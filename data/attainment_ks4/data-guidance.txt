@@ -1,0 +1,82 @@
+Key stage 4 performance
+2021/22 Academic Year
+
+Description
+
+---
+
+Coverage
+
+---
+
+File formats and conventions
+
+---
+
+Data files
+
+KS4 local authority characteristics data
+
+Filename: 2122_lachar_data.csv
+Geographic levels: National; Local Authority; Regional
+Time period: 2018/19 to 2021/22
+Content summary: Local authority and regional level headline entry and attainment measures for the latest year broken down by gender, major ethnicity, free school meal eligibility, special educational need status and description, disadvantaged status and first language. State-funded schools only.
+
+Variable names and descriptions for this file are provided below:
+
+Variable name                     |  Variable description
+--------------------------------  |  --------------------------------------------------------------------------------------------------------------------------------
+avg_att8                          |  Average Attainment 8 score of all pupils
+avg_ebaccaps                      |  Average EBacc APS score per pupil
+breakdown                         |  The breakdown of the data being displayed
+characteristic_disadvantage       |  Disadvantaged status
+characteristic_ethnic_major       |  Major ethnic group
+characteristic_first_language     |  English as an Additional Language status
+characteristic_free_school_meals  |  Free school meal eligibility
+characteristic_gender             |  Gender
+characteristic_sen_description    |  Special Educational Needs description
+characteristic_sen_status         |  Special Educational Needs status
+pt_ebacc_94                       |  Percentage of pupils achieving the English Baccalaureate (grades 4 or above in English and maths, A*-C in unreformed subjects)
+pt_ebacc_95                       |  Percentage of pupils achieving the English Baccalaureate (grades 5 or above in English and maths, A*-C in unreformed subjects)
+pt_ebacc_e_ptq_ee                 |  Percentage of pupils entering the English Baccalaureate
+pt_entbasics                      |  Percentage of pupils entering English and mathematics GCSEs
+pt_l2basics_94                    |  Percentage of pupils achieving grades 4 or above in English and mathematics GCSEs
+pt_l2basics_95                    |  Percentage of pupils achieving grades 5 or above in English and mathematics GCSEs
+t_att8                            |  Total sum of pupils Attainment 8 scores
+t_ebacc_94                        |  Total number of pupils achieving the English Baccalaureate (grades 4 or above in English and maths, A*-C in unreformed subjects)
+t_ebacc_95                        |  Total number of pupils achieving the English Baccalaureate (grades 5 or above in English and maths, A*-C in unreformed subjects)
+t_ebacc_e_ptq_ee                  |  Total number of pupils entering the English Baccalaureate
+t_ebaccaps                        |  Total EBacc APS score of pupils
+t_entbasics                       |  Total number of pupils entering English and mathematics GCSEs
+t_l2basics_94                     |  Total number of pupils achieving grades 4 or above in English and mathematics GCSEs
+t_l2basics_95                     |  Total number of pupils achieving grades 5 or above in English and mathematics GCSEs
+t_pupils                          |  Total number of pupils at the end of key stage 4
+t_schools                         |  Total number of schools
+
+Footnotes:
+
+1. Unclassified includes pupils whom ethnicity was not obtained, refused or could not be determined.
+2. From 2014/15, disadvantaged pupils include pupils known to be eligible for free school meals (FSM) in any spring, autumn, summer, alternative provision or pupil referral unit census from year 6 to year 11 or are looked after children for at least one day or are adopted from care.  For 2013/14 and earlier years, they include pupils known to be eligible for FSM in any spring, autumn, summer, alternative provision or pupil referral unit census from year 6 to year 11 or are looked after children.
+3. Some zero percentages may represent small numbers due to rounding.
+4. SEN support indicates whether a pupil has extra or different help given from that provided as part of the school’s usual curriculum. The class teacher and SEN coordinator (SENCO) may receive advice or support from outside specialists. This category replaces the former ‘school action’ and ‘school action plus’ categories.
+5. z = When an observation is not applicable
+6. City of London does not have any state funded secondary schools, therefore there are no entries present in the data for this local authority.
+7. Statement/EHC plan indicates whether a pupil a pupil has a statement of SEN or an education, health and care (EHC) plan when a formal assessment has been made.
+8. In 2020 and 2021, all GCSEs in England have been reformed and use the new 9 to 1 grading system (rather than A*-G). Year on year comparisons will be limited until these qualifications are consistently included from 2020 onwards. However, results for 2020 and 2021 are not comparable with earlier years due to the cancellation of exams (due to COVID-19) and the changes to the way GCSE grades were awarded and results for 2022 are not comparable with previous years due to the changes relating to grading assessments.
+9. All state-funded schools include local authority maintained mainstream schools, academies, free schools, city technology colleges, further education colleges with provision for 14 to 16 year-olds and state-funded special schools. They exclude independent schools, independent special schools, non-maintained special schools, hospital schools, pupil referral units and alternative provision. Alternative provision includes academy and free school alternative provision.
+10. Disadvantaged all other includes pupils for whom free school meal eligibility, Special Educational Needs status (SEN provision) or SEN primary need could not be determined.
+11. In 2019, two new local authorities were created from a merger of others. Bournemouth, Christchurch and Poole was created on 1 April 2019 from areas that were previously administered by the unitary authorities of Bournemouth and Poole, and the district of Christchurch. Dorset was created on 1 April 2019 from the districts of Weymouth and Portland, West Dorset, North Dorset, Purbeck and East Dorset. 2019 data is not comparable to previous years.
+12. In 2021, two new local authorities were introduced (North Northamptonshire and West Northamptonshire) which replaced Northamptonshire.
+13. Any science includes Astronomy, Electronics, Environmental Science and Geology.
+14. : = When data is unavailable for other reasons
+15. 'Any SEN' indicates whether a pupil has learning difficulties or disabilities that make it harder for them to learn than most children of the same age. This includes 'SEN with a statement 'EHC plan' or 'SEN support'.
+16. 'Total' includes pupils for whom Free School Meal eligibility (FSM), Special Educational Needs status (SEN provision) or SEN primary need could not be determined. This figure also includes pupils at further education colleges: as FE colleges do not complete the school census, we do not have matched pupil characteristics data of pupils in FE colleges and therefore these pupils are not included in characteristics breakdowns. This means that there are some cases where the individual characteristics breakdowns will not add up to the all pupils figure.
+17. 'No SEN' includes pupils whom could not obtained, refused, unclassified or could not be determined.
+18. Other than English includes ‘pupils whose first language is other than English’ includes 'not known but believed to be other than English'.
+19. Sub totals may not sum to the grand total due to a small number of pupils with missing information e.g. for FSM, SEN, EAL and those where ethnicity is not recorded.
+20. Following special educational needs and disability (SEND) reforms in 2014/15, SEN pupils are categorised as 'SEN with a statement or Education, health and care (EHC) plan' and 'SEN support'. SEN support replaces 'school action' and 'school action plus' (grouped as SEN without a statement up to and including 2013/14) but some pupils remain with these provision types in first year of transition. More detailed information on the reforms can be found at this link: https://www.gov.uk/government/publications/send-code-of-practice-0-to-25
+21. 'No identified SEN' includes pupils whom could not obtained, refused, unclassified or could not be determined.
+22. Local authority, region and the total (state-funded sector) figures cover achievements in state-funded schools only. They do not include pupils recently arrived from overseas and so will not match with state-funded figures in the national tables. 'England' includes all pupils from state-funded schools, independent schools, independent special schools, non-maintained special schools, hospital schools, pupil referral units and alternative provision. Alternative provision includes academy and free school alternative provision.
+23. c = a cell that has been suppressed due to low number of pupils. Suppression was applied where deemed necessary for all data up to 2018/19. For 2019/20, DfE suppression policy changed. For 2020 and 2021 results where a geographical area contains only one school (for example Isles of Scilly) the data for that area has been suppressed. This is in line with the announcement that school level data would not be published using either summer 2020 or summer 2021 exam grades awarded. Data is not being supressed in 2022 at local authority or national level.
+24. Free school meals (FSM) does not relate to pupils who actually received free school meals but those who are eligible to receive free school meals. Pupils not eligible for free school meals or unclassified pupils are described as ‘All other pupils’.
+25. English includes 'pupils whose first language is English’ includes 'not known but believed to be English'.

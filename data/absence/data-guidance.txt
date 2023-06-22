@@ -1,0 +1,91 @@
+Pupil absence in schools in England: autumn and spring terms
+2021/22 Autumn and Spring Term
+
+Description
+
+This document describes the data included in the ‘Pupil absence in schools in England: 2018/19’ National Statistics release’s underlying data files. This data is released under the terms of the Open Government License and is intended to meet at least 3 stars for Open Data. The methodology should be referenced alongside this data. It provides information on the data sources, their coverage and quality as well as explaining methodology used in producing the data.
+
+Coverage
+
+This release provides information on the levels of overall, authorised and unauthorised absence in:
+
+- state-funded primary schools
+- state-funded secondary schools
+- state-funded special schools
+- pupil referral units
+
+It includes information on:
+
+- reasons for absence
+- persistent absentees
+- pupil characteristics
+- absence by term
+
+The information is based on pupil level absence data collected via the school census.
+
+File formats and conventions
+
+Rounding
+
+This dataset has not had suppression applied.
+
+Conventions
+
+The following convention is used throughout the underlying data.
+
+‘z’ Not applicable.
+
+Data files
+
+Absence rates by pupil characteristic - autumn and spring combined
+
+Filename: 6_absence_2term_characteristics.csv
+Geographic levels: National; Local Authority; Regional
+Time period: 2016/17 Autumn and Spring Term to 2021/22 Autumn and Spring Term
+Content summary: Absence information for autumn and spring term combined by pupil characteristics such as age, gender and ethnicity for England.
+
+Variable names and descriptions for this file are provided below:
+
+Variable name                          |  Variable description
+-------------------------------------  |  -----------------------------------------------------------------------------------
+characteristic                         |  Characteristic - Filter by characteristic
+enrolments                             |  Number of pupil enrolments
+enrolments_pa_10_exact                 |  Number of persistent absentees - 10% or more sessions missed
+enrolments_pa_10_exact_percent         |  Percentage of persistent absentees - 10% or more sessions missed
+school_type                            |  School type - Filter by school type - Total includes primary, secondary and special
+sess_auth_appointments                 |  Number of medical appointments sessions
+sess_auth_excluded                     |  Number of excluded sessions
+sess_auth_ext_holiday                  |  Number of extended authorised holiday sessions
+sess_auth_holiday                      |  Number of authorised holiday sessions
+sess_auth_illness                      |  Number of illness sessions
+sess_auth_other                        |  Number of authorised other sessions
+sess_auth_religious                    |  Number of religious observance sessions
+sess_auth_study                        |  Number of study leave sessions
+sess_auth_totalreasons                 |  Number of authorised reasons sessions
+sess_auth_traveller                    |  Number of traveller sessions
+sess_authorised                        |  Number of authorised absence sessions
+sess_authorised_pa_10_exact            |  Number of authorised absence sessions for persistent absentees
+sess_authorised_percent                |  Authorised absence rate
+sess_authorised_percent_pa_10_exact    |  Authorised absence rate exact
+sess_overall                           |  Number of overall absence sessions
+sess_overall_pa_10_exact               |  Number of overall absence sessions for persistent absentees
+sess_overall_percent                   |  Overall absence rate
+sess_overall_percent_pa_10_exact       |  Overall absence rate exact
+sess_overall_totalreasons              |  Number of overall reasons sessions
+sess_possible                          |  Number of sessions possible
+sess_possible_pa_10_exact              |  Number of sessions possible for persistent absentees
+sess_unauth_holiday                    |  Number of unauthorised holiday sessions
+sess_unauth_late                       |  Number of late sessions
+sess_unauth_noyet                      |  Number of no reason yet sessions
+sess_unauth_other                      |  Number of unauthorised other sessions
+sess_unauth_totalreasons               |  Number of unauthorised reasons sessions
+sess_unauthorised                      |  Number of unauthorised absence sessions
+sess_unauthorised_pa_10_exact          |  Number of unauthorised absence sessions for persistent absentees
+sess_unauthorised_percent              |  Unauthorised absence rate
+sess_unauthorised_percent_pa_10_exact  |  Unauthorised absence rate exact
+sess_x_covid                           |  Number of sessions recorded as not attending due to COVID circumstances
+sess_y_exceptional                     |  Number of sessions recorded as exceptional circumstances
+
+Footnotes:
+
+1. Total includes state-funded primary, secondary and special schools. Data for special schools is available from 2016/17 to present

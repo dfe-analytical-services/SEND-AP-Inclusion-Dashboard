@@ -1,0 +1,549 @@
+{
+  "input": {
+    "absence_la_filter": "All SEN",
+    "absence_reg_filter": "All SEN",
+    "autism_nat_bench_filter": "Age: Under 10",
+    "ccg_choice": "NHS Leicester City CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN",
+    "destinations_1618_la_time_filter": "Identified SEN",
+    "destinations_1618_la_type_filter": "Employment",
+    "destinations_1618_reg_bench_filter": "Identified SEN",
+    "destinations_1618_reg_time_filter": "Identified SEN",
+    "destinations_1618_reg_type_filter": "Employment",
+    "ks1_phonics_la_filter": "All SEN",
+    "ks1_phonics_reg_filter": "All SEN",
+    "ks2_attainment_la_filter": "All SEN",
+    "ks2_attainment_reg_filter": "All SEN",
+    "ks4_attainment_la_bench_filter": "Any SEN",
+    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_destinations_la_bench_filter": "Identified SEN",
+    "ks4_destinations_la_time_filter": "Identified SEN",
+    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_reg_bench_filter": "Identified SEN",
+    "ks4_destinations_reg_time_filter": "Identified SEN",
+    "ks4_destinations_reg_type_filter": "Employment",
+    "la_choice": "Leicester",
+    "level_choice": "Regions",
+    "link_to_la_dashboard": 0,
+    "mainstream_with_sen_la_filter": "EHC plan",
+    "mainstream_with_sen_reg_filter": "EHC plan",
+    "myregion_switch": false,
+    "navlistPanel": "engreg_dashboard",
+    "nhs_region_choice": "Midlands",
+    "ofsted_table_choice": "Summary",
+    "percent_pupils_ehcp_la_filter": "EHC plan",
+    "percent_pupils_ehcp_reg_filter": "EHC plan",
+    "provider_types_la_bench_filter": "all pupils",
+    "provider_types_la_time_filter": "all pupils",
+    "provider_types_reg_bench_filter": "all pupils",
+    "provider_types_reg_time_filter": "all pupils",
+    "region_choice": "East Midlands",
+    "remove": 0,
+    "tabsetpanels_la": "Outcomes",
+    "tabsetpanels_reg": "Outcomes"
+  },
+  "output": {
+    "destinations_1618_reg_type": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              24.100000000000001,
+              24.600000000000001,
+              22.800000000000001,
+              19.699999999999999
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 24.1<br />characteristic: Identified LLDD",
+              "academic_year: 2018/19<br />% of pupils: 24.6<br />characteristic: Identified LLDD",
+              "academic_year: 2019/20<br />% of pupils: 22.8<br />characteristic: Identified LLDD",
+              "academic_year: 2020/21<br />% of pupils: 19.7<br />characteristic: Identified LLDD"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(102,117,133,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(102,117,133,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Identified LLDD",
+            "legendgroup": "Identified LLDD",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(102,117,133,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              16.600000000000001,
+              16.300000000000001,
+              14.199999999999999,
+              13.699999999999999
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 16.6<br />characteristic: Identified SEN",
+              "academic_year: 2018/19<br />% of pupils: 16.3<br />characteristic: Identified SEN",
+              "academic_year: 2019/20<br />% of pupils: 14.2<br />characteristic: Identified SEN",
+              "academic_year: 2020/21<br />% of pupils: 13.7<br />characteristic: Identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Identified SEN",
+            "legendgroup": "Identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              31.300000000000001,
+              31.800000000000001,
+              30.699999999999999,
+              27.399999999999999
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 31.3<br />characteristic: No identified LLDD",
+              "academic_year: 2018/19<br />% of pupils: 31.8<br />characteristic: No identified LLDD",
+              "academic_year: 2019/20<br />% of pupils: 30.7<br />characteristic: No identified LLDD",
+              "academic_year: 2020/21<br />% of pupils: 27.4<br />characteristic: No identified LLDD"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(154,133,116,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(154,133,116,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "No identified LLDD",
+            "legendgroup": "No identified LLDD",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(154,133,116,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              19.899999999999999,
+              20.300000000000001,
+              20.100000000000001,
+              17.399999999999999
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 19.9<br />characteristic: No identified SEN",
+              "academic_year: 2018/19<br />% of pupils: 20.3<br />characteristic: No identified SEN",
+              "academic_year: 2019/20<br />% of pupils: 20.1<br />characteristic: No identified SEN",
+              "academic_year: 2020/21<br />% of pupils: 17.4<br />characteristic: No identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(244,106,37,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(244,106,37,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "No identified SEN",
+            "legendgroup": "No identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(244,106,37,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 39.186384391863839
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              4.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -5,
+              105
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "tickvals": [
+              0,
+              24.999999999999996,
+              50,
+              75,
+              100
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    }
+  }
+}

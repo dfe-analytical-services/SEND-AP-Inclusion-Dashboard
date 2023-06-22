@@ -1,12 +1,8 @@
-Title: shiny-template
-Author: c(person(given = "Laura",
-                 family = "Selby",
+Title: inclusion-dashboard
+Author: c(person(given = "Mark",
+                 family = "Burdon",
                  role = c("cre", "aut"),
-                 email = "laura.selby@education.gov.uk"),
-          person(given = "Cameron",
-                 family = "Race",
-                 role = "aut",
-                 email = "cameron.race@education.gov.uk"))
+                 email = "mark.burdon@education.gov.uk")))
 License: MIT
 Type: Shiny
 Imports:

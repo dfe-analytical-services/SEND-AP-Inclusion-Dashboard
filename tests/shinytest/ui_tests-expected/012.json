@@ -1,0 +1,3522 @@
+{
+  "input": {
+    "absence_la_filter": "All SEN",
+    "absence_reg_filter": "All SEN",
+    "autism_nat_bench_filter": "Age: Under 10",
+    "ccg_choice": "NHS Leicester City CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN",
+    "destinations_1618_la_time_filter": "Identified SEN",
+    "destinations_1618_la_type_filter": "Employment",
+    "destinations_1618_reg_bench_filter": "Identified SEN",
+    "destinations_1618_reg_time_filter": "Identified SEN",
+    "destinations_1618_reg_type_filter": "Employment",
+    "ks1_phonics_la_filter": "All SEN",
+    "ks1_phonics_reg_filter": "All SEN",
+    "ks2_attainment_la_filter": "All SEN",
+    "ks2_attainment_reg_filter": "All SEN",
+    "ks4_attainment_la_bench_filter": "Any SEN",
+    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_destinations_la_bench_filter": "Identified SEN",
+    "ks4_destinations_la_time_filter": "Identified SEN",
+    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_reg_bench_filter": "Identified SEN",
+    "ks4_destinations_reg_time_filter": "Identified SEN",
+    "ks4_destinations_reg_type_filter": "Employment",
+    "la_choice": "Leicester",
+    "level_choice": "England",
+    "link_to_la_dashboard": 0,
+    "mainstream_with_sen_la_filter": "EHC plan",
+    "mainstream_with_sen_reg_filter": "EHC plan",
+    "myregion_switch": false,
+    "navlistPanel": "engreg_dashboard",
+    "nhs_region_choice": "Midlands",
+    "ofsted_table_choice": "Summary",
+    "percent_pupils_ehcp_la_filter": "EHC plan",
+    "percent_pupils_ehcp_reg_filter": "EHC plan",
+    "provider_types_la_bench_filter": "all pupils",
+    "provider_types_la_time_filter": "all pupils",
+    "provider_types_reg_bench_filter": "all pupils",
+    "provider_types_reg_time_filter": "all pupils",
+    "region_choice": "East Midlands",
+    "remove": 0,
+    "tabsetpanels_la": "Outcomes",
+    "tabsetpanels_reg": "Outcomes"
+  },
+  "output": {
+    "destinations_1618_reg_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              95.799999999999997,
+              95.200000000000003,
+              94.700000000000003,
+              95.400000000000006,
+              95.299999999999997,
+              95.299999999999997,
+              94.900000000000006,
+              94.400000000000006,
+              94.600000000000009,
+              95.100000000000009,
+              94.700000000000003
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              4.1000000000000085,
+              4.7999999999999972,
+              5.2999999999999972,
+              4.5999999999999943,
+              4.7000000000000028,
+              4.5999999999999943,
+              5.0999999999999943,
+              5.6999999999999886,
+              5.3999999999999915,
+              5,
+              5.1999999999999886
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Unknown",
+              "region_name: North West<br />North West<br />Destination: Unknown",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Unknown",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Unknown",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Unknown",
+              "region_name: East of England<br />East of England<br />Destination: Unknown",
+              "region_name: London<br />London<br />Destination: Unknown",
+              "region_name: South East<br />South East<br />Destination: Unknown",
+              "region_name: South West<br />South West<br />Destination: Unknown",
+              "region_name: Inner London<br />Inner London<br />Destination: Unknown",
+              "region_name: Outer London<br />Outer London<br />Destination: Unknown"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(204,122,136,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Unknown",
+            "legendgroup": "Unknown",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              82.799999999999997,
+              83,
+              82.900000000000006,
+              84.200000000000003,
+              83.5,
+              85.099999999999994,
+              82.299999999999997,
+              83.200000000000003,
+              82.100000000000009,
+              81.100000000000009,
+              83.099999999999994
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              13,
+              12.200000000000003,
+              11.799999999999997,
+              11.200000000000003,
+              11.799999999999997,
+              10.200000000000003,
+              12.600000000000009,
+              11.200000000000003,
+              12.5,
+              14,
+              11.600000000000009
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Not sustained",
+              "region_name: North West<br />North West<br />Destination: Not sustained",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Not sustained",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Not sustained",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Not sustained",
+              "region_name: East of England<br />East of England<br />Destination: Not sustained",
+              "region_name: London<br />London<br />Destination: Not sustained",
+              "region_name: South East<br />South East<br />Destination: Not sustained",
+              "region_name: South West<br />South West<br />Destination: Not sustained",
+              "region_name: Inner London<br />Inner London<br />Destination: Not sustained",
+              "region_name: Outer London<br />Outer London<br />Destination: Not sustained"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(179,62,82,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Not sustained",
+            "legendgroup": "Not sustained",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              78.099999999999994,
+              80.099999999999994,
+              79.799999999999997,
+              80,
+              80.299999999999997,
+              82.799999999999997,
+              81,
+              79.700000000000003,
+              78.900000000000006,
+              80.200000000000003,
+              81.5
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              4.7000000000000028,
+              2.9000000000000057,
+              3.1000000000000085,
+              4.2000000000000028,
+              3.2000000000000028,
+              2.2999999999999972,
+              1.2999999999999972,
+              3.5,
+              3.2000000000000028,
+              0.90000000000000568,
+              1.5999999999999943
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Apprenticeship",
+              "region_name: North West<br />North West<br />Destination: Apprenticeship",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Apprenticeship",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Apprenticeship",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Apprenticeship",
+              "region_name: East of England<br />East of England<br />Destination: Apprenticeship",
+              "region_name: London<br />London<br />Destination: Apprenticeship",
+              "region_name: South East<br />South East<br />Destination: Apprenticeship",
+              "region_name: South West<br />South West<br />Destination: Apprenticeship",
+              "region_name: Inner London<br />Inner London<br />Destination: Apprenticeship",
+              "region_name: Outer London<br />Outer London<br />Destination: Apprenticeship"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(199,184,230,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Apprenticeship",
+            "legendgroup": "Apprenticeship",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              68.900000000000006,
+              66.799999999999997,
+              66.700000000000003,
+              66.299999999999997,
+              69.299999999999997,
+              66.599999999999994,
+              73.299999999999997,
+              62,
+              59.799999999999997,
+              73.600000000000009,
+              73
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              9.1999999999999886,
+              13.299999999999997,
+              13.099999999999994,
+              13.700000000000003,
+              11,
+              16.200000000000003,
+              7.7000000000000028,
+              17.700000000000003,
+              19.100000000000009,
+              6.5999999999999943,
+              8.5
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Employment",
+              "region_name: North West<br />North West<br />Destination: Employment",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Employment",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Employment",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Employment",
+              "region_name: East of England<br />East of England<br />Destination: Employment",
+              "region_name: London<br />London<br />Destination: Employment",
+              "region_name: South East<br />South East<br />Destination: Employment",
+              "region_name: South West<br />South West<br />Destination: Employment",
+              "region_name: Inner London<br />Inner London<br />Destination: Employment",
+              "region_name: Outer London<br />Outer London<br />Destination: Employment"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(150,122,204,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Employment",
+            "legendgroup": "Employment",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              60.899999999999999,
+              57.100000000000001,
+              59.700000000000003,
+              57.100000000000001,
+              62.099999999999994,
+              56.600000000000001,
+              63.300000000000004,
+              55.5,
+              50.200000000000003,
+              63.100000000000001,
+              63.299999999999997
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              8.0000000000000071,
+              9.6999999999999957,
+              7,
+              9.1999999999999957,
+              7.2000000000000028,
+              9.9999999999999929,
+              9.9999999999999929,
+              6.5,
+              9.5999999999999943,
+              10.500000000000007,
+              9.7000000000000028
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Education (other)",
+              "region_name: North West<br />North West<br />Destination: Education (other)",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Education (other)",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Education (other)",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Education (other)",
+              "region_name: East of England<br />East of England<br />Destination: Education (other)",
+              "region_name: London<br />London<br />Destination: Education (other)",
+              "region_name: South East<br />South East<br />Destination: Education (other)",
+              "region_name: South West<br />South West<br />Destination: Education (other)",
+              "region_name: Inner London<br />Inner London<br />Destination: Education (other)",
+              "region_name: Outer London<br />Outer London<br />Destination: Education (other)"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(230,210,184,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Education (other)",
+            "legendgroup": "Education (other)",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              48.5,
+              51.899999999999999,
+              54.5,
+              50.200000000000003,
+              57.299999999999997,
+              51,
+              57.700000000000003,
+              49.200000000000003,
+              42.100000000000001,
+              57.200000000000003,
+              57.899999999999999
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              12.399999999999999,
+              5.2000000000000028,
+              5.2000000000000028,
+              6.8999999999999986,
+              4.7999999999999972,
+              5.6000000000000014,
+              5.6000000000000014,
+              6.2999999999999972,
+              8.1000000000000014,
+              5.8999999999999986,
+              5.3999999999999986
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Further education",
+              "region_name: North West<br />North West<br />Destination: Further education",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Further education",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Further education",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Further education",
+              "region_name: East of England<br />East of England<br />Destination: Further education",
+              "region_name: London<br />London<br />Destination: Further education",
+              "region_name: South East<br />South East<br />Destination: Further education",
+              "region_name: South West<br />South West<br />Destination: Further education",
+              "region_name: Inner London<br />Inner London<br />Destination: Further education",
+              "region_name: Outer London<br />Outer London<br />Destination: Further education"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(204,170,122,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Further education",
+            "legendgroup": "Further education",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999991,
+              0.89999999999999858,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              48.5,
+              51.899999999999999,
+              54.5,
+              50.200000000000003,
+              57.299999999999997,
+              51,
+              57.700000000000003,
+              49.200000000000003,
+              42.100000000000001,
+              57.200000000000003,
+              57.899999999999999
+            ],
+            "text": [
+              "region_name: North East<br />North East<br />Destination: Higher education",
+              "region_name: North West<br />North West<br />Destination: Higher education",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Higher education",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Higher education",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Higher education",
+              "region_name: East of England<br />East of England<br />Destination: Higher education",
+              "region_name: London<br />London<br />Destination: Higher education",
+              "region_name: South East<br />South East<br />Destination: Higher education",
+              "region_name: South West<br />South West<br />Destination: Higher education",
+              "region_name: Inner London<br />Inner London<br />Destination: Higher education",
+              "region_name: Outer London<br />Outer London<br />Destination: Higher education"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(179,130,62,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Higher education",
+            "legendgroup": "Higher education",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              97.849999999999994,
+              97.599999999999994,
+              97.349999999999994,
+              97.700000000000003,
+              97.650000000000006,
+              97.599999999999994,
+              97.450000000000003,
+              97.25,
+              97.300000000000011,
+              97.600000000000009,
+              97.299999999999997
+            ],
+            "text": [
+              "4%",
+              "5%",
+              "5%",
+              "5%",
+              "5%",
+              "5%",
+              "5%",
+              "6%",
+              "5%",
+              "5%",
+              "5%"
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Unknown",
+              "region_name: North West<br />North West<br />Destination: Unknown",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Unknown",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Unknown",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Unknown",
+              "region_name: East of England<br />East of England<br />Destination: Unknown",
+              "region_name: London<br />London<br />Destination: Unknown",
+              "region_name: South East<br />South East<br />Destination: Unknown",
+              "region_name: South West<br />South West<br />Destination: Unknown",
+              "region_name: Inner London<br />Inner London<br />Destination: Unknown",
+              "region_name: Outer London<br />Outer London<br />Destination: Unknown"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Unknown",
+            "legendgroup": "Unknown",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              89.299999999999997,
+              89.099999999999994,
+              88.800000000000011,
+              89.800000000000011,
+              89.400000000000006,
+              90.199999999999989,
+              88.599999999999994,
+              88.800000000000011,
+              88.350000000000009,
+              88.100000000000009,
+              88.900000000000006
+            ],
+            "text": [
+              "13%",
+              "12%",
+              "12%",
+              "11%",
+              "12%",
+              "10%",
+              "13%",
+              "11%",
+              "12%",
+              "14%",
+              "12%"
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Not sustained",
+              "region_name: North West<br />North West<br />Destination: Not sustained",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Not sustained",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Not sustained",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Not sustained",
+              "region_name: East of England<br />East of England<br />Destination: Not sustained",
+              "region_name: London<br />London<br />Destination: Not sustained",
+              "region_name: South East<br />South East<br />Destination: Not sustained",
+              "region_name: South West<br />South West<br />Destination: Not sustained",
+              "region_name: Inner London<br />Inner London<br />Destination: Not sustained",
+              "region_name: Outer London<br />Outer London<br />Destination: Not sustained"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Not sustained",
+            "legendgroup": "Not sustained",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              80.449999999999989,
+              81.549999999999997,
+              81.349999999999994,
+              82.099999999999994,
+              81.900000000000006,
+              83.949999999999989,
+              81.650000000000006,
+              81.450000000000003,
+              80.5,
+              80.650000000000006,
+              82.299999999999997
+            ],
+            "text": [
+              "5%",
+              "3%",
+              "3%",
+              "4%",
+              "3%",
+              null,
+              null,
+              "4%",
+              "3%",
+              null,
+              null
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Apprenticeship",
+              "region_name: North West<br />North West<br />Destination: Apprenticeship",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Apprenticeship",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Apprenticeship",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Apprenticeship",
+              "region_name: East of England<br />East of England<br />Destination: Apprenticeship",
+              "region_name: London<br />London<br />Destination: Apprenticeship",
+              "region_name: South East<br />South East<br />Destination: Apprenticeship",
+              "region_name: South West<br />South West<br />Destination: Apprenticeship",
+              "region_name: Inner London<br />Inner London<br />Destination: Apprenticeship",
+              "region_name: Outer London<br />Outer London<br />Destination: Apprenticeship"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Apprenticeship",
+            "legendgroup": "Apprenticeship",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              73.5,
+              73.449999999999989,
+              73.25,
+              73.150000000000006,
+              74.799999999999997,
+              74.699999999999989,
+              77.150000000000006,
+              70.849999999999994,
+              69.349999999999994,
+              76.900000000000006,
+              77.25
+            ],
+            "text": [
+              "9%",
+              "13%",
+              "13%",
+              "14%",
+              "11%",
+              "16%",
+              "8%",
+              "18%",
+              "19%",
+              "7%",
+              "8%"
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Employment",
+              "region_name: North West<br />North West<br />Destination: Employment",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Employment",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Employment",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Employment",
+              "region_name: East of England<br />East of England<br />Destination: Employment",
+              "region_name: London<br />London<br />Destination: Employment",
+              "region_name: South East<br />South East<br />Destination: Employment",
+              "region_name: South West<br />South West<br />Destination: Employment",
+              "region_name: Inner London<br />Inner London<br />Destination: Employment",
+              "region_name: Outer London<br />Outer London<br />Destination: Employment"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Employment",
+            "legendgroup": "Employment",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              64.900000000000006,
+              61.950000000000003,
+              63.200000000000003,
+              61.700000000000003,
+              65.699999999999989,
+              61.599999999999994,
+              68.299999999999997,
+              58.75,
+              55,
+              68.350000000000009,
+              68.150000000000006
+            ],
+            "text": [
+              "8%",
+              "10%",
+              "7%",
+              "9%",
+              "7%",
+              "10%",
+              "10%",
+              "6%",
+              "10%",
+              "10%",
+              "10%"
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Education (other)",
+              "region_name: North West<br />North West<br />Destination: Education (other)",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Education (other)",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Education (other)",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Education (other)",
+              "region_name: East of England<br />East of England<br />Destination: Education (other)",
+              "region_name: London<br />London<br />Destination: Education (other)",
+              "region_name: South East<br />South East<br />Destination: Education (other)",
+              "region_name: South West<br />South West<br />Destination: Education (other)",
+              "region_name: Inner London<br />Inner London<br />Destination: Education (other)",
+              "region_name: Outer London<br />Outer London<br />Destination: Education (other)"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Education (other)",
+            "legendgroup": "Education (other)",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              54.700000000000003,
+              54.5,
+              57.100000000000001,
+              53.650000000000006,
+              59.699999999999996,
+              53.799999999999997,
+              60.5,
+              52.350000000000001,
+              46.150000000000006,
+              60.150000000000006,
+              60.599999999999994
+            ],
+            "text": [
+              "12%",
+              "5%",
+              "5%",
+              "7%",
+              "5%",
+              "6%",
+              "6%",
+              "6%",
+              "8%",
+              "6%",
+              "5%"
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Further education",
+              "region_name: North West<br />North West<br />Destination: Further education",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Further education",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Further education",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Further education",
+              "region_name: East of England<br />East of England<br />Destination: Further education",
+              "region_name: London<br />London<br />Destination: Further education",
+              "region_name: South East<br />South East<br />Destination: Further education",
+              "region_name: South West<br />South West<br />Destination: Further education",
+              "region_name: Inner London<br />Inner London<br />Destination: Further education",
+              "region_name: Outer London<br />Outer London<br />Destination: Further education"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Further education",
+            "legendgroup": "Further education",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              5,
+              6,
+              11,
+              1,
+              10,
+              2,
+              4,
+              8,
+              9,
+              3,
+              7
+            ],
+            "y": [
+              24.25,
+              25.949999999999999,
+              27.25,
+              25.100000000000001,
+              28.649999999999999,
+              25.5,
+              28.850000000000001,
+              24.600000000000001,
+              21.050000000000001,
+              28.600000000000001,
+              28.949999999999999
+            ],
+            "text": [
+              "48%",
+              "52%",
+              "54%",
+              "50%",
+              "57%",
+              "51%",
+              "58%",
+              "49%",
+              "42%",
+              "57%",
+              "58%"
+            ],
+            "hovertext": [
+              "region_name: North East<br />North East<br />Destination: Higher education",
+              "region_name: North West<br />North West<br />Destination: Higher education",
+              "region_name: Yorkshire and<br />The Humber<br />Yorkshire and<br />The Humber<br />Destination: Higher education",
+              "region_name: East Midlands<br />East Midlands<br />Destination: Higher education",
+              "region_name: West Midlands<br />West Midlands<br />Destination: Higher education",
+              "region_name: East of England<br />East of England<br />Destination: Higher education",
+              "region_name: London<br />London<br />Destination: Higher education",
+              "region_name: South East<br />South East<br />Destination: Higher education",
+              "region_name: South West<br />South West<br />Destination: Higher education",
+              "region_name: Inner London<br />Inner London<br />Destination: Higher education",
+              "region_name: Outer London<br />Outer London<br />Destination: Higher education"
+            ],
+            "textfont": {
+              "size": 9.4488188976377963,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Higher education",
+            "legendgroup": "Higher education",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 67.699358688202253,
+            "l": 39.186384391863839
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "East Midlands",
+              "East of England",
+              "Inner London",
+              "London",
+              "North East",
+              "North West",
+              "Outer London",
+              "South East",
+              "South West",
+              "West Midlands",
+              "Yorkshire and<br />The Humber"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "East Midlands",
+              "East of England",
+              "Inner London",
+              "London",
+              "North East",
+              "North West",
+              "Outer London",
+              "South East",
+              "South West",
+              "West Midlands",
+              "Yorkshire and<br />The Humber"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": -45,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "% of pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -5.0050000000000008,
+              105.105
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "tickvals": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Region",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Destination",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "v"
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "svg"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks1_phonics_reg_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000013,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              3,
+              9,
+              10,
+              6,
+              2,
+              11,
+              4,
+              8,
+              5,
+              7
+            ],
+            "y": [
+              35.502958579881657,
+              36.655948553054664,
+              44.57593688362919,
+              45.13274336283186,
+              37.41648106904232,
+              36.430317848410759,
+              45.34746760895171,
+              37.005039596832255,
+              38.46153846153846,
+              37.367915465898172,
+              38.225255972696246
+            ],
+            "text": [
+              "Percent meeting expected standards in Y1: 35.50296<br />East Midlands",
+              "Percent meeting expected standards in Y1: 36.65595<br />East of England",
+              "Percent meeting expected standards in Y1: 44.57594<br />Inner London",
+              "Percent meeting expected standards in Y1: 45.13274<br />London",
+              "Percent meeting expected standards in Y1: 37.41648<br />North East",
+              "Percent meeting expected standards in Y1: 36.43032<br />North West",
+              "Percent meeting expected standards in Y1: 45.34747<br />Outer London",
+              "Percent meeting expected standards in Y1: 37.00504<br />South East",
+              "Percent meeting expected standards in Y1: 38.46154<br />South West",
+              "Percent meeting expected standards in Y1: 37.36792<br />West Midlands",
+              "Percent meeting expected standards in Y1: 38.22526<br />Yorkshire and<br />The Humber"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(162,133,209,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "English regions",
+            "legendgroup": "English regions",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              38.350198976691303,
+              38.350198976691303
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(61,61,61,1)",
+              "dash": "dash"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 2,
+            "y": 38.850198976691303,
+            "text": "England average",
+            "hovertext": "outcome: 38.3502",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text+lines",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null,
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            }
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 67.699358688202253,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "East Midlands",
+              "North West",
+              "East of England",
+              "South East",
+              "West Midlands",
+              "North East",
+              "Yorkshire and<br />The Humber",
+              "South West",
+              "Inner London",
+              "London",
+              "Outer London"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "East Midlands",
+              "North West",
+              "East of England",
+              "South East",
+              "West Midlands",
+              "North East",
+              "Yorkshire and<br />The Humber",
+              "South West",
+              "Inner London",
+              "London",
+              "Outer London"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": -45,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Regions in England",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -2.2673733804475855,
+              47.614840989399298
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "10",
+              "20",
+              "30",
+              "40"
+            ],
+            "tickvals": [
+              0,
+              10,
+              20,
+              30,
+              40
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "10",
+              "20",
+              "30",
+              "40"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils meeting expected standards",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": false,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks2_attainment_reg_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999991,
+              0.90000000000000013,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.89999999999999858
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              8,
+              6,
+              4,
+              7,
+              1,
+              2,
+              10,
+              5,
+              3,
+              11,
+              9
+            ],
+            "y": [
+              18.629999999999999,
+              17.210000000000001,
+              17.07,
+              17.289999999999999,
+              15.210000000000001,
+              16.100000000000001,
+              25.149999999999999,
+              17.149999999999999,
+              16.629999999999999,
+              27.870000000000001,
+              23.48
+            ],
+            "text": [
+              "Percent meeting expected standards: 18.63<br />North East",
+              "Percent meeting expected standards: 17.21<br />North West",
+              "Percent meeting expected standards: 17.07<br />Yorkshire and<br />The Humber",
+              "Percent meeting expected standards: 17.29<br />East Midlands",
+              "Percent meeting expected standards: 15.21<br />West Midlands",
+              "Percent meeting expected standards: 16.10<br />East of England",
+              "Percent meeting expected standards: 25.15<br />London",
+              "Percent meeting expected standards: 17.15<br />South East",
+              "Percent meeting expected standards: 16.63<br />South West",
+              "Percent meeting expected standards: 27.87<br />Inner London",
+              "Percent meeting expected standards: 23.48<br />Outer London"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(162,133,209,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "English regions",
+            "legendgroup": "English regions",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              17.989999999999998,
+              17.989999999999998
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(61,61,61,1)",
+              "dash": "dash"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 2,
+            "y": 20.989999999999998,
+            "text": "England average",
+            "hovertext": "outcome: 17.99",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text+lines",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null,
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            }
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 67.699358688202253,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "West Midlands",
+              "East of England",
+              "South West",
+              "Yorkshire and<br />The Humber",
+              "South East",
+              "North West",
+              "East Midlands",
+              "North East",
+              "Outer London",
+              "London",
+              "Inner London"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "West Midlands",
+              "East of England",
+              "South West",
+              "Yorkshire and<br />The Humber",
+              "South East",
+              "North West",
+              "East Midlands",
+              "North East",
+              "Outer London",
+              "London",
+              "Inner London"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": -45,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Regions in England",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -1.3935000000000002,
+              29.263500000000001
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "10",
+              "20"
+            ],
+            "tickvals": [
+              0,
+              10,
+              20
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "10",
+              "20"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils meeting expected standards",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": false,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks4_attainment_reg_bench": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              6,
+              8,
+              7,
+              11,
+              9,
+              4,
+              5,
+              10
+            ],
+            "y": [
+              -0.91000000000000003,
+              -0.81999999999999995,
+              -0.75,
+              -0.68999999999999995,
+              -0.63,
+              -0.63,
+              -0.46000000000000002,
+              -0.5,
+              -0.73999999999999999,
+              -0.71999999999999997,
+              -0.47999999999999998
+            ],
+            "text": [
+              "Average progress 8 score: -0.91<br />North East",
+              "Average progress 8 score: -0.82<br />North West",
+              "Average progress 8 score: -0.75<br />Yorkshire and <br /> The Humber",
+              "Average progress 8 score: -0.69<br />East Midlands",
+              "Average progress 8 score: -0.63<br />West Midlands",
+              "Average progress 8 score: -0.63<br />East of England",
+              "Average progress 8 score: -0.46<br />Inner London",
+              "Average progress 8 score: -0.50<br />Outer London",
+              "Average progress 8 score: -0.74<br />South East",
+              "Average progress 8 score: -0.72<br />South West",
+              "Average progress 8 score: -0.48<br />London"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "opacity": 1,
+            "line": {
+              "color": "transparent"
+            },
+            "error_y": {
+              "array": [
+                0.040000000000000036,
+                0.029999999999999916,
+                0.030000000000000027,
+                0.029999999999999916,
+                0.030000000000000027,
+                0.030000000000000027,
+                0.040000000000000036,
+                0.030000000000000027,
+                0.020000000000000018,
+                0.030000000000000027,
+                0.019999999999999962
+              ],
+              "arrayminus": [
+                0.049999999999999933,
+                0.020000000000000018,
+                0.030000000000000027,
+                0.030000000000000027,
+                0.020000000000000018,
+                0.020000000000000018,
+                0.03999999999999998,
+                0.030000000000000027,
+                0.020000000000000018,
+                0.030000000000000027,
+                0.030000000000000027
+              ],
+              "type": "data",
+              "width": 0,
+              "symmetric": false,
+              "color": "rgba(162,133,209,1)"
+            },
+            "name": "English regions",
+            "legendgroup": "English regions",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(162,133,209,1)",
+              "opacity": 1,
+              "size": 1.8897637795275593,
+              "symbol": "square-open",
+              "line": {
+                "width": 3.7795275590551185,
+                "color": "rgba(162,133,209,1)"
+              }
+            },
+            "hoveron": "points",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              -0.68999999999999995,
+              -0.68999999999999995
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(61,61,61,1)",
+              "dash": "dash"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 2,
+            "y": -0.66999999999999993,
+            "text": "England average",
+            "hovertext": "outcome: -0.69",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            },
+            "xaxis": "x",
+            "yaxis": "y",
+            "mode": "+lines",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 67.699358688202253,
+            "l": 44.499792444997915
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "North East",
+              "North West",
+              "Yorkshire and <br /> The Humber",
+              "South East",
+              "South West",
+              "East Midlands",
+              "East of England",
+              "West Midlands",
+              "Outer London",
+              "London",
+              "Inner London"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "North East",
+              "North West",
+              "Yorkshire and <br /> The Humber",
+              "South East",
+              "South West",
+              "East Midlands",
+              "East of England",
+              "West Midlands",
+              "Outer London",
+              "London",
+              "Inner London"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": -45,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Regions in England",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.98699999999999999,
+              -0.39299999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "-0.9",
+              "-0.8",
+              "-0.7",
+              "-0.6",
+              "-0.5",
+              "-0.4"
+            ],
+            "tickvals": [
+              -0.90000000000000002,
+              -0.80000000000000004,
+              -0.69999999999999996,
+              -0.59999999999999987,
+              -0.5,
+              -0.39999999999999991
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "-0.9",
+              "-0.8",
+              "-0.7",
+              "-0.6",
+              "-0.5",
+              "-0.4"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Average progress 8 score",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": false,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "orientation": "h",
+            "y": -0.34999999999999998,
+            "title": {
+              "text": ""
+            }
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "mentalhealth_reg_bench": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112
+            ],
+            "y": [
+              100035,
+              100840,
+              103915,
+              106935,
+              108820,
+              109860,
+              110675,
+              111875,
+              114025,
+              114645,
+              117195,
+              119445,
+              121365
+            ],
+            "text": [
+              "Number of children and young people: 100035<br />Midlands",
+              "Number of children and young people: 100840<br />Midlands",
+              "Number of children and young people: 103915<br />Midlands",
+              "Number of children and young people: 106935<br />Midlands",
+              "Number of children and young people: 108820<br />Midlands",
+              "Number of children and young people: 109860<br />Midlands",
+              "Number of children and young people: 110675<br />Midlands",
+              "Number of children and young people: 111875<br />Midlands",
+              "Number of children and young people: 114025<br />Midlands",
+              "Number of children and young people: 114645<br />Midlands",
+              "Number of children and young people: 117195<br />Midlands",
+              "Number of children and young people: 119445<br />Midlands",
+              "Number of children and young people: 121365<br />Midlands"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(61,61,61,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Midlands",
+            "legendgroup": "Midlands",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19112
+            ],
+            "y": [
+              63955,
+              65120,
+              66735,
+              68225,
+              69000,
+              69530,
+              70205,
+              71310,
+              72455,
+              73145,
+              74065,
+              74855,
+              76185,
+              null,
+              79035,
+              80160,
+              82240,
+              84245,
+              85235,
+              85760,
+              86745,
+              87355,
+              88195,
+              88200,
+              88635,
+              89195,
+              89930,
+              null,
+              101815,
+              103175,
+              105210,
+              107280,
+              108130,
+              108820,
+              110020,
+              111205,
+              112675,
+              113165,
+              114700,
+              116475,
+              118045,
+              null,
+              83000,
+              84645,
+              86860,
+              89085,
+              90115,
+              89440,
+              90390,
+              91110,
+              91715,
+              91385,
+              91530,
+              91845,
+              93025,
+              null,
+              90575,
+              92125,
+              94100,
+              95755,
+              97380,
+              98085,
+              99470,
+              101590,
+              103885,
+              105310,
+              107085,
+              108495,
+              110835,
+              null,
+              41600,
+              42815,
+              44115,
+              45210,
+              45750,
+              46170,
+              46950,
+              47530,
+              48200,
+              48210,
+              48835,
+              49425,
+              49880
+            ],
+            "text": [
+              "Number of children and young people:  63955<br />East of England",
+              "Number of children and young people:  65120<br />East of England",
+              "Number of children and young people:  66735<br />East of England",
+              "Number of children and young people:  68225<br />East of England",
+              "Number of children and young people:  69000<br />East of England",
+              "Number of children and young people:  69530<br />East of England",
+              "Number of children and young people:  70205<br />East of England",
+              "Number of children and young people:  71310<br />East of England",
+              "Number of children and young people:  72455<br />East of England",
+              "Number of children and young people:  73145<br />East of England",
+              "Number of children and young people:  74065<br />East of England",
+              "Number of children and young people:  74855<br />East of England",
+              "Number of children and young people:  76185<br />East of England",
+              null,
+              "Number of children and young people:  79035<br />London",
+              "Number of children and young people:  80160<br />London",
+              "Number of children and young people:  82240<br />London",
+              "Number of children and young people:  84245<br />London",
+              "Number of children and young people:  85235<br />London",
+              "Number of children and young people:  85760<br />London",
+              "Number of children and young people:  86745<br />London",
+              "Number of children and young people:  87355<br />London",
+              "Number of children and young people:  88195<br />London",
+              "Number of children and young people:  88200<br />London",
+              "Number of children and young people:  88635<br />London",
+              "Number of children and young people:  89195<br />London",
+              "Number of children and young people:  89930<br />London",
+              null,
+              "Number of children and young people: 101815<br />North East and Yorkshire",
+              "Number of children and young people: 103175<br />North East and Yorkshire",
+              "Number of children and young people: 105210<br />North East and Yorkshire",
+              "Number of children and young people: 107280<br />North East and Yorkshire",
+              "Number of children and young people: 108130<br />North East and Yorkshire",
+              "Number of children and young people: 108820<br />North East and Yorkshire",
+              "Number of children and young people: 110020<br />North East and Yorkshire",
+              "Number of children and young people: 111205<br />North East and Yorkshire",
+              "Number of children and young people: 112675<br />North East and Yorkshire",
+              "Number of children and young people: 113165<br />North East and Yorkshire",
+              "Number of children and young people: 114700<br />North East and Yorkshire",
+              "Number of children and young people: 116475<br />North East and Yorkshire",
+              "Number of children and young people: 118045<br />North East and Yorkshire",
+              null,
+              "Number of children and young people:  83000<br />North West",
+              "Number of children and young people:  84645<br />North West",
+              "Number of children and young people:  86860<br />North West",
+              "Number of children and young people:  89085<br />North West",
+              "Number of children and young people:  90115<br />North West",
+              "Number of children and young people:  89440<br />North West",
+              "Number of children and young people:  90390<br />North West",
+              "Number of children and young people:  91110<br />North West",
+              "Number of children and young people:  91715<br />North West",
+              "Number of children and young people:  91385<br />North West",
+              "Number of children and young people:  91530<br />North West",
+              "Number of children and young people:  91845<br />North West",
+              "Number of children and young people:  93025<br />North West",
+              null,
+              "Number of children and young people:  90575<br />South East",
+              "Number of children and young people:  92125<br />South East",
+              "Number of children and young people:  94100<br />South East",
+              "Number of children and young people:  95755<br />South East",
+              "Number of children and young people:  97380<br />South East",
+              "Number of children and young people:  98085<br />South East",
+              "Number of children and young people:  99470<br />South East",
+              "Number of children and young people: 101590<br />South East",
+              "Number of children and young people: 103885<br />South East",
+              "Number of children and young people: 105310<br />South East",
+              "Number of children and young people: 107085<br />South East",
+              "Number of children and young people: 108495<br />South East",
+              "Number of children and young people: 110835<br />South East",
+              null,
+              "Number of children and young people:  41600<br />South West",
+              "Number of children and young people:  42815<br />South West",
+              "Number of children and young people:  44115<br />South West",
+              "Number of children and young people:  45210<br />South West",
+              "Number of children and young people:  45750<br />South West",
+              "Number of children and young people:  46170<br />South West",
+              "Number of children and young people:  46950<br />South West",
+              "Number of children and young people:  47530<br />South West",
+              "Number of children and young people:  48200<br />South West",
+              "Number of children and young people:  48210<br />South West",
+              "Number of children and young people:  48835<br />South West",
+              "Number of children and young people:  49425<br />South West",
+              "Number of children and young people:  49880<br />South West"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(162,133,209,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Other NHS region",
+            "legendgroup": "Other NHS region",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 55.126608551266081
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              18697.25,
+              19131.75
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "Apr 2021",
+              "Jul 2021",
+              "Oct 2021",
+              "Jan 2022",
+              "Apr 2022"
+            ],
+            "tickvals": [
+              18718,
+              18809,
+              18901,
+              18993,
+              19083
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "Apr 2021",
+              "Jul 2021",
+              "Oct 2021",
+              "Jan 2022",
+              "Apr 2022"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "All Clinical Commissioning Groups in England",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              37611.75,
+              125353.25
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "40000",
+              "60000",
+              "80000",
+              "100000",
+              "120000"
+            ],
+            "tickvals": [
+              40000,
+              60000,
+              80000,
+              100000,
+              120000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "40000",
+              "60000",
+              "80000",
+              "100000",
+              "120000"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Number of children and young people",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Clinical Commissioning Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    }
+  }
+}

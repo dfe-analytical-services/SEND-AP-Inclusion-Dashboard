@@ -57,31 +57,23 @@
 
 
 ui <- function(input, output, session) {
+  # Register Open Sans google font, or else the Summary graphic will appear with serif fonts and no label text#
+  # gdtools::register_liberationsans()
+  #  gdtools::register_gfont(family = "Open Sans")
+  #  gdtools::liberationsansHtmlDependency()
+  #  gdtools::addGFontHtmlDependency(family = "Open Sans")
+
   fluidPage(
-    # use_tota11y(),
     title = tags$head(
       tags$link(
         rel = "shortcut icon",
         href = "dfefavicon.png"
       ),
       # Add title for browser tabs
-      tags$title("DfE Shiny Template")
+      tags$title("SEND and AP Inclusion Dashboard Prototype")
     ),
-    use_shiny_title(),
     tags$html(lang = "en"),
-    # Add meta description for search engines
-    meta() %>%
-      meta_general(
-        application_name = "DfE Shiny Template",
-        description = "DfE Shiny Template",
-        robots = "index,follow",
-        generator = "R-Shiny",
-        subject = "stats development",
-        rating = "General",
-        referrer = "no-referrer"
-      ),
     shinyjs::useShinyjs(),
-    customDisconnectMessage(),
     useShinydashboard(),
     # Setting up cookie consent based on a cookie recording the consent:
     # https://book.javascript-for-r.com/shiny-cookies.html
@@ -94,6 +86,8 @@ ui <- function(input, output, session) {
       ),
       tags$script(src = "cookie-consent.js")
     ),
+    use_theme(dfe_colours),
+    # use_tota11y(),  #only do this in dev version for accessibility testing
     tags$head(includeHTML(("google-analytics.html"))),
     tags$head(
       tags$link(
@@ -102,35 +96,32 @@ ui <- function(input, output, session) {
         href = "dfe_shiny_gov_style.css"
       )
     ),
+    tags$head(
+      tags$link(
+        rel = "stylesheet",
+        type = "text/css",
+        href = "additional.css"
+      )
+    ),
     shinyGovstyle::header(
-      main_text = "",
+      main_text = "DfE",
       main_link = "https://www.gov.uk/government/organisations/department-for-education",
-      secondary_text = "DfE Shiny Template",
-      logo = "images/DfE_logo_landscape.png",
-      logo_width = 150,
-      logo_height = 32
+      secondary_text = "SEND and AP Inclusion Dashboard",
+      logo = "images/DfE_logo.png"
     ),
     shinyGovstyle::banner(
       "beta banner",
       "beta",
-      paste0(
-        "<b>We're looking for volunteers! We've developed quite a few dashboards ",
-        "in the last 12 months and we'd really like to know what you think if them. ",
-        "If you're interested in helping us improve our products, please sign up ",
-        "using our <a href='https://forms.office.com/e/ZjNxf10uuN'>user-testing volunteer form</a>.</b><br>",
-        "This Dashboard is in beta phase and we are still reviewing performance and reliability. ",
-        "In case of slowdown or connection issues due to high demand, we have produced two instances of this site which can be accessed at the following links: ",
-        "<a href=", site_primary, " id='link_site_1'>Site 1</a> and ",
-        "<a href=", site_overflow, " id='link_site_2'>Site 2</a>."
-      )
+      "This Dashboard is in development. We are still reviewing performance and reliability."
     ),
     shiny::navlistPanel(
       "",
       id = "navlistPanel",
       widths = c(2, 8),
       well = FALSE,
-      dashboard_panel(),
       homepage_panel(),
+      regional_dashboard_panel(),
+      dashboard_panel(),
       a11y_panel(),
       support_links()
     ),

@@ -1,0 +1,2455 @@
+{
+  "input": {
+    "absence_la_filter": "All SEN",
+    "absence_reg_filter": "All SEN",
+    "autism_nat_bench_filter": "Age: Under 10",
+    "ccg_choice": "NHS Leicester City CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN",
+    "destinations_1618_la_time_filter": "Identified SEN",
+    "destinations_1618_la_type_filter": "Employment",
+    "destinations_1618_reg_bench_filter": "Identified SEN",
+    "destinations_1618_reg_time_filter": "Identified SEN",
+    "destinations_1618_reg_type_filter": "Employment",
+    "ks1_phonics_la_filter": "All SEN",
+    "ks1_phonics_reg_filter": "All SEN",
+    "ks2_attainment_la_filter": "All SEN",
+    "ks2_attainment_reg_filter": "All SEN",
+    "ks4_attainment_la_bench_filter": "Any SEN",
+    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_destinations_la_bench_filter": "Identified SEN",
+    "ks4_destinations_la_time_filter": "Identified SEN",
+    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_reg_bench_filter": "Identified SEN",
+    "ks4_destinations_reg_time_filter": "Identified SEN",
+    "ks4_destinations_reg_type_filter": "Employment",
+    "la_choice": "Leicester",
+    "level_choice": "Regions",
+    "link_to_la_dashboard": 0,
+    "mainstream_with_sen_la_filter": "EHC plan",
+    "mainstream_with_sen_reg_filter": "EHC plan",
+    "myregion_switch": false,
+    "navlistPanel": "engreg_dashboard",
+    "nhs_region_choice": "Midlands",
+    "ofsted_table_choice": "Summary",
+    "percent_pupils_ehcp_la_filter": "EHC plan",
+    "percent_pupils_ehcp_reg_filter": "EHC plan",
+    "provider_types_la_bench_filter": "all pupils",
+    "provider_types_la_time_filter": "all pupils",
+    "provider_types_reg_bench_filter": "all pupils",
+    "provider_types_reg_time_filter": "all pupils",
+    "region_choice": "East Midlands",
+    "remove": 0,
+    "tabsetpanels_la": "Outcomes",
+    "tabsetpanels_reg": "Outcomes"
+  },
+  "output": {
+    "destinations_1618_reg_time": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              95.700000000000003,
+              96.799999999999997,
+              96.700000000000003,
+              95.400000000000006
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              4.2999999999999972,
+              3.2000000000000028,
+              3.2999999999999972,
+              4.5999999999999943
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils:  4.3<br />Destination: Unknown",
+              "academic_year: 2018/19<br />% of pupils:  3.2<br />Destination: Unknown",
+              "academic_year: 2019/20<br />% of pupils:  3.3<br />Destination: Unknown",
+              "academic_year: 2020/21<br />% of pupils:  4.6<br />Destination: Unknown"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(204,122,136,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Unknown",
+            "legendgroup": "Unknown",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              87.5,
+              85.799999999999997,
+              88.100000000000009,
+              84.200000000000003
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              8.2000000000000028,
+              11,
+              8.5999999999999943,
+              11.200000000000003
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils:  8.2<br />Destination: Not sustained",
+              "academic_year: 2018/19<br />% of pupils: 11.0<br />Destination: Not sustained",
+              "academic_year: 2019/20<br />% of pupils:  8.6<br />Destination: Not sustained",
+              "academic_year: 2020/21<br />% of pupils: 11.2<br />Destination: Not sustained"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(179,62,82,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Not sustained",
+            "legendgroup": "Not sustained",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              82.300000000000011,
+              81,
+              83.400000000000006,
+              80
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              5.1999999999999886,
+              4.7999999999999972,
+              4.7000000000000028,
+              4.2000000000000028
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils:  5.2<br />Destination: Apprenticeship",
+              "academic_year: 2018/19<br />% of pupils:  4.8<br />Destination: Apprenticeship",
+              "academic_year: 2019/20<br />% of pupils:  4.7<br />Destination: Apprenticeship",
+              "academic_year: 2020/21<br />% of pupils:  4.2<br />Destination: Apprenticeship"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(199,184,230,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Apprenticeship",
+            "legendgroup": "Apprenticeship",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              65.700000000000003,
+              64.700000000000003,
+              69.200000000000003,
+              66.299999999999997
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              16.600000000000009,
+              16.299999999999997,
+              14.200000000000003,
+              13.700000000000003
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 16.6<br />Destination: Employment",
+              "academic_year: 2018/19<br />% of pupils: 16.3<br />Destination: Employment",
+              "academic_year: 2019/20<br />% of pupils: 14.2<br />Destination: Employment",
+              "academic_year: 2020/21<br />% of pupils: 13.7<br />Destination: Employment"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(150,122,204,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Employment",
+            "legendgroup": "Employment",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              58.300000000000004,
+              57.600000000000001,
+              59.700000000000003,
+              57.100000000000001
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              7.3999999999999986,
+              7.1000000000000014,
+              9.5,
+              9.1999999999999957
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils:  7.4<br />Destination: Education (other)",
+              "academic_year: 2018/19<br />% of pupils:  7.1<br />Destination: Education (other)",
+              "academic_year: 2019/20<br />% of pupils:  9.5<br />Destination: Education (other)",
+              "academic_year: 2020/21<br />% of pupils:  9.2<br />Destination: Education (other)"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(230,210,184,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Education (other)",
+            "legendgroup": "Education (other)",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              46.700000000000003,
+              48.600000000000001,
+              52.200000000000003,
+              50.200000000000003
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              11.600000000000001,
+              9,
+              7.5,
+              6.8999999999999986
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 11.6<br />Destination: Further education",
+              "academic_year: 2018/19<br />% of pupils:  9.0<br />Destination: Further education",
+              "academic_year: 2019/20<br />% of pupils:  7.5<br />Destination: Further education",
+              "academic_year: 2020/21<br />% of pupils:  6.9<br />Destination: Further education"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(204,170,122,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Further education",
+            "legendgroup": "Further education",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999991,
+              0.90000000000000013,
+              0.90000000000000036,
+              0.90000000000000036
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              46.700000000000003,
+              48.600000000000001,
+              52.200000000000003,
+              50.200000000000003
+            ],
+            "text": [
+              "academic_year: 2017/18<br />% of pupils: 46.7<br />Destination: Higher education",
+              "academic_year: 2018/19<br />% of pupils: 48.6<br />Destination: Higher education",
+              "academic_year: 2019/20<br />% of pupils: 52.2<br />Destination: Higher education",
+              "academic_year: 2020/21<br />% of pupils: 50.2<br />Destination: Higher education"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(179,130,62,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Higher education",
+            "legendgroup": "Higher education",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              97.849999999999994,
+              98.400000000000006,
+              98.349999999999994,
+              97.700000000000003
+            ],
+            "text": [
+              "4%",
+              "3%",
+              "3%",
+              "5%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils:  4.3<br />Destination: Unknown",
+              "academic_year: 2018/19<br />% of pupils:  3.2<br />Destination: Unknown",
+              "academic_year: 2019/20<br />% of pupils:  3.3<br />Destination: Unknown",
+              "academic_year: 2020/21<br />% of pupils:  4.6<br />Destination: Unknown"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Unknown",
+            "legendgroup": "Unknown",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              91.599999999999994,
+              91.299999999999997,
+              92.400000000000006,
+              89.800000000000011
+            ],
+            "text": [
+              "8%",
+              "11%",
+              "9%",
+              "11%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils:  8.2<br />Destination: Not sustained",
+              "academic_year: 2018/19<br />% of pupils: 11.0<br />Destination: Not sustained",
+              "academic_year: 2019/20<br />% of pupils:  8.6<br />Destination: Not sustained",
+              "academic_year: 2020/21<br />% of pupils: 11.2<br />Destination: Not sustained"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Not sustained",
+            "legendgroup": "Not sustained",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              84.900000000000006,
+              83.400000000000006,
+              85.75,
+              82.099999999999994
+            ],
+            "text": [
+              "5%",
+              "5%",
+              "5%",
+              "4%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils:  5.2<br />Destination: Apprenticeship",
+              "academic_year: 2018/19<br />% of pupils:  4.8<br />Destination: Apprenticeship",
+              "academic_year: 2019/20<br />% of pupils:  4.7<br />Destination: Apprenticeship",
+              "academic_year: 2020/21<br />% of pupils:  4.2<br />Destination: Apprenticeship"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Apprenticeship",
+            "legendgroup": "Apprenticeship",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              74,
+              72.849999999999994,
+              76.300000000000011,
+              73.150000000000006
+            ],
+            "text": [
+              "17%",
+              "16%",
+              "14%",
+              "14%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils: 16.6<br />Destination: Employment",
+              "academic_year: 2018/19<br />% of pupils: 16.3<br />Destination: Employment",
+              "academic_year: 2019/20<br />% of pupils: 14.2<br />Destination: Employment",
+              "academic_year: 2020/21<br />% of pupils: 13.7<br />Destination: Employment"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Employment",
+            "legendgroup": "Employment",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              62,
+              61.150000000000006,
+              64.450000000000003,
+              61.700000000000003
+            ],
+            "text": [
+              "7%",
+              "7%",
+              "10%",
+              "9%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils:  7.4<br />Destination: Education (other)",
+              "academic_year: 2018/19<br />% of pupils:  7.1<br />Destination: Education (other)",
+              "academic_year: 2019/20<br />% of pupils:  9.5<br />Destination: Education (other)",
+              "academic_year: 2020/21<br />% of pupils:  9.2<br />Destination: Education (other)"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Education (other)",
+            "legendgroup": "Education (other)",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              52.5,
+              53.100000000000001,
+              55.950000000000003,
+              53.650000000000006
+            ],
+            "text": [
+              "12%",
+              "9%",
+              "8%",
+              "7%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils: 11.6<br />Destination: Further education",
+              "academic_year: 2018/19<br />% of pupils:  9.0<br />Destination: Further education",
+              "academic_year: 2019/20<br />% of pupils:  7.5<br />Destination: Further education",
+              "academic_year: 2020/21<br />% of pupils:  6.9<br />Destination: Further education"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Further education",
+            "legendgroup": "Further education",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              23.350000000000001,
+              24.300000000000001,
+              26.100000000000001,
+              25.100000000000001
+            ],
+            "text": [
+              "47%",
+              "49%",
+              "52%",
+              "50%"
+            ],
+            "hovertext": [
+              "academic_year: 2017/18<br />% of pupils: 46.7<br />Destination: Higher education",
+              "academic_year: 2018/19<br />% of pupils: 48.6<br />Destination: Higher education",
+              "academic_year: 2019/20<br />% of pupils: 52.2<br />Destination: Higher education",
+              "academic_year: 2020/21<br />% of pupils: 50.2<br />Destination: Higher education"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(0,0,0,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Higher education",
+            "legendgroup": "Higher education",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 39.186384391863839
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              4.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -5,
+              105
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "tickvals": [
+              0,
+              24.999999999999996,
+              50,
+              75,
+              100
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Destination",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "v"
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks1_phonics_reg_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              16679,
+              17045,
+              17410,
+              17775,
+              18871
+            ],
+            "y": [
+              41.176470588235297,
+              41.545893719806763,
+              41.486068111455111,
+              39.370078740157481,
+              35.502958579881657
+            ],
+            "text": [
+              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 41.17647<br />characteristic: All SEN",
+              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 41.54589<br />characteristic: All SEN",
+              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 41.48607<br />characteristic: All SEN",
+              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 39.37008<br />characteristic: All SEN",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 35.50296<br />characteristic: All SEN"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "All SEN",
+            "legendgroup": "All SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              16679,
+              17045,
+              17410,
+              17775,
+              18871
+            ],
+            "y": [
+              16,
+              15,
+              15,
+              15,
+              15
+            ],
+            "text": [
+              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 16.00000<br />characteristic: EHC plan",
+              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 15.00000<br />characteristic: EHC plan",
+              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 15.00000<br />characteristic: EHC plan",
+              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 15.00000<br />characteristic: EHC plan",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 15.00000<br />characteristic: EHC plan"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "EHC plan",
+            "legendgroup": "EHC plan",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              16679,
+              17045,
+              17410,
+              17775,
+              18871
+            ],
+            "y": [
+              85,
+              85,
+              87,
+              87,
+              81
+            ],
+            "text": [
+              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 85.00000<br />characteristic: No SEN",
+              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 85.00000<br />characteristic: No SEN",
+              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 87.00000<br />characteristic: No SEN",
+              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 87.00000<br />characteristic: No SEN",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 81.00000<br />characteristic: No SEN"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(244,106,37,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "No SEN",
+            "legendgroup": "No SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(244,106,37,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(244,106,37,1)"
+              }
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              16679,
+              17045,
+              17410,
+              17775,
+              18871
+            ],
+            "y": [
+              42,
+              44,
+              45,
+              43,
+              40
+            ],
+            "text": [
+              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 42.00000<br />characteristic: SEN support",
+              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 44.00000<br />characteristic: SEN support",
+              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 45.00000<br />characteristic: SEN support",
+              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 43.00000<br />characteristic: SEN support",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 40.00000<br />characteristic: SEN support"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              16569.400000000001,
+              18980.599999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2015/16",
+              "2016/17",
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "tickvals": [
+              16679,
+              17045,
+              17410,
+              17775,
+              18140,
+              18506,
+              18871
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2015/16",
+              "2016/17",
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              11.4,
+              90.599999999999994
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "25",
+              "50",
+              "75"
+            ],
+            "tickvals": [
+              25,
+              50,
+              75
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "25",
+              "50",
+              "75"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils meeting expected standards in Y1",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks2_attainment_reg_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              17775,
+              18871
+            ],
+            "y": [
+              21.350000000000001,
+              17.289999999999999
+            ],
+            "text": [
+              "AY_date: 2018-09-01<br />Percent meeting expected standards: 21.35<br />characteristic: All SEN",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards: 17.29<br />characteristic: All SEN"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "All SEN",
+            "legendgroup": "All SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              17775,
+              18871
+            ],
+            "y": [
+              6.7999999999999998,
+              6.5999999999999996
+            ],
+            "text": [
+              "AY_date: 2018-09-01<br />Percent meeting expected standards:  6.80<br />characteristic: EHC plan",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards:  6.60<br />characteristic: EHC plan"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "EHC plan",
+            "legendgroup": "EHC plan",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              17775,
+              18871
+            ],
+            "y": [
+              23.960000000000001,
+              19.859999999999999
+            ],
+            "text": [
+              "AY_date: 2018-09-01<br />Percent meeting expected standards: 23.96<br />characteristic: SEN support",
+              "AY_date: 2021-09-01<br />Percent meeting expected standards: 19.86<br />characteristic: SEN support"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              17720.200000000001,
+              18925.799999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "tickvals": [
+              17775,
+              18140,
+              18506,
+              18871
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              5.7319999999999993,
+              24.827999999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "10",
+              "15",
+              "20"
+            ],
+            "tickvals": [
+              10,
+              15,
+              20
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "10",
+              "15",
+              "20"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils meeting expected standards",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks4_attainment_reg_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              18871,
+              18871,
+              18871
+            ],
+            "y": [
+              -0.71999999999999997,
+              -0.66000000000000003,
+              -0.71999999999999997
+            ],
+            "text": "AY_date: 2021-09-01<br />Average progress 8 score: -0.69<br />SEN provision: Any SEN",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(127,127,127,0.2)",
+              "dash": "solid"
+            },
+            "fill": "toself",
+            "fillcolor": "rgba(127,127,127,0.2)",
+            "hoveron": "points",
+            "name": "Any SEN",
+            "legendgroup": "Any SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              18871,
+              18871,
+              18871,
+              18871
+            ],
+            "y": [
+              0.080000000000000002,
+              0.080000000000000002,
+              0.10000000000000001,
+              0.080000000000000002
+            ],
+            "text": "AY_date: 2021-09-01<br />Average progress 8 score:  0.09<br />SEN provision: No identified SEN",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(244,106,37,0.2)",
+              "dash": "solid"
+            },
+            "fill": "toself",
+            "fillcolor": "rgba(244,106,37,0.2)",
+            "hoveron": "points",
+            "name": "No identified SEN",
+            "legendgroup": "No identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 18871,
+            "y": -0.68999999999999995,
+            "text": "AY_date: 2021-09-01<br />Average progress 8 score: -0.69<br />SEN provision: Any SEN",
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(127,127,127,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(127,127,127,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Any SEN",
+            "legendgroup": "Any SEN",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(127,127,127,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": 18871,
+            "y": 0.089999999999999997,
+            "text": "AY_date: 2021-09-01<br />Average progress 8 score:  0.09<br />SEN provision: No identified SEN",
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(244,106,37,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(244,106,37,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "No identified SEN",
+            "legendgroup": "No identified SEN",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(244,106,37,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 44.499792444997915
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              18870.950000000001,
+              18871.049999999999
+            ],
+            "tickmode": "array",
+            "ticktext": "2021/22",
+            "tickvals": 18871,
+            "categoryorder": "array",
+            "categoryarray": "2021/22",
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.76100000000000001,
+              0.14100000000000001
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "-0.6",
+              "-0.4",
+              "-0.2",
+              "0.0"
+            ],
+            "tickvals": [
+              -0.60000000000000009,
+              -0.40000000000000002,
+              -0.19999999999999996,
+              0
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "-0.6",
+              "-0.4",
+              "-0.2",
+              "0.0"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Average progress 8 score",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "SEN provision",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "reg_ofsted_rating": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Inspection Outcome<\/th>\n      <th>Number of LAs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            1,
+            "desc"
+          ],
+          "pageLength": 10,
+          "dom": "t",
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 1
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "rowCallback": "function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-weight':'bold','color':'#161616','background-color':value == \"No Written Statement of Action\" ? \"#73a773\" : value == \"Written Statement of Action\" ? \"red\" : value == \"Previous Written Statement of Action Removed (after reinspection)\" ? \"#73a773\" : value == \"DfE and NHS England to determine if WSoA required\" ? \"orange\" : value == \"Written Statement of Action (after reinspection)\" ? \"red\" : null});\n}",
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.rowCallback",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
+  }
+}
