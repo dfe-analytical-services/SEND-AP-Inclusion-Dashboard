@@ -161,7 +161,7 @@ ks4_attainment <- rio::import("data/attainment_ks4/2122_lachar_data.csv") %>%
 
 
 # KS4 (post-16) destination measures (non-national)
-ks4_destinations <- rio::import("data/destinations_ks4/ks4_dm_ud_202021_la_prov.csv") %>% 
+ks4_destinations <- rio::import("data/destinations_ks4/ks4_dm_ud_202021_la_prov.csv.gz") %>% 
   fsubset(characteristic_group == "SEN Provision" &
             data_type == "Percentage" &
           institution_group == "State-funded mainstream & special schools" &
@@ -328,7 +328,7 @@ ehcp_timeliness <- sen2_mi %>%
 
 
 # Overall absence rate (autumn and spring terms)
-absence <- rio::import("data/absence/6_absence_2term_characteristics.csv") %>% 
+absence <- rio::import("data/absence/6_absence_2term_characteristics.csv.gz") %>% 
   fsubset(school_type == "Total" &
             characteristic %in% c("SEN - SEN support", "SEN - Statement or EHCP")) %>% 
   ftransform(characteristic = recode(characteristic,
@@ -352,7 +352,7 @@ absence_allSEN <- absence %>%
 
 absence <- bind_rows(absence, absence_allSEN)
 
-absence_regional <- rio::import("data/absence/6_absence_2term_characteristics.csv") %>% 
+absence_regional <- rio::import("data/absence/6_absence_2term_characteristics.csv.gz") %>% 
   fsubset(school_type == "Total" &
             characteristic %in% c("SEN - SEN support", "SEN - Statement or EHCP") &
             geographic_level %in% c("National", "Regional")) %>% 
@@ -937,8 +937,8 @@ gc() #Free up some RAM
 ### Autism Waiting Times
 ### Autism stats from here: https://digital.nhs.uk/supplementary-information/2022/autism-statistics-october-2021-to-september-2022-supplementary-information
 #These two files have data for different months
-AutismStatsDec22_Age <- rio::import("data/nhs/AutismStatsDec22_Age.csv")
-autism_supplementary <- rio::import("data/nhs/AutismStatsDec22_subICB.csv")
+AutismStatsDec22_Age <- rio::import("data/nhs/AutismStatsDec22_Age.csv.gz")
+autism_supplementary <- rio::import("data/nhs/AutismStatsDec22_subICB.csv.gz")
 
 autism_raw <- AutismStatsDec22_Age %>%
   bind_rows(autism_supplementary) %>% 
@@ -973,7 +973,7 @@ mutate(nhs_name = str_replace(nhs_name, "FOUNDATION TRUST", "FT")) %>%
 # Mental Health stats from MHSDS - "Time Series Data for selected MHSDS measures" CSV file
 # https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics
 
-mentalhealth_raw <- rio::import("data/nhs/MHSDS Time_Series_data_Apr_2016_NovPrf_2022.csv") %>% 
+mentalhealth_raw <- rio::import("data/nhs/MHSDS Time_Series_data_Apr_2016_NovPrf_2022.csv.gz") %>% 
 fsubset(PRIMARY_LEVEL != "UNKNOWN" & #strip out "unknown" data
           MEASURE_ID == "MHS95" & 
           BREAKDOWN %in% c("CCG of Residence", "Sub ICB of Residence", "England", "Region")) %>% 
@@ -1012,10 +1012,10 @@ nhs_region_list <- append("", mentalhealth %>%
                             unique() )
 
 
-local_authorities <- geojsonsf::geojson_sf("prep/Counties_and_Unitary_Authorities_(December_2022)_UK_BFC.geojson") %>%
+local_authorities <- geojsonsf::geojson_sf("prep/Counties_and_Unitary_Authorities_(December_2022)_UK_BFC.geojson.gz") %>%
   sf::st_transform(crs = 27700)
 
-sub_icb_locations <- geojsonsf::geojson_sf("prep/Sub_Integrated_Care_Board_Locations_(July_2022)_EN_BFC.geojson") %>% 
+sub_icb_locations <- geojsonsf::geojson_sf("prep/Sub_Integrated_Care_Board_Locations_(July_2022)_EN_BFC.geojson.gz") %>% 
 sf::st_transform(crs = 27700)
 
 
