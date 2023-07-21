@@ -161,7 +161,7 @@ ks4_attainment <- rio::import("data/attainment_ks4/2122_lachar_data.csv") %>%
 
 
 # KS4 (post-16) destination measures (non-national)
-ks4_destinations <- rio::import("data/destinations_ks4/ks4_dm_ud_202021_la_prov.csv.gz") %>% 
+ks4_destinations <- rio::import("data/destinations_ks4/ks4_dm_ud_202021_la_prov.csv") %>% 
   fsubset(characteristic_group == "SEN Provision" &
             data_type == "Percentage" &
           institution_group == "State-funded mainstream & special schools" &
@@ -328,7 +328,7 @@ ehcp_timeliness <- sen2_mi %>%
 
 
 # Overall absence rate (autumn and spring terms)
-absence <- rio::import("data/absence/6_absence_2term_characteristics.csv.gz") %>% 
+absence <- rio::import("data/absence/6_absence_2term_characteristics.csv") %>% 
   fsubset(school_type == "Total" &
             characteristic %in% c("SEN - SEN support", "SEN - Statement or EHCP")) %>% 
   ftransform(characteristic = recode(characteristic,
@@ -565,27 +565,84 @@ destinations_1618_nat <- rio::import("data/destinations_1618/national/1618_dm_ud
 ##-------------------------------------#
 ## FINANCIAL SUSTAINABILITY INDICATORS #
 ##-------------------------------------#
-
-
-
 #DSG cumulative balance as a % of the total budget
+#irritatingly the cumulative balance has to come from the section 251 return whereas the total budget is not listed
+#in that report (the s251 "budget" is post-academy recoupment) so we need to join two separate documents
+
+dsg_budget_24 <- rio::import("data/finance/dedicated-schools-grant.ods", sheet = "Allocations_2324", skip = 1)[,1:7] %>%
+  mutate(across(3:7, as.numeric),
+         time_period = "202324") %>%
+  drop_na(`Schools block (£s)`)
+dsg_budget_23 <- rio::import("data/finance/dedicated-schools-grant.ods", sheet = "Allocations_2223", skip = 1)[,1:7] %>%
+  mutate(across(3:7, as.numeric),
+         time_period = "202223") %>%
+  drop_na(`Schools block (£s)`)
+dsg_budget_22 <- rio::import("data/finance/dedicated-schools-grant.ods", sheet = "Allocations_2122", skip = 1)[,1:7] %>%
+  mutate(across(3:7, as.numeric),
+         time_period = "202122") %>%
+  drop_na(`Schools block (£s)`)
+dsg_budget_21 <- rio::import("data/finance/dedicated-schools-grant.ods", sheet = "Allocations_2021", skip = 1)[,1:7] %>%
+  mutate(across(3:7, as.numeric),
+         time_period = "202021") %>%
+  drop_na(`Schools block (£s)`)
+dsg_budget_20 <- rio::import("data/finance/dedicated-schools-grant.ods", sheet = "Allocations_1920", skip = 1)[,1:7] %>%
+  mutate(across(3:7, ~ 1000000 * as.numeric(.x)), # 2019-20 budget is in millions rather than £s so correct (we'll fix the names in a bit)
+         time_period = "201920") %>%
+  drop_na(`2019-20 schools block \n(£ million)`)
+names(dsg_budget_20) <- names(dsg_budget_21) 
+
+dsg_budget <- bind_rows(dsg_budget_24, dsg_budget_23, dsg_budget_22, dsg_budget_21, dsg_budget_20)
+names(dsg_budget) <- c("la_code", "la_name", names(dsg_budget)[c(1:5, 8)])
+dsg_budget <- dsg_budget %>%
+  mutate(la_name = case_when(is.na(la_name) ~ "",   # fixing a bunch of typos etc pre-join
+                             la_name == "Bournemouth Christchurch and Poole" ~ "Bournemouth, Christchurch and Poole",
+                             la_name == "Bristol City of" ~ "Bristol, City of",
+                             la_name == "Herefordshire" ~ "Herefordshire, County of",
+                             la_name == "Durham" ~ "County Durham", 
+                             la_name == "Kingston upon Hull City of" ~ "Kingston upon Hull, City of",
+                             TRUE ~ la_name)) %>%
+  left_join(la_region_lookup) %>%
+  mutate(region = case_when(la_code == "ENGLAND" ~ "England",
+                     la_code == "LONDON" ~ "London",
+                     la_name == "" ~ la_code, 
+                     TRUE ~ region)) %>%
+  select(-la_code) %>%
+  distinct() # London is repeated for some reason, so this line should remove four rows, one for each year 
+
 dsg_deficit <- rio::import("data/finance/s251_alleducation_la_regional_national2.csv") %>% 
   fsubset(time_period > 201819) %>% 
-  fsubset(category_of_expenditure %in% c(
-    "1.9.1 Dedicated Schools Grant for year",
-    "1.9.3 Dedicated Schools Grant carried forward to next year")) %>% 
+  ftransform(time_period = as.character(time_period)) %>% # for join (and also this isn't really a number anyway)
+  fsubset(category_of_expenditure ==
+    "1.9.3 Dedicated Schools Grant carried forward to next year") %>% 
   pivot_wider(names_from = category_of_expenditure,
-              values_from = gross_expenditure) %>% 
-  rowwise() %>% 
+              values_from = gross_expenditure)
+
+dsg_london <- dsg_deficit %>%
+  fsubset(region_name %in% c("Inner London", "Outer London") & 
+          geographic_level == "Regional") %>% # filter to Inner and Outer London to combine them 
+  group_by(time_period, time_identifier, geographic_level, country_name, country_code, la_name, old_la_code, new_la_code, 
+           main_category, early_years_establishments, primary_schools, secondary_schools, sen_and_special_schools, pupil_referral_units_and_alt_provision, 
+           post_16, income, net_expenditure, net_per_capita_expenditure) %>%
+  summarise(region_name = "London", 
+            region_code = "E12000007", 
+            `1.9.3 Dedicated Schools Grant carried forward to next year` = sum(`1.9.3 Dedicated Schools Grant carried forward to next year`, na.rm = T))
+  
+dsg_deficit <- dsg_deficit %>%
+  fsubset(!(region_name %in% c("Inner London", "Outer London") & 
+            geographic_level == "Regional")) %>% # not the ones in the previous table
+  bind_rows(dsg_london) %>% # because adding it back %>%
+  ftransform(region_name = case_when(region_name %in% c("Inner London", "Outer London") ~ "London", 
+                                     region_name == "" ~ "England", 
+                                     .default = region_name)) %>%
+  inner_join(select(dsg_budget, la_name, region, time_period, `Total DSG allocation (£s)`), by = c("la_name", "region_name" = "region", "time_period")) %>%  rowwise() %>% 
   mutate(deficit = round(
     100 * (  `1.9.3 Dedicated Schools Grant carried forward to next year` /
-             `1.9.1 Dedicated Schools Grant for year`), 2)) %>% 
+             `Total DSG allocation (£s)`), 2)) %>% 
   ftransform(`DSG cumulative balance as a % of the total budget` = - deficit) %>% 
   fselect(time_period, geographic_level, region_name, la_name, deficit, `DSG cumulative balance as a % of the total budget`) %>% 
   ftransform(financial_year = paste0(substr(time_period, start = 1, stop = 4),"-", substr(time_period, start = 5, stop= 6)))
 
 #Per capita gross spend on non-maintained and independent special provision
-
 #From High Needs Benchmarking Tool
 
 #import xlsx spreadsheet - this is a modified version of the original "High Needs Benchmarking Tool".
@@ -880,13 +937,13 @@ gc() #Free up some RAM
 ### Autism Waiting Times
 ### Autism stats from here: https://digital.nhs.uk/supplementary-information/2022/autism-statistics-october-2021-to-september-2022-supplementary-information
 #These two files have data for different months
-AutismStatsDec22_Age <- rio::import("data/nhs/AutismStatsDec22_Age.csv.gz")
-autism_supplementary <- rio::import("data/nhs/AutismStatsDec22_subICB.csv.gz")
+AutismStatsDec22_Age <- rio::import("data/nhs/AutismStatsDec22_Age.csv")
+autism_supplementary <- rio::import("data/nhs/AutismStatsDec22_subICB.csv")
 
 autism_raw <- AutismStatsDec22_Age %>%
   bind_rows(autism_supplementary) %>% 
   fsubset(PRIMARY_LEVEL != "UNKNOWN") %>% #Remove of data from unknown providers/commissioners
-  na_if(y = "*") %>% #Remove censored data
+  fmutate(METRIC_VALUE = na_if(METRIC_VALUE, y = "*")) %>% #Remove censored data
   drop_na(METRIC_VALUE) %>%  #Remove missing data
 #The overall metric is ASD19 but the various letter codes denote different age groups.
 #This combination seems to yield the least missing data (ASD19e for under 18s, ASD19g for over 18s)
@@ -916,7 +973,7 @@ mutate(nhs_name = str_replace(nhs_name, "FOUNDATION TRUST", "FT")) %>%
 # Mental Health stats from MHSDS - "Time Series Data for selected MHSDS measures" CSV file
 # https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics
 
-mentalhealth_raw <- rio::import("data/nhs/MHSDS Time_Series_data_Apr_2016_NovPrf_2022.csv.gz") %>% 
+mentalhealth_raw <- rio::import("data/nhs/MHSDS Time_Series_data_Apr_2016_NovPrf_2022.csv") %>% 
 fsubset(PRIMARY_LEVEL != "UNKNOWN" & #strip out "unknown" data
           MEASURE_ID == "MHS95" & 
           BREAKDOWN %in% c("CCG of Residence", "Sub ICB of Residence", "England", "Region")) %>% 
@@ -955,10 +1012,10 @@ nhs_region_list <- append("", mentalhealth %>%
                             unique() )
 
 
-local_authorities <- geojsonsf::geojson_sf("prep/Counties_and_Unitary_Authorities_(December_2022)_UK_BFC.geojson.gz") %>%
+local_authorities <- geojsonsf::geojson_sf("prep/Counties_and_Unitary_Authorities_(December_2022)_UK_BFC.geojson") %>%
   sf::st_transform(crs = 27700)
 
-sub_icb_locations <- geojsonsf::geojson_sf("prep/Sub_Integrated_Care_Board_Locations_(July_2022)_EN_BFC.geojson.gz") %>% 
+sub_icb_locations <- geojsonsf::geojson_sf("prep/Sub_Integrated_Care_Board_Locations_(July_2022)_EN_BFC.geojson") %>% 
 sf::st_transform(crs = 27700)
 
 
