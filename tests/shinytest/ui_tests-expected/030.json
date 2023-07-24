@@ -53,14 +53,14 @@
               3
             ],
             "y": [
-              -2.3900000000000001,
-              -4.2400000000000002,
-              -6.2300000000000004
+              -1.78,
+              -3.1499999999999999,
+              -4.5800000000000001
             ],
             "text": [
-              "financial_year: 2019-20<br />DSG cumulative balance as a % of the total budget: -2.39",
-              "financial_year: 2020-21<br />DSG cumulative balance as a % of the total budget: -4.24",
-              "financial_year: 2021-22<br />DSG cumulative balance as a % of the total budget: -6.23"
+              "financial_year: 2019-20<br />DSG cumulative balance as a % of the total budget: -1.78",
+              "financial_year: 2020-21<br />DSG cumulative balance as a % of the total budget: -3.15",
+              "financial_year: 2021-22<br />DSG cumulative balance as a % of the total budget: -4.58"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -170,28 +170,28 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              -39.103999999999999,
-              41.723999999999997
+              -14.994,
+              8.1939999999999991
             ],
             "tickmode": "array",
             "ticktext": [
-              "-20",
+              "-10",
+              "-5",
               "0",
-              "20",
-              "40"
+              "5"
             ],
             "tickvals": [
-              -20,
-              0,
-              20,
-              40
+              -10,
+              -5,
+              -1.7763568394002505e-15,
+              5
             ],
             "categoryorder": "array",
             "categoryarray": [
-              "-20",
+              "-10",
+              "-5",
               "0",
-              "20",
-              "40"
+              "5"
             ],
             "nticks": null,
             "ticks": "outside",

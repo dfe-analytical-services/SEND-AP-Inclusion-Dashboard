@@ -43,6 +43,6 @@
     "tabsetpanels_reg": "Financial Sustainability"
   },
   "output": {
-    "dsg_deficit_reg_time_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Financial Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: right;'> DSG cumulative balance as a % of the total budget <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2019-20 <\/td> <td> South West <\/td> <td align=\"right\"> -5.40 <\/td> <\/tr>\n  <tr> <td> 2020-21 <\/td> <td> South West <\/td> <td align=\"right\"> -10.08 <\/td> <\/tr>\n  <tr> <td> 2021-22 <\/td> <td> South West <\/td> <td align=\"right\"> -14.07 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "dsg_deficit_reg_time_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Financial Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: right;'> DSG cumulative balance as a % of the total budget <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2019-20 <\/td> <td> South West <\/td> <td align=\"right\"> -2.52 <\/td> <\/tr>\n  <tr> <td> 2020-21 <\/td> <td> South West <\/td> <td align=\"right\"> -4.59 <\/td> <\/tr>\n  <tr> <td> 2021-22 <\/td> <td> South West <\/td> <td align=\"right\"> -6.21 <\/td> <\/tr>\n   <\/tbody> <\/table>"
   }
 }
