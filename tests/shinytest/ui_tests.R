@@ -939,17 +939,17 @@ app$snapshot(list(
 
 
 # 50. Check LA Summary panel ------------------------------------------------------------------------
-#message("Summary, LA level")
-#app$setInputs(
+# message("Summary, LA level")
+# app$setInputs(
 #  navlistPanel = "la_dashboard",
 #  tabsetpanels_la = "Summary",
 #  la_choice = "Middlesbrough"
-#)
-#Sys.sleep(time = 2)
-#app$snapshot(list(
+# )
+# Sys.sleep(time = 2)
+# app$snapshot(list(
 #  input = listInputs,
 #  output = "summary"
-#))
+# ))
 
 # 51. Check LA Summary table --------------------------------------------------------------------------
 app$setInputs(
