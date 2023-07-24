@@ -62,7 +62,7 @@
       ]
     },
     "box_budget": {
-      "html": "<table style=\"background-color:black color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2021-22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Change:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">-4.2%<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">↑ +27.5%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">since 2020-21<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "html": "<table style=\"background-color:black color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2021-22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Change:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">-2.2%<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">↑ +24.9%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">since 2020-21<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
       "deps": [
 
       ]
