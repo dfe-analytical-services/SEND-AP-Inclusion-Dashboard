@@ -1090,7 +1090,11 @@ dashboard_panel <- function() {
                     p("Where a percentage is negative, an LA has spent more than its allocated DSG (the overspend is carried forward to the next year). This is one indicator of the financial sustainability of a local SEND system."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/la-and-school-expenditure",
-                      "Source: LA and school expenditure"
+                      "Source: LA and school expenditure (carried over)"
+                    ),
+                    tags$a(
+                      href = "https://skillsfunding.service.gov.uk/view-latest-funding/national-funding-allocations/DSG/2023-to-2024",
+                      "Source: Dedicated schools grant (DSG) (allocation)"
                     )
                   )
                 )
@@ -2312,7 +2316,11 @@ regional_dashboard_panel <- function() {
                     p("Where a percentage is negative, an LA has spent more than its allocated DSG (the overspend is carried forward to the next year). This is one indicator of the financial sustainability of a local SEND system."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/la-and-school-expenditure",
-                      "Source: LA and school expenditure"
+                      "Source: LA and school expenditure (carried over)"
+                    ),
+                    tags$a(
+                      href = "https://skillsfunding.service.gov.uk/view-latest-funding/national-funding-allocations/DSG/2023-to-2024",
+                      "Source: Dedicated schools grant (DSG) (allocation)"
                     )
                   )
                 )
