@@ -36,6 +36,7 @@ format_pm <- function(x) {
   strNum <- paste0(ifelse(x < 0, "-", "+"), strNum)
 }
 
+
 # England Summary helper functions ----------------------------------------------------------------------------
 
 # Function for creating sparklines
@@ -133,14 +134,17 @@ arrow_function <- function(value) {
 }
 
 # Create the info box for the England summary
-create_box <- function(df, latest_value, change, latest_timeperiod, previous_timeperiod, add_percent_symbol, colour) {
+create_box <- function(df, latest_value, change, latest_timeperiod, previous_timeperiod, add_percent_symbol, money = FALSE, colour, dp = 1) {
   # If user specifies to add a % or not
   if (add_percent_symbol == TRUE) {
-    latest_value <- paste0(round(latest_value, 1), "%")
+    latest_value <- paste0(round(latest_value, dp), "%")
     change_formatted <- paste0(format_pm(change), "%")
+  } else if (money == TRUE) {
+    latest_value <- paste0("£", as.character(round(latest_value, 0), sep = " "))
+    change_formatted <- paste(format_pm(change), "%", sep = " ") # the change is always a percentage change
   } else {
-    latest_value <- round(latest_value, 1)
-    change_formatted <- format_pm(change)
+    latest_value <- round(latest_value, dp)
+    change_formatted <- paste(format_pm(change), "%", sep = " ") # the change is always a percentage change
   }
 
   tags$table(
@@ -218,11 +222,24 @@ missing_box <- function(df, latest_value, latest_timeperiod, colour) {
   )
 }
 
+# Function for subsetting summary boxes to the England/regions dropdown
+geo_subset <- function(df, lev, reg) {
+  if (lev == "England") {
+    df <- df %>%
+      fsubset(geographic_level == "National")
+  } else {
+    df <- df %>%
+      fsubset(geographic_level == "Regional" &
+        region_name == reg)
+  }
+  return(df)
+}
+
 # General dashboard plotting functions ----------------------------------------------------------------------------
 
 # Set plotly to only display a "save plot as image" button, no other buttons
 save_plot_button_only <- function(p) {
-  config(
+  plotly::config(
     p = p,
     displaylogo = FALSE,
     toImageButtonOptions = list(format = "png"),

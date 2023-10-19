@@ -1,4 +1,4 @@
-filename,status
+﻿filename,status
 ,
 data/date_format.csv,published
 data/date_format.meta.csv,published
@@ -7,29 +7,34 @@ data/lookups/la_region_lookup.Rdata,published
 data/lookups/la_region_lookup_raw.ods,published
 data/lookups/la_region_lookup_raw.xlsx,published
 data/ehc_plans/sen2_mi.csv,published
-data/sen_in_england/sen_phase_type.csv,published
-data/ehc_plans/sen2_estab_new_plans.csv,published
-data/ehc_plans/sen2_estab_caseload.csv,published
-data/ehc_plans/sen2_age_new_plans.csv,published
+data/sen_in_england/sen_phase_type_.csv,published
 data/ehc_plans/sen2_age_caseload.csv,published
 data/attainment_ks2/ks2_regional_local_authority_and_pupil_characteristics_2019_and_2022_revised.csv,published
-data/absence/data-pupil-absence-in-schools-in-england.csv,published
+data/attainment_ks4/hardcoded/201819_LA_characteristics_data_including_sen_description.xlsx,published
 data/attainment_ks4/2122_lachar_data.csv,published
-data/destinations_1618/national/1618_dm_ud_202021_nat_rev.csv,published
+data/destinations_1618/1618_dm_ud_202021_nat_rev.csv,published
+data/destinations_1618/1618_dm_ud_202021_la_rev.csv.gz,published
+data/destinations_1618/1618_dm_ud_202021_nat_prov.csv,published
 data/destinations_1618/1618_dm_ud_202021_la_prov.csv.gz,published
-data/destinations_ks4/ks4_dm_ud_202021_la_prov.csv,published
 data/finance/s251_alleducation_la_regional_national2.csv,published
-data/phonics/phonics_y1_regional_and_local_authority_f_2012_to_2022.csv,published
-data/absence/6_absence_2term_characteristics.csv.gz,published
+data/phonics/phonics_y1_regional_and_local_authority_2012_to_2023_provisional.csv,published
+data/absence/6_absence_2term_characteristics.csv,published
 data/exclusions/data/exc_characteristics.csv,published
-data/destinations_ks4/national/ks4_dm_ud_202021_nat_prov.csv,published
-data/nhs/AutismStatsDec22_Age.csv.gz,published
 data/lookups/Clinical_Commissioning_Groups_(April_2021)_Names_and_Codes_in_England.csv,published
 data/lookups/Sub_ICB_Locations_to_Integrated_Care_Boards_to_NHS_England_(Region)_(July_2022)_Lookup_in_England.csv,published
 data/lookups/ect.csv,published
 data/lookups/etr.csv,published
-data/nhs/AutismStatsDec22_subICB.csv.gz,published
-data/nhs/MHSDS Time_Series_data_Apr_2016_NovPrf_2022.csv.gz,published
-data/ofsted/SEND_Outcomes_Summary_www.xlsx,published
+data/nhs/Time_Series_data_Apr_2016_JulPrf_2023.csv.gz,published
 data/finance/2021-22-High-Needs-LA-Benchmarking-Tool.xlsx,published
-data/finance/dedicated-schools-grant.ods, published
+data/finance/hardcoded_data_keep/dedicated-schools-grant.ods,published
+data/tribunals/send_appeal_rate_table_2022.ods,published
+data/destinations_ks4/ks4_dm_ud_202021_la_prov.csv,published
+data/attainment_ks4/2122_lachar_data_revised.csv,published
+data/destinations_ks4/ks4_dm_ud_202021_nat_rev.csv,published
+data/finance/DSG_by_year_dr.xlsx,published
+data/ofsted/Area_SEND_inspection_data_01_May_2016_to_31_August_2022.ods,published
+data/ofsted/mi_ofsted_autumn_2223.csv,published
+data/destinations_ks4/ks4_dm_ud_202021_la_rev.csv,published
+data/finance/dsg_deficit_derived.xlsx,published
+data/attainment_ks2/ks2_regional_local_authority_and_pupil_characteristics_2019_and_2022_revised.csv ,published
+data/nhs/autism_time_series_derived.csv,published

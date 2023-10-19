@@ -29,6 +29,156 @@ server <- function(input, output, session) {
     updateTabsetPanel(session, "navlistPanel", selected = "support")
   })
 
+
+  # observers to turn the summary boxes into links
+  # procedure uses three observers:
+  # 1. Switches tabs, sets link target
+  # 2. Fires on tab switch, copies target and triggers #3 (this one is necessary because otherwise the scroll fires before the tab switches)
+  # 3. Scrolls to target and resets target variable
+
+  # 1. needs to be different for all of the boxes as it has a different input parameter; for the other two we only need one observer each
+  observeEvent(input$link_ks1_phonics_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Outcomes")
+    updateTabsetPanel(session, "ks1_phonics_reg_panel", selected = "Change over time")
+    this_tab("Outcomes")
+    move_target("ks1_attainment_reg_panel")
+  })
+
+  # the version for the other metrics where scrolling is required (the system )
+  observeEvent(input$link_ks2_attainment_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Outcomes")
+    updateTabsetPanel(session, "ks2_attainment_reg_panel", selected = "Change over time")
+    this_tab("Outcomes")
+    move_target("ks2_attainment_reg_panel")
+  })
+
+
+  observeEvent(input$link_ks4_attainment_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Outcomes")
+    updateTabsetPanel(session, "ks4_attainment_reg_panel", selected = "Change over time")
+    this_tab("Outcomes")
+    move_target("ks4_attainment_reg_panel")
+  })
+
+  observeEvent(input$link_mh_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Outcomes")
+    updateTabsetPanel(session, "mentalhealth_reg_panel", selected = "Change over time")
+    this_tab("Outcomes")
+    move_target("mh_reg_panel")
+  })
+
+  observeEvent(input$link_ofsted_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Outcomes")
+    updateTabsetPanel(session, "ofsted_reg_panel", selected = "Change over time")
+    this_tab("Outcomes")
+    move_target("ofsted_reg_panel")
+  })
+
+  observeEvent(input$link_1618_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Outcomes")
+    updateTabsetPanel(session, "destinations_1618_reg_panel", selected = "Change over time")
+    this_tab("Outcomes")
+    move_target("destinations_1618_reg_panel")
+  })
+
+  observeEvent(input$link_timeliness_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Experiences")
+    updateTabsetPanel(session, "timeliness_reg_panel", selected = "Change over time")
+    this_tab("Experiences")
+    move_target("timeliness_reg_panel")
+  })
+
+  observeEvent(input$link_tribunals_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Experiences")
+    updateTabsetPanel(session, "tribunals_reg_panel", selected = "Change over time")
+    this_tab("Experiences")
+    move_target("tribunals_reg_panel")
+  })
+
+  observeEvent(input$link_absence_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Experiences")
+    updateTabsetPanel(session, "absence_reg_panel", selected = "Change over time")
+    this_tab("Experiences")
+    move_target("absence_reg_panel")
+  })
+
+  observeEvent(input$link_autism_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Experiences")
+    updateTabsetPanel(session, "autism_reg_panel", selected = "Change over time")
+    this_tab("Experiences")
+    move_target("autism_reg_panel")
+  })
+
+  observeEvent(input$link_ks4_destinations_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Experiences")
+    updateTabsetPanel(session, "ks4_destinations_reg_panel", selected = "Change over time")
+    this_tab("Experiences")
+    move_target("ks4_destinations_reg_panel")
+  })
+
+  observeEvent(input$link_statefunded_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Identification of Need")
+    updateTabsetPanel(session, "percent_pupils_ehcp_reg_panel", selected = "Change over time")
+    this_tab("Identification of Need")
+    move_target("percent_pupils_ehcp_reg_panel")
+  })
+
+  observeEvent(input$link_mainstream_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Identification of Need")
+    updateTabsetPanel(session, "mainstream_with_sen_reg_panel", selected = "Change over time")
+    this_tab("Identification of Need")
+    move_target("mainstream_with_sen_reg_panel")
+  })
+
+  observeEvent(input$link_special_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Identification of Need")
+    updateTabsetPanel(session, "provider_types_reg_panel", selected = "Change over time")
+    this_tab("Identification of Need")
+    move_target("provider_types_reg_panel")
+  })
+
+  observeEvent(input$link_deficit_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Financial Sustainability")
+    updateTabsetPanel(session, "dsg_deficit_reg_panel", selected = "Change over time")
+    this_tab("Financial Sustainability")
+    move_target("dsg_deficit_reg_panel")
+  })
+
+  observeEvent(input$link_spend_reg_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Financial Sustainability")
+    updateTabsetPanel(session, "specialist_spend_reg_panel", selected = "Change over time")
+    this_tab("Financial Sustainability")
+    move_target("specialist_spend_reg_panel")
+  })
+
+  # these are parts two and three of the observer chain discussed above
+  # this code could definitely be improved - currently for some reason it runs twice, and the scroll actually happens on the second run
+  # since it works and is not particularly slow, I am not going to spend longer fiddling with reactivity to fix this, but if performance
+  # here becomes an issue it may need fixing
+  observeEvent(
+    {
+      input$tabsetpanels_reg == this_tab()
+    },
+    {
+      move_here(move_target())
+      trigger(TRUE)
+    },
+    ignoreInit = TRUE
+  )
+
+  observeEvent(
+    {
+      trigger() == TRUE
+    },
+    {
+      scroll(move_here())
+      move_here("")
+      trigger(FALSE)
+    },
+    ignoreInit = TRUE
+  )
+
+
   # Render a region drop-down only if Regions level is selected
   output$region_choice_out <- renderUI({
     if (input$level_choice == "Regions") {
@@ -37,25 +187,6 @@ server <- function(input, output, session) {
         label = "Choose region",
         choices = region_list
       )
-    } else {
-      return(NULL)
-    }
-  })
-
-  # Generate an Inner London/Outer London menu when London is the selected region - as deficit info is not available at London level
-  output$london_choice <- renderUI({
-    if (is.character(input$region_choice)) {
-      if (input$region_choice == "London") {
-        selectInput(
-          inputId = "london_choice",
-          label = "London breakdown is unavailable for some metrics.
-                  Please select Inner London or Outer London.",
-          choices = c("Inner London", "Outer London"),
-          selected = "Inner London"
-        )
-      } else {
-        return(NULL)
-      }
     } else {
       return(NULL)
     }
@@ -91,36 +222,38 @@ server <- function(input, output, session) {
 
   # output if cookie is unspecified
   observeEvent(input$cookies, {
-    if (!is.null(input$cookies)) {
-      if (!("dfe_analytics" %in% names(input$cookies))) {
-        shinyalert(
-          inputId = "cookie_consent",
-          title = "Cookie consent",
-          text = "This site uses cookies to record traffic flow using Google Analytics",
-          size = "s",
-          closeOnEsc = TRUE,
-          closeOnClickOutside = FALSE,
-          html = FALSE,
-          type = "",
-          showConfirmButton = TRUE,
-          showCancelButton = TRUE,
-          confirmButtonText = "Accept",
-          confirmButtonCol = "#AEDEF4",
-          timer = 0,
-          imageUrl = "",
-          animation = TRUE
-        )
-      } else {
-        msg <- list(
-          name = "dfe_analytics",
-          value = input$cookies$dfe_analytics
-        )
-        session$sendCustomMessage("analytics-consent", msg)
-        if ("cookies" %in% names(input)) {
-          if ("dfe_analytics" %in% names(input$cookies)) {
-            if (input$cookies$dfe_analytics == "denied") {
-              ga_msg <- list(name = paste0("_ga_", google_analytics_key))
-              session$sendCustomMessage("cookie-remove", ga_msg)
+    if (!(isTRUE(getOption("shiny.testmode")))) { # only bother with cookies outside of test mode, the popup breaks shinydriver
+      if (!is.null(input$cookies)) {
+        if (!("dfe_analytics" %in% names(input$cookies))) { # only pop-up if not already set and not in test mode
+          shinyalert(
+            inputId = "cookie_consent",
+            title = "Cookie consent",
+            text = "This site uses cookies to record traffic flow using Google Analytics",
+            size = "s",
+            closeOnEsc = TRUE,
+            closeOnClickOutside = FALSE,
+            html = FALSE,
+            type = "",
+            showConfirmButton = TRUE,
+            showCancelButton = TRUE,
+            confirmButtonText = "Accept",
+            confirmButtonCol = "#AEDEF4",
+            timer = 0,
+            imageUrl = "",
+            animation = TRUE
+          )
+        } else {
+          msg <- list(
+            name = "dfe_analytics",
+            value = input$cookies$dfe_analytics
+          )
+          session$sendCustomMessage("analytics-consent", msg)
+          if ("cookies" %in% names(input)) {
+            if ("dfe_analytics" %in% names(input$cookies)) {
+              if (input$cookies$dfe_analytics == "denied") {
+                ga_msg <- list(name = paste0("_ga_", google_analytics_key))
+                session$sendCustomMessage("cookie-remove", ga_msg)
+              }
             }
           }
         }
@@ -201,7 +334,7 @@ server <- function(input, output, session) {
         colour = "Group"
       ) +
       scale_colour_manual(values = af_palette) +
-      scale_x_date(breaks = c(ymd("2018-09-01"), ymd("2019-09-01"), ymd("2020-09-01"), ymd("2021-09-01")), labels = c("2018/19", "2019/20", "2020/21", "2021/22"))
+      scale_x_date(breaks = c(ymd("2018-09-01"), ymd("2019-09-01"), ymd("2020-09-01"), ymd("2021-09-01"), ymd("2022-09-01")), labels = c("2018/19", "2019/20", "2020/21", "2021/22", "2022/23"))
 
     ks2_attainment_la_time %>%
       ggplotly(
@@ -244,7 +377,7 @@ server <- function(input, output, session) {
         no = "Other LA"
       )) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -260,7 +393,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ks2_attainment %>%
       collapse::fsubset(characteristic == input$ks2_attainment_la_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        geographic_level == "National") %>%
       mutate(outcome = `Percent meeting expected standards`)
 
     # Create the plot
@@ -298,7 +432,7 @@ server <- function(input, output, session) {
 
     ks2_attainment_lab <- ks2_attainment %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       })
@@ -424,7 +558,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ks2_attainment %>%
       collapse::fsubset(characteristic == input$ks2_attainment_reg_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        geographic_level == "National") %>%
       mutate(outcome = `Percent meeting expected standards`) %>%
       mutate(label = "England average")
 
@@ -557,7 +692,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ks1_phonics %>%
       collapse::fsubset(characteristic == input$ks1_phonics_la_filter &
-        time_period == comparison_year) %>%
+        time_period == comparison_year &
+        geographic_level == "National") %>%
       mutate(outcome = `Percent meeting expected standards in Y1`)
 
     # Wrangle data into ggplot object
@@ -571,7 +707,7 @@ server <- function(input, output, session) {
         no = "Other LA"
       )) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -616,7 +752,7 @@ server <- function(input, output, session) {
 
     ks1_phonics_lab <- ks1_phonics %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       })
@@ -699,11 +835,11 @@ server <- function(input, output, session) {
       ggplotly(
         tooltip = c("text", "y", "x", "colour")
       ) %>%
-      save_plot_button_only() %>%
       layout(
         legend = list(orientation = "h", y = -0.2),
         dragmode = FALSE
-      )
+      ) %>%
+      save_plot_button_only()
   })
 
   output$ks1_phonics_reg_time_table <- renderTable({
@@ -747,7 +883,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ks1_phonics %>%
       collapse::fsubset(characteristic == input$ks1_phonics_reg_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        geographic_level == "National") %>%
       mutate(outcome = `Percent meeting expected standards in Y1`)
 
     region_choice_validated <- if (is.null(input$region_choice)) {
@@ -880,7 +1017,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ks4_attainment %>%
       collapse::fsubset(`SEN provision` == input$ks4_attainment_la_bench_filter &
-        time_period == comparison_year) %>%
+        time_period == comparison_year &
+        geographic_level == "National") %>%
       ungroup() %>%
       mutate(outcome = `Average progress 8 score`)
 
@@ -894,7 +1032,7 @@ server <- function(input, output, session) {
         no = "Other LAs"
       )) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -957,7 +1095,7 @@ server <- function(input, output, session) {
 
     ks4_attainment_lab <- ks4_attainment %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       })
@@ -1013,8 +1151,8 @@ server <- function(input, output, session) {
         scale_colour_manual(values = af_palette) +
         scale_fill_manual(values = af_palette) +
         scale_x_date(
-          breaks = c(ymd("2015-09-01"), ymd("2016-09-01"), ymd("2017-09-01"), ymd("2018-09-01"), ymd("2019-09-01"), ymd("2020-09-01"), ymd("2021-09-01")),
-          labels = c("2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22")
+          breaks = c(ymd("2015-09-01"), ymd("2016-09-01"), ymd("2017-09-01"), ymd("2018-09-01"), ymd("2019-09-01"), ymd("2020-09-01"), ymd("2021-09-01"), ymd("2022-09-01")),
+          labels = c("2015/16", "2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23")
         )
     } else {
       ks4_attainment_reg_time <- ks4_attainment %>%
@@ -1102,7 +1240,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ks4_attainment %>%
       collapse::fsubset(`SEN provision` == input$ks4_attainment_reg_bench_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        geographic_level == "National") %>%
       mutate(outcome = `Average progress 8 score`)
 
 
@@ -1843,11 +1982,16 @@ server <- function(input, output, session) {
     # req(input$la_choice)
     if (input$la_choice != "") {
       ofsted_la <- ofsted %>%
-        fsubset(la_name == input$la_choice)
-      if (nrow(ofsted_la > 0)) {
+        fsubset(la_name == input$la_choice) %>%
+        fmutate(`Publication Date` = if_else(is.na(`Inspection publication date (new inspection framework)`),
+          `Publication date (previous inspection framework)`,
+          `Inspection publication date (new inspection framework)`
+        ))
+
+      if (nrow(ofsted_la > 0 & ofsted_la$box_colour != "black")) {
         valueBox(
           color = ofsted_la$box_colour,
-          value = tags$p(ofsted_la$`Inspection Outcome`, style = "font-size: 50%"),
+          value = tags$p(ofsted_la$summary_outcome, style = "font-size: 50%"),
           subtitle = paste("Report published: ", ofsted_la$`Publication Date`, ".")
         )
       } else {
@@ -1874,12 +2018,15 @@ server <- function(input, output, session) {
       req(input$region_choice)
       ofsted %>%
         fsubset(region == input$region_choice) %>%
+        fmutate(`Publication Date` = case_when(!(is.na(`Inspection publication date (new inspection framework)`)) ~ `Inspection publication date (new inspection framework)`,
+          !(is.na(revisit_publish_date_old_framework)) ~ as.Date(revisit_publish_date_old_framework, format = "%d/%m/%Y"),
+          .default = `Publication date (previous inspection framework)`
+        )) %>%
         select(
           `LA name` = la_name,
           `Region` = region,
-          `Visit Date`,
           `Publication Date`,
-          `Inspection Outcome`
+          `Inspection Outcome` = summary_outcome
         ) %>%
         DT::datatable(
           rownames = FALSE,
@@ -1889,18 +2036,21 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$`Inspection Outcome`),
+            levels = unique(ofsted$summary_outcome),
             values = ofsted_palette
           )
         )
     } else if (input$level_choice == "England" & input$ofsted_table_choice == "Full table") {
       ofsted %>%
+        fmutate(`Publication Date` = case_when(!(is.na(`Inspection publication date (new inspection framework)`)) ~ `Inspection publication date (new inspection framework)`,
+          !(is.na(revisit_publish_date_old_framework)) ~ as.Date(revisit_publish_date_old_framework, format = "%d/%m/%Y"),
+          .default = `Publication date (previous inspection framework)`
+        )) %>%
         select(
           `LA name` = la_name,
           `Region` = region,
-          `Visit Date`,
           `Publication Date`,
-          `Inspection Outcome`
+          `Inspection Outcome` = summary_outcome
         ) %>%
         DT::datatable(
           rownames = FALSE,
@@ -1910,16 +2060,18 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$`Inspection Outcome`),
+            levels = unique(ofsted$summary_outcome),
             values = ofsted_palette
           )
         )
     } else if (input$level_choice == "Regions" & input$ofsted_table_choice == "Summary") {
       req(input$region_choice)
       ofsted %>%
-        fsubset(region == input$region_choice) %>%
-        group_by(`Inspection Outcome`) %>%
+        fsubset(region == input$region_choice &
+          la_name != "Northamptonshire") %>%
+        group_by(summary_outcome) %>%
         count(name = "Number of LAs") %>%
+        rename(`Inspection Outcome` = summary_outcome) %>%
         DT::datatable(
           rownames = FALSE,
           options = list(
@@ -1932,14 +2084,16 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$`Inspection Outcome`),
+            levels = unique(ofsted$summary_outcome),
             values = ofsted_palette
           )
         )
     } else if (input$level_choice == "England" & input$ofsted_table_choice == "Summary") {
       ofsted %>%
-        group_by(`Inspection Outcome`) %>%
+        fsubset(la_name != "Northamptonshire") %>%
+        group_by(summary_outcome) %>%
         count(name = "Number of LAs") %>%
+        rename(`Inspection Outcome` = summary_outcome) %>%
         DT::datatable(
           rownames = FALSE,
           options = list(
@@ -1952,7 +2106,7 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$`Inspection Outcome`),
+            levels = unique(ofsted$summary_outcome),
             values = ofsted_palette
           )
         )
@@ -1977,7 +2131,8 @@ server <- function(input, output, session) {
         y = "% of EHCPs issued within 20 weeks",
         x = "Calendar year"
       ) +
-      scale_y_continuous(limits = c(0, 100))
+      scale_y_continuous(limits = c(0, 100)) +
+      scale_x_discrete(limits = unique(ehcp_timeliness$time_period))
 
     timeliness_la_time %>%
       ggplotly(
@@ -2012,7 +2167,8 @@ server <- function(input, output, session) {
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ehcp_timeliness))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ehcp_timeliness %>%
-      collapse::fsubset(time_period == comparison_year) %>%
+      collapse::fsubset(time_period == comparison_year &
+        geographic_level == "National") %>%
       mutate(outcome = `% of EHCPs issued within 20 weeks`)
 
 
@@ -2025,7 +2181,7 @@ server <- function(input, output, session) {
         no = "Other LA"
       )) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -2084,7 +2240,7 @@ server <- function(input, output, session) {
 
     if (input$myregion_switch == TRUE) {
       timeliness_la_bt <- timeliness_la_bt %>%
-        fsubset(region_name == region_name[la_name == input$la_choice])
+        fsubset(region_name == region_name[la_name == input$la_choice][1])
     }
 
     timeliness_la_bt <- timeliness_la_bt %>%
@@ -2172,9 +2328,10 @@ server <- function(input, output, session) {
     if (input$level_choice == "Regions" & !is.null(input$region_choice)) {
       # Turned this bit off for testing only
       # Pull in England data to its own dataframe, for creating the England average dotted line.
-      # national_average <- eng_ehcp_timeliness %>%
-      #   collapse::fsubset(time_period == max(time_period)) %>%
-      #   mutate(outcome = `% of EHCPs issued within 20 weeks`)
+      national_average <- eng_ehcp_timeliness %>%
+        collapse::fsubset(time_period == max(time_period) &
+          geographic_level == "National") %>%
+        mutate(outcome = `% of EHCPs issued within 20 weeks`)
 
       timeliness_reg_bench_basic <- ehcp_timeliness %>%
         collapse::fsubset(geographic_level == "Regional" &
@@ -2200,8 +2357,8 @@ server <- function(input, output, session) {
         )) +
         geom_col() +
         # Add England average dotted line and label
-        # add_england_line_bench(national_average) +
-        # add_england_label_bench_reg(national_average, nudge = 3.5) +
+        add_england_line_bench(national_average) +
+        add_england_label_bench_reg(national_average, nudge = 3.5) +
         labs(
           x = "Regions in England",
           y = "% of EHCPs issued within 20 weeks\n (excluding exceptions)",
@@ -2387,7 +2544,7 @@ server <- function(input, output, session) {
           no = "Other CCG"
         )) %>%
         filter(if (input$myregion_switch == TRUE) {
-          nhs_region == nhs_region[nhs_name == input$ccg_choice]
+          nhs_region == nhs_region[nhs_name == input$ccg_choice][1]
         } else {
           nhs_region != "none"
         }) %>%
@@ -2484,7 +2641,7 @@ server <- function(input, output, session) {
       collapse::fsubset(date == max(date)) %>%
       ftransform(`Age group` = factor(`Age group`, levels = c("Age: Under 10", "Age: 10 to 17", "Age: 18 to 24"))) %>%
       filter(if (input$myregion_switch == TRUE) {
-        nhs_region == nhs_region[nhs_name == input$ccg_choice]
+        nhs_region == nhs_region[nhs_name == input$ccg_choice][1]
       } else {
         nhs_region != "none"
       }) %>%
@@ -2696,7 +2853,10 @@ server <- function(input, output, session) {
           desc(nhs_name),
           `Year ending`
         ) %>%
-        ftransform(`Year ending` = format(`Year ending`, "%B %Y")) %>%
+        fmutate(
+          `Year ending` = format(`Year ending`, "%B %Y"),
+          `Number of children and young people` = as.character(round(`Number of children and young people`), 0)
+        ) %>%
         fselect(`Year ending`,
           `Former CCG area` = nhs_name,
           `Number of children and young people`
@@ -2714,7 +2874,7 @@ server <- function(input, output, session) {
         no = "Other CCG"
       )) %>%
       filter(if (input$myregion_switch == TRUE) {
-        nhs_region == nhs_region[nhs_name == input$ccg_choice]
+        nhs_region == nhs_region[nhs_name == input$ccg_choice][1]
       } else {
         nhs_region != "none"
       }) %>%
@@ -2762,12 +2922,15 @@ server <- function(input, output, session) {
       fsubset(BREAKDOWN2 == "CCG/Sub-ICB of Residence" &
         `Year ending` == max(`Year ending`)) %>%
       filter(if (input$myregion_switch == TRUE) {
-        nhs_region == nhs_region[nhs_name == input$ccg_choice]
+        nhs_region == nhs_region[nhs_name == input$ccg_choice][1]
       } else {
         nhs_region != "none"
       }) %>%
       arrange(desc(`Number of children and young people`)) %>%
-      ftransform(`Year ending` = format(`Year ending`, "%B %Y")) %>% # use month name to stop renderTable linewrapping the date
+      fmutate(
+        `Year ending` = format(`Year ending`, "%B %Y"),
+        `Number of children and young people` = as.character(round(`Number of children and young people`, 0))
+      ) %>% # use month name to stop renderTable linewrapping the date
       fselect(`Year ending`,
         `Former CCG area` = nhs_name,
         `Number of children and young people`
@@ -2781,13 +2944,10 @@ server <- function(input, output, session) {
     if (input$level_choice == "Regions") {
       # req(input$nhs_region_choice)
       mentalhealth_reg_bench <- mentalhealth %>%
-        fsubset(BREAKDOWN2 %in% c("Region") & str_detect(
-          string = nhs_name,
-          pattern = "COMMIS",
-          negate = TRUE
-        )) %>%
+        fsubset(BREAKDOWN2 %in% c("Commissioning Region") &
+          `Year ending` > (ymd("2021-07-01"))) %>% # boundary changes make regions data before this point not comparable
         collapse::ftransform(chosen_region = case_when(
-          nhs_name == input$nhs_region_choice ~ input$nhs_region_choice,
+          tolower(nhs_name) == tolower(input$nhs_region_choice) ~ input$nhs_region_choice, # the NHS seems to change the capitalisation of the region names on a regular basis
           nhs_name == "England" ~ "England",
           input$level_choice == "England" ~ "English NHS regions",
           TRUE ~ "Other NHS region"
@@ -2803,14 +2963,14 @@ server <- function(input, output, session) {
         labs(
           x = ifelse(input$myregion_switch == TRUE,
             yes = paste0(
-              "Clinical Commissioning Groups in ",
+              "Integrated Care Boards in ",
               mentalhealth$nhs_region[mentalhealth$nhs_name == input$ccg_choice]
             ),
-            no = paste0("All Clinical Commissioning Groups in England")
+            no = paste0("All Integrated Care Boards in England")
           ),
           y = "Number of children and young people",
-          colour = "Clinical Commissioning Group",
-          alpha = "Clinical Commissioning Group"
+          colour = "NHS Region",
+          alpha = "NHS Region"
         ) +
         if (input$level_choice == "Regions") {
           scale_colour_manual(
@@ -2841,7 +3001,7 @@ server <- function(input, output, session) {
         )) +
         geom_line() +
         labs(
-          x = "All Clinical Commissioning Groups in England",
+          x = "Start of month",
           y = "Number of children and young people"
         )
       mentalhealth_reg_eng %>%
@@ -2859,14 +3019,14 @@ server <- function(input, output, session) {
 
   output$mentalhealth_reg_bench_table <- renderTable({
     mentalhealth_reg_bt <- mentalhealth %>%
-      fsubset(BREAKDOWN2 %in% c("Region") & str_detect(
-        string = nhs_name,
-        pattern = "COMMIS",
-        negate = TRUE
-      )) %>%
+      fsubset(BREAKDOWN2 %in% c("Commissioning Region") &
+        `Year ending` > (ymd("2021-07-01"))) %>%
       fsubset(`Year ending` == max(`Year ending`)) %>% # we have to do this in a second subset call because the regions data doesn't have the most recent month in it
       arrange(desc(`Number of children and young people`)) %>%
-      ftransform(`Year ending` = format(`Year ending`, "%B %Y")) %>% # use month name to stop renderTable linewrapping the date
+      ftransform(
+        `Year ending` = format(`Year ending`, "%B %Y"),
+        `Number of children and young people` = as.character(round(`Number of children and young people`, 0))
+      ) %>% # use month name to stop renderTable linewrapping the date
       fselect(`Year ending`,
         `NHS Region` = nhs_name,
         `Number of children and young people`
@@ -2939,7 +3099,7 @@ server <- function(input, output, session) {
           "colour"
         )
       ) %>%
-      config(displayModeBar = FALSE) %>%
+      # config(displayModeBar = FALSE) %>%
       layout(yaxis = list(autorange = FALSE))
   })
 
@@ -2962,7 +3122,8 @@ server <- function(input, output, session) {
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(tribunals), column = "year")
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_tribunals %>%
-      collapse::fsubset(year == comparison_year) %>%
+      collapse::fsubset(year == comparison_year &
+        region_name == "England") %>%
       mutate(outcome = `SEND Tribunal Appeal Rate`) %>%
       mutate(`Appeal Rate` = paste0(`SEND Tribunal Appeal Rate`, "%"))
 
@@ -2976,7 +3137,7 @@ server <- function(input, output, session) {
       )) %>%
       mutate(`Appeal Rate` = paste0(`SEND Tribunal Appeal Rate`, "%")) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -3027,7 +3188,7 @@ server <- function(input, output, session) {
         year == comparison_year) %>%
       mutate(`Appeal Rate` = paste0(`SEND Tribunal Appeal Rate`, "%")) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -3123,7 +3284,8 @@ server <- function(input, output, session) {
   output$tribunals_reg_bench <- renderPlotly({
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_tribunals %>%
-      collapse::fsubset(year == max(year)) %>%
+      collapse::fsubset(year == max(year) &
+        region_name == "England") %>%
       ungroup() %>%
       mutate(outcome = `SEND Tribunal Appeal Rate`) %>%
       mutate(`Appeal Rate` = paste0(`SEND Tribunal Appeal Rate`, "%"))
@@ -3242,7 +3404,7 @@ server <- function(input, output, session) {
         x = "Academic year",
         colour = "Group"
       ) +
-      scale_colour_manual(values = c(af_darkpink, af_darkblue, af_turquoise)) +
+      scale_colour_manual(values = c(af_darkpink, af_darkblue, af_turquoise, af_orange)) +
       scale_y_continuous(limits = c(0, max(absence$`Overall absence %`)))
 
 
@@ -3281,7 +3443,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_absence %>%
       collapse::fsubset(characteristic == input$absence_la_filter &
-        time_period == comparison_year) %>%
+        time_period == comparison_year &
+        region_name == "England") %>%
       ungroup() %>%
       mutate(outcome = `Overall absence %`)
 
@@ -3296,7 +3459,7 @@ server <- function(input, output, session) {
         no = "Other LA"
       )) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -3346,7 +3509,7 @@ server <- function(input, output, session) {
         characteristic == input$absence_la_filter &
         time_period == comparison_year) %>%
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -3377,12 +3540,12 @@ server <- function(input, output, session) {
         geom_line() +
         geom_point() +
         labs(
-          y = "% of sessions missed due to absence (Autumn/Spring terms)",
+          y = "% of sessions missed due to absence \n(Autumn/Spring terms)",
           x = "Academic year",
           colour = "Group"
         ) +
         scale_colour_manual(values = c(
-          af_darkpink, af_darkblue, af_turquoise
+          af_darkpink, af_darkblue, af_turquoise, af_orange
         ))
     } else {
       absence_reg_time <- absence_regional %>%
@@ -3396,12 +3559,12 @@ server <- function(input, output, session) {
         geom_line() +
         geom_point() +
         labs(
-          y = "% of sessions missed due to absence (Autumn/Spring terms)",
+          y = "% of sessions missed due to absence \n(Autumn/Spring terms)",
           x = "Academic year",
           colour = "Group"
         ) +
         scale_colour_manual(values = c(
-          af_darkpink, af_darkblue, af_turquoise
+          af_darkpink, af_darkblue, af_turquoise, af_orange
         ))
     }
 
@@ -3455,7 +3618,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_absence %>%
       collapse::fsubset(characteristic == input$absence_reg_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        region_name == "England") %>%
       ungroup() %>%
       mutate(outcome = `Overall absence %`)
 
@@ -3945,8 +4109,8 @@ server <- function(input, output, session) {
     latest_dsg <- dsg_deficit %>%
       fsubset(time_period == comparison_year)
 
-    min_scale <- min(latest_dsg$`DSG cumulative balance as a % of the total budget`)
-    max_scale <- max(latest_dsg$`DSG cumulative balance as a % of the total budget`)
+    min_scale <- min(dsg_deficit$`DSG cumulative balance as a % of the total budget`)
+    max_scale <- max(dsg_deficit$`DSG cumulative balance as a % of the total budget`)
 
     dsg_deficit_la_time <- dsg_deficit %>%
       fsubset(la_name == input$la_choice) %>%
@@ -3995,7 +4159,8 @@ server <- function(input, output, session) {
       comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(dsg_deficit))
       # Pull in England data to its own dataframe, for creating the England average dotted line.
       national_average <- eng_dsg_deficit %>%
-        collapse::fsubset(time_period == comparison_year) %>%
+        collapse::fsubset(time_period == comparison_year &
+          geographic_level == "National") %>%
         ungroup() %>% # required before mutate here
         mutate(outcome = `DSG cumulative balance as a % of the total budget`)
 
@@ -4081,7 +4246,8 @@ server <- function(input, output, session) {
       comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(dsg_deficit))
       # Pull in England data to its own dataframe, for creating the England average dotted line.
       national_average <- eng_dsg_deficit %>%
-        collapse::fsubset(time_period == comparison_year) %>%
+        collapse::fsubset(time_period == comparison_year &
+          geographic_level == "National") %>%
         ungroup() %>% # required before mutate here
         mutate(outcome = `DSG cumulative balance as a % of the total budget`)
 
@@ -4167,7 +4333,7 @@ server <- function(input, output, session) {
         !(la_name %in% small_LAs)) %>%
       ungroup() %>% # otherwise the next line breaks
       filter(if (input$myregion_switch == TRUE) {
-        region_name == region_name[la_name == input$la_choice]
+        region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
       }) %>%
@@ -4183,33 +4349,18 @@ server <- function(input, output, session) {
 
   ## DSG deficit (region/time)
   output$dsg_deficit_reg_time <- renderPlotly({
+    validate(need(input$region_choice, message = "Please select a region"))
     reg_dsg <- dsg_deficit %>%
       fsubset(geographic_level == "Regional")
 
     min_scale <- min(reg_dsg$`DSG cumulative balance as a % of the total budget`)
     max_scale <- max(reg_dsg$`DSG cumulative balance as a % of the total budget`)
 
-    # First check region choice is selected
-    if (is.character(input$region_choice)) {
-      # Assuming that's the case, if region isn't London, display only that region.
-      if (input$level_choice == "Regions" & input$region_choice != "London") {
-        dsg_deficit2 <- dsg_deficit %>% filter(
-          geographic_level == "Regional",
-          region_name == input$region_choice
-        )
-      } else if
-      (is.character(input$london_choice)) { # Check London choice is valid (it won't be for a split second when loading)
-        if (input$level_choice == "Regions" & input$region_choice == "London") {
-          dsg_deficit2 <- dsg_deficit %>% filter(
-            geographic_level == "Regional",
-            region_name == input$london_choice
-          )
-        } else {
-          dsg_deficit2 <- dsg_deficit %>% filter(geographic_level == "National")
-        }
-      } else {
-        dsg_deficit2 <- dsg_deficit %>% filter(geographic_level == "National")
-      } # end of "If London choice is valid" if clause
+    if (input$level_choice == "Regions") {
+      dsg_deficit2 <- dsg_deficit %>% filter(
+        geographic_level == "Regional",
+        region_name == input$region_choice
+      )
     } else {
       dsg_deficit2 <- dsg_deficit %>% filter(geographic_level == "National")
     } # End of "if region choice is valid"  if clause
@@ -4236,29 +4387,19 @@ server <- function(input, output, session) {
   })
 
   output$dsg_deficit_reg_time_table <- renderTable({
-    if (input$level_choice == "Regions" & input$region_choice != "London") {
+    if (input$level_choice == "Regions") {
       dsg_deficit_reg_tt <- dsg_deficit %>% filter(
         geographic_level == "Regional",
         region_name == input$region_choice
       )
-    } else if
-    (is.character(input$london_choice)) { # Check London choice is valid (it won't be for a split second when loading)
-      if (input$level_choice == "Regions" & input$region_choice == "London") {
-        dsg_deficit_reg_tt <- dsg_deficit %>% filter(
-          geographic_level == "Regional",
-          region_name == input$london_choice
-        )
-      } else {
-        dsg_deficit_reg_tt <- dsg_deficit %>%
-          filter(geographic_level == "National") %>%
-          fmutate(region_name = "England")
-      }
     } else {
       dsg_deficit_reg_tt <- dsg_deficit %>%
         filter(geographic_level == "National") %>%
         fmutate(region_name = "England")
-    } # end of "If London choice is valid" if clause
+    }
+
     dsg_deficit_reg_tt <- dsg_deficit_reg_tt %>%
+      distinct() %>%
       arrange(financial_year) %>%
       fselect(
         `Financial Year` = financial_year,
@@ -4271,9 +4412,11 @@ server <- function(input, output, session) {
 
   ## DSG deficit (region/bench)
   output$dsg_deficit_reg_bench <- renderPlotly({
+    validate(need(input$region_choice, message = "Please select a region"))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_dsg_deficit %>%
-      collapse::fsubset(time_period == max(time_period)) %>%
+      collapse::fsubset(time_period == max(time_period) &
+        geographic_level == "National") %>%
       ungroup() %>% # required before mutate here
       mutate(outcome = `DSG cumulative balance as a % of the total budget`)
 
@@ -4283,30 +4426,12 @@ server <- function(input, output, session) {
       ungroup()
 
     # First check region choice is selected
-    if (is.character(input$region_choice)) {
-      # Assuming that's the case, if region isn't London, display only that region.
-      if (input$level_choice == "Regions" & input$region_choice != "London") {
-        dsg_deficit_reg_bench2 <- dsg_deficit_reg_bench1 %>%
-          mutate(chosen_region = ifelse(test = (region_name == input$region_choice),
-            yes = input$region_choice,
-            no = "Other region"
-          ))
-      } else if
-      (is.character(input$london_choice)) { # Check London choice is valid (it won't be for a split second when loading)
-        if (input$level_choice == "Regions" & input$region_choice == "London") {
-          dsg_deficit_reg_bench2 <- dsg_deficit_reg_bench1 %>%
-            mutate(chosen_region = ifelse(test = region_name == input$london_choice,
-              yes = input$london_choice,
-              no = "Other region"
-            ))
-        } else {
-          dsg_deficit_reg_bench2 <- dsg_deficit_reg_bench1 %>%
-            mutate(chosen_region = "English regions")
-        }
-      } else {
-        dsg_deficit_reg_bench2 <- dsg_deficit_reg_bench1 %>%
-          mutate(chosen_region = "English regions")
-      } # end of "If London choice is valid" if clause
+    if (input$level_choice == "Regions") {
+      dsg_deficit_reg_bench2 <- dsg_deficit_reg_bench1 %>%
+        mutate(chosen_region = ifelse(test = (region_name == input$region_choice),
+          yes = input$region_choice,
+          no = "Other region"
+        ))
     } else {
       dsg_deficit_reg_bench2 <- dsg_deficit_reg_bench1 %>%
         mutate(chosen_region = "English regions")
@@ -4367,6 +4492,7 @@ server <- function(input, output, session) {
       collapse::fsubset(geographic_level == "Regional" &
         time_period == max(time_period)) %>%
       ungroup() %>%
+      distinct() %>%
       arrange(desc(`DSG cumulative balance as a % of the total budget`)) %>%
       fselect(
         `Financial Year` = financial_year,
@@ -4434,6 +4560,78 @@ server <- function(input, output, session) {
       )
 
     return(spec_la_tt)
+  })
+
+  ## Specialist Spend (reg/time)
+  output$specialist_spend_reg_time <- renderPlotly({
+    latest_specialist_spend <- reg_specialist_spend %>%
+      fsubset(year == max(year))
+
+    min_scale <- min(specialist_spend$`Spend per head`[specialist_spend$category == "Total"], na.rm = TRUE)
+    max_scale <- max(specialist_spend$`Spend per head`, na.rm = TRUE)
+
+    if (input$level_choice == "England") {
+      specialist_spend_reg_data <- ungroup(nat_specialist_spend) %>%
+        fsubset(category != "Total") %>%
+        fmutate(region = "England") # this is just so you can plot both graphs with the same code
+    } else {
+      specialist_spend_reg_data <- ungroup(reg_specialist_spend) %>%
+        fsubset(region == input$region_choice &
+          category != "Total")
+    }
+    specialist_spend_reg_time <- ggplot(specialist_spend_reg_data, aes(
+      x = year,
+      y = `Spend per head`,
+      group = region,
+      fill = category,
+      text = paste0("Spend per head: £", round(`Spend per head`, 0))
+    )) +
+      geom_col(position = "stack") +
+      labs(
+        x = "Financial year",
+        y = "Per capita spend on special schools and AP",
+        fill = "School type"
+      ) +
+      scale_y_continuous(limits = c(min_scale, max_scale), labels = scales::dollar_format(prefix = "£")) +
+      scale_fill_manual(values = c("#4d8264", "#1A99F9"))
+
+
+    specialist_spend_reg_time %>%
+      ggplotly(
+        tooltip = c("text", "x")
+      ) %>%
+      save_plot_button_only() %>%
+      layout(
+        legend = list(orientation = "h", y = -0.2),
+        dragmode = FALSE
+      )
+  })
+
+  output$specialist_spend_reg_time_table <- renderTable({
+    if (input$level_choice == "England") {
+      spec_reg_tt <- ungroup(nat_specialist_spend) %>%
+        fsubset(category != "Total") %>%
+        fmutate(region = "England")
+    } else {
+      spec_reg_tt <- ungroup(reg_specialist_spend) %>%
+        fsubset(region == input$region_choice &
+          category != "Total")
+    }
+
+    spec_reg_tt <- spec_reg_tt %>%
+      ungroup() %>%
+      arrange(
+        category,
+        year
+      ) %>%
+      fselect(
+        `Financial Year` = year,
+        `Region` = region,
+        `Sector` = category,
+        `Per capita spend on special schools and AP` = round(`Spend per head`, digits = 1)
+      )
+
+    return(spec_reg_tt)
   })
 
 
@@ -4551,6 +4749,119 @@ server <- function(input, output, session) {
     return(spend_la_bt)
   })
 
+  ## Specialist Spend (Reg/bench)
+
+  output$specialist_spend_reg_bench <- renderPlotly({
+    # req(input$la_choice)
+
+    if (input$level_choice == "Regions") {
+      specialist_spend_reg_bench <- reg_specialist_spend %>%
+        collapse::fsubset(year == max(year) &
+          !(is.na(region))) %>%
+        collapse::ftransform(chosen_region = case_when(
+          region == input$region_choice ~
+            input$region_choice,
+          region != input$region_choice & category == "Independent or non-maintained" ~
+            "Other Regions (Ind/non-maintained spending)",
+          region != input$region_choice & category == "State" ~
+            "Other Regions (State spending)",
+          region != input$region_choice & category == "Total" ~
+            "Other Regions (Total spending)"
+        )) %>%
+        ungroup() %>%
+        ggplot(aes(
+          x = tidytext::reorder_within(
+            x = region,
+            by = `Spend per head`,
+            within = category,
+            sep = "*"
+          ),
+          y = `Spend per head`,
+          text = region,
+          fill = chosen_region
+        )) +
+        geom_col(position = "stack") +
+        labs(x = "Regions in England", fill = "Selected Region") +
+        theme(axis.text.x = element_text(
+          angle = 45,
+          vjust = 0.5,
+          hjust = 1
+        ), legend.position = "bottom") +
+        scale_fill_manual(values = c(
+          "Other Regions (Total spending)" = af_purple,
+          "Other Regions (State spending)" = "#1A99F9",
+          "Other Regions (Ind/non-maintained spending)" = "#4d8264"
+        ), na.value = af_grey) +
+        scale_y_continuous(labels = scales::dollar_format(prefix = "£")) +
+        facet_wrap(~category, nrow = 3, scales = "free_x") +
+        tidytext::scale_x_reordered(labels = function(x) gsub("*.+$", "", x))
+    } else {
+      specialist_spend_reg_bench <- reg_specialist_spend %>%
+        mutate(
+          region = if_else(region == "Yorkshire and The Humber", "Yorkshire and\nThe Humber", region),
+          region = factor(region, levels = reg_specialist_spend_order)
+        ) %>%
+        collapse::fsubset(year == max(year) &
+          !(is.na(region))) %>%
+        ungroup() %>%
+        ggplot(aes(
+          x = region,
+          y = `Spend per head`,
+          text = region,
+          fill = category
+        )) +
+        geom_col(position = "stack") +
+        labs(x = "Regions in England", fill = "Spend on") +
+        theme(axis.text.x = element_text(
+          angle = 45,
+          vjust = 0.5,
+          hjust = 1
+        ), legend.position = "bottom") +
+        scale_fill_manual(values = c(
+          "Total" = af_purple,
+          "State" = "#1A99F9",
+          "Independent or non-maintained" = "#4d8264"
+        ), na.value = af_grey) +
+        scale_y_continuous(labels = scales::dollar_format(prefix = "£")) +
+        facet_wrap(~category, nrow = 3)
+    }
+
+
+    if (sum(specialist_spend_reg_bench$data$`Spend per head`[specialist_spend_reg_bench$data$region == input$region_choice] != 0) != 0) {
+      specialist_spend_reg_bench %>%
+        ggplotly(
+          tooltip = c("text", "y")
+        ) %>%
+        save_plot_button_only() %>%
+        layout(
+          legend = list(orientation = "h", y = -0.3),
+          dragmode = FALSE
+        )
+    }
+  })
+
+  output$specialist_spend_reg_bench_table <- renderTable({
+    comparison <- reg_specialist_spend %>%
+      collapse::fsubset(year == max(year))
+
+
+    spend_reg_bt <- comparison %>%
+      collapse::fsubset(!is.na(region)) %>%
+      ungroup() %>%
+      arrange(
+        `category`,
+        `Spend per head`
+      ) %>%
+      fselect(
+        `Financial Year` = year,
+        `Region` = region,
+        `Sector` = category,
+        `Spend per head`
+      )
+
+    return(spend_reg_bt)
+  })
+
   # IDENTIFICATION OF NEED GRAPHS ---------------------------------------------------------------------------
 
 
@@ -4607,7 +4918,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_percent_pupils_ehcp %>%
       collapse::fsubset(`SEN provision` == input$percent_pupils_ehcp_la_filter &
-        time_period == comparison_year) %>%
+        time_period == comparison_year &
+        geographic_level == "National") %>%
       mutate(outcome = `% of pupils`)
 
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
@@ -4776,7 +5088,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_percent_pupils_ehcp %>%
       collapse::fsubset(`SEN provision` == input$percent_pupils_ehcp_reg_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        geographic_level == "National") %>%
       mutate(outcome = `% of pupils`)
 
     percent_pupils_ehcp_reg_bench_basic <- percent_pupils_ehcp %>%
@@ -5163,7 +5476,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_mainstream_with_sen %>%
       collapse::fsubset(`SEN provision` == input$mainstream_with_sen_la_filter &
-        time_period == comparison_year) %>%
+        time_period == comparison_year &
+        geographic_level == "National") %>%
       mutate(outcome = `% of pupils`)
 
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
@@ -5346,7 +5660,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_mainstream_with_sen %>%
       collapse::fsubset(`SEN provision` == input$mainstream_with_sen_reg_filter &
-        time_period == max(time_period)) %>%
+        time_period == max(time_period) &
+        geographic_level == "National") %>%
       mutate(outcome = `% of pupils`)
 
     mainstream_with_sen_reg_bench_basic <- mainstream_with_sen %>%
@@ -5496,7 +5811,8 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- provider_types_grouped_nat %>%
       fsubset(`Provision type` == input$provider_types_la_bench_filter &
-        academic_year == comparison_year) %>%
+        academic_year == comparison_year &
+        geographic_level == "National") %>%
       ungroup() %>%
       mutate(outcome = `% in independent/AP/special`)
 
@@ -5713,7 +6029,8 @@ server <- function(input, output, session) {
   output$provider_types_reg_bench <- renderPlotly({
     national_average <- provider_types_grouped_nat %>%
       fsubset(academic_year == max(academic_year) &
-        `Provision type` == input$provider_types_reg_bench_filter) %>%
+        `Provision type` == input$provider_types_reg_bench_filter &
+        geographic_level == "National") %>%
       ungroup() %>%
       mutate(outcome = `% in independent/AP/special`)
 
@@ -5898,7 +6215,8 @@ server <- function(input, output, session) {
         force = 1.5,
         force_pull = 0.7,
         min.segment.length = 0.001,
-        point.padding = 10
+        point.padding = 10,
+        seed = if_else(isTRUE(getOption("shiny.testmode")), 23, NA) # fixed seed for test mode so the graph is always the same
       ) +
       theme_bw() +
       theme(
@@ -5923,7 +6241,7 @@ server <- function(input, output, session) {
       scale_colour_manual(values = c(af_darkblue, af_turquoise, af_darkpink, af_orange)) +
       facet_wrap(~Theme, ncol = 4, scales = "fixed") -> summary_plot
 
-    girafe(ggobj = summary_plot, width_svg = 11, height_svg = 7)
+    girafe(ggobj = summary_plot, width_svg = 11, height_svg = 7, canvas_id = "la_summary")
   })
 
   output$summary_polar <- renderGirafe({
@@ -6186,40 +6504,32 @@ server <- function(input, output, session) {
 
   # KS1 phonics
   output$box_ks1_phonics <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+    validate(need(input$summary_sen_type, message = "Select SEN level"), errorClass = "summary-validation")
     df <- eng_ks1_phonics %>%
-      drop_na(`Percent meeting expected standards in Y1`)
+      drop_na(`Percent meeting expected standards in Y1`) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
-    latest_timeperiod <- df %>%
+    latest_df <- df %>%
       filter(
-        characteristic == "All SEN",
+        characteristic == input$summary_sen_type,
         academic_year == max(academic_year)
-      ) %>%
-      pull(academic_year)
+      )
 
-    latest_value <- df %>%
-      filter(
-        characteristic == "All SEN",
-        academic_year == max(academic_year)
-      ) %>%
-      pull(`Percent meeting expected standards in Y1`)
+    latest_timeperiod <- pull(latest_df, academic_year)
+    latest_value <- pull(latest_df, `Percent meeting expected standards in Y1`)
 
-    previous_timeperiod <- df %>%
+    previous_df <- df %>%
       filter(
-        characteristic == "All SEN",
+        characteristic == input$summary_sen_type,
         academic_year != max(academic_year)
       ) %>%
-      filter(academic_year == max(academic_year)) %>%
-      pull(academic_year)
+      filter(academic_year == max(academic_year))
 
-    previous_value <- df %>%
-      filter(
-        characteristic == "All SEN",
-        academic_year != max(academic_year)
-      ) %>%
-      filter(academic_year == max(academic_year)) %>%
-      pull(`Percent meeting expected standards in Y1`)
+    previous_timeperiod <- pull(previous_df, academic_year)
+    previous_value <- pull(previous_df, `Percent meeting expected standards in Y1`)
+    change <- pull(latest_df, pc_change)
 
-    change <- latest_value - previous_value
     create_box(
       df = eng_ks1_phonics,
       latest_value = latest_value,
@@ -6255,40 +6565,31 @@ server <- function(input, output, session) {
 
   # KS2 attainment
   output$box_ks2_attainment <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+    validate(need(input$summary_sen_type, message = "Select SEN level"), errorClass = "summary-validation")
     df <- eng_ks2_attainment %>%
-      drop_na(`Percent meeting expected standards`)
+      drop_na(`Percent meeting expected standards`) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
-    latest_timeperiod <- df %>%
+    latest_df <- df %>%
       filter(
-        characteristic == "All SEN",
+        characteristic == input$summary_sen_type,
         academic_year == max(academic_year)
-      ) %>%
-      pull(academic_year)
+      )
 
-    latest_value <- df %>%
-      filter(
-        characteristic == "All SEN",
-        academic_year == max(academic_year)
-      ) %>%
-      pull(`Percent meeting expected standards`)
+    latest_timeperiod <- pull(latest_df, academic_year)
+    latest_value <- pull(latest_df, `Percent meeting expected standards`)
 
-    previous_timeperiod <- df %>%
+    previous_df <- df %>%
       filter(
-        characteristic == "All SEN",
+        characteristic == input$summary_sen_type,
         academic_year != max(academic_year)
       ) %>%
-      filter(academic_year == max(academic_year)) %>%
-      pull(academic_year)
+      filter(academic_year == max(academic_year))
 
-    previous_value <- df %>%
-      filter(
-        characteristic == "All SEN",
-        academic_year != max(academic_year)
-      ) %>%
-      filter(academic_year == max(academic_year)) %>%
-      pull(`Percent meeting expected standards`)
-
-    change <- latest_value - previous_value
+    previous_timeperiod <- pull(previous_df, academic_year)
+    previous_value <- pull(previous_df, `Percent meeting expected standards`)
+    change <- pull(latest_df, pc_change)
 
     create_box(
       df = eng_ks2_attainment,
@@ -6323,12 +6624,27 @@ server <- function(input, output, session) {
 
   # Mental Health support
   output$box_mentalhealth <- renderUI({
-    df <- eng_mentalhealth %>%
-      drop_na(`Number of children and young people`)
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+
+    nhs_region_from_region <- case_when(input$region_choice %in% c("Yorkshire and The Humber", "North East") ~ "North East And Yorkshire",
+      input$region_choice %in% c("East Midlands", "West Midlands") ~ "Midlands",
+      input$region_choice == "East of England" ~ "East Of England", # sigh
+      .default = input$region_choice
+    )
+
+    # can't use geo_subset here because df has different colnames and we're also not using DfE regions
+    if (input$level_choice == "England") {
+      df <- eng_mentalhealth %>%
+        drop_na(`Number of children and young people`) %>%
+        fsubset(BREAKDOWN == "England")
+    } else {
+      df <- eng_mentalhealth %>%
+        drop_na(`Number of children and young people`) %>%
+        fsubset(BREAKDOWN == "Commissioning Region" &
+          nhs_name == nhs_region_from_region)
+    }
 
     box_data <- data.frame("x")
-
-
 
     box_data$latest_timeperiod <- paste0(
       lubridate::month(max(df$`Year ending`),
@@ -6337,21 +6653,22 @@ server <- function(input, output, session) {
       " ",
       lubridate::year(max(df$`Year ending`))
     )
+    target_timeframe <- df %>%
+      filter(`Year ending` <= (max(df$`Year ending`) - years(1)))
 
     box_data$previous_timeperiod <- paste0(
-      lubridate::month(max(df$`Year ending`),
+      lubridate::month(max(target_timeframe$`Year ending`),
         label = TRUE, abbr = FALSE
       ),
       " ",
-      lubridate::year(max(df$`Year ending`)) - 1
+      lubridate::year(max(target_timeframe$`Year ending`))
     )
 
     box_data$latest_value <- df$`Number of children and young people`[df$`Year ending` == max(df$`Year ending`)]
 
-    box_data$previous_value <- df$`Number of children and young people`[df$`Year ending` == (max(df$`Year ending` - lubridate::years(1)))]
+    box_data$previous_value <- df$`Number of children and young people`[df$`Year ending` == (max(target_timeframe$`Year ending`))]
 
-
-    box_data$change <- box_data$latest_value - box_data$previous_value
+    box_data$change <- df$pc_change[df$`Year ending` == max(df$`Year ending`)]
 
     create_box(
       df = eng_mentalhealth,
@@ -6384,8 +6701,10 @@ server <- function(input, output, session) {
 
   # KS4 attainment
   output$box_ks4_attainment <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_ks4_attainment <- eng_ks4_attainment %>%
-      drop_na(`Average progress 8 score`)
+      drop_na(`Average progress 8 score`) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
     latest_timeperiod <- eng_ks4_attainment %>%
       filter(
@@ -6417,32 +6736,28 @@ server <- function(input, output, session) {
         `SEN provision` == "Any SEN",
         academic_year != max(academic_year)
       )
-    if (nrow(previous_value > 0)) {
-      previous_value <- previous_value %>%
-        filter(academic_year == max(academic_year)) %>%
-        pull(`Average progress 8 score`)
-    }
 
-    if (nrow(previous_value) == 0) {
-      missing_box(
-        df = eng_ks4_attainment,
-        latest_value = latest_value,
-        latest_timeperiod = latest_timeperiod,
-        colour = "blue"
-      )
-    } else {
-      change <- latest_value - previous_value
+    previous_value <- previous_value %>%
+      filter(academic_year == max(academic_year)) %>%
+      pull(`Average progress 8 score`)
 
-      create_box(
-        df = eng_ks4_attainment,
-        latest_value = latest_value,
-        latest_timeperiod = latest_timeperiod,
-        previous_timeperiod = previous_timeperiod,
-        change = change,
-        add_percent_symbol = FALSE,
-        colour = "blue"
-      )
-    }
+    change <- eng_ks4_attainment %>%
+      filter(
+        `SEN provision` == "Any SEN",
+        academic_year == max(academic_year)
+      ) %>%
+      pull(pc_change)
+
+    create_box(
+      df = eng_ks4_attainment,
+      latest_value = latest_value,
+      latest_timeperiod = latest_timeperiod,
+      previous_timeperiod = previous_timeperiod,
+      change = change,
+      add_percent_symbol = FALSE,
+      colour = "blue",
+      dp = 2
+    )
   })
 
   #  output$sparkline_ks4_attainment <- renderPlotly({
@@ -6464,12 +6779,18 @@ server <- function(input, output, session) {
   #  })
 
   output$box_ofsted <- renderUI({
-    eng_ofsted <- eng_ofsted %>%
-      mutate(pc = 100 * n / sum(n))
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+    if (input$level_choice == "England") {
+      good_pc <- eng_ofsted[eng_ofsted$WSoAPAP == FALSE, ]$pc_LAs
+    } else {
+      good_pc <- reg_ofsted %>%
+        fsubset(region == input$region_choice &
+          WSoAPAP == FALSE) %>%
+        pull(pc_LAs)
+    }
 
-    good_pc <- sum(eng_ofsted$pc[eng_ofsted$`Inspection Outcome` %in% c("No Written Statement of Action", "Previous Written Statement of Action Removed (after reinspection)")])
-    latest_value <- paste0(round(good_pc, 1), "%")
-    latest <- max(as.Date(ofsted$`Publication Date`, format = "%d %b %Y"))
+    latest_value <- paste0(round(100 * good_pc, 1), "%")
+    latest <- format(max(ofsted$`Inspection publication date (new inspection framework)`, na.rm = T), "%d %b %Y")
 
     # doing the ofsted box directly because it's different to all the other boxes
     tags$table(
@@ -6492,15 +6813,25 @@ server <- function(input, output, session) {
 
   # destinations is also fiddly since the metric is "not these two categories"
   output$box_1618dest <- renderUI({
-    eng_1618 <- destinations_1618_nat %>%
-      fsubset(characteristic == "Identified SEN")
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
 
-    current_year <- eng_1618 %>%
-      fsubset(time_period == max(time_period)) %>%
-      pull(academic_year)
-    current_value <- eng_1618 %>%
-      fsubset(time_period == max(time_period) &
-        Destination %in% c("Not sustained", "Unknown")) %>%
+    # because the 16-18 destinations come in two separate files, one England and one Regional, this has to be done a bit differently
+    if (input$level_choice == "England") {
+      eng_1618 <- destinations_1618_nat %>%
+        fsubset(characteristic == "Identified SEN")
+    } else {
+      eng_1618 <- reg_1618 %>%
+        fsubset(characteristic == "Identified SEN") %>%
+        geo_subset(lev = input$level_choice, reg = input$region_choice)
+    }
+
+    current <- eng_1618 %>%
+      fsubset(time_period == max(time_period))
+
+    current_year <- pull(current, academic_year)
+
+    current_value <- current %>%
+      fsubset(Destination %in% c("Not sustained", "Unknown")) %>%
       fsummarise(value = 100 - fsum(`% of pupils`)) %>%
       pull(value)
     previous_year <- eng_1618 %>%
@@ -6513,7 +6844,8 @@ server <- function(input, output, session) {
         Destination %in% c("Not sustained", "Unknown")) %>%
       fsummarise(value = 100 - fsum(`% of pupils`)) %>%
       pull(value)
-    change <- current_value - previous_value
+    change <- 100 * (current_value - previous_value) / previous_value
+
     create_box(
       df = eng_1618,
       latest_value = current_value,
@@ -6526,8 +6858,10 @@ server <- function(input, output, session) {
   })
 
   output$box_timeliness <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_ehcp_timeliness <- eng_ehcp_timeliness %>%
-      arrange(desc(time_period))
+      arrange(desc(time_period)) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
     create_box(
       df = eng_ehcp_timeliness,
@@ -6541,8 +6875,17 @@ server <- function(input, output, session) {
   })
 
   output$box_tribunals <- renderUI({
-    eng_tribunals <- eng_tribunals %>%
-      arrange(desc(year))
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+
+    if (input$level_choice == "England") {
+      eng_tribunals <- eng_tribunals %>%
+        fsubset(region_name == "England") %>%
+        arrange(desc(year))
+    } else {
+      eng_tribunals <- eng_tribunals %>%
+        fsubset(region_name == input$region_choice) %>%
+        arrange(desc(year))
+    }
 
     # then since the current year will be at the top...
     create_box(
@@ -6557,15 +6900,29 @@ server <- function(input, output, session) {
   })
 
   output$box_absence <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+
+    # sen column in this df isn't the same as others as it still contains the legacy "or statement" language
+    sen_from_menu_sen <- if_else(input$summary_sen_type == "EHC plan", "EHCP or Statement", input$summary_sen_type)
+
+    # this is yet another subtly different data structure - this time "England" is treated as a region
+    if (input$level_choice == "England") {
+      eng_absence <- eng_absence %>%
+        fsubset(region_name == "England")
+    } else {
+      eng_absence <- eng_absence %>%
+        fsubset(region_name == input$region_choice)
+    }
     eng_absence <- eng_absence %>%
-      arrange(desc(time_period))
+      arrange(desc(time_period)) %>%
+      fsubset(characteristic == sen_from_menu_sen)
 
     # then since the current year will be at the top...
     create_box(
       df = eng_absence,
       latest_value = eng_absence$`Overall absence %`[1],
       latest_timeperiod = eng_absence$academic_year[1],
-      previous_timeperiod = eng_absence$academic_year[4], # three rows per year due to All SEN/SEN Sup/EHCP
+      previous_timeperiod = eng_absence$academic_year[2],
       change = eng_absence$pc_change[1],
       add_percent_symbol = TRUE,
       colour = "green"
@@ -6573,6 +6930,7 @@ server <- function(input, output, session) {
   })
 
   output$box_autism <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_autism <- eng_autism %>%
       arrange(desc(date))
 
@@ -6588,11 +6946,18 @@ server <- function(input, output, session) {
     )
   })
 
-  # destinations again, sigh
+  # destinations again, has the same problem as before with national data not in the same file as regional, sigh
   output$box_KS4dest <- renderUI({
-    eng_ks4 <- ks4_destinations_nat %>%
-      fsubset(characteristic == "Identified SEN")
-
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+    if (input$level_choice == "England") {
+      eng_ks4 <- ks4_destinations_nat %>%
+        fsubset(characteristic == "Identified SEN")
+    } else {
+      eng_ks4 <- ks4_destinations %>%
+        fsubset(geographic_level == "Regional" &
+          region_name == input$region_choice &
+          characteristic == "Identified SEN")
+    }
     current_year <- eng_ks4 %>%
       fsubset(time_period == max(time_period)) %>%
       pull(academic_year)
@@ -6611,7 +6976,7 @@ server <- function(input, output, session) {
         Destination %in% c("Not sustained", "Unknown")) %>%
       fsummarise(value = 100 - fsum(`% of pupils`)) %>%
       pull(value)
-    change <- current_value - previous_value
+    change <- 100 * (current_value - previous_value) / previous_value
     create_box(
       df = eng_1618,
       latest_value = current_value,
@@ -6624,8 +6989,10 @@ server <- function(input, output, session) {
   })
 
   output$box_statefunded <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_percent_pupils_ehcp <- eng_percent_pupils_ehcp %>%
-      arrange(desc(time_period))
+      arrange(desc(time_period)) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
     # then since the current year will be at the top...
     create_box(
@@ -6640,8 +7007,10 @@ server <- function(input, output, session) {
   })
 
   output$box_mainstream <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_mainstream_with_sen <- eng_mainstream_with_sen %>%
-      arrange(desc(time_period))
+      arrange(desc(time_period)) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
     # then since the current year will be at the top...
     create_box(
@@ -6656,8 +7025,10 @@ server <- function(input, output, session) {
   })
 
   output$box_special <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_provider_types <- eng_provider_types %>%
-      arrange(desc(academic_year))
+      arrange(desc(academic_year)) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
     # then since the current year will be at the top...
     create_box(
@@ -6672,8 +7043,10 @@ server <- function(input, output, session) {
   })
 
   output$box_budget <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     eng_dsg_deficit <- eng_dsg_deficit %>%
-      arrange(desc(time_period))
+      arrange(desc(time_period)) %>%
+      geo_subset(lev = input$level_choice, reg = input$region_choice)
 
     # then since the current year will be at the top...
     create_box(
@@ -6683,6 +7056,33 @@ server <- function(input, output, session) {
       previous_timeperiod = eng_dsg_deficit$financial_year[2],
       change = eng_dsg_deficit$pc_change[1],
       add_percent_symbol = TRUE,
+      colour = "black"
+    )
+  })
+
+  output$box_percap <- renderUI({
+    validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
+    if (input$level_choice == "England") {
+      summary_percap <- nat_specialist_spend %>%
+        arrange(desc(year)) %>%
+        fsubset(category == "Total") %>%
+        ftransform(pc_change = (100 * (`Spend per head` - lead(`Spend per head`)) / lead(`Spend per head`)))
+    } else {
+      summary_percap <- reg_specialist_spend %>%
+        arrange(desc(year)) %>%
+        fsubset(region == input$region_choice &
+          category == "Total") %>%
+        ftransform(pc_change = (100 * (`Spend per head` - lead(`Spend per head`)) / lead(`Spend per head`)))
+    }
+    # then since the current year will be at the top...
+    create_box(
+      df = summary_percap,
+      latest_value = summary_percap$`Spend per head`[1],
+      latest_timeperiod = summary_percap$year[1],
+      previous_timeperiod = summary_percap$year[2],
+      change = summary_percap$pc_change[1],
+      add_percent_symbol = FALSE,
+      money = TRUE,
       colour = "black"
     )
   })
@@ -7034,6 +7434,7 @@ server <- function(input, output, session) {
   })
 
   output$ks1_phonics_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$phonics_regt_toggle == "Chart") {
       plotlyOutput("ks1_phonics_reg_time")
     } else {
@@ -7042,6 +7443,7 @@ server <- function(input, output, session) {
   })
 
   output$ks1_phonics_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$phonics_regb_toggle == "Chart") {
       plotlyOutput("ks1_phonics_reg_bench")
     } else {
@@ -7050,6 +7452,7 @@ server <- function(input, output, session) {
   })
 
   output$ks2_attainment_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$ks2_regt_toggle == "Chart") {
       plotlyOutput("ks2_attainment_reg_time")
     } else {
@@ -7058,6 +7461,7 @@ server <- function(input, output, session) {
   })
 
   output$ks2_attainment_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$ks2_regb_toggle == "Chart") {
       plotlyOutput("ks2_attainment_reg_bench")
     } else {
@@ -7066,6 +7470,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_attainment_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$ks4_regt_toggle == "Chart") {
       plotlyOutput("ks4_attainment_reg_time")
     } else {
@@ -7074,6 +7479,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_attainment_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$ks4_regb_toggle == "Chart") {
       plotlyOutput("ks4_attainment_reg_bench")
     } else {
@@ -7082,6 +7488,7 @@ server <- function(input, output, session) {
   })
 
   output$destinations_1618_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$dest18_regt_toggle == "Chart") {
       plotlyOutput("destinations_1618_reg_time")
     } else {
@@ -7090,6 +7497,7 @@ server <- function(input, output, session) {
   })
 
   output$destinations_1618_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$dest18_regb_toggle == "Chart") {
       plotlyOutput("destinations_1618_reg_bench")
     } else {
@@ -7098,6 +7506,7 @@ server <- function(input, output, session) {
   })
 
   output$destinations_1618_reg_type_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$dest18_regtyp_toggle == "Chart") {
       plotlyOutput("destinations_1618_reg_type")
     } else {
@@ -7106,6 +7515,7 @@ server <- function(input, output, session) {
   })
 
   output$mentalhealth_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$mh_regt_toggle == "Chart") {
       plotlyOutput("mentalhealth_reg_bench")
     } else {
@@ -7114,6 +7524,7 @@ server <- function(input, output, session) {
   })
 
   output$timeliness_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$time_regt_toggle == "Chart") {
       plotlyOutput("timeliness_reg_time")
     } else {
@@ -7122,6 +7533,7 @@ server <- function(input, output, session) {
   })
 
   output$timeliness_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$time_regb_toggle == "Chart") {
       plotlyOutput("timeliness_reg_bench")
     } else {
@@ -7130,6 +7542,7 @@ server <- function(input, output, session) {
   })
 
   output$tribunals_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$trib_regt_toggle == "Chart") {
       plotlyOutput("tribunals_reg_time")
     } else {
@@ -7138,6 +7551,7 @@ server <- function(input, output, session) {
   })
 
   output$tribunals_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$trib_regb_toggle == "Chart") {
       plotlyOutput("tribunals_reg_bench")
     } else {
@@ -7146,6 +7560,7 @@ server <- function(input, output, session) {
   })
 
   output$autism_nat_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$aut_nat_toggle == "Chart") {
       plotlyOutput("autism_nat_time")
     } else {
@@ -7154,6 +7569,7 @@ server <- function(input, output, session) {
   })
 
   output$autism_nat_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$aut_nab_toggle == "Chart") {
       plotlyOutput("autism_nat_bench")
     } else {
@@ -7162,6 +7578,7 @@ server <- function(input, output, session) {
   })
 
   output$absence_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$abs_regt_toggle == "Chart") {
       plotlyOutput("absence_reg_time")
     } else {
@@ -7170,6 +7587,7 @@ server <- function(input, output, session) {
   })
 
   output$absence_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$abs_regb_toggle == "Chart") {
       plotlyOutput("absence_reg_bench")
     } else {
@@ -7178,6 +7596,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$destks4_regt_toggle == "Chart") {
       plotlyOutput("ks4_destinations_reg_time")
     } else {
@@ -7186,6 +7605,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$destks4_regb_toggle == "Chart") {
       plotlyOutput("ks4_destinations_reg_bench")
     } else {
@@ -7194,6 +7614,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_reg_type_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$destks4_regtyp_toggle == "Chart") {
       plotlyOutput("ks4_destinations_reg_type")
     } else {
@@ -7202,6 +7623,7 @@ server <- function(input, output, session) {
   })
 
   output$percent_pupils_ehcp_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$ehcppc_regt_toggle == "Chart") {
       plotlyOutput("percent_pupils_ehcp_reg_time")
     } else {
@@ -7210,6 +7632,7 @@ server <- function(input, output, session) {
   })
 
   output$percent_pupils_ehcp_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$ehcppc_regb_toggle == "Chart") {
       plotlyOutput("percent_pupils_ehcp_reg_bench")
     } else {
@@ -7218,6 +7641,7 @@ server <- function(input, output, session) {
   })
 
   output$mainstream_with_sen_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$msen_regt_toggle == "Chart") {
       plotlyOutput("mainstream_with_sen_reg_time")
     } else {
@@ -7226,6 +7650,7 @@ server <- function(input, output, session) {
   })
 
   output$mainstream_with_sen_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$msen_regb_toggle == "Chart") {
       plotlyOutput("mainstream_with_sen_reg_bench")
     } else {
@@ -7234,6 +7659,7 @@ server <- function(input, output, session) {
   })
 
   output$provider_types_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$types_regt_toggle == "Chart") {
       plotlyOutput("provider_types_reg_time")
     } else {
@@ -7242,6 +7668,7 @@ server <- function(input, output, session) {
   })
 
   output$provider_types_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$types_regb_toggle == "Chart") {
       plotlyOutput("provider_types_reg_bench")
     } else {
@@ -7250,6 +7677,7 @@ server <- function(input, output, session) {
   })
 
   output$ehcp_ageprofile_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$age_regt_toggle == "Chart") {
       plotlyOutput("ehcp_ageprofile_reg_time")
     } else {
@@ -7258,6 +7686,7 @@ server <- function(input, output, session) {
   })
 
   output$dsg_deficit_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$dsg_regt_toggle == "Chart") {
       plotlyOutput("dsg_deficit_reg_time")
     } else {
@@ -7266,6 +7695,7 @@ server <- function(input, output, session) {
   })
 
   output$dsg_deficit_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$dsg_regb_toggle == "Chart") {
       plotlyOutput("dsg_deficit_reg_bench")
     } else {
@@ -7274,6 +7704,7 @@ server <- function(input, output, session) {
   })
 
   output$specialist_spend_reg_time_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$spend_regt_toggle == "Chart") {
       plotlyOutput("specialist_spend_reg_time")
     } else {
@@ -7282,6 +7713,7 @@ server <- function(input, output, session) {
   })
 
   output$specialist_spend_reg_bench_tog <- renderUI({
+    validate(need(input$level_choice, message = "Please select England or Regional level"))
     if (input$spend_regb_toggle == "Chart") {
       plotlyOutput("specialist_spend_reg_bench")
     } else {
@@ -7403,20 +7835,20 @@ server <- function(input, output, session) {
   }
 
 
-  mytoggle_englandmenus <- function(id, condition) {
-    shinyjs::toggle(
-      id = id,
-      condition = (input$tabsetpanels_reg != "Summary"),
-      anim = TRUE,
-      animType = "fade",
-      time = 0.5
-    )
-  }
+  # mytoggle_englandmenus <- function(id, condition) {
+  #    shinyjs::toggle(
+  #      id = id,
+  #      condition = (input$tabsetpanels_reg != "Summary"),
+  #      anim = TRUE,
+  #      animType = "fade",
+  #      time = 0.5
+  #    )
+  #  }
 
 
 
   observe({
-    purrr::map(england_menu_items, mytoggle_englandmenus)
+    #  purrr::map(england_menu_items, mytoggle_englandmenus)
     purrr::map(graphs_dependent_on_la_choice, mytoggle_la)
     purrr::map(graphs_dependent_on_ccg_choice, mytoggle_ccg)
   })

@@ -75,6 +75,7 @@ ui <- function(input, output, session) {
     tags$html(lang = "en"),
     shinyjs::useShinyjs(),
     useShinydashboard(),
+    use_shinyscroll(),
     # Setting up cookie consent based on a cookie recording the consent:
     # https://book.javascript-for-r.com/shiny-cookies.html
     tags$head(
@@ -84,7 +85,7 @@ ui <- function(input, output, session) {
           "dist/js.cookie.min.js"
         )
       ),
-      tags$script(src = "cookie-consent.js")
+      tags$script(src = "cookie-consent.js"),
     ),
     use_theme(dfe_colours),
     # use_tota11y(),  #only do this in dev version for accessibility testing
@@ -117,7 +118,7 @@ ui <- function(input, output, session) {
     shiny::navlistPanel(
       "",
       id = "navlistPanel",
-      widths = c(2, 8),
+      widths = c(2, 10),
       well = FALSE,
       homepage_panel(),
       regional_dashboard_panel(),
