@@ -4797,14 +4797,14 @@ server <- function(input, output, session) {
         tidytext::scale_x_reordered(labels = function(x) gsub("*.+$", "", x))
     } else {
       specialist_spend_reg_bench <- reg_specialist_spend %>%
-        mutate(
+        ungroup() %>%
+         mutate(
           region = if_else(region == "Yorkshire and The Humber", "Yorkshire and\nThe Humber", region),
           region = factor(region, levels = reg_specialist_spend_order)
         ) %>%
         collapse::fsubset(year == max(year) &
           !(is.na(region))) %>%
-        ungroup() %>%
-        ggplot(aes(
+       ggplot(aes(
           x = region,
           y = `Spend per head`,
           text = region,
@@ -7063,7 +7063,7 @@ server <- function(input, output, session) {
   output$box_percap <- renderUI({
     validate(need(input$level_choice, message = "Pick England or Regional-level summary"), errorClass = "summary-validation")
     if (input$level_choice == "England") {
-      summary_percap <- nat_specialist_spend %>%
+      summary_percap <- ungroup(nat_specialist_spend) %>%
         arrange(desc(year)) %>%
         fsubset(category == "Total") %>%
         ftransform(pc_change = (100 * (`Spend per head` - lead(`Spend per head`)) / lead(`Spend per head`)))
