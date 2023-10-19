@@ -14,7 +14,7 @@ shhh(library(shiny))
 shhh(library(shinyjs))
 shhh(library(tools))
 shhh(library(testthat))
-shhh(library(shinytest))
+shhh(library(shinytest2))
 shhh(library(shinydashboard))
 shhh(library(shinyWidgets))
 shhh(library(shinyGovstyle))
@@ -27,11 +27,11 @@ shhh(library(shinycssloaders))
 shhh(library(ggrepel))
 shhh(library(ggiraph))
 shhh(library(geomtextpath))
-shhh(library(tidytext))
 shhh(library(lubridate))
 shhh(library(stringr))
 shhh(library(fresh))
 shhh(library(shinyalert))
+shhh(library(shinyscroll))
 # shhh(library(shinya11y)) #accessibility testing only in local version
 # shhh(library(rlang))
 
@@ -52,6 +52,12 @@ spinner_type <- 1 # Defines the spinner style
 # defines width of panels
 graph_width <- 7
 info_width <- 4
+
+# reactive values used to control tab updates - get updated with where we're linking to
+move_here <- reactiveVal("")
+move_target <- reactiveVal("")
+this_tab <- reactiveVal("")
+trigger <- reactiveVal(FALSE)
 
 useShinyjs() # Activates shinyjs which allows toggling of visibility for some objects
 
@@ -130,7 +136,7 @@ dest_ks4_palette <- c(
   "#E6D2B8", "#CCAA7A", "#B3823E", "#7a592a"
 )
 
-ofsted_palette <- c("#73a773", "red", "#73a773", "orange", "red")
+ofsted_palette <- c("red", "#73a773", "#73a773", "orange", "white", "red")
 
 
 

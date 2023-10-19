@@ -38,7 +38,7 @@ homepage_panel <- function() {
                     tags$li(actionLink("link_to_feedback", "Support and feedback – provides links for feedback and if you have any questions about the dashboard, or the data it contains. There is also a link to the GitHub repository if you wish to view the dashboard source code."))
                   ),
                   p("The dashboard will be kept up to date with the latest data shortly after it is released though there may be some lag. The metrics in the prototype will be updated for publication later this year and then reviewed on an annual basis."),
-                  p("This dashboard is not all encompassing of all SEND and AP data - more information, along with methodological information, can be found on", a(href = "https://explore-education-statistics.service.gov.uk/", "Explore Education Statistics.")),
+                  p("This dashboard is not all encompassing of all SEND and AP data - more information, along with methodological information, can be found on", a(href = "https://explore-education-statistics.service.gov.uk/", "Explore Education Statistics.", target = "_blank")),
                   p(strong("Local Government Unitarisation")),
                   p("In 2021 Northamptonshire county area was split into two unitary authorities: West Northamptonshire and North Northamptonshire. This impacts data comparison pre and post 2021. We have made it possible to view data for Northamptonshire Local Authority to 2021 and both West and North Northamptonshire for 2021 onwards."),
                   p("This year, 2023, Cumbria will also be split into two unitary authorities and single unitary councils will be created in North Yorkshire and Somerset."),
@@ -65,7 +65,7 @@ homepage_panel <- function() {
               div(
                 class = "panel-body",
                 h3("Context and purpose"),
-                p("The dashboard is part of the intended reforms to the SEND and AP system, as set out in the", a(href = "https://www.gov.uk/government/publications/send-and-alternative-provision-improvement-plan", "Improvement Plan"), ", which aims to improve outcomes for children and young people with SEND and in AP, improve experiences for families, and deliver financial sustainability."),
+                p("The dashboard is part of the intended reforms to the SEND and AP system, as set out in the", a(href = "https://www.gov.uk/government/publications/send-and-alternative-provision-improvement-plan", "Improvement Plan", target = "_blank"), ", which aims to improve outcomes for children and young people with SEND and in AP, improve experiences for families, and deliver financial sustainability."),
                 p("The dashboard will eventually be fully accessible to the public and will present timely performance data across education, health and care. The dashboard will support better use of data in the system through:"),
                 tags$ul(
                   tags$li("Improving public transparency"),
@@ -75,13 +75,13 @@ homepage_panel <- function() {
                 ),
                 p(
                   "The prototype has been developed with multiple users in mind, including LAs, SEND and AP providers, and parents and carers. During the",
-                  a(href = "https://www.gov.uk/government/consultations/send-review-right-support-right-place-right-time", "Green Paper"),
+                  a(href = "https://www.gov.uk/government/consultations/send-review-right-support-right-place-right-time", "Green Paper", target = "_blank"),
                   "consultation we heard that careful consideration must be given to the dashboard before publication to ensure we develop a tool that helps us achieve our overall objectives, considers the various users in the system, and sets out relevant and useful metrics. The user testing phase will run from Spring 2023 through to the end of the year, when we will publish a first version of the dashboard. Development of the dashboard will continue with ongoing updates and iterations in response to user feedback."
                 ),
                 p(strong("Related Dashboards")),
                 p("Users may also wish to look at the related dashboards below:"),
                 tags$ul(
-                  tags$li(a(href = "https://lginform.local.gov.uk/reports/view/send-research/local-area-send-report?mod-group=AllSingleTierAndCountyLaInCountry_England&mod-area=E92000001&mod-type=namedComparisonGroup", "LG Inform Dashboard")),
+                  tags$li(a(href = "https://lginform.local.gov.uk/reports/view/send-research/local-area-send-report?mod-group=AllSingleTierAndCountyLaInCountry_England&mod-area=E92000001&mod-type=namedComparisonGroup", "LG Inform Dashboard", target = "_blank")),
                   tags$li("Further Education (FE) Performance Dashboard – In development"),
                   tags$li("Children’s Social Care (CSC) Dashboard – In development")
                 ),
@@ -98,7 +98,6 @@ homepage_panel <- function() {
 
 dashboard_panel <- function() {
   tabPanel(
-    value = "la_dashboard",
     "Local Areas",
     gov_main_layout(
       gov_row(
@@ -108,6 +107,7 @@ dashboard_panel <- function() {
         ),
         column(
           width = 12,
+          style = "position: sticky; top: 10px; z-index:10",
           div(
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
@@ -184,7 +184,7 @@ dashboard_panel <- function() {
                       Where two metrics are very close (e.g. if the ranks are 64 and 65), one circle is moved to the side and labels may be removed, for clarity."),
                     radioGroupButtons(
                       "la_sum_toggle",
-                      label = NULL,
+                      label = "Display data as:",
                       choices = c("Chart", "Table"),
                       selected = "Chart"
                     ),
@@ -212,7 +212,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "phonics_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -228,7 +228,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "phonics_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -242,7 +242,7 @@ dashboard_panel <- function() {
                     p("For full details and limitations, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-1-and-phonics-screening-check-attainment/2021-22",
-                      "Source: Key stage 1 and phonics screening check attainment."
+                      "Source: Key stage 1 and phonics screening check attainment.", target = "_blank"
                     )
                   )
                 )
@@ -261,7 +261,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "ks2_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -277,7 +277,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "ks2_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -291,7 +291,7 @@ dashboard_panel <- function() {
                     p("Figures for 2022 are based on revised data. Figures for other years are based on final data. For full details and limitations, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-2-attainment",
-                      "Source: Key stage 2 attainment."
+                      "Source: Key stage 2 attainment.", target = "_blank"
                     )
                   )
                 )
@@ -311,7 +311,7 @@ dashboard_panel <- function() {
                         htmlOutput("nhants_excuse"),
                         radioGroupButtons(
                           "ks4_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -327,7 +327,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "ks4_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -345,11 +345,11 @@ dashboard_panel <- function() {
                       "More information on these changes, and how Progress 8 is calculated, can be seen in the",
                       tags$a(
                         href = "https://www.gov.uk/government/news/guide-to-gcse-results-for-england-summer-2022",
-                        "Guide to GCSE results for England, summer 2022."
+                        "Guide to GCSE results for England, summer 2022.", target = "_blank"
                       )
                     ),
-                    tags$a(href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1134998/Secondary_accountability_measures_2022_guidance_for_maintained_secondary_schools__academies_and_free_schools.pdf", "Secondary accountability measures: 2022 guidance for maintained secondary schools, academies and free schools (publishing.service.gov.uk)"),
-                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance-revised", "Source: Key stage 4 Performance")
+                    tags$a(href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1134998/Secondary_accountability_measures_2022_guidance_for_maintained_secondary_schools__academies_and_free_schools.pdf", "Secondary accountability measures: 2022 guidance for maintained secondary schools, academies and free schools (publishing.service.gov.uk)", target = "_blank"),
+                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance-revised", "Source: Key stage 4 Performance", target = "_blank")
                   )
                 )
               ),
@@ -371,7 +371,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "dest18_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -387,7 +387,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "dest18_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -414,7 +414,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "dest18_typ_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -432,7 +432,7 @@ dashboard_panel <- function() {
                     p("The latest data was affected by COVID-19. For full details and limitations, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/16-18-destination-measures",
-                      "Source: 16-18 destinations. "
+                      "Source: 16-18 destinations. ", target = "_blank"
                     )
                   )
                 )
@@ -461,7 +461,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "mh_cgt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -472,7 +472,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "mh_cgb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -487,7 +487,7 @@ dashboard_panel <- function() {
                     p("For full details and limitations, see the full NHS publication linked below."),
                     tags$a(
                       href = "https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics",
-                      "Source: Mental Health Services Monthly Statistics."
+                      "Source: Mental Health Services Monthly Statistics.", target = "_blank"
                     )
                   )
                 )
@@ -512,7 +512,7 @@ dashboard_panel <- function() {
                       "Source: ADSC collation of Ofsted/CQC reports from ",
                       tags$a(
                         href = "https://adcs.org.uk/inspection/article/send-inspection-outcomes-summary",
-                        "adcs.org.uk/inspection/"
+                        "adcs.org.uk/inspection/", target = "_blank"
                       )
                     )
                   )
@@ -559,7 +559,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "time_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -570,7 +570,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "time_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -583,7 +583,7 @@ dashboard_panel <- function() {
                     p("The whole process of EHC needs assessment and EHC plan development, from the point when an assessment is requested (or a child or young person is brought to the local authority’s attention) until any final EHC plan is issued, must take no more than 20 weeks. The relevant legislation provides for certain exceptions to the time limits."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans",
-                      "Source: Education, health and care plans in England (SEN2). "
+                      "Source: Education, health and care plans in England (SEN2).", target = "_blank"
                     )
                   )
                 )
@@ -602,7 +602,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "trib_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -613,7 +613,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "trib_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -632,11 +632,11 @@ dashboard_panel <- function() {
                     ),
                     tags$div(
                       "For more information on the decision to publish a new appeal rate, see ",
-                      tags$a(href = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/686233/send-consultation-response.pdf", "the response to the joint MoJ/DfE consulation feedback (link to GOV.uk).")
+                      tags$a(href = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/686233/send-consultation-response.pdf", "the response to the joint MoJ/DfE consulation feedback (link to GOV.uk).", target = "_blank")
                     ),
                     tags$div(tags$a(
                       href = "https://www.gov.uk/government/statistics/tribunal-statistics-quarterly-january-to-march-2022",
-                      "Source: Tribunal Statistics Quarterly."
+                      "Source: Tribunal Statistics Quarterly.", target = "_blank"
                     ))
                   )
                 )
@@ -655,7 +655,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "aut_cgt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -666,7 +666,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "aut_cgb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -683,7 +683,7 @@ dashboard_panel <- function() {
                     p("These are experimental statistics. This means that care should be taken when making comparisons as the metric is still being refined and definitions may change between years. "),
                     tags$a(
                       href = "https://digital.nhs.uk/data-and-information/publications/statistical/autism-statistics",
-                      "Source: Autism Waiting Time Statistics"
+                      "Source: Autism Waiting Time Statistics", target = "_blank"
                     )
                   )
                 )
@@ -702,7 +702,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "abs_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -717,7 +717,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "abs_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -732,7 +732,7 @@ dashboard_panel <- function() {
                     p("For further detail, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/pupil-absence-in-schools-in-england-autumn-and-spring-terms#explore-data-and-files",
-                      "Source: Absence in schools in England (Autumn and Spring terms). "
+                      "Source: Absence in schools in England (Autumn and Spring terms). ", target = "_blank"
                     )
                   )
                 )
@@ -756,7 +756,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "destks4_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -772,7 +772,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "destks4_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -800,7 +800,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "destks4_typ_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -814,7 +814,7 @@ dashboard_panel <- function() {
                     p("To be counted in a destination, young people have to have sustained participation for a 6 month period in the destination year. "),
                     p("This dataset is affected by the COVID-19 disruption. Many employers and apprenticeship providers took on fewer individuals during the pandemic and so it is anticipated that sustained employment and apprenticeship destinations will be lower than for previous years."),
                     p("For full details and limitations, see the source publication linked below."),
-                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-destination-measures", "Source: Key stage 4 destination measures")
+                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-destination-measures", "Source: Key stage 4 destination measures", target = "_blank")
                   )
                 )
               ),
@@ -860,7 +860,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "ehcppc_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -875,7 +875,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "ehcppc_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -894,7 +894,7 @@ dashboard_panel <- function() {
                     p("Note that children and young people not attending school (e.g. those at FE college or private nurseries) who have an EHC plan are not included in this graph."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/special-educational-needs-in-england",
-                      "Source: Special educational needs in England"
+                      "Source: Special educational needs in England", target = "_blank"
                     )
                   )
                 )
@@ -913,7 +913,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "msen_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -928,7 +928,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "msen_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -947,7 +947,7 @@ dashboard_panel <- function() {
                     p("It does not include pupils in special schools, alternative provision, independent schools or out of education."),
                     tags$a(
                       href = "% of pupils in mainstream educational settings with SEN",
-                      "Source: Special educational needs in England"
+                      "Source: Special educational needs in England", target = "_blank"
                     )
                   )
                 )
@@ -970,7 +970,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "types_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -985,7 +985,7 @@ dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "types_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1001,7 +1001,7 @@ dashboard_panel <- function() {
                     The drop-down menu allows you to filter the graph to show the percentage of pupils with EHC plans or SEN support that are in these school types (for example, a value of 5% with EHC plans selected from the drop-down would mean that 5% of pupils with EHC plans were in that school type)."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/special-educational-needs-in-england",
-                      "Source: Special educational needs in England "
+                      "Source: Special educational needs in England ", target = "_blank"
                     )
                   )
                 )
@@ -1017,7 +1017,7 @@ dashboard_panel <- function() {
                     p(),
                     radioGroupButtons(
                       "age_lat_toggle",
-                      label = NULL,
+                      label = "Display data as:",
                       choices = c("Chart", "Table"),
                       selected = "Chart"
                     ),
@@ -1030,7 +1030,7 @@ dashboard_panel <- function() {
                     p("For more information, including what education provision children with EHC plans are currently in, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans",
-                      "Source: Education, health and care plans"
+                      "Source: Education, health and care plans", target = "_blank"
                     )
                   )
                 )
@@ -1064,7 +1064,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "dsg_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1075,7 +1075,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "dsg_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1090,11 +1090,11 @@ dashboard_panel <- function() {
                     p("Where a percentage is negative, an LA has spent more than its allocated DSG (the overspend is carried forward to the next year). This is one indicator of the financial sustainability of a local SEND system."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/la-and-school-expenditure",
-                      "Source: LA and school expenditure (carried over)"
+                      "Source: LA and school expenditure (carried over)", target = "_blank"
                     ),
                     tags$a(
                       href = "https://skillsfunding.service.gov.uk/view-latest-funding/national-funding-allocations/DSG/2023-to-2024",
-                      "Source: Dedicated schools grant (DSG) (allocation)"
+                      "Source: Dedicated schools grant (DSG) (allocation)", target = "_blank"
                     )
                   )
                 )
@@ -1114,7 +1114,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "spend_lat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1126,7 +1126,7 @@ dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "spend_lab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1142,7 +1142,7 @@ dashboard_panel <- function() {
                     p(" However, independent special schools often cater for children and young people with very complex needs which increases the average cost."),
                     tags$a(
                       href = "https://www.gov.uk/government/publications/high-needs-benchmarking-tool",
-                      "Source: High needs benchmarking tool"
+                      "Source: High needs benchmarking tool", target = "_blank"
                     )
                   )
                 )
@@ -1162,7 +1162,6 @@ dashboard_panel <- function() {
 regional_dashboard_panel <- function() {
   tabPanel(
     id = "toptab_engreg",
-    value = "engreg_dashboard",
     "England and Regions",
 
     # Define UI for application that draws a histogram
@@ -1176,6 +1175,7 @@ regional_dashboard_panel <- function() {
         ),
         column(
           width = 12,
+          style = "position: sticky; top: 10px; z-index:10",
           div(
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
@@ -1184,12 +1184,12 @@ regional_dashboard_panel <- function() {
                 width = 12,
                 pickerInput("level_choice",
                   label = h2("Select England or region-level view"),
-                  choices = c("England", "Regions"),
-                  selected = "England",
+                  choices = list("Pick England or Regions" = "", "England", "Regions"),
+                  selected = NULL,
                   options = pickerOptions(maxOptions = 1, )
                 ),
                 conditionalPanel(
-                  condition = "input.level_choice == 'Regions' && input.tabsetpanels_reg != 'Summary'",
+                  condition = "input.level_choice == 'Regions'",
                   selectInput(
                     inputId = "region_choice",
                     label = "Choose region",
@@ -1198,7 +1198,12 @@ regional_dashboard_panel <- function() {
                 ),
                 conditionalPanel(
                   condition = "input.tabsetpanels_reg == 'Summary'",
-                  strong("Currently only England-level and LA-level summaries are available. Once a Region-level summary is created it will be selectable here.")
+                  selectInput(
+                    inputId = "summary_sen_type",
+                    label = "Choose SEN type used for Summary (applies to KS1, KS2, and absence metrics)",
+                    choices = list("All SEN", "EHC plan", "SEN support")
+                  ),
+                  p("Progress 8 is not a meaningful measure for children with EHCPs as most do not do 8 qualifications, so this switch does not apply to the KS4 metric")
                 )
               )
             )
@@ -1215,218 +1220,281 @@ regional_dashboard_panel <- function() {
                 h2("England and Regions Summary"),
                 box(
                   width = 12,
-                  p("This page provides a snapshot of the latest data on one page for all metrics at an England level. A direction arrow indicates an increase or decrease in the latest value of a measure when compared with the previous period of data. The previous period in question is noted below the information on the size of the change.")
+                  p("This page provides a snapshot of the latest data on one page for all metrics at an England level. A direction arrow indicates an increase or decrease in the latest value of a measure when compared with the previous period of data. The previous period in question is noted below the information on the size of the change."),
+                  p("Changes are expressed as percentage changes rather than percentage point changes; eg if a value is 2% this year after being 1% last year that is a 100% increase, not a 1% increase.")
                 )
               ),
               h2("Outcomes"),
               fluidRow(
                 class = "summary-box",
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%", # manually specifying box height to achieve uniform box size
-                  background = "blue",
-                  h3("KS1 phonics"),
-                  h4("% achieving expected standard in Y1 (all pupils with SEN)", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: KS1 phonics",
-                    uiOutput("box_ks1_phonics"),
+                actionLink(
+                  inputId = "link_ks1_phonics_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%", # manually specifying box height to achieve uniform box size
+                    background = "blue",
+                    h3("KS1 phonics"),
+                    h4("% achieving expected standard in Y1", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: KS1 phonics",
+                      uiOutput("box_ks1_phonics"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "blue",
-                  h3("KS2 attainment"),
-                  h4("% achieving expected standards (all pupils with SEN)"),
-                  div( # need a div to add hover over title
-                    title = "Source: KS2 attainemnt",
-                    uiOutput("box_ks2_attainment"),
+                actionLink(
+                  inputId = "link_ks2_attainment_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "blue",
+                    h3("KS2 attainment"),
+                    h4("% achieving expected standards"),
+                    div( # need a div to add hover over title
+                      title = "Source: KS2 attainemnt",
+                      uiOutput("box_ks2_attainment"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "blue",
-                  h3("KS4 attainment"),
-                  h4("Average progress 8 score (all pupils with SEN)"),
-                  div( # need a div to add hover over title
-                    title = "Source: KS4 attainment",
-                    uiOutput("box_ks4_attainment"),
-                  ),
-                  # br(),
+                actionLink(
+                  inputId = "link_ks4_attainment_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "blue",
+                    h3("KS4 attainment"),
+                    h4("Average progress 8 score (all pupils with SEN)"),
+                    div( # need a div to add hover over title
+                      title = "Source: KS4 attainment",
+                      uiOutput("box_ks4_attainment"),
+                    ),
+                    br()
+                  )
                 )
               ),
               fluidRow(
                 class = "summary-box",
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "blue",
-                  h3("Mental Health services access"),
-                  h4("Number of children and young people accessing NHS-funded support", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: NHS England",
-                    uiOutput("box_mentalhealth"),
+                actionLink(
+                  inputId = "link_mh_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "blue",
+                    h3("Mental Health services access"),
+                    h4("Number of children and young people accessing NHS-funded support", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: NHS England",
+                      uiOutput("box_mentalhealth"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "blue",
-                  h3("Ofsted Ratings"),
-                  br(),
-                  h4("Percentage of LAs with no Written Statement of Action", .noWS = "after"),
-                  br(),
-                  div( # need a div to add hover over title
-                    title = "Source: Ofsted",
-                    uiOutput("box_ofsted"),
+                actionLink(
+                  inputId = "link_ofsted_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "blue",
+                    h3("Ofsted Ratings"),
+                    # br(),
+                    h4("Percentage of LAs with no Written Statement of Action or Priority Action Plan", .noWS = "after"),
+                    # br(),
+                    div( # need a div to add hover over title
+                      title = "Source: Ofsted",
+                      uiOutput("box_ofsted"),
+                    ),
+                    br()
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "blue",
-                  h3("16-18 Destinations"),
-                  br(),
-                  h4("Percentage of school leavers with sustained destination", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: 16-18 destinations",
-                    uiOutput("box_1618dest"),
+                actionLink(
+                  inputId = "link_1618_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "blue",
+                    h3("16-18 Destinations"),
+                    # br(),
+                    h4("Percentage of school leavers (identified SEN) with sustained destination", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: 16-18 destinations",
+                      uiOutput("box_1618dest"),
+                    )
                   )
                 )
               ),
               h2("Experiences"),
               fluidRow(
                 class = "summary-box",
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "green",
-                  h3("EHCP timeliness"),
-                  # br(),
-                  h4("Percentage of EHCPs issued within 20-week limit:", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: SEN2",
-                    uiOutput("box_timeliness"),
+                actionLink(
+                  inputId = "link_timeliness_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "green",
+                    h3("EHCP timeliness"),
+                    br(),
+                    h4("Percentage of EHCPs issued within 20-week limit:", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: SEN2",
+                      uiOutput("box_timeliness"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "green",
-                  h3("SEND Tribunal appeal rate"),
-                  # br(),
-                  h4("Appeals to SEND tribunal as % of appealable decisions", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: HMCTS",
-                    uiOutput("box_tribunals"),
+                actionLink(
+                  inputId = "link_tribunals_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "green",
+                    h3("SEND Tribunal appeal rate"),
+                    # br(),
+                    h4("Appeals to SEND tribunal as % of appealable decisions", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: HMCTS",
+                      uiOutput("box_tribunals"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "green",
-                  h3("Overall absence rate"),
-                  # br(),
-                  h4("Overall absence rate (all pupils with SEN)", .noWS = "after"),
-                  # br(),
-                  div( # need a div to add hover over title
-                    title = "Source: Absence in schools in England",
-                    uiOutput("box_absence"),
+                actionLink(
+                  inputId = "link_absence_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "green",
+                    h3("Overall absence rate"),
+                    br(),
+                    h4("Overall absence rate", .noWS = "after"),
+                    # br(),
+                    div( # need a div to add hover over title
+                      title = "Source: Absence in schools in England",
+                      uiOutput("box_absence"),
+                    )
                   )
                 )
               ),
               fluidRow(
                 class = "summary-box",
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "green",
-                  h3("Autism waiting times"),
-                  h4("Proportion of children under 10 recieving a first appointment after > 13 weeks", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: Absence in schools in England",
-                    uiOutput("box_autism"),
+                actionLink(
+                  inputId = "link_autism_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "green",
+                    h3("Autism waiting times"),
+                    h4("Proportion of children under 10 recieving a first appointment after more than 13 weeks (national data only, regional not published)", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: Absence in schools in England",
+                      uiOutput("box_autism"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "green",
-                  h3("Destinations post-KS4"),
-                  h4("Proportion of school leavers with a sustained destination", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: Absence in schools in England",
-                    uiOutput("box_KS4dest"),
+                actionLink(
+                  inputId = "link_ks4_destinations_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "green",
+                    h3("Destinations post-KS4"),
+                    h4("Proportion of school leavers (identified SEN) with a sustained destination", .noWS = "after"),
+                    br(),
+                    div( # need a div to add hover over title
+                      title = "Source: Absence in schools in England",
+                      uiOutput("box_KS4dest"),
+                    )
                   )
                 ),
               ),
               h2("Identification of Need"),
               fluidRow(
                 class = "summary-box",
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "red",
-                  h3("Pupils with EHC plans in state-funded schools"),
-                  h4("Percentage of pupils in state-funded schools with an EHCP", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: Special educational needs in England",
-                    uiOutput("box_statefunded"),
+                actionLink(
+                  inputId = "link_statefunded_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "red",
+                    h3("Pupils with EHC plans in state-funded schools"),
+                    h4("Percentage of pupils in state-funded schools with an EHCP", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: Special educational needs in England",
+                      uiOutput("box_statefunded"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "red",
-                  h3("Pupils with SEN in mainstream schools"),
-                  h4("Percentage of pupils in mainstream settings with SEN", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: Special educational needs in England",
-                    uiOutput("box_mainstream"),
+                actionLink(
+                  inputId = "link_mainstream_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "red",
+                    h3("Pupils with SEN in mainstream schools"),
+                    h4("Percentage of pupils in mainstream settings with SEN", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: Special educational needs in England",
+                      uiOutput("box_mainstream"),
+                    )
                   )
                 ),
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  height = "100%",
-                  background = "red",
-                  h3("Pupils in special schools"),
-                  br(),
-                  h4("Percentage of pupils in specialist settings", .noWS = "after"),
-                  # br(),
-                  div( # need a div to add hover over title
-                    title = "Source: Special educational needs in England",
-                    uiOutput("box_special"),
+                actionLink(
+                  inputId = "link_special_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    height = "100%",
+                    background = "red",
+                    h3("Pupils in special schools"),
+                    # br(),
+                    h4("Percentage of pupils in specialist settings", .noWS = "after"),
+                    # br(),
+                    div( # need a div to add hover over title
+                      title = "Source: Special educational needs in England",
+                      uiOutput("box_special"),
+                    )
                   )
                 )
               ),
               h2("Financial Sustainability"),
               fluidRow(
                 class = "summary-box",
-                box(
-                  class = "summary-box",
-                  width = 4,
-                  background = "black",
-                  height = "100%",
-                  h3("Combined Local Authority Education Deficit"),
-                  h4("Dedicated Schools Grant cumulative balance as % of total budget", .noWS = "after"),
-                  div( # need a div to add hover over title
-                    title = "Source: LA and school expenditure",
-                    uiOutput("box_budget"),
+                actionLink(
+                  inputId = "link_deficit_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    background = "black",
+                    height = "100%",
+                    h3("Combined Local Authority Education Deficit"),
+                    h4("Dedicated Schools Grant cumulative balance as % of total budget", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: LA and school expenditure",
+                      uiOutput("box_budget"),
+                    )
+                  )
+                ),
+                actionLink(
+                  inputId = "link_spend_reg_panel", width = "33%", class = "link-box",
+                  box(
+                    class = "summary-box",
+                    width = 12,
+                    background = "black",
+                    height = "100%",
+                    h3("Average spend per head on specialist provision"),
+                    h4("Total per capita gross spend for SEN, AP and special schools", .noWS = "after"),
+                    div( # need a div to add hover over title
+                      title = "Source: High needs benchmarking tool",
+                      uiOutput("box_percap"),
+                    )
                   )
                 )
               )
@@ -1447,7 +1515,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "phonics_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1463,7 +1531,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "phonics_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1477,7 +1545,7 @@ regional_dashboard_panel <- function() {
                     p("For full details and limitations, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-1-and-phonics-screening-check-attainment/2021-22",
-                      "Source: Key stage 1 and phonics screening check attainment."
+                      "Source: Key stage 1 and phonics screening check attainment.", target = "_blank"
                     )
                   )
                 )
@@ -1496,11 +1564,11 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "ks2_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
-                        withSpinner(type = spinner_type, ui_element = uiOutput("ks2_attainment_reg_time_tog", height = "110%"))
+                        div(withSpinner(type = spinner_type, ui_element = uiOutput("ks2_attainment_reg_time_tog", height = "110%")))
                       ),
                       tabPanel(
                         "Regional comparison",
@@ -1511,7 +1579,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "ks2_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1525,7 +1593,7 @@ regional_dashboard_panel <- function() {
                     p("Figures for 2022 are based on revised data. Figures for other years are based on final data. For full details and limitations, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-2-attainment",
-                      "Source: Key stage 2 attainment."
+                      "Source: Key stage 2 attainment.", target = "_blank"
                     )
                   )
                 )
@@ -1544,7 +1612,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "ks4_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1559,7 +1627,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "ks4_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1572,16 +1640,15 @@ regional_dashboard_panel <- function() {
                     p("Progress 8 aims to capture the progress that pupils in a school make from the end of primary school to the end of KS4. It is a type of value-added measure, which means that pupils’ results in up to 8 qualifications are compared to other pupils nationally with similar prior attainment."),
                     p("This academic year saw the return of the summer exam series, after they had been cancelled in 2020 and 2021 due to the impact of the COVID-19 pandemic, where alternative processes were set up to award grades (centre assessment grades, known as CAGs, and teacher assessed grades, known as TAGs). As part of the transition back to the summer exam series, adaptations were made to the exams (including advance information) and the approach to grading for 2022 exams broadly reflected a midpoint between results in 2019 and 2021. "),
                     p("Progress 8 scores in 2022 will also have been impacted by the changes to methodology in the way 2022 performance measures were calculated, as results achieved between January 2020 and August 2021 were not included in the measures."),
-                    p(strong("Currently Progress 8 scores broken down by SEN description are not available for 2018/19, so no comparison over time is possible. These scores will be added in the near future.")),
                     tags$div(
                       "More information on these changes, and how Progress 8 is calculated, can be seen in the",
                       tags$a(
                         href = "https://www.gov.uk/government/news/guide-to-gcse-results-for-england-summer-2022",
-                        "Guide to GCSE results for England, summer 2022."
+                        "Guide to GCSE results for England, summer 2022.", target = "_blank"
                       )
                     ),
-                    tags$a(href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1134998/Secondary_accountability_measures_2022_guidance_for_maintained_secondary_schools__academies_and_free_schools.pdf", "Secondary accountability measures: 2022 guidance for maintained secondary schools, academies and free schools (publishing.service.gov.uk)"),
-                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance-revised", "Source: Key stage 4 Performance")
+                    tags$a(href = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1134998/Secondary_accountability_measures_2022_guidance_for_maintained_secondary_schools__academies_and_free_schools.pdf", "Secondary accountability measures: 2022 guidance for maintained secondary schools, academies and free schools (publishing.service.gov.uk)", target = "_blank"),
+                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance-revised", "Source: Key stage 4 Performance", target = "_blank")
                   )
                 )
               ),
@@ -1603,7 +1670,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "dest18_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1618,7 +1685,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "dest18_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1644,7 +1711,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "dest18_regtyp_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1662,7 +1729,7 @@ regional_dashboard_panel <- function() {
                     p("The latest data was affected by COVID-19. For full details and limitations, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/16-18-destination-measures",
-                      "Source: 16-18 destinations. "
+                      "Source: 16-18 destinations. ", target = "_blank"
                     )
                   )
                 )
@@ -1670,7 +1737,7 @@ regional_dashboard_panel <- function() {
               fluidRow(
                 column(
                   width = 12,
-                  h2("Mental Health service access"),
+                  h2("Mental Health service access", id = "mh_reg_panel"),
                   h3("Children and young people accessing NHS-funded mental health support"),
                   box(
                     width = graph_width,
@@ -1686,7 +1753,7 @@ regional_dashboard_panel <- function() {
                       "Regional comparison over time",
                       radioGroupButtons(
                         "mh_regt_toggle",
-                        label = NULL,
+                        label = "Display data as:",
                         choices = c("Chart", "Table"),
                         selected = "Chart"
                       ),
@@ -1698,7 +1765,7 @@ regional_dashboard_panel <- function() {
                         "NHS regions have different boundaries to those used by DfE. ",
                         tags$a(
                           href = "https://geoportal.statistics.gov.uk/documents/nhs-england-regions-april-2020-map-in-england-1/explore",
-                          "The latest map is on the Open Geography Portal. "
+                          "The latest map is on the Open Geography Portal. ", target = "_blank"
                         )
                       )
                     )
@@ -1710,7 +1777,7 @@ regional_dashboard_panel <- function() {
                     p("For full details and limitations, see the full NHS publication linked below."),
                     tags$a(
                       href = "https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics",
-                      "Source: Mental Health Services Monthly Statistics."
+                      "Source: Mental Health Services Monthly Statistics.", target = "_blank"
                     )
                   )
                 )
@@ -1718,11 +1785,10 @@ regional_dashboard_panel <- function() {
               fluidRow(
                 column(
                   width = 12,
-                  h2("Local Area SEND Inspection ratings"),
+                  h2("Local Area SEND Inspection ratings", id = "ofsted_reg_panel"),
                   h3("Ratings from the last joint Ofsted/CQC inspection"),
                   box(
                     width = graph_width,
-                    id = "ofsted_reg_panel",
                     strong("LA inspection outcomes in region/nation"),
                     selectInput("ofsted_table_choice",
                       label = "Select either a summary (number of LAs by category) or a full table of inspection results:",
@@ -1738,7 +1804,7 @@ regional_dashboard_panel <- function() {
                       "Source: ADSC collation of Ofsted/CQC reports from ",
                       tags$a(
                         href = "https://adcs.org.uk/inspection/article/send-inspection-outcomes-summary",
-                        "adcs.org.uk/inspection/"
+                        "adcs.org.uk/inspection/", target = "_blank"
                       )
                     )
                   )
@@ -1784,7 +1850,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "time_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1795,7 +1861,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "time_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1808,7 +1874,7 @@ regional_dashboard_panel <- function() {
                     p("The whole process of EHC needs assessment and EHC plan development, from the point when an assessment is requested (or a child or young person is brought to the local authority’s attention) until any final EHC plan is issued, must take no more than 20 weeks. The relevant legislation provides for exceptions to the time limits in certain situations."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans",
-                      "Source: Education, health and care plans in England (SEN2). "
+                      "Source: Education, health and care plans in England (SEN2).", target = "_blank"
                     )
                   )
                 )
@@ -1827,7 +1893,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "trib_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1838,7 +1904,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "trib_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1857,11 +1923,11 @@ regional_dashboard_panel <- function() {
                     ),
                     tags$div(
                       "For more information on the decision to publish a new appeal rate, see ",
-                      tags$a(href = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/686233/send-consultation-response.pdf", "the response to the joint MoJ/DfE consulation feedback (link to GOV.uk).")
+                      tags$a(href = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/686233/send-consultation-response.pdf", "the response to the joint MoJ/DfE consulation feedback (link to GOV.uk).", target = "_blank")
                     ),
                     tags$div(tags$a(
                       href = "https://www.gov.uk/government/collections/tribunals-statistics#tribunal-statistics-quarterly",
-                      "Source: Tribunal Statistics Quarterly."
+                      "Source: Tribunal Statistics Quarterly.", target = "_blank"
                     ))
                   )
                 )
@@ -1880,7 +1946,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "abs_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1895,7 +1961,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "abs_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1910,7 +1976,7 @@ regional_dashboard_panel <- function() {
                     p("For further detail, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/pupil-absence-in-schools-in-england-autumn-and-spring-terms#explore-data-and-files",
-                      "Source: Absence in schools in England (Autumn and Spring terms). "
+                      "Source: Absence in schools in England (Autumn and Spring terms). ", target = "_blank"
                     )
                   )
                 )
@@ -1929,7 +1995,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "aut_nat_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1944,7 +2010,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "aut_nab_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1961,7 +2027,7 @@ regional_dashboard_panel <- function() {
                     p("These are experimental statistics. This means that care should be taken when making comparisons as the metric is still being refined and definitions may change between years. "),
                     tags$a(
                       href = "https://digital.nhs.uk/data-and-information/publications/statistical/autism-statistics",
-                      "Source: Autism Waiting Time Statistics"
+                      "Source: Autism Waiting Time Statistics", target = "_blank"
                     )
                   )
                 )
@@ -1984,7 +2050,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "destks4_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -1999,7 +2065,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "destks4_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2026,7 +2092,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "destks4_regtyp_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2040,7 +2106,7 @@ regional_dashboard_panel <- function() {
                     p("To be counted in a destination, young people have to have sustained participation for a 6 month period in the destination year. "),
                     p("This dataset is affected by the COVID-19 disruption. Many employers and apprenticeship providers took on fewer individuals during the pandemic and so it is anticipated that sustained employment and apprenticeship destinations will be lower than for previous years."),
                     p("For full details and limitations, see the source publication linked below."),
-                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-destination-measures", "Source: Key stage 4 destination measures")
+                    tags$a(href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-destination-measures", "Source: Key stage 4 destination measures", target = "_blank")
                   )
                 )
               ),
@@ -2086,7 +2152,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "ehcppc_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2101,7 +2167,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "ehcppc_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2120,7 +2186,7 @@ regional_dashboard_panel <- function() {
                     p("Note that children and young people not attending school (e.g. those at FE college or private nurseries) who have an EHC plan are not included in this graph."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/special-educational-needs-in-england",
-                      "Source: Special educational needs in England"
+                      "Source: Special educational needs in England", target = "_blank"
                     )
                   )
                 )
@@ -2139,7 +2205,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "msen_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2154,7 +2220,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "msen_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2171,7 +2237,7 @@ regional_dashboard_panel <- function() {
                     p("It does not include pupils in special schools, alternative provision, independent schools or out of education."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/special-educational-needs-in-england",
-                      "Source: Special educational needs in England"
+                      "Source: Special educational needs in England", target = "_blank"
                     )
                   )
                 )
@@ -2194,7 +2260,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "types_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2209,7 +2275,7 @@ regional_dashboard_panel <- function() {
                         ),
                         radioGroupButtons(
                           "types_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2225,7 +2291,7 @@ regional_dashboard_panel <- function() {
                     The drop-down menu allows you to filter the graph to show the percentage of pupils with EHC plans or SEN support that are in these school types (for example, a value of 5% with EHC plan selected from the drop-down would mean that 5% of pupils with EHC plans were in that school type)."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/special-educational-needs-in-england",
-                      "Source: Special educational needs in England "
+                      "Source: Special educational needs in England ", target = "_blank"
                     )
                   )
                 )
@@ -2240,7 +2306,7 @@ regional_dashboard_panel <- function() {
                     p(),
                     radioGroupButtons(
                       "age_regt_toggle",
-                      label = NULL,
+                      label = "Display data as:",
                       choices = c("Chart", "Table"),
                       selected = "Chart"
                     ),
@@ -2254,7 +2320,7 @@ regional_dashboard_panel <- function() {
                     p("For more information, including what education provision children with EHC plans are currently in, see the source publication linked below."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans",
-                      "Source: Education, health and care plans"
+                      "Source: Education, health and care plans", target = "_blank"
                     )
                   )
                 )
@@ -2282,7 +2348,6 @@ regional_dashboard_panel <- function() {
                   h3("Dedicated Schools Grant (DSG) cumulative balance as a % of the total budget"),
                   box(
                     width = graph_width,
-                    uiOutput("london_choice"),
                     tabsetPanel(
                       id = "dsg_deficit_reg_panel",
                       tabPanel(
@@ -2290,7 +2355,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "dsg_regt_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2301,7 +2366,7 @@ regional_dashboard_panel <- function() {
                         p(),
                         radioGroupButtons(
                           "dsg_regb_toggle",
-                          label = NULL,
+                          label = "Display data as:",
                           choices = c("Chart", "Table"),
                           selected = "Chart"
                         ),
@@ -2316,11 +2381,11 @@ regional_dashboard_panel <- function() {
                     p("Where a percentage is negative, an LA has spent more than its allocated DSG (the overspend is carried forward to the next year). This is one indicator of the financial sustainability of a local SEND system."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/la-and-school-expenditure",
-                      "Source: LA and school expenditure (carried over)"
+                      "Source: LA and school expenditure (carried over)", target = "_blank"
                     ),
                     tags$a(
                       href = "https://skillsfunding.service.gov.uk/view-latest-funding/national-funding-allocations/DSG/2023-to-2024",
-                      "Source: Dedicated schools grant (DSG) (allocation)"
+                      "Source: Dedicated schools grant (DSG) (allocation)", target = "_blank"
                     )
                   )
                 )
@@ -2332,18 +2397,41 @@ regional_dashboard_panel <- function() {
                   h3("Per capita gross spend on non-maintained and independent sector for SEN, AP and special schools"),
                   box(
                     width = graph_width,
-                    #          withSpinner(type = spinner_type, ui_element = uiOutput("specialist_spend_reg_time_tog", height = "110%")))
+                    tabsetPanel(
+                      tabPanel(
+                        "Change over time",
+                        p(),
+                        radioGroupButtons(
+                          "spend_regt_toggle",
+                          label = "Display data as:",
+                          choices = c("Chart", "Table"),
+                          selected = "Chart"
+                        ),
+                        withSpinner(type = spinner_type, ui_element = uiOutput("specialist_spend_reg_time_tog", height = "110%"))
+                      ),
+                      tabPanel(
+                        "Regional comparison",
+                        p(),
+                        radioGroupButtons(
+                          "spend_regb_toggle",
+                          label = "Display data as:",
+                          choices = c("Chart", "Table"),
+                          selected = "Chart"
+                        ),
+                        withSpinner(type = spinner_type, ui_element = uiOutput("specialist_spend_reg_bench_tog", height = "110%"))
+                      )
+                    )
                   ),
                   box(
                     width = info_width, title = "About this indicator", solidHeader = TRUE,
-                    p(strong("Metric not yet available at regional or England level. This graph is currently present in the LA Dashboard, and will be added here once the data becomes available.")),
+                    # p(strong("Metric not yet available at regional or England level. This graph is currently present in the LA Dashboard, and will be added here once the data becomes available.")),
                     p("This metric shows the amount of High Needs top-up funding spent within the state and independent/non-maintained sectors on special schools and alternative provision."),
                     p("It is taken from the High Needs Benchmarking tool generally used by Local Authorities."),
                     p("On average, independent and non-maintained provision is more expensive per head than provision in the state sector (e.g. state-funded special schools), and more children are in independent or non-maintained settings than previously."),
                     p("However, independent special schools often cater for children and young people with very complex needs which increases the average cost."),
                     tags$a(
                       href = "https://www.gov.uk/government/publications/high-needs-benchmarking-tool",
-                      "Source: High needs benchmarking tool"
+                      "Source: High needs benchmarking tool", target = "_blank"
                     )
                   )
                 )

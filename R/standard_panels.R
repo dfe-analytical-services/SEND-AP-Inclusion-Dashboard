@@ -11,8 +11,10 @@ a11y_panel <- function() {
             This application is run by the Department for Education. We want as many people as possible to be able to use this application,
             and have actively developed this application with accessibilty in mind."),
           h2("WCAG 2.1 compliance"),
-          br("We follow the reccomendations of the ", a(href = "https://www.w3.org/TR/WCAG21/", "WCAG 2.1 requirements. ", onclick = "ga('send', 'event', 'click', 'link', 'IKnow', 1)"), "This application has been checked using the ", a(href = "https://github.com/ewenme/shinya11y", "Shinya11y tool "), ", which did not detect accessibility issues.
-             This application also fully passes the accessibility audits checked by the ", a(href = "https://developers.google.com/web/tools/lighthouse", "Google Developer Lighthouse tool"), ". This means that this application:"),
+          br("We follow the reccomendations of the ", a(href = "https://www.w3.org/TR/WCAG21/", "WCAG 2.1 requirements. ", onclick = "ga('send', 'event', 'click', 'link', 'IKnow', 1)", target = "_blank"), "This application has been checked using the ", a(href = "https://github.com/ewenme/shinya11y", "Shinya11y tool", target = "_blank"), ", which detected a small number of accessibility issues as outlined below.
+             Each page in this application has been audited for accessiblity with the page-snapshot functionality in the ", a(href = "https://developers.google.com/web/tools/lighthouse", "Google Developer Lighthouse tool", target = "_blank"), ".
+             This application does not fully pass the accessibility auditing, partially due to limitations in the software (R-Shiny) used to produce the dashboard. Specific reasons for this are outlined in the limitations section below, whilst to mitigate the accessibility challenges here, we also provide a link to the underlying data for each metric in the 'about this indicator' panel."),
+          br("This app does however follow the following guidelines:"),
           tags$div(tags$ul(
             tags$li("uses colours that have sufficient contrast"),
             tags$li("allows you to zoom in up to 300% without the text spilling off the screen"),
@@ -27,6 +29,9 @@ a11y_panel <- function() {
             tags$li("This dashboard uses R-Shiny components that have some issues with badly formatted aria identifiers."),
             tags$li("Keyboard navigation through the interactive charts is currently limited, and some features are unavailable for keyboard only users.")
           )),
+          h2("Browser compatibility"),
+          br("The browsers used were Edge Chromium and Chrome as these are standard in the DfE and its agencies. The operating system used was Windows."),
+          br("This statement was prepared and last updated on 18th October 2023."),
           h2("Feedback"),
           br(
             "If you have any feedback on how we could further improve the accessibility of this application, please contact us at",
@@ -57,16 +62,16 @@ support_links <- function() {
           br(),
           h2("Find more information on the data"),
           "The majority of the data used to produce the dashboard, along with methodological information can be found on ",
-          a(href = "https://explore-education-statistics.service.gov.uk/", "Explore Education Statistics", .noWS = c("after")),
+          a(href = "https://explore-education-statistics.service.gov.uk/", "Explore Education Statistics", .noWS = c("after"), target = "_blank"),
           ".",
           "Some non-education data is also used; including healthcare information from NHS England. Each graph or table has its data source linked in the right-hand side panel.",
           br(),
           h2("Contact us"),
           "If you have questions about the dashboard or data within it, please contact us at ",
-          a(href = "mailto:sendap.dashboard@education.gov.uk", "sendap.dashboard@education.gov.uk", .noWS = c("after")), br(),
+          a(href = "mailto:sendap.dashboard@education.gov.uk", "sendap.dashboard@education.gov.uk", .noWS = c("after"), target = "_blank"), br(),
           h2("See the source code"),
           "The source code for this dashboard is available in our ",
-          a(href = "https://github.com/dfe-analytical-services/SEND-AP-Inclusion-Dashboard", "GitHub repository", .noWS = c("after")),
+          a(href = "https://github.com/dfe-analytical-services/SEND-AP-Inclusion-Dashboard", "GitHub repository", .noWS = c("after"), target = "_blank"),
           ".",
           br()
         ),
