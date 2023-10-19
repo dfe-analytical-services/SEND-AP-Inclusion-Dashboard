@@ -4564,7 +4564,7 @@ server <- function(input, output, session) {
 
   ## Specialist Spend (reg/time)
   output$specialist_spend_reg_time <- renderPlotly({
-    latest_specialist_spend <- reg_specialist_spend %>%
+    latest_specialist_spend <- ungroup(reg_specialist_spend) %>%
       fsubset(year == max(year))
 
     min_scale <- min(specialist_spend$`Spend per head`[specialist_spend$category == "Total"], na.rm = TRUE)
@@ -5810,10 +5810,10 @@ server <- function(input, output, session) {
 
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- provider_types_grouped_nat %>%
+      ungroup() %>%
       fsubset(`Provision type` == input$provider_types_la_bench_filter &
         academic_year == comparison_year &
         geographic_level == "National") %>%
-      ungroup() %>%
       mutate(outcome = `% in independent/AP/special`)
 
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
@@ -6028,10 +6028,10 @@ server <- function(input, output, session) {
   ## Provider types (region/bench)
   output$provider_types_reg_bench <- renderPlotly({
     national_average <- provider_types_grouped_nat %>%
+      ungroup() %>%
       fsubset(academic_year == max(academic_year) &
         `Provision type` == input$provider_types_reg_bench_filter &
         geographic_level == "National") %>%
-      ungroup() %>%
       mutate(outcome = `% in independent/AP/special`)
 
 
@@ -6783,7 +6783,7 @@ server <- function(input, output, session) {
     if (input$level_choice == "England") {
       good_pc <- eng_ofsted[eng_ofsted$WSoAPAP == FALSE, ]$pc_LAs
     } else {
-      good_pc <- reg_ofsted %>%
+      good_pc <- ungroup(reg_ofsted) %>%
         fsubset(region == input$region_choice &
           WSoAPAP == FALSE) %>%
         pull(pc_LAs)
@@ -7068,7 +7068,7 @@ server <- function(input, output, session) {
         fsubset(category == "Total") %>%
         ftransform(pc_change = (100 * (`Spend per head` - lead(`Spend per head`)) / lead(`Spend per head`)))
     } else {
-      summary_percap <- reg_specialist_spend %>%
+      summary_percap <- ungroup(reg_specialist_spend) %>%
         arrange(desc(year)) %>%
         fsubset(region == input$region_choice &
           category == "Total") %>%
