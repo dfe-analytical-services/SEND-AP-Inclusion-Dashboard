@@ -4798,13 +4798,13 @@ server <- function(input, output, session) {
     } else {
       specialist_spend_reg_bench <- reg_specialist_spend %>%
         ungroup() %>%
-         mutate(
+        mutate(
           region = if_else(region == "Yorkshire and The Humber", "Yorkshire and\nThe Humber", region),
           region = factor(region, levels = reg_specialist_spend_order)
         ) %>%
         collapse::fsubset(year == max(year) &
           !(is.na(region))) %>%
-       ggplot(aes(
+        ggplot(aes(
           x = region,
           y = `Spend per head`,
           text = region,
