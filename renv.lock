@@ -2506,7 +2506,7 @@
     },
     "units": {
       "Package": "units",
-      "Version": "0.8-4",
+      "Version": "0.8-5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
