@@ -24,17 +24,13 @@ library(stringr)
 library(RCurl)
 library(gsubfn)
 library(forcats)
+library(rio)
 
 #==============================
 # Pre-step
 #==============================
 
-
-
-# Run the file which requires some manual changes 
-source("prep/data_preparation_manual_changes_required.R")
-
-print("Although this file automates the downloading of data where possible, when updating you should progress step by step to check for key possible issues e.g., the underlying file changes name, stucture, or where it's published")
+print("Although this file automates the downloading of data where possible, when updating you should progress step by step to check for key possible issues e.g., the underlying file changes name, stucture, or where it's published.")
 
 
 #------------------------------
@@ -42,9 +38,11 @@ print("Although this file automates the downloading of data where possible, when
 #------------------------------
 
 ymc_date_format <- "%Y-%m-%d"
-months <- c(1:12)
-current_year <- as.numeric(format(Sys.Date(), "%Y"))  
+nhs_months <- c(4:12, 1:3) # data is in financial years
+months <- 1:12
+current_year <- as.numeric(format(Sys.Date(), "%Y"))
 nhs_years <- c(current_year-1, current_year) # because in January, you want last year's publication 
+
 
 #function that fixes capitalisation in some NHS records
 simpleCap <- function(x) {
@@ -52,6 +50,10 @@ simpleCap <- function(x) {
   paste(toupper(substring(s, 1, 1)), substring(s, 2),
         sep = "", collapse = " ")
 }
+
+
+# Run the file which requires some manual changes - has to be done after defining the globals above since it uses them 
+source("prep/data_preparation_manual_changes_required.R")
 
 #==============================
 # OUTCOME INDICATORS
@@ -84,19 +86,19 @@ ks1_phonics <- rio::import(paste0("data/", "phonics/", phonics_file_name)) %>%
   fsubset(breakdown_topic == "SEN status" &
     time_period >= 201516 &
     gender == "Total" &
-    breakdown %in% c("EHC plan", "SEN support", "No SEN")) 
+    breakdown %in% c("EHC plan", "Statement of SEN", "SEN support", "No SEN", "All SEN")) 
 
 
-ks1_phonics_allSEN <- ks1_phonics %>%
+ks1_phonics_EHCPorStatement <- ks1_phonics %>%
   group_by(
     time_period, geographic_level,
     region_name, la_name
   ) %>%
-  filter(breakdown != "No SEN") %>%
+  filter(breakdown %in% c("EHC plan", "Statement of SEN")) %>%
   summarise(across(c("t_phonics_y1_eligible_pupils", "t_phonics_y1_met_expected_standard"), ~sum(as.numeric(.x), na.rm = T))) %>%
   mutate(
     `Percent meeting expected standards in Y1` = round(100 * (t_phonics_y1_met_expected_standard / t_phonics_y1_eligible_pupils), 2),
-    breakdown = "All SEN"
+    breakdown = "EHC plan or Statement"
   ) %>%
   ungroup() %>%
   select(
@@ -121,9 +123,30 @@ ks1_phonics <- ks1_phonics %>%
   rename(characteristic = breakdown) %>%
   mutate(across(c(t_phonics_y1_eligible_pupils, t_phonics_y1_met_expected_standard), ~as.numeric(.x))) %>%
   ftransform(`Percent meeting expected standards in Y1` = round(100 * (t_phonics_y1_met_expected_standard / t_phonics_y1_eligible_pupils),2)) %>%
-  bind_rows(ks1_phonics_allSEN) %>%
+  fsubset(!characteristic %in% c("Statement of SEN", "EHC plan")) %>% 
+  bind_rows(ks1_phonics_EHCPorStatement) %>%
   time_period_to_academic_year() 
 # Next 
+
+#------------------------------
+# EYFSP attainment 
+#------------------------------
+
+get_ees_data(
+  url = "https://explore-education-statistics.service.gov.uk/find-statistics/early-years-foundation-stage-profile-results", 
+  desired_file_name <- "1_eyfsp_headline_measures_2022.csv",
+  zip_subfolder_to_extract <- "data/", 
+  output_dir <- "data/eyfsp"
+)
+
+eyfsp <- rio::import("data/eyfsp/1_eyfsp_headline_measures_2022.csv") %>%
+  fsubset(characteristic == "SEN provision" &
+            gender == "Total") %>% 
+  select(time_period, geographic_level, region_code, region_name, new_la_code, la_name, characteristic_type, children_number, gld_number, gld_percentage) %>% 
+  time_period_to_academic_year() %>% 
+  fmutate(region_name = if_else(geographic_level == "National", "England", region_name), 
+          gld_percentage = as.numeric(gld_percentage))
+
 
 #------------------------------
 # Pupil destinations after 16-18 study - use revised unless only provisional are available 
@@ -189,18 +212,23 @@ for (file in dest_1618_to_import) {
 # Next 
 
 # Define a function for data wrangling
+
+
 wrangle_1618_destinations <- function(data) {
-  dest_1618_vars <- c("time_period", "geographic_level", "region_name", "la_name", "characteristic",
-                     "characteristic_group", "cohort", "all_work", "appren", "he", "fe", "other_edu", "all_notsust", "all_unknown")
+  dest_1618_vars <- c("time_period", "geographic_level", "region_name", "institution_group", "la_name", "characteristic", "cohort", "all_work", "appren", "he", "fe", "other_edu", "all_notsust", "all_unknown", "overall")
   data %>%
+    rename(characteristic = breakdown) %>% 
     fsubset(data_type == "Percentage" &
               cohort_level_group == "Total" &
-              characteristic %in% c("Identified LLDD", "Identified SEN", "No identified LLDD", "No identified SEN")) %>%
+              (institution_group == "Special schools" |
+              breakdown_topic %in% c("SEN Provision", "LLDD Provision") &
+              (characteristic %in% c("Identified LLDD", "Identified SEN", "No identified LLDD") | 
+               characteristic == "No identified SEN" & institution_group == "State-funded mainstream schools"))) %>%  # because otherwise this also gets No SEN 
     select(any_of(dest_1618_vars)) %>%
     time_period_to_academic_year() %>%
-    mutate(across(c("all_work", "appren", "fe", "he", "other_edu", "all_notsust", "all_unknown"), ~as.numeric(.x))) %>% 
+    mutate(across(c("all_work", "appren", "fe", "he", "other_edu", "all_notsust", "all_unknown", "overall"), ~as.numeric(.x))) %>% 
     pivot_longer(
-      cols = c(all_work, appren, he, fe, other_edu, all_notsust, all_unknown),
+      cols = c(all_work, appren, he, fe, other_edu, all_notsust, all_unknown, overall),
       names_to = "destination_raw",
       values_to = "% of pupils"
     ) %>%
@@ -212,7 +240,8 @@ wrangle_1618_destinations <- function(data) {
                                   "he" = "Higher education",
                                   "other_edu" = "Education (other)",
                                   "all_notsust" = "Not sustained",
-                                  "all_unknown" = "Unknown"
+                                  "all_unknown" = "Unknown",
+                                  "overall" = "Overall sustained"
     )) %>%
     mutate(Destination = factor(Destination,
                                 ordered = TRUE,
@@ -223,15 +252,50 @@ wrangle_1618_destinations <- function(data) {
                                   "Employment",
                                   "Education (other)",
                                   "Further education",
-                                  "Higher education"
-                                )
-    ))
-  
+                                  "Higher education",
+                                  "Overall sustained"
+                                )),
+          characteristic = case_when(institution_group == "Special schools" ~ "Specialist provision",
+                                     characteristic == "Identified SEN" ~ "Identified SEN (mainstream)",
+                                     characteristic == "Identified LLDD" ~ "Identified LLDD (mainstream)", 
+                                     .default = characteristic)
+          ) %>% 
+  select(-institution_group)
 
 }
 
-destinations_1618 <- wrangle_1618_destinations(dest_1618_ls$`1618_dm_ud_202021_la_rev.csv`)
-destinations_1618_nat <- wrangle_1618_destinations(dest_1618_ls$`1618_dm_ud_202021_nat_rev.csv`)
+# Programatically, get names of dataframes in list
+la_df_1618_name_la <- grep("la", names(dest_1618_ls), value = TRUE)
+la_df_1618_name_nat <- grep("nat", names(dest_1618_ls), value = TRUE)  
+
+# extract the datasets 
+destinations_1618_la <- dest_1618_ls[[la_df_1618_name_la[1]]]
+destinations_1618_nat <- dest_1618_ls[[la_df_1618_name_nat[1]]]
+
+# wrangle LA data
+destinations_1618 <- wrangle_1618_destinations(destinations_1618_la)
+
+destinations_1618_overall <- destinations_1618 %>% 
+  mutate(Destination = as.factor(as.character(Destination)),
+        measure_filter = ifelse(Destination %in% "Overall sustained",
+                                "Overall sustained destination (education, apprenticeship or employment)",
+                                "All destination measures")) 
+
+destinations_1618 <- destinations_1618 %>% 
+  filter(!(Destination %in% "Overall sustained destination (education, apprenticeship or employment)")) %>% # for time view
+  mutate(Destination = as.factor(as.character(Destination)))
+
+# Wrangle national data 
+destinations_1618_nat <- wrangle_1618_destinations(destinations_1618_nat)
+
+destinations_1618_nat_overall <- destinations_1618_nat %>% 
+  mutate(Destination = as.factor(as.character(Destination)),
+         measure_filter = ifelse(Destination %in% "Overall sustained", "Overall sustained destination (education, apprenticeship or employment)", "All destination measures")) 
+
+
+destinations_1618_nat <- destinations_1618_nat %>% 
+  filter(!(Destination %in% "Overall sustained destination (education, apprenticeship or employment)")) %>% # for time view
+  mutate(Destination = as.factor(as.character(Destination)))
 
 # Next 
 
@@ -253,7 +317,7 @@ link_vector <- c()
 
 # Nested loop to combine and print
 for (year in nhs_years) {
-  for (month in months) {
+  for (month in 1:12) {
     link <- paste0(
       "https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-services-monthly-statistics/performance-",
       getLowercaseMonthName(month), "-provisional-", getLowercaseMonthName(month+1), "-", year)
@@ -404,7 +468,7 @@ for(i in sen2_ls) {
 
 # Source: Education, health and care plans. File 05 - Requests, assessments, discontinued plans, 20 week timeliness, mainstream to special transfers, mediation and tribunals
 sen2_mi <- read_csv("data/ehc_plans/sen2_mi.csv",
-  col_types = cols(NoExc20weekRate = col_number())
+  col_types = cols(no_exc_20week_rate = col_number())
 )
 
 # EHCP timeliness
@@ -421,21 +485,40 @@ ehcp_timeliness <- sen2_mi %>%
   )) %>%
   mutate(`% of EHCPs issued within 20 weeks`  = as.numeric(`% of EHCPs issued within 20 weeks` ))
 
-# Next 
+# Discontinued plans
+discontinued_plans <- sen2_mi %>%
+  fsubset(time_period > 2016) %>%
+  fselect(time_period = as.numeric(time_period), geographic_level, region_code,
+          region_name, old_la_code, new_la_code,
+          la_name, discontinued_schoolage = discontinued_met_ehc, discontinued_older = discontinued_met_noncomp
+  ) %>%
+  ftransform(region_name = if_else(condition = geographic_level == "National",
+                                   true = "England",
+                                   false = region_name),
+            discontinued_schoolage = as.numeric(discontinued_schoolage),  
+            discontinued_older = as.numeric(discontinued_older)) %>%  # note that this creates NAs, which is fine
+  time_period_to_academic_year()
 
-#------------------------------
+#==============================
 # Absences data 
+#==============================
+
+# Get the latets data 
+absence_data_desired <- c("4_absence_2term_pru.csv", # the latest autumn & Spring term data - state-funded AP 
+                          "6_absence_2term_characteristics.csv") # the latest autumn & Spring term data 
+
+for(i in absence_data_desired) {
+  get_ees_data(
+    url = "https://explore-education-statistics.service.gov.uk/find-statistics/pupil-absence-in-schools-in-england", # Define URL of publication
+    desired_file_name <- i,
+    zip_subfolder_to_extract <- "data/", 
+    output_dir <- "data/absence/"
+  )
+}
+
 #------------------------------
-
-abs_url <- "https://explore-education-statistics.service.gov.uk/find-statistics/pupil-absence-in-schools-in-england-autumn-and-spring-terms"
-# Extract the year the publication refers to
-
-get_ees_data(
-  url = abs_url, 
-  desired_file_name <- "6_absence_2term_characteristics.csv",
-  zip_subfolder_to_extract <- "data/", 
-  output_dir <- "data/absence"
-)
+# Absences: Save the SEN data 
+#------------------------------
 
 # Overall absence rate (autumn and spring terms)
 absence <- rio::import("data/absence/6_absence_2term_characteristics.csv") %>%
@@ -452,9 +535,10 @@ absence <- rio::import("data/absence/6_absence_2term_characteristics.csv") %>%
                                    true = "England",
                                    false = region_name
   )) %>%
-  fselect(time_period, geographic_level, region_name, new_la_code, la_name, characteristic, sess_overall_percent, sess_overall, sess_possible) %>%
-  time_period_to_academic_year() %>%
-  ftransform(`Overall absence %` = round(as.numeric(sess_overall_percent), 2))
+  fselect(time_period, geographic_level, region_name, new_la_code, la_name, characteristic, sess_overall_percent, sess_authorised_percent, sess_unauthorised_percent, sess_overall, sess_possible, sess_authorised, sess_unauthorised) %>%
+  ftransform(Overall = round(as.numeric(sess_overall_percent), 2),
+             Authorised = round(as.numeric(sess_authorised_percent), 2),
+             Unauthorised = round(as.numeric(sess_unauthorised_percent), 2))
 
 absence_allSEN <- absence %>%
   ungroup() %>%
@@ -462,16 +546,25 @@ absence_allSEN <- absence %>%
   fgroup_by(time_period, geographic_level, region_name, new_la_code, la_name) %>%
   fsummarise(
     sess_overall = sum(as.numeric(sess_overall), na.rm = T),
-    sess_possible = sum(as.numeric(sess_possible), na.rm = T)
+    sess_possible = sum(as.numeric(sess_possible), na.rm = T), 
+    sess_authorised = sum(as.numeric(sess_authorised), na.rm = T),
+    sess_unauthorised = sum(as.numeric(sess_unauthorised), na.rm = T)
   ) %>%
   ftransform(
-    `Overall absence %` = round(100 * sess_overall / sess_possible, 2),
+    Overall = round(100 * sess_overall / sess_possible, 2),
+    Authorised = round(100* sess_authorised / sess_possible, 2),
+    Unauthorised = round(100* sess_unauthorised / sess_possible, 2),
     characteristic = "All SEN"
-  ) %>%
+  )
+
+absence <- bind_rows(absence, absence_allSEN) %>%
+  select(time_period, geographic_level, characteristic, region_name, new_la_code, la_name, Overall, Authorised, Unauthorised) %>% 
+  pivot_longer(cols = c("Overall",
+                        "Authorised",
+                        "Unauthorised"),
+               names_to = "Absence measure",
+               values_to = "Percentage") %>% 
   time_period_to_academic_year()
-
-absence <- bind_rows(absence, absence_allSEN)
-
 
 absence_regional <- rio::import("data/absence/6_absence_2term_characteristics.csv") %>%
   fsubset(school_type == "Total" &
@@ -495,7 +588,11 @@ absence_regional <- rio::import("data/absence/6_absence_2term_characteristics.cs
           la_name,
           characteristic,
           sess_overall_percent,
+          sess_authorised_percent,
+          sess_unauthorised_percent,
           sess_overall,
+          sess_authorised,
+          sess_unauthorised,
           sess_possible
   ) %>%
   mutate(region_name = ifelse(test = region_old %in% c("Inner London", "Outer London"),
@@ -505,91 +602,209 @@ absence_regional <- rio::import("data/absence/6_absence_2term_characteristics.cs
   group_by(time_period, characteristic, region_name) %>%
   summarise(
     sess_overall = sum(sess_overall),
-    sess_possible = sum(sess_possible),
-    sess_overall_percent = mean(sess_overall_percent)
-  ) %>%
+    sess_possible = sum(sess_possible), 
+    sess_authorised = sum(sess_authorised),
+    sess_unauthorised = sum(sess_unauthorised)) %>%
   rowwise() %>%
-  mutate(overall_absence_percent = round(100 * (sess_overall / sess_possible), 5)) %>% # This perfectly reproduces the existing metric
-  time_period_to_academic_year() %>%
-  ftransform(`Overall absence %` = round(100 * sess_overall / sess_possible, 2))
+  mutate(overall_absence_percent = round(100 * (sess_overall / sess_possible), 5), # This perfectly reproduces the existing metric
+         authorised_absence_percent = round(100 * (sess_authorised / sess_possible), 5),
+         unauthorised_absence_percent = round(100 * (sess_unauthorised / sess_possible), 5)) %>% 
+  ftransform(Overall = round(100 * sess_overall / sess_possible, 2), 
+             Authorised = round(100 * (sess_authorised / sess_possible), 2),
+             Unauthorised = round(100 * (sess_unauthorised / sess_possible), 2))
 
 absence_regional_allSEN <- absence_regional %>%
   ungroup() %>%
   filter(characteristic != "No SEN") %>%
-  group_by(time_period, academic_year, region_name) %>%
+  group_by(time_period, region_name) %>%
   summarise(
     sess_overall = sum(sess_overall),
-    sess_possible = sum(sess_possible),
-    sess_overall_percent = mean(sess_overall_percent)
-  ) %>% # this metric is not apparently used for anything but for consistency and bind_rows...
-  ftransform(
+    sess_possible = sum(sess_possible), 
+    sess_authorised = sum(sess_authorised),
+    sess_unauthorised = sum(sess_unauthorised)) %>% 
+    ftransform(
     overall_absence_percent = round(100 * (sess_overall / sess_possible), 5),
-    `Overall absence %` = round(100 * sess_overall / sess_possible, 2),
+    authorised_absence_percent = round(100 * (sess_authorised / sess_possible), 5),
+    unauthorised_absence_percent = round(100 * (sess_unauthorised / sess_possible), 5),
+    Overall = round(100 * sess_overall / sess_possible, 2), 
+    Authorised = round(100 * (sess_authorised / sess_possible), 2),
+    Unauthorised = round(100 * (sess_unauthorised / sess_possible), 2),
     characteristic = "All SEN"
   )
 
-absence_regional <- bind_rows(absence_regional, absence_regional_allSEN)
+absence_regional <- bind_rows(absence_regional, absence_regional_allSEN) %>% 
+  select(time_period, characteristic, region_name, Overall, Authorised, Unauthorised) %>% 
+  pivot_longer(cols = c("Overall",
+                        "Authorised",
+                        "Unauthorised"),
+               names_to = "Absence measure",
+               values_to = "Percentage") %>% 
+  time_period_to_academic_year()
+
+#------------------------------
+# Absences: Save the state-funded AP data  
+#------------------------------
+sf_ap_absence_df <- rio::import("data/absence/4_absence_2term_pru.csv") %>%
+  mutate(time_period = as.numeric(time_period)) %>%
+  filter(time_period > 201617)
+
+# Contains LA, regional, Eng 
+sf_ap_absence <-  sf_ap_absence_df %>%
+  mutate(across(starts_with(c("sess", "enrolment")), ~round(as.numeric(.x), 2))) %>%
+  select(time_period,
+         geographic_level,
+         region_name,
+         new_la_code,
+         la_name,
+         total_schools_included = num_schools,
+         total_enrolments = enrolments,
+         `Overall absence %` = sess_overall_percent,
+         `Authorised absence %` = sess_authorised_percent,
+         `Unauthorised absence %` = sess_unauthorised_percent,
+         `% of persistent absentees - 10% or more sessions missed` = enrolments_pa_10_exact_percent,
+         `% of persistent absentees - 50% or more sessions missed` = enrolments_pa_50_exact_percent) %>%
+  ftransform(region_name = if_else(condition = geographic_level == "National",
+                                   true = "England",
+                                   false = region_name)) %>%
+  time_period_to_academic_year() 
+
+# LA & National view 
+sf_ap_absence_nat_la <- sf_ap_absence %>% filter(geographic_level != "Regional") %>%
+  mutate(region_name = case_when(geographic_level %in% "National" ~ "England", 
+                                 region_name %in% c("Inner London", "Outer London") ~ "London", 
+                                 .default = region_name))
+
+# Regional view
+sf_ap_absence_regional <- sf_ap_absence_df  %>%
+  mutate(across(starts_with(c("sess", "enrolment")), ~round(as.numeric(.x), 2))) %>%
+  filter(geographic_level %in% c("Regional")) %>%
+  mutate(region_name = ifelse(region_name %in% c("Inner London", "Outer London"), "London", region_name)) %>%
+  group_by(geographic_level, time_period, region_name) %>%
+  summarise(
+    across(c("enrolments",
+             "sess_possible",
+             "sess_overall",
+             "sess_authorised",
+             "sess_unauthorised",
+             "enrolments_pa_10_exact",
+             "enrolments_pa_50_exact",
+             "num_schools"), ~ sum(.x))) %>% 
+  ungroup() %>%
+  mutate(`Overall absence %` = round(100 * sess_overall / sess_possible, 2),
+         `Authorised absence %` = round(100 * sess_authorised / sess_possible, 2),
+         `Unauthorised absence %` = round(100 * sess_unauthorised / sess_possible, 2),
+         `% of persistent absentees - 10% or more sessions missed` = round(100 * enrolments_pa_10_exact / enrolments, 2),
+         `% of persistent absentees - 50% or more sessions missed` = round(100 * enrolments_pa_50_exact / enrolments, 2)) %>%
+  select(time_period,
+         geographic_level,
+         region_name,
+         total_enrolments = enrolments,
+         total_schools_included = num_schools,
+         `Overall absence %`,
+         `Authorised absence %`,
+         `Unauthorised absence %`,
+         `% of persistent absentees - 10% or more sessions missed`,
+         `% of persistent absentees - 50% or more sessions missed`) %>%
+  time_period_to_academic_year() %>%
+  mutate(`Academic year` = academic_year)
+
+rm(sf_ap_absence_df, sf_ap_absence)
+
+# Switch to long format
+sf_ap_absence <- bind_rows(sf_ap_absence_nat_la, sf_ap_absence_regional) %>%
+  pivot_longer(cols = c("Overall absence %",
+                        "Authorised absence %",
+                        "Unauthorised absence %",
+                        "% of persistent absentees - 10% or more sessions missed",
+                        "% of persistent absentees - 50% or more sessions missed"),
+               names_to = "Absence measure",
+               values_to = "Percentage") %>%
+  mutate(Region = region_name) %>%
+  mutate(Region = ifelse(geographic_level %in% "National", "England", Region))
 
 # Next
 
 #------------------------------
-# KS4 attainment REVISED - attainment 8 (webscraping used)
+# KS4 attainment - attainment 8 (webscraping used)
 #------------------------------
+ks4_vars <- c("time_period", "geographic_level","region_name", "la_name", "sen_description", "t_pupils", "t_schools","avg_att8", "avg_p8score", "p8score_ci_low","p8score_ci_upp")
+
 ks4_attainment_201819 <- rio::import(paste0("data/attainment_ks4/hardcoded/", "201819_LA_characteristics_data_including_sen_description.xlsx")) %>%
   select(-c("avg_att8_unrounded")) %>%
-  rename( characteristic_ethnic_major = characteristic_Ethnic_major) %>%
   filter(
-    characteristic_sen_description %in% c("Any SEN", "No identified SEN"),
-    characteristic_gender == "Total",
-    breakdown %in% c("Total", "SEN description")) # for whatever reason the data uses both of these for the SEN breakdown we want 
+    sen_description %in% c("Any SEN", "No identified SEN"),
+    gender == "Total",
+    breakdown %in% c("Total", "SEN description")) %>% # for whatever reason the data uses both of these for the SEN breakdown we want 
+  select(ks4_vars)
 
+# This takes the latest revised if available, but provisional if not
 # url we want
 ks4_att_url <- "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance-revised"
 # Extract the year the publication refers to
 ks4_att_year_of_pub <- read_html(ks4_att_url) %>% html_nodes(".govuk-caption-xl") %>% html_text()
 ks4_att_name_start <- substr(ks4_att_year_of_pub, start = nchar(ks4_att_year_of_pub) -4, stop = nchar(ks4_att_year_of_pub) - 3)
 ks4_att_name_end <- substr(ks4_att_year_of_pub, start = nchar(ks4_att_year_of_pub) -1, stop = nchar(ks4_att_year_of_pub) - 0)
-# State the file with correct year we want
-ks4_att_file_name <- paste0(ks4_att_name_start, ks4_att_name_end, "_lachar_data_revised.csv")
 
-# Save latest ks4 attainment data 
-get_ees_data(
-  url = ks4_att_url, 
-  desired_file_name <- ks4_att_file_name,
-  zip_subfolder_to_extract <- "data/", 
-  output_dir <- "data/attainment_ks4"
+
+ks4_final_or_prov <- function(final_ks4_name_end, prov_ks4_name_end) {
+  tryCatch({
+    get_ees_data(
+      url = ks4_att_url, 
+      desired_file_name <- paste0(ks4_att_name_start, ks4_att_name_end, final_ks4_name_end),
+      zip_subfolder_to_extract <- "data/", 
+      output_dir <- "data/attainment_ks4")
+
+    print("If no warning, revised stats were used")
+    },
+    warning = function(warn) {
+      # Handle the warning message here (e.g., print a message)
+      cat("Warning:", conditionMessage(warn), "\n")
+      print("use provisional stats as revised not yet available")
+      
+      get_ees_data(
+        url = ks4_att_url, 
+        desired_file_name <- paste0(ks4_att_name_start, ks4_att_name_end, prov_ks4_name_end),
+        zip_subfolder_to_extract <- "data/", 
+        output_dir <- "data/attainment_ks4")
+    })
+}
+
+# Download data 
+print("WARNING: Need to check naming conventions of files in case they change in future")
+ks4_final_or_prov(
+  final_ks4_name_end = "_la_char_data_revised.csv",
+  prov_ks4_name_end = "_la_char_data_provisional.csv"
 )
 
 # wrangle latest ks4 data 
-ks4_attainment_new <- rio::import(paste0("data/attainment_ks4/", ks4_att_file_name)) %>%
+## Get name of latest file programatically 
+ks4_file_name <- list.files("data/attainment_ks4", pattern = paste0(ks4_att_name_start, ks4_att_name_end))
+## Import & wrangle data
+ks4_attainment_new <- rio::import(paste0("data/attainment_ks4/", ks4_file_name)) %>%
   # Remove the year that we're addressing via the manual hardcoded data 
   filter(time_period != "201819") %>%
   fsubset(breakdown == "SEN description" &
-            characteristic_free_school_meals == "Total" &
-            characteristic_sen_status == "Total" &
-            characteristic_sen_description %in% c("Any SEN", "No identified SEN") &
-            characteristic_disadvantage == "Total" &
-            characteristic_gender == "Total") 
+            free_school_meals == "Total" &
+            sen_status == "Total" &
+            sen_description %in% c("Any SEN", "No identified SEN") &
+            disadvantage == "Total" &
+            gender == "Total") %>%
+  select(ks4_vars)
+
 
 # Bind and sort data 
 ks4_attainment <- rbind(ks4_attainment_new, ks4_attainment_201819) %>%
-  fselect(
-    time_period, geographic_level,
-    region_name, la_name,
-    characteristic_sen_description,
-    t_pupils, t_schools,
-    avg_att8, avg_p8score,
-    p8score_CI_low, p8score_CI_upp
-  ) %>%
+  fselect(ks4_vars) %>%
   time_period_to_academic_year() %>%
+  rename(characteristic_sen_description = sen_description) %>%
   ftransform("SEN provision" = recode(characteristic_sen_description,
-                                      "Any SEN" = "Any SEN",
+                                      "Any SEN" = "All SEN",
                                       "No identified SEN" = "No identified SEN"
   )) %>%
   mutate(
     "Average progress 8 score" = as.numeric(avg_p8score),
-    "Progress 8 score (lower confidence interval)" = as.numeric(p8score_CI_low),
-    "Progress 8 score (upper confidence interval)" = as.numeric(p8score_CI_upp)
+    "Progress 8 score (lower confidence interval)" = as.numeric(p8score_ci_low),
+    "Progress 8 score (upper confidence interval)" = as.numeric(p8score_ci_upp)
   ) %>%
   # Add the below in case publication team add in 2018/19 later 
   distinct(.keep_all = T)
@@ -658,6 +873,8 @@ for (file in dest_ks4_to_import) {
 # Functionalise data wrangling as the same is done for LA and national data  
 ks4_dest_wrangle_data <- function(data) {
   data %>% as.data.frame %>%
+    rename(characteristic_group = breakdown_topic,
+           characteristic = breakdown) %>% 
     fsubset(characteristic_group == "SEN Provision" &
               data_type == "Percentage" &
               institution_group == "State-funded mainstream & special schools" &
@@ -673,10 +890,10 @@ ks4_dest_wrangle_data <- function(data) {
     time_period_to_academic_year() %>%
     fsubset(academic_year > "2017/18") %>%
     mutate(
-      across(c("all_work", "appren", "sfc", "ssf", "fe", "other_edu", "all_notsust", "all_unknown"), ~as.numeric(.x))
+      across(c("all_work", "appren", "sfc", "ssf", "fe", "other_edu", "all_notsust", "all_unknown", "overall"), ~as.numeric(.x))
     ) %>%
     pivot_longer(
-      cols = c(all_work, appren, sfc, ssf, fe, other_edu, all_notsust, all_unknown),
+      cols = c(all_work, appren, sfc, ssf, fe, other_edu, all_notsust, all_unknown, overall),
       names_to = "destination_raw",
       values_to = "pupils"
     ) %>%
@@ -690,7 +907,9 @@ ks4_dest_wrangle_data <- function(data) {
                            "fe" = "Further education",
                            "other_edu" = "Education (other)",
                            "all_notsust" = "Not sustained",
-                           "all_unknown" = "Unknown"
+                           "all_unknown" = "Unknown",
+                           "overall" = "Overall sustained"
+                           
       )
     ) %>%
     mutate(Destination = factor(Destination,
@@ -703,16 +922,50 @@ ks4_dest_wrangle_data <- function(data) {
                                   "Education (other)",
                                   "Further education",
                                   "School sixth form",
-                                  "Sixth form college"
+                                  "Sixth form college",
+                                  "Overall sustained"
+                                  
                                 )
     ))
   
   
 }
 
-# Apply the function to both datasets
-ks4_destinations <- ks4_dest_wrangle_data(data = as.data.frame(dest_ks4_ls$ks4_dm_ud_202021_la_rev.csv))
-ks4_destinations_nat <- ks4_dest_wrangle_data(data = as.data.frame(dest_ks4_ls$ks4_dm_ud_202021_nat_rev.csv))
+# Programatically, get names of dataframes in list
+la_df_ks4_name_la <- grep("la", names(dest_ks4_ls), value = TRUE)
+la_df_ks4_name_nat <- grep("nat", names(dest_ks4_ls), value = TRUE)  
+
+# extract the datasets 
+destinations_ks4_la <- dest_ks4_ls[[la_df_ks4_name_la[1]]]
+destinations_ks4_nat <- dest_ks4_ls[[la_df_ks4_name_nat[1]]]
+
+# wrangle the datasets 
+ks4_destinations <- ks4_dest_wrangle_data(destinations_ks4_la)
+ks4_destinations_nat <- ks4_dest_wrangle_data(destinations_ks4_nat)
+
+
+
+# Extract regional and national data 
+ks4_destinations_overall <- ks4_destinations %>% 
+  mutate(Destination = as.factor(as.character(Destination)),
+         measure_filter = ifelse(Destination %in% "Overall sustained",
+                                 "Overall sustained destination (education, apprenticeship or employment)",
+                                 "All destination measures")) 
+
+ks4_destinations <- ks4_destinations %>% 
+  filter(!(Destination %in% "Overall sustained destination (education, apprenticeship or employment)")) %>% # for time view
+  mutate(Destination = as.factor(as.character(Destination)))
+
+# Extract national data 
+ks4_destinations_nat <- ks4_dest_wrangle_data(destinations_ks4_nat)
+
+ks4_destinations_nat_overall <- ks4_destinations_nat %>% 
+  mutate(Destination = as.factor(as.character(Destination)),
+         measure_filter = ifelse(Destination %in% "Overall sustained", "Overall sustained destination (education, apprenticeship or employment)", "All destination measures")) 
+
+ks4_destinations_nat <- ks4_destinations_nat %>% 
+  filter(!(Destination %in% "Overall sustained destination (education, apprenticeship or employment)")) %>% # for time view
+  mutate(Destination = as.factor(as.character(Destination)))
 
 # Next 
 
@@ -723,7 +976,7 @@ ks4_destinations_nat <- ks4_dest_wrangle_data(data = as.data.frame(dest_ks4_ls$k
 #-----------------------------------------
 # Local authority education surplus/deficit
 #-----------------------------------------
-# DSG cumulative balance as a % of the total budget
+# DSG cumulative balance as a % of the total income
 # This is derived from two separate data sources - see steps below 
 
 # Webscrape list of deep links from latest year 
@@ -736,7 +989,6 @@ for(i in years_num) {
   new_url <- paste0("https://skillsfunding.service.gov.uk/view-latest-funding/national-funding-allocations/DSG/", start_yr, "-to-", end_yr)
   url_lS_land <- c(url_lS_land, new_url)
 }
-
 
 # Create a dataframe of links to the files I want
 url_list_file <- data.frame()
@@ -824,10 +1076,12 @@ dsg_budget <- dplyr::bind_rows(dsg_list) %>%
   mutate(la_name = case_when(
     is.na(la_name) ~ "", # fixing a bunch of typos etc pre-join
     la_name == "Bournemouth Christchurch and Poole" ~ "Bournemouth, Christchurch and Poole",
+    la_name == "Bedford Borough" ~ "Bedford",
+    la_name == "St Helens" ~ "St. Helens",
     la_name == "Bristol City of" ~ "Bristol, City of",
     la_name == "Herefordshire" ~ "Herefordshire, County of",
     la_name == "Durham" ~ "County Durham",
-    la_name == "Kingston upon Hull City of" ~ "Kingston upon Hull, City of",
+    la_name %in% c("Kingston upon Hull City of", "Kingston Upon Hull, City of") ~ "Kingston upon Hull, City of",
     TRUE ~ la_name
   )) %>%
   left_join(la_region_lookup) %>%
@@ -915,8 +1169,8 @@ dsg_deficit <- dsg_deficit %>%
     100 * (`1.9.3 Dedicated Schools Grant carried forward to next year` /
        `Total DSG allocation (£s)`), 2
   )) %>%
-  ftransform(`DSG cumulative balance as a % of the total budget` = -deficit) %>%
-  fselect(time_period, geographic_level, region_name, la_name, deficit, `DSG cumulative balance as a % of the total budget`) %>%
+  ftransform(`DSG cumulative balance as a % of the total income` = -deficit) %>%
+  fselect(time_period, geographic_level, region_name, la_name, deficit, `DSG cumulative balance as a % of the total income`) %>%
   ftransform(financial_year = paste0(substr(time_period, start = 1, stop = 4), "-", substr(time_period, start = 5, stop = 6)))
 
 
@@ -929,7 +1183,9 @@ write.xlsx(dsg_deficit, "data/finance/dsg_deficit_derived.xlsx")
 ## -----------------------------------#
 
 # Save the latest SEN in England stats wanted 
-sen_england <- c("sen_phase_type_.csv")
+sen_england <- c("sen_phase_type_.csv",
+                 "sen_age_gender_.csv",
+                 "sen_fsm_ethnicity_language_.csv")
 
 for(i in sen_england) {
   get_ees_data(
@@ -1045,14 +1301,16 @@ mainstream_with_sen <- sen_phase_type %>%
     sensupport_percent,
     total_pupils
   ) %>% # Get rid of unused variables
+  mutate(total_percent = ehc_percent + sensupport_percent) %>% 
   pivot_longer(
-    cols = c(ehc_percent, sensupport_percent),
+    cols = c(ehc_percent, sensupport_percent, total_percent),
     names_to = "SEN provision",
     values_to = "% of pupils"
   ) %>%
   mutate(`SEN provision` = recode(`SEN provision`,
     ehc_percent = "EHC plan",
-    sensupport_percent = "SEN support"
+    sensupport_percent = "SEN support",
+    total_percent = "All SEN"
   )) %>%
   time_period_to_academic_year() %>%
   mutate(`% of pupils` = round(`% of pupils`, 2)) %>%
@@ -1147,11 +1405,9 @@ provider_types_grouped_nat <- provider_types_nat %>%
   summarise(`% in independent/AP/special` = sum(`% of pupils (with SEN provision type)`)) %>%
   filter(`Grouped provider type` == "Independent, alternative provision or special school")
 
-rm(sen_phase_type) # No longer need the big source file
 gc() # Free up some RAM
 
 # Next
-
 #=================================
 # Autism - waiting times 
 #=================================
@@ -1302,6 +1558,573 @@ autism <- aut_ts_df %>%
 write.csv(autism, "data/nhs/autism_time_series_derived.csv")
 # Next 
 
+#==============================
+#==============================
+# Alternative Provision tab metrics 
+#==============================
+#==============================
+
+#==============================
+# import Schools, pupils, characteristics datasets for AP
+#==============================
+# https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics
+
+# Import data 
+spc_url <- "https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics"
+spc_year_of_pub <- read_html(spc_url) %>% html_nodes(".govuk-caption-xl") %>% html_text()
+print(spc_year_of_pub)
+
+spc_ls <- c("spc_school_characteristics_.csv", # State funded AP
+            "spc_pupils_fsm_ethnicity_yrgp.csv", # State funded AP
+            "spc_school_ap_placement.csv", # School arranged AP
+            "spc_ap_setting.csv", # placements at LA funded AP
+            "ap_placements_ap_census.csv",
+            "spc_school_ap_characteristics.csv") # School arranged AP 
+for(i in spc_ls) {  
+  get_ees_data(
+    url = spc_url, 
+    desired_file_name <- i,
+    zip_subfolder_to_extract <- "data/", 
+    output_dir <- "data/ap/")
+}
+
+#------------------------------
+# Pupil numbers by type of AP
+#------------------------------
+
+# State funded AP 
+spc_sfap <- rio::import(paste0("data/", "ap/", "spc_school_characteristics_.csv")) %>%
+  filter(
+    sex_of_school_description == "Total",
+    phase_type_grouping == "State-funded AP school",
+    denomination	== "Total",
+    admissions_policy == "Total",
+    urban_rural == "Total",
+    academy_flag == "Total") %>%
+  mutate(type_of_establishment = case_when(
+    type_of_establishment %in% c("Pupil referral unit", "Pupil Referral Unit") ~ "Pupil Referral Unit",
+    type_of_establishment %in% c("Free Schools - Alternative Provision", "Free schools alternative provision") ~ "Free Schools - Alternative Provision",
+    T ~ type_of_establishment)) %>%
+  rename(prov_type = phase_type_grouping,
+         setting_type = type_of_establishment,
+         total_pupils = headcount_of_pupils) %>%
+  mutate(time_period = as.character(time_period)) %>%
+  select("time_period",
+         "geographic_level",
+         "region_name",
+         "old_la_code",
+         "new_la_code",
+         "la_name",
+         "prov_type",
+         "setting_type",
+         # "number_of_schools",
+         "total" = "total_pupils"
+         #"headcount_total_girls",
+         #"headcount_total_boys"
+  ) %>%
+  filter(setting_type == "Total")
+
+# School arranged AP 
+spc_sap <- rio::import(paste0("data/", "ap/", "spc_school_ap_placement.csv")) %>%
+  filter(pupil_characteristic == "Total",
+         characteristic_grouping == "Total") %>%
+  rename(total_pupils = pupils) %>%
+  mutate(prov_type = "School arranged AP") %>%
+  select("time_period",
+         "geographic_level",
+         "region_name",
+         "old_la_code",
+         "new_la_code",
+         "la_name",
+         "prov_type",
+         "setting_type",
+         "total" =  "total_pupils") 
+
+# LA funded AP 
+spc_lfap <- rio::import(paste0("data/", "ap/", "ap_placements_ap_census.csv")) %>%
+  filter(gender == "Total",
+         age == "Total",
+         ethnicity_minor == "Total",
+         fsm == "Total") %>%
+  mutate(prov_type = "LA funded AP placements") %>%
+  select("time_period",
+         "geographic_level",
+         "region_name",
+         "old_la_code",
+         "new_la_code",
+         "la_name",
+         "prov_type",
+         "total" = "number_of_pupils") %>%
+  mutate(setting_type = "Total") # assign setting type as Total (although we only have setting type for years pre 2023 in other data files)
+
+# All counts - total  
+ap_counts <- rbind(spc_sfap, spc_sap, spc_lfap) %>%
+  filter(setting_type == "Total") %>%
+  time_period_to_academic_year() %>%
+  mutate(
+    `Type of AP` = prov_type,
+    `Academic year` = academic_year,
+    Total = total,
+    `Provision type` = prov_type,
+    `Local authority` = la_name,
+    Region = region_name) %>% 
+  filter(as.numeric(time_period) >=201718) %>%
+  mutate(region_name = ifelse(geographic_level %in% "National", "England", region_name))
+
+#==============================
+# Unregistered AP placement counts 
+#==============================
+
+# LA funded AP pupil counts by setting type
+spc_lfap_c <- rio::import(paste0("data/", "ap/", "spc_ap_setting.csv")) %>%
+  mutate(prov_type = "LA funded AP placements") %>%
+  select("time_period",
+         "geographic_level",
+         "region_name",
+         "old_la_code",
+         "new_la_code",
+         "la_name",
+         "prov_type",
+         "setting_type",
+         "total" = "placements")
+
+# Counts of unregistered AP (UAP) - defined as AP placements that don't have URNs 
+uap_counts <- rbind(spc_sap, spc_lfap_c) %>%
+  filter(!(setting_type %in% c("Total", "Education setting with URN"))) 
+
+# Get total UAP 
+uap_counts_total <- uap_counts %>%
+  group_by_at(vars(-total, -setting_type)) %>%
+  summarise(total = sum(total)) %>%
+  ungroup() %>%
+  mutate(setting_type = "Grand total unregistered AP (all setting types)")
+
+# Bring all together
+uap_counts <- rbind(uap_counts, uap_counts_total) %>% 
+  time_period_to_academic_year() %>%
+  mutate(prov_type = case_when(prov_type %in% "LA funded AP placements" ~ "LA funded unregistered AP placements",
+                               prov_type %in% "School arranged AP" ~ "School arranged unregistered AP pupils",
+                               T ~ "CHECK if you can see this")) %>%
+  mutate(
+    `Type of AP` = prov_type,
+    `Academic year` = academic_year,
+    Total = total,
+    `Setting type` = setting_type,
+    `Provision type` = prov_type,
+    `Local authority` = la_name) %>%
+  mutate(region_name = ifelse(geographic_level %in% "National", "England", region_name),
+         Region = region_name)
+  
+rm(spc_sfap, spc_sap, spc_lfap, spc_lfap_c, uap_counts_total)
+
+# Next 
+
+#==============================
+# Pupil characteristics by AP
+#==============================
+# I need to combine files from the SEN in England publication and AP
+
+
+#------------------------------
+# SF AP by characteristic: get one file with all the breakdowns (SEN in England publication)
+#------------------------------
+
+# Get gender, SEN and age 
+sf_ap_sen_age_gender <- read_csv("data/sen_in_england/sen_age_gender_.csv") %>%
+  filter(phase_type_grouping %in% "State-funded AP school",
+         primary_need %in% "Total") %>%
+  select(-ends_with("percent")) %>%
+  pivot_longer(
+    cols = starts_with(c("age", "pupil_gender")),
+    names_to = "char",
+    values_to = "value") %>%
+  mutate(char_dv = case_when(
+    # Age 
+    char %in% c("age_2_and_under", "age_3", "age_4") ~ "Under 5",
+    char %in% c("age_5", "age_6") ~ "Age 5 to 6",
+    char %in% c("age_7", "age_8", "age_9", "age_10") ~ "Age 7 to 10",
+    char %in% c("age_11", "age_12", "age_13") ~ "Age 11 to 13",
+    char %in% c("age_14", "age_15") ~ "Age 14 to 15",
+    char %in% c("age_16", "age_17", "age_18", "age_19_and_over") ~ "Age 16 and older",
+    # gender
+    char %in% "pupil_gender_boys" ~ "Boys",
+    char %in% "pupil_gender_girls" ~ "Girls",
+    T ~ "Check"
+  )) 
+
+# SF AP: gender and age 
+sf_ap_age_gender_t <- sf_ap_sen_age_gender %>%
+  filter(pupil_sen_status %in% "Total") %>%
+  group_by(time_period, geographic_level, region_name, la_name, char_dv) %>%
+  mutate(pupils_dv = sum(value)) %>%
+  ungroup %>%
+  select(-c(char, value, primary_need)) %>%
+  mutate(char_per = pupils_dv / number_of_pupils) %>%
+  distinct(.keep_all=T)
+
+# SF AP: sen only 
+sf_ap_sen_t <- sf_ap_sen_age_gender %>% 
+  filter(pupil_sen_status != "Total") %>%
+  select(-c(char, char_dv, value)) %>%
+  rename(char_dv = pupil_sen_status,
+         pupils_dv = number_of_pupils) %>%
+  distinct(.keep_all=T) %>%
+  group_by(time_period, geographic_level, region_name, la_name) %>%
+  mutate(total_pupils = sum(pupils_dv)) %>%
+  ungroup() %>%
+  mutate(char_per = pupils_dv / total_pupils) 
+
+# SF AP: fsm only
+sf_ap_fsm_t <- read_csv("data/sen_in_england/sen_fsm_ethnicity_language_.csv") %>%
+  filter(phase_type_grouping %in% "State-funded AP school",
+         primary_need %in% "Total",
+         pupil_sen_status %in% "Total") %>%
+  select("time_period",
+         "time_identifier",
+         "geographic_level",
+         "region_name",
+         "old_la_code",
+         "la_name",
+         "new_la_code",
+         "phase_type_grouping",
+         "fsm_not_eligible",
+         "fsm_eligible") %>%
+  pivot_longer(
+    cols = c(fsm_not_eligible,
+             fsm_eligible),
+    names_to = "char_dv",
+    values_to = "pupils_dv"
+  ) %>%
+  group_by(time_period, geographic_level, region_name, la_name) %>%
+  mutate(total_pupils = sum(pupils_dv)) %>%
+  ungroup() %>%
+  mutate(char_per = pupils_dv / total_pupils)
+
+# SF AP with age, gender, sen, and fsm from the SEN in England publication
+sf_ap_chars <- bind_rows(sf_ap_age_gender_t, sf_ap_sen_t, sf_ap_fsm_t) %>%
+  rename(prov_type = phase_type_grouping) %>%
+  select(-c("primary_need", total_pupils))
+
+rm(sf_ap_age_gender_t, sf_ap_sen_t, sf_ap_fsm_t)
+  
+
+#------------------------------
+# School & LA arrange AP characteristics (schools, pupils, characteristics)
+#------------------------------
+sa_ap_chars <- read_csv("data/ap/spc_school_ap_characteristics.csv") %>%
+  filter(setting_type %in% "Total",
+         pupil_characteristic != "Total",
+         characteristic_grouping %in% c("FSM eligibility",
+                                        "SEN on entry",
+                                        "Age",
+                                        "Gender")) %>%
+  mutate(prov_type = "School arranged AP") %>%
+  mutate(char_dv = case_when(
+    pupil_characteristic
+    %in% c("1", "2", "3", "4") ~ "Under 5",
+    pupil_characteristic
+    %in% c("5", "6") ~ "Age 5 to 6",
+    pupil_characteristic
+    %in% c("7", "8", "9", "10") ~ "Age 7 to 10",
+    pupil_characteristic
+    %in% c("11", "12", "13") ~ "Age 11 to 13",
+    pupil_characteristic
+    %in% c("14", "15") ~ "Age 14 to 15", 
+    pupil_characteristic
+    %in% c("16", "17", "18", "19") ~ "Age 16 and older",
+    T ~ pupil_characteristic
+)) %>%
+  group_by(time_period, geographic_level, region_name, la_name, characteristic_grouping) %>%
+  mutate(total_pupils = sum(pupils)) %>%
+  ungroup() %>%
+  group_by(time_period, geographic_level, region_name, la_name, char_dv) %>%
+  mutate(pupils_dv = sum(pupils)) %>%
+  select(-c("setting_type", "characteristic_grouping", "pupils")) %>%
+  summarise(char_per = pupils_dv / total_pupils,
+            pupils_dv = max(pupils_dv))  %>% distinct() %>%
+  mutate(prov_type = "School arranged AP") %>% ungroup()
+
+# Combine - school arranged & SF AP from different publications
+ap_characteristics <- bind_rows(sf_ap_chars, sa_ap_chars) %>%
+  select(-c("pupil_sen_status", "number_of_pupils")) %>%
+  mutate(char_dv = ifelse(char_dv %in% c("EHC plans"), "EHC plan", char_dv)) %>%
+  mutate(pupil_characteristic = case_when(grepl("Age|Under 5|and older", char_dv) ~ "Age breakdown",
+                                          grepl("SEN|EHC plan", char_dv) ~ "SEN status",
+                                          grepl("FSM|fsm_", char_dv) ~ "Free school meal status",
+                                          grepl("Male|Female|Girls|Boys", char_dv) ~ "Gender",
+                                          T ~ char_dv)) %>%
+  mutate(academic_year = as.character(time_period)) %>%
+  mutate(char_dv = case_when(
+    char_dv %in% "Girls" ~ "Female",
+    char_dv %in% "Boys" ~ "Male",
+    char_dv %in% "fsm_eligible" ~ "FSM eligible",
+    char_dv %in% "fsm_not_eligible" ~ "Not FSM eligible",
+    T ~ char_dv))  %>%
+  time_period_to_academic_year() %>%
+  mutate(`Academic year` = academic_year,
+         char_dv = as.factor(char_dv),
+         char_dv = fct_relevel(char_dv,
+                               "Age 16 and older",
+                               "Age 14 to 15",
+                               "Age 11 to 13",
+                               "Age 7 to 10",
+                               "Age 5 to 6",
+                               "Under 5",
+                              
+                               "FSM eligible",
+                               "Not FSM eligible",
+                              
+                               "EHC plan",
+                               "SEN Support",
+                               "No SEN",
+                               
+                               "Male",
+                               "Female",
+                               )) %>%
+  mutate(`% of pupils` = round(char_per*100, 2)) %>%
+  mutate(time_period = as.numeric(time_period)) %>%
+  filter(time_period > 201617) %>%
+  mutate(
+    `Type of AP` = prov_type,
+    `Characteristic` = char_dv,
+    `Total pupils` = pupils_dv) %>%
+  mutate(Region = region_name) %>%
+  mutate(Region = ifelse(geographic_level %in% "National", "England", Region),
+         `Local authority` = la_name)
+
+# Make an All SEN line. Arguably better to have spliced this in above but this approach at least prevents order-of-operations issues
+ap_anysen <- ap_characteristics %>% 
+  fsubset(Characteristic %in% c("EHC plan", "SEN Support", "No SEN")) %>% 
+  mutate(Characteristic = ifelse(Characteristic %in% c("EHC plan", "SEN Support"), "All SEN", "No SEN")) %>% 
+  dplyr::group_by(time_period, time_identifier, geographic_level, country_code, country_name, region_name, region_code, old_la_code, la_name, new_la_code, prov_type, Characteristic, academic_year, `Academic year`, `Type of AP`) %>% 
+  dplyr::summarise(pupils_dv = sum(pupils_dv, na.rm = T), 
+                   char_per = sum(char_per), 
+                   `% of pupils` = sum(`% of pupils`),
+                   `Total pupils` = sum(`Total pupils`)) %>% ungroup() %>%
+  mutate(char_dv = Characteristic,
+         pupil_characteristic = "All SEN",
+         Region = region_name)
+
+ap_characteristics <- bind_rows(ap_characteristics, ap_anysen) %>%
+  mutate(`% of pupils` = round(char_per*100, 2),
+         Region = ifelse(geographic_level %in% "National", "England", Region),
+         `Local authority` = la_name) %>% 
+  mutate(across(c("Characteristic", "char_dv", "pupil_characteristic"), ~ ifelse(.x %in% "Any SEN", "All SEN", .x))) %>%
+  mutate(Characteristic = as.factor(Characteristic)) %>%
+  mutate(Characteristic=fct_relevel(Characteristic,c("Age 16 and older",
+                                                     "Age 14 to 15",
+                                                     "Age 11 to 13",
+                                                     "Age 7 to 10",
+                                                     "Age 5 to 6",
+                                                     "Under 5"))) 
+
+# Next 
+
+#===============================
+# School Ofsted data 
+#===============================
+
+# Data is published here: https://www.gov.uk/search/research-and-statistics?parent=/education/inspection-of-maintained-schools-and-academies&keywords=State-funded%20schools%20inspections%20and%20outcomes%20as%20at%2031%20August&content_store_document_type=all_research_and_statistics&topic=40334e3b-8ce3-48d3-96bc-fec16b43da39&order=relevance
+
+# Step 1: Get list of links for each publication (not the file), and ensure links are valid 
+link_vector <- paste0(
+  "https://www.gov.uk/government/statistics/state-funded-schools-inspections-and-outcomes-as-at-31-august-", 2019:2050)
+
+ofsted_schl <- data.frame(Link = link_vector) %>%
+  mutate(year = substr(Link, start = nchar(Link) - 3, stop = nchar(Link) - 0)) %>%
+  mutate(pub_date = ymd(paste(year, "01-01", sep = "-"))) %>%
+  filter(pub_date < Sys.Date())
+# Classify whether the link works or not 
+ofsted_schl$link_is_valid <- sapply(ofsted_schl$Link, valid_url)
+ofsted_schl <- ofsted_schl %>% filter(link_is_valid == T) %>%
+  distinct(.keep_all=T)
+
+# Step 2: Now extract the relevant data file from each publication identified 
+# Create an empty list to store the links
+ofsted_sch_all_links <- list()
+
+# Iterate through the list of URLs
+for (i in ofsted_schl$Link) {
+  url <- i
+  page <- read_html(url)
+  
+  links <- page %>%
+    html_nodes("a") %>%
+    html_attr("href")
+  
+  # Append the links to the list
+  ofsted_sch_all_links <- c(ofsted_sch_all_links, list(links))
+}
+
+# Unlist the list of links and create a data frame of csv links 
+ofsted_sch_links <- data.frame(pub_link = unlist(ofsted_sch_all_links)) %>%
+  filter(grepl("ate_funded_schools_inspections_and_outcomes_as_at_31_August", pub_link) &   grepl("\\.csv$", pub_link)) %>%
+  distinct(.keep_all=T) %>%
+  mutate(file_name = substr(pub_link, start = nchar(pub_link) -69, stop = nchar(pub_link) -0))
+
+
+for(i in ofsted_sch_links$pub_link) {
+  link <- i 
+  file_name <- substr(link, start = nchar(link) -69, stop = nchar(link) -0)
+  GET(link, write_disk(paste0("data/ofsted_school/", file_name), overwrite = TRUE))
+}
+
+
+# List the files in the directory, with specified naming pattern 
+ofsted_files <- list.files("data/ofsted_school", pattern = paste0("funded_schools_inspections_and_outcomes_as_at_31_August"), full.names = TRUE)
+
+# Create an empty list to store dataframes
+dataframes_list <- list()
+
+# Loop through the list of files
+for (file in ofsted_files) {
+  # Read the data from each file into a dataframe
+  df <- rio::import(file) %>% 
+    distinct(.keep_all = T) %>%
+    select("URN", "LAESTAB", "Region", "Local authority", "URN", "Type of education", "Overall effectiveness", "Total number of pupils") %>%
+    mutate(Year = paste0(str_sub(file, -8, -5)),
+           published_file_link = paste0(file))
+  print(file)
+  print(count(df)) 
+  
+  # Append the dataframe to the list
+  dataframes_list <- append(dataframes_list, list(df))
+  rm(df)
+}
+
+# Remove the downloaded files 
+file.remove(ofsted_files)
+
+# Bind all dataframes into one
+ofsted_school_time_series_august_31 <- bind_rows(dataframes_list) 
+# Save time series for transparency 
+write.csv(ofsted_school_time_series_august_31, paste0("data/ofsted_school/", "time_series_ofsted_state-funded-schools-inspections-and-outcomes-as-at-31-august.csv"))
+
+
+# Step 3: Wrangle data 
+of_ap_names <- c("Academy Alternative Provision Converter",
+                 "Academy Alternative Provision Sponsor Led",
+                 "Free School - Alternative Provision",
+                 "Pupil Referral Unit")
+
+of_sf_special_schools <- c("Foundation Special School",
+                           "Community Special School",
+                           "Academy Special Converter",
+                           "Academy Special Sponsor Led",
+                           "Free School Special")
+
+of_nm_ss <- "Non-Maintained Special School"
+
+
+of_other_schools <- c("Voluntary Aided School",
+                      "LA Nursery School",
+                      "Community School",
+                      "Voluntary Controlled School",
+                      "Foundation School",
+                      "City Technology College",
+                      "Academy Sponsor Led",
+                      "Academy Converter",
+                      "Free School",
+                      "Studio School",
+                      "University Technical College")
+
+ap_ofsted_schl <- ofsted_school_time_series_august_31 %>%  
+  rename(ofsted_la_naming_convention = `Local authority`) %>%
+  mutate(
+    # recode so Ofsted data matches DfE naming convention 
+    la_name = case_when(
+      ofsted_la_naming_convention %in% "Bristol" ~ "Bristol, City of",
+      ofsted_la_naming_convention %in% "Durham" ~ "County Durham",
+      ofsted_la_naming_convention %in% "Kingston upon Hull" ~ "Kingston upon Hull, City of",
+      ofsted_la_naming_convention %in% "St Helens" ~ "St. Helens",
+      ofsted_la_naming_convention %in% "Southend on Sea" ~ "Southend-on-Sea",
+      ofsted_la_naming_convention %in% "Herefordshire" ~ "Herefordshire, County of",
+      ofsted_la_naming_convention %in% "Bournemouth, Christchurch & Poole" ~ "Bournemouth, Christchurch and Poole",
+      T ~ ofsted_la_naming_convention)) %>%
+  filter(!is.na(URN), 
+         `Overall effectiveness` != "NULL") %>% # requested to remove the NULLs after we initially included them; oddly R imports NULLs as a string and not NA
+  # Make LA names DfE names 
+  mutate(good_or_outst = ifelse(`Overall effectiveness` %in% c(1,2), 1, 0),
+       num_overall_effectiveness = as.factor(`Overall effectiveness`), 
+      `Overall effectiveness` = as.factor(`Overall effectiveness`),
+         `Overall effectiveness` = case_when(
+           `Overall effectiveness` %in% "1" ~ "Outstanding",
+           `Overall effectiveness` %in% "2" ~ "Good",
+           `Overall effectiveness` %in% "3" ~ "Requires improvement",
+           `Overall effectiveness` %in% "4" ~ "Inadequate",
+           T ~ "Check this!"),
+         school_type = case_when(
+           `Type of education` %in% of_ap_names ~ "State-funded AP school",
+           `Type of education` %in% of_sf_special_schools ~ "State-funded special school",
+           `Type of education` %in% of_nm_ss ~ "Non-maintained special school",
+           `Type of education` %in% of_other_schools ~ "State-funded mainstream school",
+           T ~ "Check!!! - if you're seeing this, the data has changed so investigate")) %>%
+  # Relevel, so the graphs always follow the correct hierarchy of Ofsted rating 1=Outstanding; 5=NULL
+  mutate(`num_overall_effectiveness` = ifelse(is.na(as.numeric(`num_overall_effectiveness`)), 5, `num_overall_effectiveness`),
+         `Overall effectiveness` = reorder(`Overall effectiveness`, num_overall_effectiveness))
+
+oftsed_school_effectiveness_calc <- function(data, group_vars) {
+  result <- data %>%
+    group_by(across(all_of(c(group_vars, "Overall effectiveness")))) %>%
+    summarise(total_schools_effect_rating = n()) %>%
+    ungroup() %>%
+    group_by(across(all_of(c(group_vars)))) %>% 
+    mutate(grand_total_schools = sum(total_schools_effect_rating)) %>%
+    ungroup() %>%
+    mutate(`Overall effectiveness (% of schools)` = round(100 * (total_schools_effect_rating / grand_total_schools), 2)) %>%
+    rename(`Overall effectiveness (number of schools)` = total_schools_effect_rating) 
+  
+  return(result)
+}
+
+      
+# Calc. & create a dataframe with national, regional and LA data: 
+ap_ofsted_schl_la <- oftsed_school_effectiveness_calc(ap_ofsted_schl, group_vars = c("Year", "Region", "la_name", "school_type")) %>% 
+  mutate(geographic_level = "Local authority")
+
+ap_ofsted_schl_reg <- oftsed_school_effectiveness_calc(ap_ofsted_schl, group_vars = c("Year", "Region", "school_type")) %>% 
+  mutate(geographic_level = "Regional")
+
+ap_ofsted_schl_nat <- oftsed_school_effectiveness_calc(ap_ofsted_schl, group_vars = c("Year", "school_type")) %>%
+  mutate(geographic_level = "National")
+
+# Stack 
+ap_ofsted_schl <- bind_rows(ap_ofsted_schl_nat, ap_ofsted_schl_reg, ap_ofsted_schl_la) %>%
+  pivot_longer(cols = c(`Overall effectiveness (% of schools)`, `Overall effectiveness (number of schools)`),
+               names_to = "Measure",
+               values_to = "Value") %>%
+  mutate(Region = ifelse(geographic_level %in% "National", "England", Region)) %>%
+  mutate(Region = ifelse(Region == "Yorkshire and the Humber", "Yorkshire and The Humber", Region)) 
+
+rm(ap_ofsted_schl_nat, ap_ofsted_schl_reg, ap_ofsted_schl_la)
+
+# Next 
+
+#================================
+# Children in Need
+#================================
+
+get_ees_data(url = "https://explore-education-statistics.service.gov.uk/find-statistics/outcomes-for-children-in-need-including-children-looked-after-by-local-authorities-in-england", 
+                    desired_file_name = "sen_la.csv", 
+                    zip_subfolder_to_extract = "data/",
+                    output_dir = "./data/cin/")
+
+get_ees_data(url = "https://explore-education-statistics.service.gov.uk/find-statistics/outcomes-for-children-in-need-including-children-looked-after-by-local-authorities-in-england", 
+             desired_file_name = "sen_national.csv", 
+             zip_subfolder_to_extract = "data/",
+             output_dir = "./data/cin/")
+
+cin_la <- read_csv("data/cin/sen_la.csv") %>% 
+   select(time_period, geographic_level, region_code, region_name, la_name, new_la_code, social_care_group, 
+          `No identified SEN` = pt_no_identified_SEN, 
+          `All SEN` = pt_all_SEN, 
+          `SEN support` = pt_SEN_support, 
+          `EHC plan` = pt_statement_or_EHC_plan) %>% 
+   mutate(across(8:11, as.numeric), 
+          region_name = if_else(geographic_level == "National", "England", region_name)) %>% 
+   pivot_longer(8:11, names_to = "SEN Provision", values_to = "Percentage of children") %>% 
+  time_period_to_academic_year()
+
 #================================
 # Prep geog. files
 #================================
@@ -1417,32 +2240,34 @@ compare_to_previous <- function(df, col, time_column, ...) {
   return(df)
 }
 
-# Create england-only dataframes
-eng_ks2_attainment <- nat_and_reg(ks2_attainment) %>% compare_to_previous(`Percent meeting expected standards`, time_period, characteristic, region_name)
-eng_ks1_phonics <- nat_and_reg(ks1_phonics) %>% compare_to_previous(`Percent meeting expected standards in Y1`, time_period, characteristic, region_name)
+# Create england-only dataframes. Some of this could be condensed using purrr::map() but they largely need different switches in compare_to_previous annoyingly
+eng_ks2_attainment <- nat_and_reg(ks2_attainment) %>% compare_to_previous(`Percent meeting expected standard`, time_period, characteristic, region_name)
+eng_ks1_phonics <- nat_and_reg(ks1_phonics) %>% compare_to_previous(`Percent meeting expected standards in Y1`, time_period, characteristic, region_name) %>% 
+  mutate(characteristic = if_else(characteristic == "EHC plan or Statement", "EHC plan", characteristic)) # so that the SEN switch in the summary panel works and also by 2022/3 there are no statements anyway
 #this one is normal except that "last year" is 2018-19
 eng_ks4_attainment <- nat_and_reg(ks4_attainment) %>% 
   mutate(region_name = if_else(geographic_level == "National", "England", region_name)) %>%  # the lack of an entry here is breaking compare_to_previous
-  filter(time_period %in% c(201819, 202122)) %>% 
-  compare_to_previous(`Average progress 8 score`, time_period, geographic_level, region_name, characteristic_sen_description)# there's no previous data here to compare to currently - for unclear reasons P8 wasn't published in 2018/19
+  filter(time_period %in% c(202122, 202223)) %>% 
+  compare_to_previous(`Average progress 8 score`, time_period, geographic_level, region_name, characteristic_sen_description)
 eng_ehcp_timeliness <- nat_and_reg(ehcp_timeliness) %>% compare_to_previous(`% of EHCPs issued within 20 weeks`, time_period, region_name)
 eng_mentalhealth <- mentalhealth %>%
   fsubset(BREAKDOWN %in% c("England", "Commissioning Region")) %>%
   compare_to_previous(`Number of children and young people`, `Year ending`, PRIMARY_LEVEL_DESCRIPTION)
 eng_absence <- absence_regional %>%
-  compare_to_previous(`Overall absence %`, time_period, characteristic, region_name)
+  compare_to_previous(Percentage, time_period, characteristic, region_name, `Absence measure`)
+sf_ap_absence_regional <- sf_ap_absence  %>% filter(geographic_level != "Local authority") %>% compare_to_previous(Percentage, time_period, `Absence measure`, region_name)
 eng_tribunals <- compare_to_previous(tribunals_reg, `SEND Tribunal Appeal Rate`, year, region_name)
-eng_dsg_deficit <- nat_and_reg(dsg_deficit) %>% distinct() %>% compare_to_previous(`DSG cumulative balance as a % of the total budget`, time_period, region_name)
+eng_dsg_deficit <- nat_and_reg(dsg_deficit) %>% distinct() %>% compare_to_previous(`DSG cumulative balance as a % of the total income`, time_period, region_name)
 eng_percent_pupils_ehcp <- nat_and_reg(percent_pupils_ehcp) %>% compare_to_previous(`% of pupils`, time_period, `SEN provision`, region_name)
 eng_autism <- autism %>%
   fsubset(BREAKDOWN == "Age Group") %>%
   compare_to_previous(`% with first appointment after more than 13 weeks`, date, nhs_name)
-sum_ofsted <- ofsted %>% 
+sum_ofsted <- ofsted %>%
   filter(la_name != "Northamptonshire") %>% # because it doesn't actually exist at the moment
-  mutate(WSoAPAP = case_when(`Priority action plan required? (new inspection framework)` == "Yes" ~ TRUE, 
-                                  `Inspection outcome: written statement of action required? (previous inspection framwork)` == "Yes" ~ TRUE,
-                                  `Revisit outcome: sufficient progress in addressing all significant weaknesses? (previous inspection framework)` != "Yes" ~ TRUE,
-                                   .default = FALSE))
+  mutate(WSoAPAP = case_when(`Inspection outcome (new inspection framework)` %in% c("Widespread and/or systemic failings", "Inconsistent experiences and outcomes") ~ TRUE, 
+
+                             `Inspection outcome: written statement of action required? (previous inspection framwork)` == "Yes" ~ TRUE,
+                             .default = FALSE))
 eng_ofsted <- count(ungroup(sum_ofsted), WSoAPAP, name = "Num_LAs") %>%
   fmutate(pc_LAs = Num_LAs/sum(Num_LAs))
 reg_ofsted <- count(ungroup(sum_ofsted), region, WSoAPAP, name = "Num_LAs") %>% 
@@ -1450,19 +2275,25 @@ reg_ofsted <- count(ungroup(sum_ofsted), region, WSoAPAP, name = "Num_LAs") %>%
   fmutate(pc_LAs = Num_LAs/sum(Num_LAs))
 reg_1618 <- nat_and_reg(destinations_1618) # for odd reasons the destinations metric comes in two files - national only and regional and local
 
+eng_discontinued <- nat_and_reg(discontinued_plans) %>% compare_to_previous(discontinued_schoolage, time_period, region_name)
+eng_cin <- nat_and_reg(cin_la) %>% compare_to_previous(`Percentage of children`, time_period, region_name, `SEN Provision`, social_care_group)
+eng_eyfsp <- nat_and_reg(eyfsp) %>% compare_to_previous(gld_percentage, time_period, region_name, characteristic_type)
+eng_mainstream_with_sen <- nat_and_reg(mainstream_with_sen) %>%
+  compare_to_previous(`% of pupils`, time_period, region_name, `SEN provision`)
+
 # less straightforward summaries
 # want an "all SEN" for this one which isn't there
-eng_mainstream_with_sen <- nat_and_reg(mainstream_with_sen) %>%
-  group_by(time_period, academic_year, region_name, geographic_level) %>%
-  summarise(`% of pupils` = sum(`% of pupils`)) %>%
-  mutate(`SEN provision` = "All SEN") %>%
-  compare_to_previous(`% of pupils`, time_period, region_name)
+eng_ap_characteristics <- ap_characteristics %>% 
+  nat_and_reg() %>% 
+  fsubset(Characteristic %in% c("All SEN",
+                                "EHC plan",
+                                "SEN Support") & 
+          `Type of AP` == "State-funded AP school") %>% 
+  group_by(time_period, academic_year, region_name, geographic_level, `Type of AP`, Characteristic) %>%
+  mutate(Characteristic = case_when(Characteristic %in% "SEN Support" ~ "SEN support",
+                                    T ~ Characteristic)) %>%
+  compare_to_previous(`% of pupils`, time_period, region_name, `Type of AP`, Characteristic)
 
-eng_mainstream_with_sen_2 <- nat_and_reg(mainstream_with_sen) %>%
-  compare_to_previous(`% of pupils`, time_period, `SEN provision`, region_name, geographic_level ) %>%
-  select(time_period, academic_year, `% of pupils`, `SEN provision`, pc_change, region_name, geographic_level)
-
-eng_mainstream_with_sen <- bind_rows(eng_mainstream_with_sen, eng_mainstream_with_sen_2)
 # There may be other metrics that can be calculated at England level
 
 # grouping all specialist provider types
@@ -1473,20 +2304,42 @@ eng_provider_types <- nat_and_reg(provider_types) %>%
   fsummarise(`% of pupils (with SEN provision type)` = sum(`% of pupils (with SEN provision type)`)) %>%
   compare_to_previous(`% of pupils (with SEN provision type)`, academic_year, region_name, geographic_level)
 
+# adding up "good" and "outstanding" Ofsted reports
+eng_ap_ofsted_schl <- ap_ofsted_schl %>% 
+  fsubset(geographic_level %in% c("National", "Regional") &
+            school_type == "State-funded AP school" &
+            Measure == "Overall effectiveness (% of schools)") %>% 
+  fmutate(Mask = if_else(`Overall effectiveness` %in% c("Outstanding", "Good"), TRUE, FALSE), 
+          Region = if_else(Region == "Yorkshire and the Humber", "Yorkshire and The Humber", Region)) %>%  # standardise across dashboard or else the dropdown won't work
+  group_by(Year, Mask, Region) %>% 
+  summarise(grand_total_schools = sum(grand_total_schools), 
+            Value = sum(Value)) %>% 
+  ungroup() %>% 
+  fsubset(Mask == TRUE) %>% 
+  compare_to_previous(Value, Year, Region)
+
+eng_ap_counts <- ap_counts %>% nat_and_reg() %>% compare_to_previous(total, time_period, prov_type, Region)
+eng_uap_counts <- uap_counts %>% fsubset(setting_type == "Grand total unregistered AP (all setting types)") %>% 
+  nat_and_reg() %>% compare_to_previous(total, time_period, prov_type, Region)
+
 source("prep/summary_prep.R")
 
 save(ks2_attainment, ks1_phonics, ks4_attainment, # Initial Outcomes metrics
   mentalhealth, mentalhealth_reg, mentalhealth_ccg, most_recent_mentalhealth_label, year_ago_mentalhealth_label, # MH metrics
-  ofsted, ofsted_data_updated, destinations_1618, destinations_1618_nat, # Final Outcomes metrics
-  ehcp_timeliness, autism, tribunals, tribunals_reg, absence, absence_regional, ks4_destinations, ks4_destinations_nat, # Experiences metrics
+  ofsted, ofsted_data_updated, destinations_1618, destinations_1618_nat, destinations_1618_overall, destinations_1618_nat_overall, discontinued_plans, eyfsp, # Final Outcomes metrics
+  ehcp_timeliness, autism, la_communityhealth, tribunals, tribunals_reg, absence, absence_regional, ks4_destinations, ks4_destinations_nat, ks4_destinations_overall, ks4_destinations_nat_overall, # Experiences metrics
   dsg_deficit, specialist_spend, reg_specialist_spend, reg_specialist_spend_order, nat_specialist_spend, # Financial Sustainability metrics
-  ehcp_ageprofile, mainstream_with_sen, percent_pupils_ehcp, # Identification of Need metrics
+  ehcp_ageprofile, mainstream_with_sen, cin_la, percent_pupils_ehcp, # Identification of Need metrics
   provider_types, provider_types_grouped, provider_types_nat, provider_types_grouped_nat, # specialist provider types metric
+  ap_counts, uap_counts, ap_characteristics, sf_ap_absence, sf_ap_absence_regional, ap_ofsted_schl, # AP metrics
   nhs_region_list, la_region_lookup, nhs_lookup, la_ccg_lookup, # Lookups
   eng_absence, eng_autism, eng_dsg_deficit, eng_ehcp_timeliness, eng_ks1_phonics, eng_ks2_attainment, eng_ks4_attainment,
+  eng_mentalhealth, eng_percent_pupils_ehcp, eng_tribunals, eng_mainstream_with_sen, eng_provider_types, eng_ofsted, reg_ofsted, 
+  reg_1618, summary_metrics, ap_summary_metrics, eng_ap_counts, eng_uap_counts, eng_ap_characteristics, sf_ap_absence_regional, eng_ap_ofsted_schl, eng_eyfsp, eng_discontinued, 
+  eng_cin, eng_communityhealth, # England and Regional Summaries
+  eng_absence, eng_autism, eng_dsg_deficit, eng_ehcp_timeliness, eng_ks1_phonics, eng_ks2_attainment, eng_eyfsp, eng_ks4_attainment, eng_discontinued, eng_cin,
   eng_mentalhealth, eng_percent_pupils_ehcp, eng_tribunals, eng_mainstream_with_sen, eng_provider_types, eng_ofsted, reg_ofsted, reg_1618, summary_metrics,
   # box_ks2_attainment, sparkline_ks2_attainment,
-  file = "data/prepared_data.Rdata"
-)
+  file = "data/prepared_data.Rdata")
 
 # End 

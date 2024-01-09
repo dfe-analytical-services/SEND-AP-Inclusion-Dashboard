@@ -1,35 +1,36 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
-    "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "ccg_choice": "NHS North Central London CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
     "ks4_destinations_la_type_filter": "Employment",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
-    "ks4_destinations_reg_type_filter": "Employment",
-    "la_choice": "Hackney",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
+    "la_choice": "Camden",
     "level_choice": "Regions",
-    "link_to_la_dashboard": 0,
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
-    "navlistPanel": "Local Areas",
-    "nhs_region_choice": "London",
+    "navlistPanel": "England and Regions",
+    "nhs_region_choice": "Midlands",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
     "percent_pupils_ehcp_reg_filter": "EHC plan",
@@ -37,318 +38,160 @@
     "provider_types_la_time_filter": "all pupils",
     "provider_types_reg_bench_filter": "all pupils",
     "provider_types_reg_time_filter": "all pupils",
-    "region_choice": "London",
+    "region_choice": "West Midlands",
     "remove": 0,
-    "tabsetpanels_la": "Financial Sustainability",
+    "tabsetpanels_la": "Experiences",
     "tabsetpanels_reg": "Experiences"
   },
   "output": {
-    "dsg_deficit_la_time": {
+    "absence_reg_time_table": {
       "x": {
-        "data": [
-          {
-            "x": [
-              1,
-              2,
-              3
-            ],
-            "y": [
-              -1.78,
-              -3.1499999999999999,
-              -4.5899999999999999
-            ],
-            "text": [
-              "financial_year: 2019-20<br />DSG cumulative balance as a % of the total budget: -1.78",
-              "financial_year: 2020-21<br />DSG cumulative balance as a % of the total budget: -3.15",
-              "financial_year: 2021-22<br />DSG cumulative balance as a % of the total budget: -4.59"
-            ],
-            "type": "scatter",
-            "mode": "lines+markers",
-            "line": {
-              "width": 1.8897637795275593,
-              "color": "rgba(0,0,0,1)",
-              "dash": "solid"
-            },
-            "hoveron": "points",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(0,0,0,1)",
-              "opacity": 1,
-              "size": 5.6692913385826778,
-              "symbol": "circle",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "rgba(0,0,0,1)"
-              }
-            },
-            "frame": null
-          }
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
         ],
-        "layout": {
-          "margin": {
-            "t": 24.855680088556802,
-            "r": 6.6417600664175991,
-            "b": 36.086896360868963,
-            "l": 39.186384391863839
-          },
-          "plot_bgcolor": "rgba(255,255,255,1)",
-          "paper_bgcolor": "rgba(255,255,255,1)",
-          "font": {
-            "color": "rgba(0,0,0,1)",
-            "family": "",
-            "size": 13.283520132835198
-          },
-          "xaxis": {
-            "domain": [
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Region<\/th>\n      <th>Absence measure<\/th>\n      <th>SEN Status<\/th>\n      <th>Percentage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              3,
+              "desc"
+            ],
+            [
               0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              0.40000000000000002,
-              3.6000000000000001
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "2019-20",
-              "2020-21",
-              "2021-22"
-            ],
-            "tickvals": [
-              1,
-              2,
-              3
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "2019-20",
-              "2020-21",
-              "2021-22"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "y",
-            "title": {
-              "text": "Financial year",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "hoverformat": ".2f"
-          },
-          "yaxis": {
-            "domain": [
-              0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              -16.170000000000002,
-              8.25
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "-15",
-              "-10",
-              "-5",
-              "0",
-              "5"
-            ],
-            "tickvals": [
-              -15,
-              -10,
-              -5,
-              0,
-              5
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "-15",
-              "-10",
-              "-5",
-              "0",
-              "5"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "x",
-            "title": {
-              "text": "% surplus (if positive) or deficit (if negative)",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "hoverformat": ".2f"
-          },
-          "shapes": [
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
             {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
-
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 1
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
             }
           ],
-          "showlegend": false,
-          "legend": {
-            "bgcolor": "rgba(255,255,255,1)",
-            "bordercolor": "transparent",
-            "borderwidth": 1.7179670722977816,
-            "font": {
-              "color": "rgba(0,0,0,1)",
-              "family": "",
-              "size": 13.283520132835198
-            },
-            "orientation": "h",
-            "y": -0.20000000000000001
-          },
-          "hovermode": "closest",
-          "barmode": "relative",
-          "dragmode": false
-        },
-        "config": {
-          "doubleClick": "reset",
-          "modeBarButtonsToAdd": [
-            "hoverclosest",
-            "hovercompare"
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
           ],
-          "showSendToCloud": false,
-          "displaylogo": false,
-          "toImageButtonOptions": {
-            "format": "png"
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
           },
-          "modeBarButtons": [
-            "toImage"
-          ]
+          "serverSide": true,
+          "processing": true
         },
-        "source": "A",
-        "highlight": {
-          "on": "plotly_click",
-          "persistent": false,
-          "dynamic": false,
-          "selectize": false,
-          "opacityDim": 0.20000000000000001,
-          "selected": {
-            "opacity": 1
-          },
-          "debounce": 0
-        },
-        "shinyEvents": [
-          "plotly_hover",
-          "plotly_click",
-          "plotly_selected",
-          "plotly_relayout",
-          "plotly_brushed",
-          "plotly_brushing",
-          "plotly_clickannotation",
-          "plotly_doubleclick",
-          "plotly_deselect",
-          "plotly_afterplot",
-          "plotly_sunburstclick"
-        ],
-        "base_url": "https://plot.ly"
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
       },
       "evals": [
-
+        "options.ajax.data"
       ],
       "jsHooks": [
 
       ],
       "deps": [
         {
-          "name": "setprototypeof",
-          "version": "0.1",
-          "src": {
-            "href": "setprototypeof-0.1"
-          },
-          "meta": null,
-          "script": "setprototypeof.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "typedarray",
-          "version": "0.1",
-          "src": {
-            "href": "typedarray-0.1"
-          },
-          "meta": null,
-          "script": "typedarray.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
           "name": "jquery",
-          "version": "3.5.1",
+          "version": "3.6.0",
           "src": {
-            "href": "jquery-3.5.1"
+            "href": "jquery-3.6.0"
           },
           "meta": null,
-          "script": "jquery.min.js",
+          "script": "jquery-3.6.0.min.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
           "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
         },
         {
           "name": "crosstalk",
@@ -362,395 +205,154 @@
           "head": null,
           "attachment": null,
           "all_files": true
-        },
-        {
-          "name": "plotly-htmlwidgets-css",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-htmlwidgets-css-2.11.1"
-          },
-          "meta": null,
-          "script": null,
-          "stylesheet": "plotly-htmlwidgets.css",
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "plotly-main",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-main-2.11.1"
-          },
-          "meta": null,
-          "script": "plotly-latest.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
         }
       ]
     },
-    "specialist_spend_la_time": {
+    "autism_nat_time_table": {
       "x": {
-        "data": [
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036
-            ],
-            "base": [
-              220.85730031343644,
-              261.58970093970783,
-              152.92385677866415
-            ],
-            "x": [
-              1,
-              2,
-              3
-            ],
-            "y": [
-              142.09847415010506,
-              192.48456684271895,
-              241.92887119095005
-            ],
-            "text": [
-              "year: 2018-19<br />Spend per head: £142",
-              "year: 2019-20<br />Spend per head: £192",
-              "year: 2020-21<br />Spend per head: £242"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(77,130,100,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Independent or non-maintained",
-            "legendgroup": "Independent or non-maintained",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036
-            ],
-            "base": [
-              0,
-              0,
-              0
-            ],
-            "x": [
-              1,
-              2,
-              3
-            ],
-            "y": [
-              220.85730031343644,
-              261.58970093970783,
-              152.92385677866415
-            ],
-            "text": [
-              "year: 2018-19<br />Spend per head: £221",
-              "year: 2019-20<br />Spend per head: £262",
-              "year: 2020-21<br />Spend per head: £153"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(26,153,249,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "State",
-            "legendgroup": "State",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          }
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
         ],
-        "layout": {
-          "margin": {
-            "t": 24.855680088556802,
-            "r": 6.6417600664175991,
-            "b": 36.086896360868963,
-            "l": 44.499792444997915
-          },
-          "plot_bgcolor": "rgba(255,255,255,1)",
-          "paper_bgcolor": "rgba(255,255,255,1)",
-          "font": {
-            "color": "rgba(0,0,0,1)",
-            "family": "",
-            "size": 13.283520132835198
-          },
-          "xaxis": {
-            "domain": [
-              0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              0.40000000000000002,
-              3.6000000000000001
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "2018-19",
-              "2019-20",
-              "2020-21"
-            ],
-            "tickvals": [
-              1,
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Month<\/th>\n      <th>Region<\/th>\n      <th>Age group<\/th>\n      <th>% with first appointment\n after more than 13 weeks<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
               2,
-              3
+              "desc"
             ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "2018-19",
-              "2019-20",
-              "2020-21"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "y",
-            "title": {
-              "text": "Financial year",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "hoverformat": ".2f"
-          },
-          "yaxis": {
-            "domain": [
+            [
               0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              -31.051967317035121,
-              652.0913136577376
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "£0",
-              "£200",
-              "£400",
-              "£600"
-            ],
-            "tickvals": [
-              0,
-              200,
-              400,
-              600
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "£0",
-              "£200",
-              "£400",
-              "£600"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "x",
-            "title": {
-              "text": "Per capita spend on special schools and AP",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "hoverformat": ".2f"
-          },
-          "shapes": [
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
             {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
-
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 1
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
             }
           ],
-          "showlegend": true,
-          "legend": {
-            "bgcolor": "rgba(255,255,255,1)",
-            "bordercolor": "transparent",
-            "borderwidth": 1.7179670722977816,
-            "font": {
-              "color": "rgba(0,0,0,1)",
-              "family": "",
-              "size": 13.283520132835198
-            },
-            "title": {
-              "text": "School type",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "orientation": "h",
-            "y": -0.20000000000000001
-          },
-          "hovermode": "closest",
-          "barmode": "relative",
-          "dragmode": false
-        },
-        "config": {
-          "doubleClick": "reset",
-          "modeBarButtonsToAdd": [
-            "hoverclosest",
-            "hovercompare"
+          "columnDefs": [
+
           ],
-          "showSendToCloud": false,
-          "displaylogo": false,
-          "toImageButtonOptions": {
-            "format": "png"
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
           },
-          "modeBarButtons": [
-            "toImage"
-          ]
+          "serverSide": true,
+          "processing": true
         },
-        "source": "A",
-        "highlight": {
-          "on": "plotly_click",
-          "persistent": false,
-          "dynamic": false,
-          "selectize": false,
-          "opacityDim": 0.20000000000000001,
-          "selected": {
-            "opacity": 1
-          },
-          "debounce": 0
-        },
-        "shinyEvents": [
-          "plotly_hover",
-          "plotly_click",
-          "plotly_selected",
-          "plotly_relayout",
-          "plotly_brushed",
-          "plotly_brushing",
-          "plotly_clickannotation",
-          "plotly_doubleclick",
-          "plotly_deselect",
-          "plotly_afterplot",
-          "plotly_sunburstclick"
-        ],
-        "base_url": "https://plot.ly"
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
       },
       "evals": [
-
+        "options.ajax.data"
       ],
       "jsHooks": [
 
       ],
       "deps": [
         {
-          "name": "setprototypeof",
-          "version": "0.1",
-          "src": {
-            "href": "setprototypeof-0.1"
-          },
-          "meta": null,
-          "script": "setprototypeof.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "typedarray",
-          "version": "0.1",
-          "src": {
-            "href": "typedarray-0.1"
-          },
-          "meta": null,
-          "script": "typedarray.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
           "name": "jquery",
-          "version": "3.5.1",
+          "version": "3.6.0",
           "src": {
-            "href": "jquery-3.5.1"
+            "href": "jquery-3.6.0"
           },
           "meta": null,
-          "script": "jquery.min.js",
+          "script": "jquery-3.6.0.min.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
           "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
         },
         {
           "name": "crosstalk",
@@ -764,32 +366,656 @@
           "head": null,
           "attachment": null,
           "all_files": true
+        }
+      ]
+    },
+    "ch_nat_time_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Date<\/th>\n      <th>Region<\/th>\n      <th>Service<\/th>\n      <th>Percentage waiting more than 18 weeks<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "desc"
+            ],
+            [
+              0,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
         },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
         {
-          "name": "plotly-htmlwidgets-css",
-          "version": "2.11.1",
+          "name": "jquery",
+          "version": "3.6.0",
           "src": {
-            "href": "plotly-htmlwidgets-css-2.11.1"
+            "href": "jquery-3.6.0"
           },
           "meta": null,
-          "script": null,
-          "stylesheet": "plotly-htmlwidgets.css",
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "plotly-main",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-main-2.11.1"
-          },
-          "meta": null,
-          "script": "plotly-latest.min.js",
+          "script": "jquery-3.6.0.min.js",
           "stylesheet": null,
           "head": null,
           "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
           "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ks4_destinations_reg_time_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Region<\/th>\n      <th>SEN Status<\/th>\n      <th>Destination<\/th>\n      <th>% of pupils<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              0,
+              "desc"
+            ],
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "timeliness_reg_time_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Region<\/th>\n      <th>% of EHCPs issued within 20 weeks<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              0,
+              "desc"
+            ],
+            [
+              2,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "tribunals_reg_time_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Region<\/th>\n      <th>Appeal Rate<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              0,
+              "desc"
+            ],
+            [
+              2,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
         }
       ]
     }

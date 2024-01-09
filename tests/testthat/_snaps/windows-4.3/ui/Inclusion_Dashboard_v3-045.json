@@ -1,21 +1,23 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
     "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
     "ks4_destinations_la_type_filter": "Employment",
@@ -23,12 +25,11 @@
     "ks4_destinations_reg_time_filter": "Identified SEN",
     "ks4_destinations_reg_type_filter": "Employment",
     "la_choice": "Derby",
-    "level_choice": "England",
-    "link_to_la_dashboard": 0,
+    "level_choice": "Regions",
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
-    "navlistPanel": "Local Areas",
+    "navlistPanel": "England and Regions",
     "nhs_region_choice": "South West",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
@@ -39,12 +40,333 @@
     "provider_types_reg_time_filter": "all pupils",
     "region_choice": "South West",
     "remove": 0,
-    "tabsetpanels_la": "Identification of Need",
-    "tabsetpanels_reg": "Financial Sustainability"
+    "tabsetpanels_la": "Financial sustainability",
+    "tabsetpanels_reg": "Financial sustainability"
   },
   "output": {
-    "mainstream_with_sen_la_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Local Authority <\/th> <th style='text-align: left;'> SEN provision <\/th> <th style='text-align: right;'> % of pupils <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2022/23 <\/td> <td> Nottinghamshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 0.82 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Nottingham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 0.88 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leeds <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Birmingham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Coventry <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Telford and Wrekin <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.56 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Staffordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Doncaster <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.69 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Medway <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hartlepool <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Northamptonshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Sussex <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.75 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> County Durham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.76 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leicester <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.80 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sunderland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.82 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Gateshead <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.86 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Milton Keynes <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.94 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Blackpool <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.97 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lancashire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.97 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Worcestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.97 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wirral <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southend-on-Sea <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.01 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Solihull <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Derbyshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Warwickshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wolverhampton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Northamptonshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Shropshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Lincolnshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.06 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bournemouth, Christchurch and Poole <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.09 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sheffield <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.09 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Peterborough <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.13 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stoke-on-Trent <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.13 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> South Tyneside <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.14 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Somerset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Middlesbrough <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.17 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sefton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.18 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rotherham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hertfordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Herefordshire, County of <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.22 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North East Lincolnshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.23 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wigan <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.24 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Sussex <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.24 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bolton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Newcastle upon Tyne <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Plymouth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bristol, City of <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.29 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> York <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.29 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Croydon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.29 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Darlington <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.30 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Redcar and Cleveland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.31 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Essex <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.32 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Tyneside <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.32 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Northumberland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.34 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> St. Helens <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.34 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Blackburn with Darwen <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stockton-on-Tees <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kirklees <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Luton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.36 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hillingdon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.39 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sutton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.39 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Yorkshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.40 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Berkshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.41 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hounslow <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leicestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Tameside <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.43 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Walsall <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.44 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Warrington <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.45 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Oldham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.46 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cheshire West and Chester <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.48 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sandwell <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.48 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Reading <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Brent <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cornwall <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kingston upon Hull, City of <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Slough <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.50 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bexley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.50 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barking and Dagenham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.52 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bradford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.52 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Harrow <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Halton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kent <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Norfolk <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Oxfordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.55 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Liverpool <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.55 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Suffolk <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.58 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Trafford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.59 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Windsor and Maidenhead <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.60 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Gloucestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.63 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Salford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.64 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Newham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Greenwich <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bedford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.66 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Dudley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.67 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Redbridge <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.69 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southampton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.70 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Calderdale <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.72 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Swindon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Buckinghamshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Somerset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> South Gloucestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.74 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wokingham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.75 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rutland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.76 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stockport <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lincolnshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Portsmouth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Derby <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.79 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kingston upon Thames <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.81 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Knowsley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.81 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bromley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.90 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rochdale <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.92 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Ealing <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.94 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barnsley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.01 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wakefield <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Havering <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southwark <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.04 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bracknell Forest <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Surrey <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Dorset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Manchester <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barnet <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.11 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lewisham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.12 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Camden <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.12 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Central Bedfordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.14 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Brighton and Hove <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bath and North East Somerset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.19 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Torbay <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.23 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bury <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.24 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Richmond upon Thames <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Haringey <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.26 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wiltshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hampshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.29 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Enfield <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.31 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Westminster <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.32 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cumbria <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Riding of Yorkshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.36 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hammersmith and Fulham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.37 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Devon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.43 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cheshire East <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.44 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Thurrock <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.46 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Merton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.47 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cambridgeshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Waltham Forest <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.64 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lambeth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.88 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Islington <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.91 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Isle of Wight <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wandsworth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hackney <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.31 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Tower Hamlets <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.41 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kensington and Chelsea <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.47 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "percent_pupils_ehcp_la_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Local Authority <\/th> <th style='text-align: left;'> SEN provision <\/th> <th style='text-align: right;'> % of pupils <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2022/23 <\/td> <td> Nottinghamshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 1.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Nottingham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.23 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leeds <\/td> <td> EHC plan <\/td> <td align=\"right\"> 2.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Richmond upon Thames <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.21 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Newham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.22 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Doncaster <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.28 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cornwall <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.31 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hertfordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.36 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Coventry <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.39 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Derbyshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.40 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Somerset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> York <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.50 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Shropshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bracknell Forest <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.56 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Blackburn with Darwen <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.60 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Redbridge <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.60 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Camden <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.63 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wokingham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.63 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Oxfordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.63 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Reading <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.64 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Northamptonshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bedford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.66 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kirklees <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.68 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Harrow <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.70 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leicester <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.72 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barking and Dagenham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.72 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Milton Keynes <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hartlepool <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.75 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Slough <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.75 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Solihull <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.77 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sandwell <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rutland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.79 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Yorkshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.80 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Birmingham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.81 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Peterborough <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.82 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Havering <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.83 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Essex <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.85 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Telford and Wrekin <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.88 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kensington and Chelsea <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.89 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bradford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.92 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sheffield <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.95 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Northamptonshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.97 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southend-on-Sea <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.97 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Warrington <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> County Durham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 3.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Herefordshire, County of <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barnet <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.00 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Warwickshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.06 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bristol, City of <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Suffolk <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Walsall <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.09 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Sussex <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.10 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wolverhampton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.11 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Gloucestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.13 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Luton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.13 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North East Lincolnshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.14 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Sussex <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.14 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Brent <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.16 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bolton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.17 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Newcastle upon Tyne <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sefton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.21 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Worcestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.21 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sutton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.21 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bexley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.23 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bournemouth, Christchurch and Poole <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Plymouth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Gateshead <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Westminster <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> St. Helens <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.26 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Lincolnshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.26 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Greenwich <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Croydon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hounslow <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Brighton and Hove <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Medway <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.27 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southwark <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.28 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kingston upon Thames <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.30 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lancashire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.36 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Buckinghamshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.37 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Riding of Yorkshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.40 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wigan <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.41 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> South Gloucestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sunderland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bath and North East Somerset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.46 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Calderdale <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.47 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hillingdon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.47 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cheshire West and Chester <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.50 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leicestershire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.50 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Trafford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.52 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Somerset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Staffordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Portsmouth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wiltshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.56 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kingston upon Hull, City of <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.57 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Windsor and Maidenhead <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.59 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bromley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.61 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barnsley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.62 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Tameside <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.63 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wakefield <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rochdale <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.66 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stockton-on-Tees <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.67 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cumbria <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.68 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stoke-on-Trent <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.68 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Norfolk <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.68 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rotherham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.70 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Berkshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.70 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Salford <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Redcar and Cleveland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.72 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cheshire East <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Haringey <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Dorset <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.77 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Derby <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Ealing <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Surrey <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Middlesbrough <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.79 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wirral <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.79 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> South Tyneside <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.80 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Central Bedfordshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.82 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Dudley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.89 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Halton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.92 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Blackpool <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.92 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Swindon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.92 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bury <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.93 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lincolnshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.95 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stockport <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.97 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Thurrock <\/td> <td> EHC plan <\/td> <td align=\"right\"> 4.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lewisham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.00 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Darlington <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Waltham Forest <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.09 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Liverpool <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.10 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cambridgeshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.10 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hampshire <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.10 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Northumberland <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.13 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Manchester <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southampton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.22 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kent <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.24 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hackney <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Oldham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Enfield <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.38 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Devon <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.43 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hammersmith and Fulham <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.45 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Tyneside <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.66 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lambeth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Merton <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wandsworth <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.86 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Tower Hamlets <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.93 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Isle of Wight <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.96 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Knowsley <\/td> <td> EHC plan <\/td> <td align=\"right\"> 5.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Islington <\/td> <td> EHC plan <\/td> <td align=\"right\"> 6.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Torbay <\/td> <td> EHC plan <\/td> <td align=\"right\"> 6.18 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "provider_types_la_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Local Authority <\/th> <th style='text-align: left;'> Provision type <\/th> <th style='text-align: right;'> % in independent/AP/special <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2022/23 <\/td> <td> Warrington <\/td> <td> all pupils <\/td> <td align=\"right\"> 1.58 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barking and Dagenham <\/td> <td> all pupils <\/td> <td align=\"right\"> 1.74 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Thurrock <\/td> <td> all pupils <\/td> <td align=\"right\"> 1.76 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barnsley <\/td> <td> all pupils <\/td> <td align=\"right\"> 1.82 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sandwell <\/td> <td> all pupils <\/td> <td align=\"right\"> 1.84 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Nottinghamshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hartlepool <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.21 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Newham <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.29 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Havering <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.51 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wigan <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.57 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> South Gloucestershire <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.59 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Swindon <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.63 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Halton <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.64 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rotherham <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.74 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Central Bedfordshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.77 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Tameside <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.91 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Dudley <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.94 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> South Tyneside <\/td> <td> all pupils <\/td> <td align=\"right\"> 2.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Darlington <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.00 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Redcar and Cleveland <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Lincolnshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Middlesbrough <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.29 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rochdale <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.33 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Doncaster <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bexley <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.37 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sunderland <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.44 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North East Lincolnshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.45 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Peterborough <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.48 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Knowsley <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.52 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cornwall <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.56 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Slough <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.61 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stoke-on-Trent <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Blackpool <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Tyneside <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.77 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> St. Helens <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.77 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Walsall <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.89 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kirklees <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.96 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Riding of Yorkshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Torbay <\/td> <td> all pupils <\/td> <td align=\"right\"> 3.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Luton <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cumbria <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.08 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Northumberland <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.12 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Milton Keynes <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.24 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Liverpool <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.32 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bradford <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.48 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Somerset <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.58 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Enfield <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.65 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Calderdale <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.73 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Derby <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.75 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Plymouth <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.84 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Derbyshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.86 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sheffield <\/td> <td> all pupils <\/td> <td align=\"right\"> 4.92 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leeds <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.01 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> County Durham <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wolverhampton <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.04 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kingston upon Hull, City of <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Telford and Wrekin <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.25 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wirral <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.39 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sutton <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.56 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lincolnshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.58 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southend-on-Sea <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.64 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Medway <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.66 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Coventry <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.67 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leicester <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.82 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Northamptonshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 5.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Brent <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Staffordshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Northamptonshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.10 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Oldham <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.13 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Birmingham <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.24 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Trafford <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.31 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Islington <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lancashire <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.41 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cheshire East <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.43 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Norfolk <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.45 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Redbridge <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Essex <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.59 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Waltham Forest <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.67 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southampton <\/td> <td> all pupils <\/td> <td align=\"right\"> 6.98 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Tower Hamlets <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.00 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Solihull <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hounslow <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Sefton <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Nottingham <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bournemouth, Christchurch and Poole <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wakefield <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.22 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lambeth <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.40 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Herefordshire, County of <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.51 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Lewisham <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.55 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Leicestershire <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.90 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Isle of Wight <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.94 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bolton <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stockton-on-Tees <\/td> <td> all pupils <\/td> <td align=\"right\"> 7.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Gateshead <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Blackburn with Darwen <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.16 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bury <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.21 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Devon <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.28 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Manchester <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.35 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> North Yorkshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.39 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Suffolk <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.62 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Greenwich <\/td> <td> all pupils <\/td> <td align=\"right\"> 8.87 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Warwickshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.02 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wiltshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hillingdon <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.18 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hampshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kent <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.47 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cheshire West and Chester <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.49 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Ealing <\/td> <td> all pupils <\/td> <td align=\"right\"> 9.76 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Gloucestershire <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> York <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Portsmouth <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.22 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Harrow <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.46 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bromley <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.51 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Worcestershire <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.53 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Haringey <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.60 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Sussex <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.69 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Buckinghamshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 10.72 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Sussex <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.07 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Newcastle upon Tyne <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.23 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Stockport <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.39 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Dorset <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.46 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bristol, City of <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.48 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Somerset <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.83 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hertfordshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 11.91 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Reading <\/td> <td> all pupils <\/td> <td align=\"right\"> 12.15 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Shropshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 12.22 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Barnet <\/td> <td> all pupils <\/td> <td align=\"right\"> 12.64 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Cambridgeshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 12.74 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Brighton and Hove <\/td> <td> all pupils <\/td> <td align=\"right\"> 13.42 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> West Berkshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 13.48 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Croydon <\/td> <td> all pupils <\/td> <td align=\"right\"> 13.66 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wokingham <\/td> <td> all pupils <\/td> <td align=\"right\"> 13.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bedford <\/td> <td> all pupils <\/td> <td align=\"right\"> 13.91 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Southwark <\/td> <td> all pupils <\/td> <td align=\"right\"> 14.03 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kingston upon Thames <\/td> <td> all pupils <\/td> <td align=\"right\"> 15.20 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Salford <\/td> <td> all pupils <\/td> <td align=\"right\"> 15.77 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bracknell Forest <\/td> <td> all pupils <\/td> <td align=\"right\"> 15.99 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Merton <\/td> <td> all pupils <\/td> <td align=\"right\"> 16.05 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Oxfordshire <\/td> <td> all pupils <\/td> <td align=\"right\"> 16.52 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Bath and North East Somerset <\/td> <td> all pupils <\/td> <td align=\"right\"> 16.59 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Windsor and Maidenhead <\/td> <td> all pupils <\/td> <td align=\"right\"> 21.26 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Surrey <\/td> <td> all pupils <\/td> <td align=\"right\"> 21.85 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hackney <\/td> <td> all pupils <\/td> <td align=\"right\"> 24.71 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Wandsworth <\/td> <td> all pupils <\/td> <td align=\"right\"> 25.37 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Rutland <\/td> <td> all pupils <\/td> <td align=\"right\"> 26.04 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Hammersmith and Fulham <\/td> <td> all pupils <\/td> <td align=\"right\"> 26.85 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Richmond upon Thames <\/td> <td> all pupils <\/td> <td align=\"right\"> 27.55 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Westminster <\/td> <td> all pupils <\/td> <td align=\"right\"> 31.78 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Camden <\/td> <td> all pupils <\/td> <td align=\"right\"> 31.80 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> Kensington and Chelsea <\/td> <td> all pupils <\/td> <td align=\"right\"> 46.10 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "dsg_deficit_reg_time_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Financial Year<\/th>\n      <th>Region<\/th>\n      <th>DSG cumulative balance as a % of the total income<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              0,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 2
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "specialist_spend_reg_time_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Financial Year<\/th>\n      <th>Region<\/th>\n      <th>Sector<\/th>\n      <th>Per capita spend on special schools and AP<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "asc"
+            ],
+            [
+              0,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
   }
 }

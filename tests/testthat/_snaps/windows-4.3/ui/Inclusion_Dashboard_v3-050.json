@@ -1,35 +1,36 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
     "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
     "ks4_destinations_la_type_filter": "Employment",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
     "ks4_destinations_reg_type_filter": "Employment",
-    "la_choice": "Middlesbrough",
-    "level_choice": "Regions",
-    "link_to_la_dashboard": 0,
+    "la_choice": "Derby",
+    "level_choice": "England",
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
-    "navlistPanel": "Local Areas",
-    "nhs_region_choice": "North West",
+    "navlistPanel": "England and Regions",
+    "nhs_region_choice": "South East",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
     "percent_pupils_ehcp_reg_filter": "EHC plan",
@@ -37,94 +38,383 @@
     "provider_types_la_time_filter": "all pupils",
     "provider_types_reg_bench_filter": "all pupils",
     "provider_types_reg_time_filter": "all pupils",
-    "region_choice": "North West",
+    "region_choice": "South East",
     "remove": 0,
-    "tabsetpanels_la": "Summary",
-    "tabsetpanels_reg": "Identification of Need"
+    "tabsetpanels_la": "Financial sustainability",
+    "tabsetpanels_reg": "Financial sustainability"
   },
   "output": {
-    "summary": {
+    "dsg_deficit_reg_bench": {
       "x": {
-        "html": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='img' id='la_summary' viewBox='0 0 792 504'>\n <defs id='la_summary_defs'>\n  <clipPath id='la_summary_c1'>\n   <rect x='0' y='0' width='792' height='504'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c2'>\n   <rect x='38.03' y='40.09' width='183.01' height='455.69'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c3'>\n   <rect x='226.53' y='40.09' width='183.01' height='455.69'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c4'>\n   <rect x='415.02' y='40.09' width='183.01' height='455.69'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c5'>\n   <rect x='603.51' y='40.09' width='183.01' height='455.69'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c6'>\n   <rect x='38.03' y='23.18' width='183.01' height='16.92'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c7'>\n   <rect x='226.53' y='23.18' width='183.01' height='16.92'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c8'>\n   <rect x='415.02' y='23.18' width='183.01' height='16.92'/>\n  <\/clipPath>\n  <clipPath id='la_summary_c9'>\n   <rect x='603.51' y='23.18' width='183.01' height='16.92'/>\n  <\/clipPath>\n <\/defs>\n <g id='la_summary_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#la_summary_c1)'>\n   <rect x='0' y='0' width='792' height='504' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='-0' y='0' width='792' height='504' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#la_summary_c2)'>\n   <rect x='38.03' y='40.09' width='183.01' height='455.69' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='38.03,495.78 221.05,495.78' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,441.85 221.05,441.85' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,387.93 221.05,387.93' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,334.00 221.05,334.00' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,280.07 221.05,280.07' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,226.14 221.05,226.14' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,172.22 221.05,172.22' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,118.29 221.05,118.29' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='38.03' y1='67.06' x2='221.05' y2='67.06' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='38.03' y1='468.82' x2='221.05' y2='468.82' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='38.03' y1='266.59' x2='221.05' y2='266.59' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text id='la_summary_e1' x='153.04' y='64.72' font-size='6.4pt' font-family='Arial' fill='#3D3D3D' fill-opacity='1' title='Highest LA'>Highest LA<\/text>\n   <text id='la_summary_e2' x='153.52' y='264.25' font-size='6.4pt' font-family='Arial' fill='#3D3D3D' fill-opacity='1' title='Median LA'>Median LA<\/text>\n   <text id='la_summary_e3' x='153.99' y='479.96' font-size='6.4pt' font-family='Arial' fill='#3D3D3D' fill-opacity='1' title='Lowest LA'>Lowest LA<\/text>\n   <circle id='la_summary_e4' cx='135.09' cy='444.55' r='4.67pt' fill='#12436D' fill-opacity='1' stroke='none' title='% meeting expected standards at KS2 (All SEN)' nearest='true'/>\n   <circle id='la_summary_e5' cx='146.18' cy='441.85' r='4.67pt' fill='#12436D' fill-opacity='1' stroke='none' title='Average progress 8 score (Any SEN)' nearest='true'/>\n   <circle id='la_summary_e6' cx='123.99' cy='439.16' r='4.67pt' fill='#12436D' fill-opacity='1' stroke='none' title='% meeting expected phonics standards in Y1 (All SEN)' nearest='true'/>\n   <circle id='la_summary_e7' cx='112.9' cy='191.09' r='4.67pt' fill='#12436D' fill-opacity='1' stroke='none' title='% of pupils with self-identified learning difficulty, disability or physical illness in a non-sustained destination after 16-18 study' nearest='true'/>\n   <text id='la_summary_e8' x='130.34' y='446.59' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% meeting expected standards at KS2 (All SEN)'>141<\/text>\n   <text id='la_summary_e9' x='141.44' y='443.89' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='Average progress 8 score (Any SEN)'>140<\/text>\n   <text id='la_summary_e10' x='119.25' y='441.19' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% meeting expected phonics standards in Y1 (All SEN)'>139<\/text>\n   <text id='la_summary_e11' x='109.74' y='193.13' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% of pupils with self-identified learning difficulty, disability or physical illness in a non-sustained destination after 16-18 study'>47<\/text>\n   <text id='la_summary_e12' x='100.57' y='460.93' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% meeting expected standards at KS2 (All SEN)'>KS2 attainment<\/text>\n   <text id='la_summary_e13' x='142.07' y='431.61' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='Average progress 8 score (Any SEN)'>KS4 attainment<\/text>\n   <text id='la_summary_e14' x='86.98' y='428.92' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% meeting expected phonics standards in Y1 (All SEN)'>KS1 phonics<\/text>\n   <text id='la_summary_e15' x='83.39' y='180.82' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% of pupils with self-identified learning difficulty, disability or physical illness in a non-sustained destination after 16-18 study'>16-18 destinations<\/text>\n   <rect x='38.03' y='40.09' width='183.01' height='455.69' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#la_summary_c3)'>\n   <rect x='226.53' y='40.09' width='183.01' height='455.69' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='226.53,495.78 409.54,495.78' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,441.85 409.54,441.85' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,387.93 409.54,387.93' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,334.00 409.54,334.00' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,280.07 409.54,280.07' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,226.14 409.54,226.14' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,172.22 409.54,172.22' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='226.53,118.29 409.54,118.29' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='226.53' y1='67.06' x2='409.54' y2='67.06' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='226.53' y1='468.82' x2='409.54' y2='468.82' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='226.53' y1='266.59' x2='409.54' y2='266.59' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle id='la_summary_e16' cx='334.67' cy='466.12' r='4.67pt' fill='#28A197' fill-opacity='1' stroke='none' title='Rate of appeals to SEND Tribunal' nearest='true'/>\n   <circle id='la_summary_e17' cx='301.39' cy='134.47' r='4.67pt' fill='#28A197' fill-opacity='1' stroke='none' title='Overall absence % (EHC plans)' nearest='true'/>\n   <circle id='la_summary_e18' cx='312.49' cy='131.77' r='4.67pt' fill='#28A197' fill-opacity='1' stroke='none' title='% of pupils in a non-sustained destination after KS4' nearest='true'/>\n   <circle id='la_summary_e19' cx='323.58' cy='126.38' r='4.67pt' fill='#28A197' fill-opacity='1' stroke='none' title='% of EHCPs issued within 20 weeks' nearest='true'/>\n   <text id='la_summary_e20' x='329.93' y='468.16' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='Rate of appeals to SEND Tribunal'>149<\/text>\n   <text id='la_summary_e21' x='298.23' y='136.51' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='Overall absence % (EHC plans)'>26<\/text>\n   <text id='la_summary_e22' x='309.32' y='133.81' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% of pupils in a non-sustained destination after KS4'>25<\/text>\n   <text id='la_summary_e23' x='320.42' y='128.42' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% of EHCPs issued within 20 weeks'>23<\/text>\n   <text id='la_summary_e24' x='302.23' y='455.87' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='Rate of appeals to SEND Tribunal'>Tribunal appeal rate<\/text>\n   <text id='la_summary_e25' x='271.32' y='150.84' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='Overall absence % (EHC plans)'>Absence<\/text>\n   <text id='la_summary_e26' x='311.65' y='148.09' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% of pupils in a non-sustained destination after KS4'>KS4 destinations<\/text>\n   <text id='la_summary_e27' x='297.02' y='116.1' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% of EHCPs issued within 20 weeks'>EHCP timeliness<\/text>\n   <rect x='226.53' y='40.09' width='183.01' height='455.69' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#la_summary_c4)'>\n   <rect x='415.02' y='40.09' width='183.01' height='455.69' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='415.02,495.78 598.03,495.78' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,441.85 598.03,441.85' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,387.93 598.03,387.93' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,334.00 598.03,334.00' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,280.07 598.03,280.07' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,226.14 598.03,226.14' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,172.22 598.03,172.22' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='415.02,118.29 598.03,118.29' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='415.02' y1='67.06' x2='598.03' y2='67.06' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='415.02' y1='468.82' x2='598.03' y2='468.82' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='415.02' y1='266.59' x2='598.03' y2='266.59' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle id='la_summary_e28' cx='523.16' cy='298.95' r='4.67pt' fill='#801650' fill-opacity='1' stroke='none' title='% of pupils in mainstream schools who have EHC plans' nearest='true'/>\n   <circle id='la_summary_e29' cx='506.52' cy='177.61' r='4.67pt' fill='#801650' fill-opacity='1' stroke='none' title='% of pupils with EHC plans who are in independent/AP/special settings' nearest='true'/>\n   <circle id='la_summary_e30' cx='489.89' cy='120.99' r='4.67pt' fill='#801650' fill-opacity='1' stroke='none' title='% of pupils who have Education, Health and Care plans' nearest='true'/>\n   <text id='la_summary_e31' x='520' y='300.98' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% of pupils in mainstream schools who have EHC plans'>87<\/text>\n   <text id='la_summary_e32' x='503.36' y='179.65' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% of pupils with EHC plans who are in independent/AP/special settings'>42<\/text>\n   <text id='la_summary_e33' x='486.72' y='123.02' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='% of pupils who have Education, Health and Care plans'>21<\/text>\n   <text id='la_summary_e34' x='470.13' y='288.77' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% of pupils in mainstream schools who have EHC plans'>Pupils in mainstream with SEN<\/text>\n   <text id='la_summary_e35' x='450.44' y='193.98' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% of pupils with EHC plans who are in independent/AP/special settings'>Pupils in specialist settings<\/text>\n   <text id='la_summary_e36' x='443.97' y='110.8' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='% of pupils who have Education, Health and Care plans'>% of pupils with EHC plans<\/text>\n   <rect x='415.02' y='40.09' width='183.01' height='455.69' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#la_summary_c5)'>\n   <rect x='603.51' y='40.09' width='183.01' height='455.69' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='603.51,495.78 786.52,495.78' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,441.85 786.52,441.85' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,387.93 786.52,387.93' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,334.00 786.52,334.00' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,280.07 786.52,280.07' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,226.14 786.52,226.14' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,172.22 786.52,172.22' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='603.51,118.29 786.52,118.29' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='603.51' y1='67.06' x2='786.52' y2='67.06' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='603.51' y1='468.82' x2='786.52' y2='468.82' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <line x1='603.51' y1='266.59' x2='786.52' y2='266.59' stroke='#000000' stroke-opacity='0.3' stroke-width='1.07' stroke-dasharray='1,3' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle id='la_summary_e37' cx='678.38' cy='342.09' r='4.67pt' fill='#F46A25' fill-opacity='1' stroke='none' title='DSG cumulative balance as a % of the total budget' nearest='true'/>\n   <circle id='la_summary_e38' cx='711.65' cy='282.77' r='4.67pt' fill='#F46A25' fill-opacity='1' stroke='none' title='Spend per head on special schools and AP in the independent or non-maintained sector' nearest='true'/>\n   <text id='la_summary_e39' x='673.64' y='344.13' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='DSG cumulative balance as a % of the total budget'>103<\/text>\n   <text id='la_summary_e40' x='708.49' y='284.81' font-size='4.27pt' font-family='Arial' fill='#FFFFFF' fill-opacity='1' title='Spend per head on special schools and AP in the independent or non-maintained sector'>81<\/text>\n   <text id='la_summary_e41' x='636.71' y='331.93' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='DSG cumulative balance as a % of the total budget'>DSG cumulative balance<\/text>\n   <text id='la_summary_e42' x='657.24' y='299.07' font-size='6.4pt' font-family='Arial' fill='#000000' fill-opacity='0.7' title='Spend per head on special schools and AP in the independent or non-maintained sector'>Specialist spend per head<\/text>\n   <rect x='603.51' y='40.09' width='183.01' height='455.69' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#la_summary_c6)'>\n   <rect x='38.03' y='23.18' width='183.01' height='16.92' fill='#D9D9D9' fill-opacity='1' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='109.48' y='34.79' font-size='6.6pt' font-family='Arial' fill='#1A1A1A' fill-opacity='1'>Outcomes<\/text>\n  <\/g>\n  <g clip-path='url(#la_summary_c7)'>\n   <rect x='226.53' y='23.18' width='183.01' height='16.92' fill='#D9D9D9' fill-opacity='1' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='293.82' y='34.79' font-size='6.6pt' font-family='Arial' fill='#1A1A1A' fill-opacity='1'>Experiences<\/text>\n  <\/g>\n  <g clip-path='url(#la_summary_c8)'>\n   <rect x='415.02' y='23.18' width='183.01' height='16.92' fill='#D9D9D9' fill-opacity='1' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='465.17' y='34.79' font-size='6.6pt' font-family='Arial' fill='#1A1A1A' fill-opacity='1'>Identification of Need<\/text>\n  <\/g>\n  <g clip-path='url(#la_summary_c9)'>\n   <rect x='603.51' y='23.18' width='183.01' height='16.92' fill='#D9D9D9' fill-opacity='1' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='650.26' y='34.79' font-size='6.6pt' font-family='Arial' fill='#1A1A1A' fill-opacity='1'>Financial Sustainability<\/text>\n  <\/g>\n  <g clip-path='url(#la_summary_c1)'>\n   <text x='18.41' y='498.93' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>160<\/text>\n   <text x='18.41' y='445' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>140<\/text>\n   <text x='18.41' y='391.08' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>120<\/text>\n   <text x='18.41' y='337.15' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>100<\/text>\n   <text x='23.31' y='283.22' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>80<\/text>\n   <text x='23.31' y='229.29' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>60<\/text>\n   <text x='23.31' y='175.37' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>40<\/text>\n   <text x='23.31' y='121.44' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>20<\/text>\n   <polyline points='35.29,495.78 38.03,495.78' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,441.85 38.03,441.85' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,387.93 38.03,387.93' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,334.00 38.03,334.00' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,280.07 38.03,280.07' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,226.14 38.03,226.14' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,172.22 38.03,172.22' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,118.29 38.03,118.29' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text transform='translate(13.36,335.04) rotate(-90.00)' font-size='8.25pt' font-family='Arial'>LA's rank within all 152 LAs<\/text>\n   <text x='38.03' y='14.93' font-size='9.9pt' font-family='Arial'>LA Metric Summary<\/text>\n  <\/g>\n <\/g>\n<\/svg>",
-        "js": null,
-        "uid": "la_summary",
-        "ratio": 1.571428571428571,
-        "settings": {
-          "tooltip": {
-            "css": ".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}",
-            "placement": "doc",
-            "opacity": 0.9,
-            "offx": 10,
-            "offy": 10,
-            "use_cursor_pos": true,
-            "use_fill": false,
-            "use_stroke": false,
-            "delay_over": 200,
-            "delay_out": 500
-          },
-          "hover": {
-            "css": ".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }",
-            "reactive": true,
-            "nearest_distance": null
-          },
-          "hover_inv": {
-            "css": ""
-          },
-          "hover_key": {
-            "css": ".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }",
-            "reactive": true
-          },
-          "hover_theme": {
-            "css": ".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }",
-            "reactive": true
-          },
-          "select": {
-            "css": ".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }",
-            "type": "multiple",
-            "only_shiny": true,
-            "selected": [
-
-            ]
-          },
-          "select_inv": {
-            "css": ""
-          },
-          "select_key": {
-            "css": ".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }",
-            "type": "single",
-            "only_shiny": true,
-            "selected": [
-
-            ]
-          },
-          "select_theme": {
-            "css": ".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }",
-            "type": "single",
-            "only_shiny": true,
-            "selected": [
-
-            ]
-          },
-          "zoom": {
-            "min": 1,
-            "max": 1,
-            "duration": 300
-          },
-          "toolbar": {
-            "position": "topright",
-            "pngname": "diagram",
-            "tooltips": null,
-            "hidden": [
-
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.89999999999999991,
+              0.90000000000000036,
+              0.89999999999999858,
+              0.90000000000000036,
+              0.90000000000000036
             ],
-            "delay_over": 200,
-            "delay_out": 500
+            "base": [
+              -0.68999999999999995,
+              -1.3600000000000001,
+              -1.0700000000000001,
+              -6.21,
+              -1.47,
+              0,
+              -0.97999999999999998,
+              -2.75
+            ],
+            "x": [
+              8,
+              5,
+              6,
+              1,
+              4,
+              9,
+              7,
+              3
+            ],
+            "y": [
+              0.68999999999999995,
+              1.3600000000000001,
+              1.0700000000000001,
+              6.21,
+              1.47,
+              0.12,
+              0.97999999999999998,
+              2.75
+            ],
+            "text": [
+              "DSG cumulative balance as a % of the total income: -0.69<br />Yorkshire and<br />The Humber",
+              "DSG cumulative balance as a % of the total income: -1.36<br />East of England",
+              "DSG cumulative balance as a % of the total income: -1.07<br />North East",
+              "DSG cumulative balance as a % of the total income: -6.21<br />South West",
+              "DSG cumulative balance as a % of the total income: -1.47<br />North West",
+              "DSG cumulative balance as a % of the total income: 0.12<br />East Midlands",
+              "DSG cumulative balance as a % of the total income: -0.98<br />West Midlands",
+              "DSG cumulative balance as a % of the total income: -2.75<br />London"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(191,191,191,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Other region",
+            "legendgroup": "Other region",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
           },
-          "sizing": {
-            "rescale": true,
-            "width": 1
+          {
+            "orientation": "v",
+            "width": 0.90000000000000013,
+            "base": -4.2800000000000002,
+            "x": 2,
+            "y": 4.2800000000000002,
+            "text": "DSG cumulative balance as a % of the total income: -4.28<br />South East",
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "South East",
+            "legendgroup": "South East",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              9.5999999999999996
+            ],
+            "y": [
+              -2.2599999999999998,
+              -2.2599999999999998
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(61,61,61,1)",
+              "dash": "dash"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 9,
+            "y": -1.7599999999999998,
+            "text": "England average",
+            "hovertext": "",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
           }
-        }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 67.699358688202253,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              9.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "South West",
+              "South East",
+              "London",
+              "North West",
+              "East of England",
+              "North East",
+              "West Midlands",
+              "Yorkshire and<br />The Humber",
+              "East Midlands"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              6.9999999999999991,
+              8,
+              9
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "South West",
+              "South East",
+              "London",
+              "North West",
+              "East of England",
+              "North East",
+              "West Midlands",
+              "Yorkshire and<br />The Humber",
+              "East Midlands"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": -45,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Regions in England",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -6.5265000000000004,
+              0.4365
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "-6",
+              "-4",
+              "-2",
+              "0"
+            ],
+            "tickvals": [
+              -6,
+              -4,
+              -2,
+              0
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "-6",
+              "-4",
+              "-2",
+              "0"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "DSG cumulative balance as <br /> % of the total income",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": false,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
       },
       "evals": [
 
@@ -133,7 +423,84 @@
 
       ],
       "deps": [
-
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
       ]
     }
   }

@@ -1,30 +1,31 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
     "ccg_choice": "NHS Tees Valley CCG",
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Overall sustained",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
-    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_la_type_filter": "Overall sustained",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
-    "ks4_destinations_reg_type_filter": "Employment",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
     "la_choice": "Middlesbrough",
     "level_choice": "",
-    "link_to_la_dashboard": 0,
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
@@ -52,344 +53,49 @@
               0.89999999999999991,
               0.90000000000000013,
               0.90000000000000036,
+              0.90000000000000036,
               0.90000000000000036
             ],
             "base": [
-              96.700000000000003,
-              94.200000000000003,
-              95.599999999999994,
-              94.799999999999997
+              0,
+              0,
+              0,
+              0,
+              0
             ],
             "x": [
               1,
               2,
               3,
-              4
+              4,
+              5
             ],
             "y": [
-              3.2000000000000028,
-              5.8999999999999915,
-              4.2999999999999972,
-              5.2999999999999972
-            ],
-            "text": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Unknown",
-              "academic_year: 2018/19<br />% of pupils:  5.9<br />Destination: Unknown",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Unknown",
-              "academic_year: 2020/21<br />% of pupils:  5.3<br />Destination: Unknown"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(204,122,136,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Unknown",
-            "legendgroup": "Unknown",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036
-            ],
-            "base": [
               93.5,
               82.400000000000006,
               91.299999999999997,
-              84.299999999999997
-            ],
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              3.2000000000000028,
-              11.799999999999997,
-              4.2999999999999972,
-              10.5
+              84.200000000000003,
+              77.299999999999997
             ],
             "text": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Not sustained",
-              "academic_year: 2018/19<br />% of pupils: 11.8<br />Destination: Not sustained",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Not sustained",
-              "academic_year: 2020/21<br />% of pupils: 10.5<br />Destination: Not sustained"
+              "Academic Year: 2017/18<br />% of students: 93.5<br />Destination: Overall sustained",
+              "Academic Year: 2018/19<br />% of students: 82.4<br />Destination: Overall sustained",
+              "Academic Year: 2019/20<br />% of students: 91.3<br />Destination: Overall sustained",
+              "Academic Year: 2020/21<br />% of students: 84.2<br />Destination: Overall sustained",
+              "Academic Year: 2021/22<br />% of students: 77.3<br />Destination: Overall sustained"
             ],
             "type": "bar",
             "textposition": "none",
             "marker": {
               "autocolorscale": false,
-              "color": "rgba(179,62,82,1)",
+              "color": "rgba(18,67,109,1)",
               "line": {
                 "width": 1.8897637795275593,
                 "color": "transparent"
               }
             },
-            "name": "Not sustained",
-            "legendgroup": "Not sustained",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036
-            ],
-            "base": [
-              90.299999999999997,
-              76.5,
-              89.099999999999994,
-              71.099999999999994
-            ],
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              3.2000000000000028,
-              5.9000000000000057,
-              2.2000000000000028,
-              13.200000000000003
-            ],
-            "text": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Apprenticeship",
-              "academic_year: 2018/19<br />% of pupils:  5.9<br />Destination: Apprenticeship",
-              "academic_year: 2019/20<br />% of pupils:  2.2<br />Destination: Apprenticeship",
-              "academic_year: 2020/21<br />% of pupils: 13.2<br />Destination: Apprenticeship"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(199,184,230,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Apprenticeship",
-            "legendgroup": "Apprenticeship",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036
-            ],
-            "base": [
-              87.100000000000009,
-              64.700000000000003,
-              86.899999999999991,
-              60.599999999999994
-            ],
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              3.1999999999999886,
-              11.799999999999997,
-              2.2000000000000028,
-              10.5
-            ],
-            "text": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Employment",
-              "academic_year: 2018/19<br />% of pupils: 11.8<br />Destination: Employment",
-              "academic_year: 2019/20<br />% of pupils:  2.2<br />Destination: Employment",
-              "academic_year: 2020/21<br />% of pupils: 10.5<br />Destination: Employment"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(150,122,204,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Employment",
-            "legendgroup": "Employment",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036
-            ],
-            "base": [
-              83.900000000000006,
-              64.700000000000003,
-              82.599999999999994,
-              55.299999999999997
-            ],
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              3.2000000000000028,
-              0,
-              4.2999999999999972,
-              5.2999999999999972
-            ],
-            "text": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Education (other)",
-              "academic_year: 2018/19<br />% of pupils:  0.0<br />Destination: Education (other)",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Education (other)",
-              "academic_year: 2020/21<br />% of pupils:  5.3<br />Destination: Education (other)"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(230,210,184,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Education (other)",
-            "legendgroup": "Education (other)",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036
-            ],
-            "base": [
-              74.200000000000003,
-              58.799999999999997,
-              78.299999999999997,
-              55.299999999999997
-            ],
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              9.7000000000000028,
-              5.9000000000000057,
-              4.2999999999999972,
-              0
-            ],
-            "text": [
-              "academic_year: 2017/18<br />% of pupils:  9.7<br />Destination: Further education",
-              "academic_year: 2018/19<br />% of pupils:  5.9<br />Destination: Further education",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Further education",
-              "academic_year: 2020/21<br />% of pupils:  0.0<br />Destination: Further education"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(204,170,122,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Further education",
-            "legendgroup": "Further education",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036
-            ],
-            "base": [
-              0,
-              0,
-              0,
-              0
-            ],
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              74.200000000000003,
-              58.799999999999997,
-              78.299999999999997,
-              55.299999999999997
-            ],
-            "text": [
-              "academic_year: 2017/18<br />% of pupils: 74.2<br />Destination: Higher education",
-              "academic_year: 2018/19<br />% of pupils: 58.8<br />Destination: Higher education",
-              "academic_year: 2019/20<br />% of pupils: 78.3<br />Destination: Higher education",
-              "academic_year: 2020/21<br />% of pupils: 55.3<br />Destination: Higher education"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(179,130,62,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Higher education",
-            "legendgroup": "Higher education",
+            "name": "Overall sustained",
+            "legendgroup": "Overall sustained",
             "showlegend": true,
             "xaxis": "x",
             "yaxis": "y",
@@ -401,275 +107,39 @@
               1,
               2,
               3,
-              4
+              4,
+              5
             ],
             "y": [
-              98.300000000000011,
-              97.150000000000006,
-              97.75,
-              97.449999999999989
+              46.75,
+              41.200000000000003,
+              45.649999999999999,
+              42.100000000000001,
+              38.649999999999999
             ],
             "text": [
-              "3%",
-              "6%",
-              "4%",
-              "5%"
+              "94%",
+              "82%",
+              "91%",
+              "84%",
+              "77%"
             ],
             "hovertext": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Unknown",
-              "academic_year: 2018/19<br />% of pupils:  5.9<br />Destination: Unknown",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Unknown",
-              "academic_year: 2020/21<br />% of pupils:  5.3<br />Destination: Unknown"
+              "Academic Year: 2017/18<br />% of students: 93.5<br />Destination: Overall sustained",
+              "Academic Year: 2018/19<br />% of students: 82.4<br />Destination: Overall sustained",
+              "Academic Year: 2019/20<br />% of students: 91.3<br />Destination: Overall sustained",
+              "Academic Year: 2020/21<br />% of students: 84.2<br />Destination: Overall sustained",
+              "Academic Year: 2021/22<br />% of students: 77.3<br />Destination: Overall sustained"
             ],
             "textfont": {
               "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
+              "color": "rgba(255,255,255,1)"
             },
             "type": "scatter",
             "mode": "text",
             "hoveron": "points",
-            "name": "Unknown",
-            "legendgroup": "Unknown",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              95.099999999999994,
-              88.300000000000011,
-              93.449999999999989,
-              89.549999999999997
-            ],
-            "text": [
-              "3%",
-              "12%",
-              "4%",
-              "10%"
-            ],
-            "hovertext": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Not sustained",
-              "academic_year: 2018/19<br />% of pupils: 11.8<br />Destination: Not sustained",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Not sustained",
-              "academic_year: 2020/21<br />% of pupils: 10.5<br />Destination: Not sustained"
-            ],
-            "textfont": {
-              "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
-            },
-            "type": "scatter",
-            "mode": "text",
-            "hoveron": "points",
-            "name": "Not sustained",
-            "legendgroup": "Not sustained",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              91.900000000000006,
-              79.450000000000003,
-              90.199999999999989,
-              77.699999999999989
-            ],
-            "text": [
-              "3%",
-              "6%",
-              null,
-              "13%"
-            ],
-            "hovertext": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Apprenticeship",
-              "academic_year: 2018/19<br />% of pupils:  5.9<br />Destination: Apprenticeship",
-              "academic_year: 2019/20<br />% of pupils:  2.2<br />Destination: Apprenticeship",
-              "academic_year: 2020/21<br />% of pupils: 13.2<br />Destination: Apprenticeship"
-            ],
-            "textfont": {
-              "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
-            },
-            "type": "scatter",
-            "mode": "text",
-            "hoveron": "points",
-            "name": "Apprenticeship",
-            "legendgroup": "Apprenticeship",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              88.700000000000003,
-              70.599999999999994,
-              88,
-              65.849999999999994
-            ],
-            "text": [
-              "3%",
-              "12%",
-              null,
-              "10%"
-            ],
-            "hovertext": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Employment",
-              "academic_year: 2018/19<br />% of pupils: 11.8<br />Destination: Employment",
-              "academic_year: 2019/20<br />% of pupils:  2.2<br />Destination: Employment",
-              "academic_year: 2020/21<br />% of pupils: 10.5<br />Destination: Employment"
-            ],
-            "textfont": {
-              "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
-            },
-            "type": "scatter",
-            "mode": "text",
-            "hoveron": "points",
-            "name": "Employment",
-            "legendgroup": "Employment",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              85.5,
-              64.700000000000003,
-              84.75,
-              57.949999999999996
-            ],
-            "text": [
-              "3%",
-              null,
-              "4%",
-              "5%"
-            ],
-            "hovertext": [
-              "academic_year: 2017/18<br />% of pupils:  3.2<br />Destination: Education (other)",
-              "academic_year: 2018/19<br />% of pupils:  0.0<br />Destination: Education (other)",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Education (other)",
-              "academic_year: 2020/21<br />% of pupils:  5.3<br />Destination: Education (other)"
-            ],
-            "textfont": {
-              "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
-            },
-            "type": "scatter",
-            "mode": "text",
-            "hoveron": "points",
-            "name": "Education (other)",
-            "legendgroup": "Education (other)",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              79.050000000000011,
-              61.75,
-              80.449999999999989,
-              55.299999999999997
-            ],
-            "text": [
-              "10%",
-              "6%",
-              "4%",
-              null
-            ],
-            "hovertext": [
-              "academic_year: 2017/18<br />% of pupils:  9.7<br />Destination: Further education",
-              "academic_year: 2018/19<br />% of pupils:  5.9<br />Destination: Further education",
-              "academic_year: 2019/20<br />% of pupils:  4.3<br />Destination: Further education",
-              "academic_year: 2020/21<br />% of pupils:  0.0<br />Destination: Further education"
-            ],
-            "textfont": {
-              "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
-            },
-            "type": "scatter",
-            "mode": "text",
-            "hoveron": "points",
-            "name": "Further education",
-            "legendgroup": "Further education",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              1,
-              2,
-              3,
-              4
-            ],
-            "y": [
-              37.100000000000001,
-              29.399999999999999,
-              39.149999999999999,
-              27.649999999999999
-            ],
-            "text": [
-              "74%",
-              "59%",
-              "78%",
-              "55%"
-            ],
-            "hovertext": [
-              "academic_year: 2017/18<br />% of pupils: 74.2<br />Destination: Higher education",
-              "academic_year: 2018/19<br />% of pupils: 58.8<br />Destination: Higher education",
-              "academic_year: 2019/20<br />% of pupils: 78.3<br />Destination: Higher education",
-              "academic_year: 2020/21<br />% of pupils: 55.3<br />Destination: Higher education"
-            ],
-            "textfont": {
-              "size": 11.338582677165356,
-              "color": "rgba(0,0,0,1)"
-            },
-            "type": "scatter",
-            "mode": "text",
-            "hoveron": "points",
-            "name": "Higher education",
-            "legendgroup": "Higher education",
+            "name": "Overall sustained",
+            "legendgroup": "Overall sustained",
             "showlegend": false,
             "xaxis": "x",
             "yaxis": "y",
@@ -682,7 +152,7 @@
             "t": 24.855680088556802,
             "r": 6.6417600664175991,
             "b": 36.086896360868963,
-            "l": 39.186384391863839
+            "l": 33.872976338729757
           },
           "plot_bgcolor": "rgba(255,255,255,1)",
           "paper_bgcolor": "rgba(255,255,255,1)",
@@ -701,27 +171,30 @@
             "autorange": false,
             "range": [
               0.40000000000000002,
-              4.5999999999999996
+              5.5999999999999996
             ],
             "tickmode": "array",
             "ticktext": [
               "2017/18",
               "2018/19",
               "2019/20",
-              "2020/21"
+              "2020/21",
+              "2021/22"
             ],
             "tickvals": [
               1,
               2,
               3,
-              4
+              4,
+              5
             ],
             "categoryorder": "array",
             "categoryarray": [
               "2017/18",
               "2018/19",
               "2019/20",
-              "2020/21"
+              "2020/21",
+              "2021/22"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -762,31 +235,28 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              -5.0049999999999999,
-              105.10499999999999
+              -4.6749999999999998,
+              98.174999999999997
             ],
             "tickmode": "array",
             "ticktext": [
               "0",
               "25",
               "50",
-              "75",
-              "100"
+              "75"
             ],
             "tickvals": [
               0,
-              25,
+              25.000000000000004,
               50,
-              75,
-              100
+              75
             ],
             "categoryorder": "array",
             "categoryarray": [
               "0",
               "25",
               "50",
-              "75",
-              "100"
+              "75"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -809,7 +279,7 @@
             "zeroline": false,
             "anchor": "x",
             "title": {
-              "text": "% of pupils",
+              "text": "% of students at destination",
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
@@ -990,6 +460,509 @@
         }
       ]
     },
+    "discontinued_la_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              2021,
+              2020,
+              2019,
+              2018,
+              2017,
+              2022
+            ],
+            "y": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              0
+            ],
+            "text": [
+              "Year: 2021<br />Plans discontinued: NA<br />",
+              "Year: 2020<br />Plans discontinued: NA<br />",
+              "Year: 2019<br />Plans discontinued: NA<br />",
+              "Year: 2018<br />Plans discontinued: NA<br />",
+              "Year: 2017<br />Plans discontinued: NA<br />",
+              "Year: 2022<br />Plans discontinued: 0<br />"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Above compulsory schooling age",
+            "legendgroup": "Above compulsory schooling age",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2021,
+              2020,
+              2019,
+              2018,
+              2017,
+              2022
+            ],
+            "y": [
+              2,
+              0,
+              1,
+              1,
+              12,
+              0
+            ],
+            "text": [
+              "Year: 2021<br />Plans discontinued: 2<br />",
+              "Year: 2020<br />Plans discontinued: 0<br />",
+              "Year: 2019<br />Plans discontinued: 1<br />",
+              "Year: 2018<br />Plans discontinued: 1<br />",
+              "Year: 2017<br />Plans discontinued: 12<br />",
+              "Year: 2022<br />Plans discontinued: 0<br />"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Compulsory schooling age",
+            "legendgroup": "Compulsory schooling age",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "y": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              0
+            ],
+            "text": [
+              "Year: 2017<br />Plans discontinued: NA<br />",
+              "Year: 2018<br />Plans discontinued: NA<br />",
+              "Year: 2019<br />Plans discontinued: NA<br />",
+              "Year: 2020<br />Plans discontinued: NA<br />",
+              "Year: 2021<br />Plans discontinued: NA<br />",
+              "Year: 2022<br />Plans discontinued: 0<br />"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Above compulsory schooling age",
+            "legendgroup": "Above compulsory schooling age",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "y": [
+              12,
+              1,
+              1,
+              0,
+              2,
+              0
+            ],
+            "text": [
+              "Year: 2017<br />Plans discontinued: 12<br />",
+              "Year: 2018<br />Plans discontinued: 1<br />",
+              "Year: 2019<br />Plans discontinued: 1<br />",
+              "Year: 2020<br />Plans discontinued: 0<br />",
+              "Year: 2021<br />Plans discontinued: 2<br />",
+              "Year: 2022<br />Plans discontinued: 0<br />"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Compulsory schooling age",
+            "legendgroup": "Compulsory schooling age",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 44.499792444997915
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              2016.75,
+              2022.25
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2017",
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022"
+            ],
+            "tickvals": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2017",
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.60000000000000009,
+              12.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0.0",
+              "2.5",
+              "5.0",
+              "7.5",
+              "10.0",
+              "12.5"
+            ],
+            "tickvals": [
+              0,
+              2.5,
+              5,
+              7.5,
+              10,
+              12.5
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0.0",
+              "2.5",
+              "5.0",
+              "7.5",
+              "10.0",
+              "12.5"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Plans discontinued as needs met",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Age",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
     "ks1_phonics_la_time": {
       "x": {
         "data": [
@@ -1003,20 +976,20 @@
               19236
             ],
             "y": [
-              36.439999999999998,
-              38.700000000000003,
-              38.93,
+              31.23,
+              36.039999999999999,
+              38.740000000000002,
               31.059999999999999,
               24.82,
               35.560000000000002
             ],
             "text": [
-              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 36.44<br />characteristic: All SEN",
-              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 38.70<br />characteristic: All SEN",
-              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 38.93<br />characteristic: All SEN",
-              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 31.06<br />characteristic: All SEN",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 24.82<br />characteristic: All SEN",
-              "AY_date: 2022-09-01<br />Percent meeting expected standards in Y1: 35.56<br />characteristic: All SEN"
+              "Academic Year: 2015/16 <br /> % meeting expected standards in Y1: 31.23 <br /> SEN status: All SEN",
+              "Academic Year: 2016/17 <br /> % meeting expected standards in Y1: 36.04 <br /> SEN status: All SEN",
+              "Academic Year: 2017/18 <br /> % meeting expected standards in Y1: 38.74 <br /> SEN status: All SEN",
+              "Academic Year: 2018/19 <br /> % meeting expected standards in Y1: 31.06 <br /> SEN status: All SEN",
+              "Academic Year: 2021/22 <br /> % meeting expected standards in Y1: 24.82 <br /> SEN status: All SEN",
+              "Academic Year: 2022/23 <br /> % meeting expected standards in Y1: 35.56 <br /> SEN status: All SEN"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1055,20 +1028,20 @@
               19236
             ],
             "y": [
-              20,
-              21.210000000000001,
+              7.4100000000000001,
+              14.550000000000001,
               18.18,
               8.1999999999999993,
               9.8599999999999994,
               8.6999999999999993
             ],
             "text": [
-              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 20.00<br />characteristic: EHC plan",
-              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 21.21<br />characteristic: EHC plan",
-              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 18.18<br />characteristic: EHC plan",
-              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1:  8.20<br />characteristic: EHC plan",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1:  9.86<br />characteristic: EHC plan",
-              "AY_date: 2022-09-01<br />Percent meeting expected standards in Y1:  8.70<br />characteristic: EHC plan"
+              "Academic Year: 2015/16 <br /> % meeting expected standards in Y1: 7.41 <br /> SEN status: EHC plan or Statement",
+              "Academic Year: 2016/17 <br /> % meeting expected standards in Y1: 14.55 <br /> SEN status: EHC plan or Statement",
+              "Academic Year: 2017/18 <br /> % meeting expected standards in Y1: 18.18 <br /> SEN status: EHC plan or Statement",
+              "Academic Year: 2018/19 <br /> % meeting expected standards in Y1: 8.2 <br /> SEN status: EHC plan or Statement",
+              "Academic Year: 2021/22 <br /> % meeting expected standards in Y1: 9.86 <br /> SEN status: EHC plan or Statement",
+              "Academic Year: 2022/23 <br /> % meeting expected standards in Y1: 8.7 <br /> SEN status: EHC plan or Statement"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1078,8 +1051,8 @@
               "dash": "solid"
             },
             "hoveron": "points",
-            "name": "EHC plan",
-            "legendgroup": "EHC plan",
+            "name": "EHC plan or Statement",
+            "legendgroup": "EHC plan or Statement",
             "showlegend": true,
             "xaxis": "x",
             "yaxis": "y",
@@ -1115,12 +1088,12 @@
               83.150000000000006
             ],
             "text": [
-              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 82.18<br />characteristic: No SEN",
-              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 83.06<br />characteristic: No SEN",
-              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 86.69<br />characteristic: No SEN",
-              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 86.04<br />characteristic: No SEN",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 78.23<br />characteristic: No SEN",
-              "AY_date: 2022-09-01<br />Percent meeting expected standards in Y1: 83.15<br />characteristic: No SEN"
+              "Academic Year: 2015/16 <br /> % meeting expected standards in Y1: 82.18 <br /> SEN status: No SEN",
+              "Academic Year: 2016/17 <br /> % meeting expected standards in Y1: 83.06 <br /> SEN status: No SEN",
+              "Academic Year: 2017/18 <br /> % meeting expected standards in Y1: 86.69 <br /> SEN status: No SEN",
+              "Academic Year: 2018/19 <br /> % meeting expected standards in Y1: 86.04 <br /> SEN status: No SEN",
+              "Academic Year: 2021/22 <br /> % meeting expected standards in Y1: 78.23 <br /> SEN status: No SEN",
+              "Academic Year: 2022/23 <br /> % meeting expected standards in Y1: 83.15 <br /> SEN status: No SEN"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1167,12 +1140,12 @@
               43.090000000000003
             ],
             "text": [
-              "AY_date: 2015-09-01<br />Percent meeting expected standards in Y1: 37.21<br />characteristic: SEN support",
-              "AY_date: 2016-09-01<br />Percent meeting expected standards in Y1: 41.23<br />characteristic: SEN support",
-              "AY_date: 2017-09-01<br />Percent meeting expected standards in Y1: 42.18<br />characteristic: SEN support",
-              "AY_date: 2018-09-01<br />Percent meeting expected standards in Y1: 37.93<br />characteristic: SEN support",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards in Y1: 30.05<br />characteristic: SEN support",
-              "AY_date: 2022-09-01<br />Percent meeting expected standards in Y1: 43.09<br />characteristic: SEN support"
+              "Academic Year: 2015/16 <br /> % meeting expected standards in Y1: 37.21 <br /> SEN status: SEN support",
+              "Academic Year: 2016/17 <br /> % meeting expected standards in Y1: 41.23 <br /> SEN status: SEN support",
+              "Academic Year: 2017/18 <br /> % meeting expected standards in Y1: 42.18 <br /> SEN status: SEN support",
+              "Academic Year: 2018/19 <br /> % meeting expected standards in Y1: 37.93 <br /> SEN status: SEN support",
+              "Academic Year: 2021/22 <br /> % meeting expected standards in Y1: 30.05 <br /> SEN status: SEN support",
+              "Academic Year: 2022/23 <br /> % meeting expected standards in Y1: 43.09 <br /> SEN status: SEN support"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1236,7 +1209,8 @@
               "2018/19",
               "2019/20",
               "2020/21",
-              "2021/22"
+              "2021/22",
+              "2022/23"
             ],
             "tickvals": [
               16679,
@@ -1245,7 +1219,8 @@
               17775,
               18140,
               18506,
-              18871
+              18871,
+              19236
             ],
             "categoryorder": "array",
             "categoryarray": [
@@ -1255,7 +1230,8 @@
               "2018/19",
               "2019/20",
               "2020/21",
-              "2021/22"
+              "2021/22",
+              "2022/23"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -1296,22 +1272,25 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              4.2754999999999992,
-              90.614499999999992
+              -4.3345000000000002,
+              91.024500000000003
             ],
             "tickmode": "array",
             "ticktext": [
+              "0",
               "25",
               "50",
               "75"
             ],
             "tickvals": [
+              0,
               25,
-              50,
+              49.999999999999993,
               75
             ],
             "categoryorder": "array",
             "categoryarray": [
+              "0",
               "25",
               "50",
               "75"
@@ -1525,15 +1504,18 @@
           {
             "x": [
               17775,
-              18871
+              18871,
+              19236
             ],
             "y": [
               15.74,
-              17.170000000000002
+              17.170000000000002,
+              19.239999999999998
             ],
             "text": [
-              "AY_date: 2018-09-01<br />Percent meeting expected standards: 15.74<br />characteristic: All SEN",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards: 17.17<br />characteristic: All SEN"
+              "Academic Year: 2018/19 <br /> % meeting expected standard: 15.74 <br /> SEN status: All SEN",
+              "Academic Year: 2021/22 <br /> % meeting expected standard: 17.17 <br /> SEN status: All SEN",
+              "Academic Year: 2022/23 <br /> % meeting expected standard: 19.24 <br /> SEN status: All SEN"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1565,15 +1547,18 @@
           {
             "x": [
               17775,
-              18871
+              18871,
+              19236
             ],
             "y": [
               8.1099999999999994,
-              6.1200000000000001
+              6.1200000000000001,
+              10.380000000000001
             ],
             "text": [
-              "AY_date: 2018-09-01<br />Percent meeting expected standards:  8.11<br />characteristic: EHC plan",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards:  6.12<br />characteristic: EHC plan"
+              "Academic Year: 2018/19 <br /> % meeting expected standard: 8.11 <br /> SEN status: EHC plan",
+              "Academic Year: 2021/22 <br /> % meeting expected standard: 6.12 <br /> SEN status: EHC plan",
+              "Academic Year: 2022/23 <br /> % meeting expected standard: 10.38 <br /> SEN status: EHC plan"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1605,15 +1590,18 @@
           {
             "x": [
               17775,
-              18871
+              18871,
+              19236
             ],
             "y": [
               77.620000000000005,
-              70.510000000000005
+              70.510000000000005,
+              71.180000000000007
             ],
             "text": [
-              "AY_date: 2018-09-01<br />Percent meeting expected standards: 77.62<br />characteristic: No SEN",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards: 70.51<br />characteristic: No SEN"
+              "Academic Year: 2018/19 <br /> % meeting expected standard: 77.62 <br /> SEN status: No SEN",
+              "Academic Year: 2021/22 <br /> % meeting expected standard: 70.51 <br /> SEN status: No SEN",
+              "Academic Year: 2022/23 <br /> % meeting expected standard: 71.18 <br /> SEN status: No SEN"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1645,15 +1633,18 @@
           {
             "x": [
               17775,
-              18871
+              18871,
+              19236
             ],
             "y": [
               17.5,
-              20.109999999999999
+              20.109999999999999,
+              21.989999999999998
             ],
             "text": [
-              "AY_date: 2018-09-01<br />Percent meeting expected standards: 17.50<br />characteristic: SEN support",
-              "AY_date: 2021-09-01<br />Percent meeting expected standards: 20.11<br />characteristic: SEN support"
+              "Academic Year: 2018/19 <br /> % meeting expected standard: 17.5 <br /> SEN status: SEN support",
+              "Academic Year: 2021/22 <br /> % meeting expected standard: 20.11 <br /> SEN status: SEN support",
+              "Academic Year: 2022/23 <br /> % meeting expected standard: 21.99 <br /> SEN status: SEN support"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -1706,28 +1697,31 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              17720.200000000001,
-              18925.799999999999
+              17701.950000000001,
+              19309.049999999999
             ],
             "tickmode": "array",
             "ticktext": [
               "2018/19",
               "2019/20",
               "2020/21",
-              "2021/22"
+              "2021/22",
+              "2022/23"
             ],
             "tickvals": [
               17775,
               18140,
               18506,
-              18871
+              18871,
+              19236
             ],
             "categoryorder": "array",
             "categoryarray": [
               "2018/19",
               "2019/20",
               "2020/21",
-              "2021/22"
+              "2021/22",
+              "2022/23"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -1768,24 +1762,27 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              2.5449999999999999,
-              81.195000000000007
+              -3.8810000000000002,
+              81.501000000000005
             ],
             "tickmode": "array",
             "ticktext": [
+              "0",
               "20",
               "40",
               "60",
               "80"
             ],
             "tickvals": [
+              0,
               20,
               40,
-              59.999999999999993,
+              60,
               80
             ],
             "categoryorder": "array",
             "categoryarray": [
+              "0",
               "20",
               "40",
               "60",
@@ -1812,7 +1809,7 @@
             "zeroline": false,
             "anchor": "x",
             "title": {
-              "text": "% of pupils meeting expected standards",
+              "text": "% of pupils meeting expected standard",
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
@@ -1994,540 +1991,8 @@
         }
       ]
     },
-    "ks4_attainment_la_time": {
-      "x": {
-        "data": [
-          {
-            "x": [
-              17775,
-              18871,
-              18871,
-              17775,
-              17775
-            ],
-            "y": [
-              -1.1499999999999999,
-              -1.23,
-              -0.93000000000000005,
-              -0.87,
-              -1.1499999999999999
-            ],
-            "text": [
-              "AY_date: 2018-09-01<br />Average progress 8 score: -1.01<br />SEN provision: Any SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -1.08<br />SEN provision: Any SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -1.08<br />SEN provision: Any SEN",
-              "AY_date: 2018-09-01<br />Average progress 8 score: -1.01<br />SEN provision: Any SEN",
-              "AY_date: 2018-09-01<br />Average progress 8 score: -1.01<br />SEN provision: Any SEN"
-            ],
-            "type": "scatter",
-            "mode": "lines",
-            "line": {
-              "width": 1.8897637795275593,
-              "color": "rgba(127,127,127,0.2)",
-              "dash": "solid"
-            },
-            "fill": "toself",
-            "fillcolor": "rgba(127,127,127,0.2)",
-            "hoveron": "points",
-            "name": "Any SEN",
-            "legendgroup": "Any SEN",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              17775,
-              18871,
-              18871,
-              18871,
-              17775,
-              17775
-            ],
-            "y": [
-              -0.20000000000000001,
-              -0.32000000000000001,
-              -0.32000000000000001,
-              -0.16,
-              -0.040000000000000001,
-              -0.20000000000000001
-            ],
-            "text": [
-              "AY_date: 2018-09-01<br />Average progress 8 score: -0.12<br />SEN provision: No identified SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -0.24<br />SEN provision: No identified SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -0.24<br />SEN provision: No identified SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -0.24<br />SEN provision: No identified SEN",
-              "AY_date: 2018-09-01<br />Average progress 8 score: -0.12<br />SEN provision: No identified SEN",
-              "AY_date: 2018-09-01<br />Average progress 8 score: -0.12<br />SEN provision: No identified SEN"
-            ],
-            "type": "scatter",
-            "mode": "lines",
-            "line": {
-              "width": 1.8897637795275593,
-              "color": "rgba(244,106,37,0.2)",
-              "dash": "solid"
-            },
-            "fill": "toself",
-            "fillcolor": "rgba(244,106,37,0.2)",
-            "hoveron": "points",
-            "name": "No identified SEN",
-            "legendgroup": "No identified SEN",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              18871,
-              17775
-            ],
-            "y": [
-              -1.0800000000000001,
-              -1.01
-            ],
-            "text": [
-              "AY_date: 2021-09-01<br />Average progress 8 score: -1.08<br />SEN provision: Any SEN",
-              "AY_date: 2018-09-01<br />Average progress 8 score: -1.01<br />SEN provision: Any SEN"
-            ],
-            "type": "scatter",
-            "mode": "markers",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(127,127,127,1)",
-              "opacity": 1,
-              "size": 5.6692913385826778,
-              "symbol": "circle",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "rgba(127,127,127,1)"
-              }
-            },
-            "hoveron": "points",
-            "name": "Any SEN",
-            "legendgroup": "Any SEN",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              18871,
-              17775
-            ],
-            "y": [
-              -0.23999999999999999,
-              -0.12
-            ],
-            "text": [
-              "AY_date: 2021-09-01<br />Average progress 8 score: -0.24<br />SEN provision: No identified SEN",
-              "AY_date: 2018-09-01<br />Average progress 8 score: -0.12<br />SEN provision: No identified SEN"
-            ],
-            "type": "scatter",
-            "mode": "markers",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(244,106,37,1)",
-              "opacity": 1,
-              "size": 5.6692913385826778,
-              "symbol": "circle",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "rgba(244,106,37,1)"
-              }
-            },
-            "hoveron": "points",
-            "name": "No identified SEN",
-            "legendgroup": "No identified SEN",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              17775,
-              18871
-            ],
-            "y": [
-              -1.01,
-              -1.0800000000000001
-            ],
-            "text": [
-              "AY_date: 2018-09-01<br />Average progress 8 score: -1.01<br />SEN provision: Any SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -1.08<br />SEN provision: Any SEN"
-            ],
-            "type": "scatter",
-            "mode": "lines",
-            "line": {
-              "width": 1.8897637795275593,
-              "color": "rgba(127,127,127,1)",
-              "dash": "solid"
-            },
-            "hoveron": "points",
-            "name": "Any SEN",
-            "legendgroup": "Any SEN",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              17775,
-              18871
-            ],
-            "y": [
-              -0.12,
-              -0.23999999999999999
-            ],
-            "text": [
-              "AY_date: 2018-09-01<br />Average progress 8 score: -0.12<br />SEN provision: No identified SEN",
-              "AY_date: 2021-09-01<br />Average progress 8 score: -0.24<br />SEN provision: No identified SEN"
-            ],
-            "type": "scatter",
-            "mode": "lines",
-            "line": {
-              "width": 1.8897637795275593,
-              "color": "rgba(244,106,37,1)",
-              "dash": "solid"
-            },
-            "hoveron": "points",
-            "name": "No identified SEN",
-            "legendgroup": "No identified SEN",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          }
-        ],
-        "layout": {
-          "margin": {
-            "t": 24.855680088556802,
-            "r": 6.6417600664175991,
-            "b": 36.086896360868963,
-            "l": 49.813200498131998
-          },
-          "plot_bgcolor": "rgba(255,255,255,1)",
-          "paper_bgcolor": "rgba(255,255,255,1)",
-          "font": {
-            "color": "rgba(0,0,0,1)",
-            "family": "",
-            "size": 13.283520132835198
-          },
-          "xaxis": {
-            "domain": [
-              0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              17720.200000000001,
-              18925.799999999999
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "2018/19",
-              "2019/20",
-              "2020/21",
-              "2021/22"
-            ],
-            "tickvals": [
-              17775,
-              18140,
-              18506,
-              18871
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "2018/19",
-              "2019/20",
-              "2020/21",
-              "2021/22"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "y",
-            "title": {
-              "text": "Academic year",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "hoverformat": ".2f"
-          },
-          "yaxis": {
-            "domain": [
-              0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              -1.2894999999999999,
-              0.019499999999999997
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "-1.25",
-              "-1.00",
-              "-0.75",
-              "-0.50",
-              "-0.25",
-              "0.00"
-            ],
-            "tickvals": [
-              -1.25,
-              -1,
-              -0.75,
-              -0.5,
-              -0.25,
-              0
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "-1.25",
-              "-1.00",
-              "-0.75",
-              "-0.50",
-              "-0.25",
-              "0.00"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "x",
-            "title": {
-              "text": "Average progress 8 score",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "hoverformat": ".2f"
-          },
-          "shapes": [
-            {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
-
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 1
-            }
-          ],
-          "showlegend": true,
-          "legend": {
-            "bgcolor": "rgba(255,255,255,1)",
-            "bordercolor": "transparent",
-            "borderwidth": 1.7179670722977816,
-            "font": {
-              "color": "rgba(0,0,0,1)",
-              "family": "",
-              "size": 13.283520132835198
-            },
-            "title": {
-              "text": "SEN provision",
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              }
-            },
-            "orientation": "h",
-            "y": -0.20000000000000001
-          },
-          "hovermode": "closest",
-          "barmode": "relative",
-          "dragmode": false
-        },
-        "config": {
-          "doubleClick": "reset",
-          "modeBarButtonsToAdd": [
-            "hoverclosest",
-            "hovercompare"
-          ],
-          "showSendToCloud": false,
-          "displaylogo": false,
-          "toImageButtonOptions": {
-            "format": "png"
-          },
-          "modeBarButtons": [
-            "toImage"
-          ]
-        },
-        "source": "A",
-        "highlight": {
-          "on": "plotly_click",
-          "persistent": false,
-          "dynamic": false,
-          "selectize": false,
-          "opacityDim": 0.20000000000000001,
-          "selected": {
-            "opacity": 1
-          },
-          "debounce": 0
-        },
-        "shinyEvents": [
-          "plotly_hover",
-          "plotly_click",
-          "plotly_selected",
-          "plotly_relayout",
-          "plotly_brushed",
-          "plotly_brushing",
-          "plotly_clickannotation",
-          "plotly_doubleclick",
-          "plotly_deselect",
-          "plotly_afterplot",
-          "plotly_sunburstclick"
-        ],
-        "base_url": "https://plot.ly"
-      },
-      "evals": [
-
-      ],
-      "jsHooks": [
-
-      ],
-      "deps": [
-        {
-          "name": "setprototypeof",
-          "version": "0.1",
-          "src": {
-            "href": "setprototypeof-0.1"
-          },
-          "meta": null,
-          "script": "setprototypeof.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "typedarray",
-          "version": "0.1",
-          "src": {
-            "href": "typedarray-0.1"
-          },
-          "meta": null,
-          "script": "typedarray.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
-          "name": "crosstalk",
-          "version": "1.2.0",
-          "src": {
-            "href": "crosstalk-1.2.0"
-          },
-          "meta": null,
-          "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.min.css",
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
-          "name": "plotly-htmlwidgets-css",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-htmlwidgets-css-2.11.1"
-          },
-          "meta": null,
-          "script": null,
-          "stylesheet": "plotly-htmlwidgets.css",
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "plotly-main",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-main-2.11.1"
-          },
-          "meta": null,
-          "script": "plotly-latest.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        }
-      ]
-    },
     "la_ofsted_rating": {
-      "html": "<div class=\"small-box bg-maroon\">\n  <div class=\"inner\">\n    <h3>\n      <p style=\"font-size: 50%\">Written Statement of Action (old framework)<\/p>\n    <\/h3>\n    <p>Report published:  2017-03-20 .<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-green\">\n  <div class=\"inner\">\n    <h3>\n      <p style=\"font-size: 50%\">WSoA (previous framework); progress made on all weaknesses<\/p>\n    <\/h3>\n    <p>Report published:  2017-06-16 .<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
@@ -2565,7 +2030,8 @@
               19477,
               19508,
               19538,
-              19569
+              19569,
+              19600
             ],
             "y": [
               572912,
@@ -2596,7 +2062,8 @@
               701839,
               697305,
               702282,
-              698851
+              698851,
+              703168
             ],
             "text": [
               "Year ending: 2021-03-31<br />Number of children and young people: 572912",
@@ -2627,7 +2094,8 @@
               "Year ending: 2023-04-30<br />Number of children and young people: 701839",
               "Year ending: 2023-05-31<br />Number of children and young people: 697305",
               "Year ending: 2023-06-30<br />Number of children and young people: 702282",
-              "Year ending: 2023-07-31<br />Number of children and young people: 698851"
+              "Year ending: 2023-07-31<br />Number of children and young people: 698851",
+              "Year ending: 2023-08-31<br />Number of children and young people: 703168"
             ],
             "type": "scatter",
             "mode": "lines+markers",
@@ -2684,7 +2152,8 @@
               19477,
               19508,
               19538,
-              19569
+              19569,
+              19600
             ],
             "y": [
               12835,
@@ -2715,7 +2184,8 @@
               15345,
               15360,
               15415,
-              15395
+              15395,
+              15440
             ],
             "text": [
               "Year ending: 2021-03-31<br />Number of children and young people:  12835",
@@ -2746,10 +2216,11 @@
               "Year ending: 2023-04-30<br />Number of children and young people:  15345",
               "Year ending: 2023-05-31<br />Number of children and young people:  15360",
               "Year ending: 2023-06-30<br />Number of children and young people:  15415",
-              "Year ending: 2023-07-31<br />Number of children and young people:  15395"
+              "Year ending: 2023-07-31<br />Number of children and young people:  15395",
+              "Year ending: 2023-08-31<br />Number of children and young people:  15440"
             ],
             "type": "scatter",
-            "mode": "lines",
+            "mode": "lines+markers",
             "line": {
               "width": 1.8897637795275593,
               "color": "rgba(0,0,0,1)",
@@ -2760,104 +2231,6 @@
             "xaxis": "x",
             "yaxis": "y2",
             "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              18717,
-              18747,
-              18778,
-              18808,
-              18839,
-              18870,
-              18900,
-              18931,
-              18961,
-              18992,
-              19023,
-              19051,
-              19082,
-              19112,
-              19204,
-              19235,
-              19265,
-              19296,
-              19326,
-              19357,
-              19388,
-              19416,
-              19447,
-              19477,
-              19508,
-              19538,
-              19143,
-              19173,
-              19569
-            ],
-            "y": [
-              12835,
-              12905,
-              13155,
-              13315,
-              13345,
-              13640,
-              13710,
-              13985,
-              14130,
-              14240,
-              14335,
-              14560,
-              14805,
-              14735,
-              14965,
-              14870,
-              15025,
-              15020,
-              14940,
-              14865,
-              15065,
-              15195,
-              15180,
-              15345,
-              15360,
-              15415,
-              14745,
-              14775,
-              15395
-            ],
-            "text": [
-              "Year ending: 2021-03-31<br />Number of children and young people:  12835",
-              "Year ending: 2021-04-30<br />Number of children and young people:  12905",
-              "Year ending: 2021-05-31<br />Number of children and young people:  13155",
-              "Year ending: 2021-06-30<br />Number of children and young people:  13315",
-              "Year ending: 2021-07-31<br />Number of children and young people:  13345",
-              "Year ending: 2021-08-31<br />Number of children and young people:  13640",
-              "Year ending: 2021-09-30<br />Number of children and young people:  13710",
-              "Year ending: 2021-10-31<br />Number of children and young people:  13985",
-              "Year ending: 2021-11-30<br />Number of children and young people:  14130",
-              "Year ending: 2021-12-31<br />Number of children and young people:  14240",
-              "Year ending: 2022-01-31<br />Number of children and young people:  14335",
-              "Year ending: 2022-02-28<br />Number of children and young people:  14560",
-              "Year ending: 2022-03-31<br />Number of children and young people:  14805",
-              "Year ending: 2022-04-30<br />Number of children and young people:  14735",
-              "Year ending: 2022-07-31<br />Number of children and young people:  14965",
-              "Year ending: 2022-08-31<br />Number of children and young people:  14870",
-              "Year ending: 2022-09-30<br />Number of children and young people:  15025",
-              "Year ending: 2022-10-31<br />Number of children and young people:  15020",
-              "Year ending: 2022-11-30<br />Number of children and young people:  14940",
-              "Year ending: 2022-12-31<br />Number of children and young people:  14865",
-              "Year ending: 2023-01-31<br />Number of children and young people:  15065",
-              "Year ending: 2023-02-28<br />Number of children and young people:  15195",
-              "Year ending: 2023-03-31<br />Number of children and young people:  15180",
-              "Year ending: 2023-04-30<br />Number of children and young people:  15345",
-              "Year ending: 2023-05-31<br />Number of children and young people:  15360",
-              "Year ending: 2023-06-30<br />Number of children and young people:  15415",
-              "Year ending: 2022-05-31<br />Number of children and young people:  14745",
-              "Year ending: 2022-06-30<br />Number of children and young people:  14775",
-              "Year ending: 2023-07-31<br />Number of children and young people:  15395"
-            ],
-            "type": "scatter",
-            "mode": "markers",
             "marker": {
               "autocolorscale": false,
               "color": "rgba(0,0,0,1)",
@@ -2869,11 +2242,6 @@
                 "color": "rgba(0,0,0,1)"
               }
             },
-            "hoveron": "points",
-            "showlegend": false,
-            "xaxis": "x",
-            "yaxis": "y2",
-            "hoverinfo": "text",
             "frame": null
           }
         ],
@@ -2900,8 +2268,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              18674.400000000001,
-              19611.599999999999
+              18672.849999999999,
+              19644.150000000001
             ],
             "tickmode": "array",
             "ticktext": [
@@ -2911,7 +2279,8 @@
               "Jun 2022",
               "Oct 2022",
               "Feb 2023",
-              "Jun 2023"
+              "Jun 2023",
+              "Oct 2023"
             ],
             "tickvals": [
               18779,
@@ -2920,7 +2289,8 @@
               19144,
               19266,
               19389,
-              19509
+              19509,
+              19631
             ],
             "categoryorder": "array",
             "categoryarray": [
@@ -2930,7 +2300,8 @@
               "Jun 2022",
               "Oct 2022",
               "Feb 2023",
-              "Jun 2023"
+              "Jun 2023",
+              "Oct 2023"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -3162,8 +2533,8 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              12706,
-              15544
+              12704.75,
+              15570.25
             ],
             "tickmode": "array",
             "ticktext": [
@@ -3365,13 +2736,13 @@
       ]
     },
     "nhs_value_box_ccg_newest": {
-      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>15,395<\/h3>\n    <p>Children and young people in contact with NHS-funded mental health services in the 12 months ending July 2023<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-blue\">\n  <div class=\"inner\">\n    <h3>15,440<\/h3>\n    <p>Children and young people in contact with NHS-funded mental health services in the 12 months ending August 2023<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]
     },
     "nhs_value_box_ccg_older": {
-      "html": "<div class=\"small-box bg-purple\">\n  <div class=\"inner\">\n    <h3>14,965<\/h3>\n    <p>Children and young people in contact with NHS-funded mental health services in the 12 months ending July 2022<\/p>\n  <\/div>\n<\/div>",
+      "html": "<div class=\"small-box bg-purple\">\n  <div class=\"inner\">\n    <h3>14,870<\/h3>\n    <p>Children and young people in contact with NHS-funded mental health services in the 12 months ending August 2022<\/p>\n  <\/div>\n<\/div>",
       "deps": [
 
       ]

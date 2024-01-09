@@ -1,35 +1,36 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
     "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
     "ks4_destinations_la_type_filter": "Employment",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
     "ks4_destinations_reg_type_filter": "Employment",
-    "la_choice": "Middlesbrough",
-    "level_choice": "Regions",
-    "link_to_la_dashboard": 0,
+    "la_choice": "Norfolk",
+    "level_choice": "England",
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
     "navlistPanel": "Local Areas",
-    "nhs_region_choice": "North West",
+    "nhs_region_choice": "South East",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
     "percent_pupils_ehcp_reg_filter": "EHC plan",
@@ -37,12 +38,3136 @@
     "provider_types_la_time_filter": "all pupils",
     "provider_types_reg_bench_filter": "all pupils",
     "provider_types_reg_time_filter": "all pupils",
-    "region_choice": "North West",
+    "region_choice": "South East",
     "remove": 0,
-    "tabsetpanels_la": "Summary",
-    "tabsetpanels_reg": "Identification of Need"
+    "tabsetpanels_la": "Identification of need",
+    "tabsetpanels_reg": "Financial sustainability"
   },
   "output": {
-    "la_summary_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Local Authority <\/th> <th style='text-align: left;'> Metric <\/th> <th style='text-align: left;'> Theme <\/th> <th style='text-align: right;'> LA Rank (most recent year) <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> Middlesbrough <\/td> <td> % of pupils with self-identified learning difficulty, disability or physical illness in a non-sustained destination after 16-18 study <\/td> <td> Outcomes <\/td> <td align=\"right\">  47 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % meeting expected phonics standards in Y1 (All SEN) <\/td> <td> Outcomes <\/td> <td align=\"right\"> 139 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % meeting expected standards at KS2 (All SEN) <\/td> <td> Outcomes <\/td> <td align=\"right\"> 141 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> Average progress 8 score (All SEN) <\/td> <td> Outcomes <\/td> <td align=\"right\"> 140 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> Overall absence % (EHC plans) <\/td> <td> Experiences <\/td> <td align=\"right\">  26 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % of pupils in a non-sustained destination after KS4 <\/td> <td> Experiences <\/td> <td align=\"right\">  25 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % of EHCPs issued within 20 weeks <\/td> <td> Experiences <\/td> <td align=\"right\">  23 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> Rate of appeals to SEND Tribunal <\/td> <td> Experiences <\/td> <td align=\"right\"> 149 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % of pupils who have Education, Health and Care plans <\/td> <td> Identification of Need <\/td> <td align=\"right\">  21 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % of pupils with EHC plans who are in independent/AP/special settings <\/td> <td> Identification of Need <\/td> <td align=\"right\">  42 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> % of pupils in mainstream schools who have EHC plans <\/td> <td> Identification of Need <\/td> <td align=\"right\">  87 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> DSG cumulative balance as a % of the total budget <\/td> <td> Financial Sustainability <\/td> <td align=\"right\"> 103 <\/td> <\/tr>\n  <tr> <td> Middlesbrough <\/td> <td> Spend per head on special schools and AP in the independent or non-maintained sector <\/td> <td> Financial Sustainability <\/td> <td align=\"right\">  81 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "cin_la_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              45.899999999999999,
+              48.799999999999997,
+              53.200000000000003,
+              50,
+              48.399999999999999,
+              48.600000000000001
+            ],
+            "text": [
+              "Percentage of children: 45.9<br />Social care group: CINO at 31 March<br />Academic year: 2016/17",
+              "Percentage of children: 48.8<br />Social care group: CINO at 31 March<br />Academic year: 2017/18",
+              "Percentage of children: 53.2<br />Social care group: CINO at 31 March<br />Academic year: 2018/19",
+              "Percentage of children: 50.0<br />Social care group: CINO at 31 March<br />Academic year: 2019/20",
+              "Percentage of children: 48.4<br />Social care group: CINO at 31 March<br />Academic year: 2020/21",
+              "Percentage of children: 48.6<br />Social care group: CINO at 31 March<br />Academic year: 2021/22"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "CINO at 31 March",
+            "legendgroup": "CINO at 31 March",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              59.200000000000003,
+              58.200000000000003,
+              59.799999999999997,
+              59.299999999999997,
+              60.399999999999999,
+              63.899999999999999
+            ],
+            "text": [
+              "Percentage of children: 59.2<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2016/17",
+              "Percentage of children: 58.2<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2017/18",
+              "Percentage of children: 59.8<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2018/19",
+              "Percentage of children: 59.3<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2019/20",
+              "Percentage of children: 60.4<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2020/21",
+              "Percentage of children: 63.9<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2021/22"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "CLA 12 months at 31 March",
+            "legendgroup": "CLA 12 months at 31 March",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              43.399999999999999,
+              42.100000000000001,
+              42.899999999999999,
+              42.799999999999997,
+              41.700000000000003,
+              44.100000000000001
+            ],
+            "text": [
+              "Percentage of children: 43.4<br />Social care group: CPPO at 31 March<br />Academic year: 2016/17",
+              "Percentage of children: 42.1<br />Social care group: CPPO at 31 March<br />Academic year: 2017/18",
+              "Percentage of children: 42.9<br />Social care group: CPPO at 31 March<br />Academic year: 2018/19",
+              "Percentage of children: 42.8<br />Social care group: CPPO at 31 March<br />Academic year: 2019/20",
+              "Percentage of children: 41.7<br />Social care group: CPPO at 31 March<br />Academic year: 2020/21",
+              "Percentage of children: 44.1<br />Social care group: CPPO at 31 March<br />Academic year: 2021/22"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "CPPO at 31 March",
+            "legendgroup": "CPPO at 31 March",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              48.600000000000001,
+              48.399999999999999,
+              50,
+              53.200000000000003,
+              48.799999999999997,
+              45.899999999999999
+            ],
+            "text": [
+              "Percentage of children: 48.6<br />Social care group: CINO at 31 March<br />Academic year: 2021/22",
+              "Percentage of children: 48.4<br />Social care group: CINO at 31 March<br />Academic year: 2020/21",
+              "Percentage of children: 50.0<br />Social care group: CINO at 31 March<br />Academic year: 2019/20",
+              "Percentage of children: 53.2<br />Social care group: CINO at 31 March<br />Academic year: 2018/19",
+              "Percentage of children: 48.8<br />Social care group: CINO at 31 March<br />Academic year: 2017/18",
+              "Percentage of children: 45.9<br />Social care group: CINO at 31 March<br />Academic year: 2016/17"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "CINO at 31 March",
+            "legendgroup": "CINO at 31 March",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              63.899999999999999,
+              60.399999999999999,
+              59.299999999999997,
+              59.799999999999997,
+              58.200000000000003,
+              59.200000000000003
+            ],
+            "text": [
+              "Percentage of children: 63.9<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2021/22",
+              "Percentage of children: 60.4<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2020/21",
+              "Percentage of children: 59.3<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2019/20",
+              "Percentage of children: 59.8<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2018/19",
+              "Percentage of children: 58.2<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2017/18",
+              "Percentage of children: 59.2<br />Social care group: CLA 12 months at 31 March<br />Academic year: 2016/17"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "CLA 12 months at 31 March",
+            "legendgroup": "CLA 12 months at 31 March",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              44.100000000000001,
+              41.700000000000003,
+              42.799999999999997,
+              42.899999999999999,
+              42.100000000000001,
+              43.399999999999999
+            ],
+            "text": [
+              "Percentage of children: 44.1<br />Social care group: CPPO at 31 March<br />Academic year: 2021/22",
+              "Percentage of children: 41.7<br />Social care group: CPPO at 31 March<br />Academic year: 2020/21",
+              "Percentage of children: 42.8<br />Social care group: CPPO at 31 March<br />Academic year: 2019/20",
+              "Percentage of children: 42.9<br />Social care group: CPPO at 31 March<br />Academic year: 2018/19",
+              "Percentage of children: 42.1<br />Social care group: CPPO at 31 March<br />Academic year: 2017/18",
+              "Percentage of children: 43.4<br />Social care group: CPPO at 31 March<br />Academic year: 2016/17"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "CPPO at 31 March",
+            "legendgroup": "CPPO at 31 March",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 0,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              6.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2016/17",
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              3.9999999999999996,
+              5,
+              6
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2016/17",
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -3.1950000000000003,
+              67.094999999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "20",
+              "40",
+              "60"
+            ],
+            "tickvals": [
+              0,
+              20,
+              40,
+              60
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "20",
+              "40",
+              "60"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Percentage of children",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Social Care Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "annotations": [
+            {
+              "text": "",
+              "x": 2.27,
+              "y": -0.37,
+              "showarrow": false,
+              "yref": "paper"
+            }
+          ],
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ehcp_ageprofile_la_time": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095
+            ],
+            "base": [
+              7877,
+              7306,
+              6710,
+              5916,
+              5741,
+              5267
+            ],
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              858,
+              1365,
+              1043,
+              773,
+              411,
+              235
+            ],
+            "text": [
+              "Number of EHCPs:  858<br />Age group: Age 20 to 25<br />Calendar year: 2023",
+              "Number of EHCPs: 1365<br />Age group: Age 20 to 25<br />Calendar year: 2022",
+              "Number of EHCPs: 1043<br />Age group: Age 20 to 25<br />Calendar year: 2021",
+              "Number of EHCPs:  773<br />Age group: Age 20 to 25<br />Calendar year: 2020",
+              "Number of EHCPs:  411<br />Age group: Age 20 to 25<br />Calendar year: 2019",
+              "Number of EHCPs:  235<br />Age group: Age 20 to 25<br />Calendar year: 2018"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(11,40,65,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(255,255,255,1)"
+              }
+            },
+            "name": "Age 20 to 25",
+            "legendgroup": "Age 20 to 25",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095
+            ],
+            "base": [
+              5879,
+              5340,
+              4814,
+              4141,
+              3946,
+              3710
+            ],
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              1998,
+              1966,
+              1896,
+              1775,
+              1795,
+              1557
+            ],
+            "text": [
+              "Number of EHCPs: 1998<br />Age group: Age 16 to 19<br />Calendar year: 2023",
+              "Number of EHCPs: 1966<br />Age group: Age 16 to 19<br />Calendar year: 2022",
+              "Number of EHCPs: 1896<br />Age group: Age 16 to 19<br />Calendar year: 2021",
+              "Number of EHCPs: 1775<br />Age group: Age 16 to 19<br />Calendar year: 2020",
+              "Number of EHCPs: 1795<br />Age group: Age 16 to 19<br />Calendar year: 2019",
+              "Number of EHCPs: 1557<br />Age group: Age 16 to 19<br />Calendar year: 2018"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(14,54,87,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(255,255,255,1)"
+              }
+            },
+            "name": "Age 16 to 19",
+            "legendgroup": "Age 16 to 19",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095
+            ],
+            "base": [
+              2734,
+              2541,
+              2366,
+              1905,
+              1801,
+              1611
+            ],
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              3145,
+              2799,
+              2448,
+              2236,
+              2145,
+              2099
+            ],
+            "text": [
+              "Number of EHCPs: 3145<br />Age group: Age 11 to 15<br />Calendar year: 2023",
+              "Number of EHCPs: 2799<br />Age group: Age 11 to 15<br />Calendar year: 2022",
+              "Number of EHCPs: 2448<br />Age group: Age 11 to 15<br />Calendar year: 2021",
+              "Number of EHCPs: 2236<br />Age group: Age 11 to 15<br />Calendar year: 2020",
+              "Number of EHCPs: 2145<br />Age group: Age 11 to 15<br />Calendar year: 2019",
+              "Number of EHCPs: 2099<br />Age group: Age 11 to 15<br />Calendar year: 2018"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(255,255,255,1)"
+              }
+            },
+            "name": "Age 11 to 15",
+            "legendgroup": "Age 11 to 15",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095
+            ],
+            "base": [
+              321,
+              318,
+              259,
+              159,
+              177,
+              162
+            ],
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              2413,
+              2223,
+              2107,
+              1746,
+              1624,
+              1449
+            ],
+            "text": [
+              "Number of EHCPs: 2413<br />Age group: Age 5 to 10<br />Calendar year: 2023",
+              "Number of EHCPs: 2223<br />Age group: Age 5 to 10<br />Calendar year: 2022",
+              "Number of EHCPs: 2107<br />Age group: Age 5 to 10<br />Calendar year: 2021",
+              "Number of EHCPs: 1746<br />Age group: Age 5 to 10<br />Calendar year: 2020",
+              "Number of EHCPs: 1624<br />Age group: Age 5 to 10<br />Calendar year: 2019",
+              "Number of EHCPs: 1449<br />Age group: Age 5 to 10<br />Calendar year: 2018"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(65,105,138,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(255,255,255,1)"
+              }
+            },
+            "name": "Age 5 to 10",
+            "legendgroup": "Age 5 to 10",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095,
+              0.90000000000009095
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              321,
+              318,
+              259,
+              159,
+              177,
+              162
+            ],
+            "text": [
+              "Number of EHCPs:  321<br />Age group: Under 5<br />Calendar year: 2023",
+              "Number of EHCPs:  318<br />Age group: Under 5<br />Calendar year: 2022",
+              "Number of EHCPs:  259<br />Age group: Under 5<br />Calendar year: 2021",
+              "Number of EHCPs:  159<br />Age group: Under 5<br />Calendar year: 2020",
+              "Number of EHCPs:  177<br />Age group: Under 5<br />Calendar year: 2019",
+              "Number of EHCPs:  162<br />Age group: Under 5<br />Calendar year: 2018"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(113,142,167,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(255,255,255,1)"
+              }
+            },
+            "name": "Under 5",
+            "legendgroup": "Under 5",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              8306,
+              7988.5,
+              7231.5,
+              6302.5,
+              5946.5,
+              5384.5
+            ],
+            "text": [
+              null,
+              "20 to 25",
+              "20 to 25",
+              null,
+              null,
+              null
+            ],
+            "hovertext": [
+              "Number of EHCPs:  858<br />Age group: Age 20 to 25<br />Calendar year: 2023",
+              "Number of EHCPs: 1365<br />Age group: Age 20 to 25<br />Calendar year: 2022",
+              "Number of EHCPs: 1043<br />Age group: Age 20 to 25<br />Calendar year: 2021",
+              "Number of EHCPs:  773<br />Age group: Age 20 to 25<br />Calendar year: 2020",
+              "Number of EHCPs:  411<br />Age group: Age 20 to 25<br />Calendar year: 2019",
+              "Number of EHCPs:  235<br />Age group: Age 20 to 25<br />Calendar year: 2018"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(255,255,255,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Age 20 to 25",
+            "legendgroup": "Age 20 to 25",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              6878,
+              6323,
+              5762,
+              5028.5,
+              4843.5,
+              4488.5
+            ],
+            "text": [
+              "16 to 19",
+              "16 to 19",
+              "16 to 19",
+              "16 to 19",
+              "16 to 19",
+              "16 to 19"
+            ],
+            "hovertext": [
+              "Number of EHCPs: 1998<br />Age group: Age 16 to 19<br />Calendar year: 2023",
+              "Number of EHCPs: 1966<br />Age group: Age 16 to 19<br />Calendar year: 2022",
+              "Number of EHCPs: 1896<br />Age group: Age 16 to 19<br />Calendar year: 2021",
+              "Number of EHCPs: 1775<br />Age group: Age 16 to 19<br />Calendar year: 2020",
+              "Number of EHCPs: 1795<br />Age group: Age 16 to 19<br />Calendar year: 2019",
+              "Number of EHCPs: 1557<br />Age group: Age 16 to 19<br />Calendar year: 2018"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(255,255,255,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Age 16 to 19",
+            "legendgroup": "Age 16 to 19",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              4306.5,
+              3940.5,
+              3590,
+              3023,
+              2873.5,
+              2660.5
+            ],
+            "text": [
+              "11 to 15",
+              "11 to 15",
+              "11 to 15",
+              "11 to 15",
+              "11 to 15",
+              "11 to 15"
+            ],
+            "hovertext": [
+              "Number of EHCPs: 3145<br />Age group: Age 11 to 15<br />Calendar year: 2023",
+              "Number of EHCPs: 2799<br />Age group: Age 11 to 15<br />Calendar year: 2022",
+              "Number of EHCPs: 2448<br />Age group: Age 11 to 15<br />Calendar year: 2021",
+              "Number of EHCPs: 2236<br />Age group: Age 11 to 15<br />Calendar year: 2020",
+              "Number of EHCPs: 2145<br />Age group: Age 11 to 15<br />Calendar year: 2019",
+              "Number of EHCPs: 2099<br />Age group: Age 11 to 15<br />Calendar year: 2018"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(255,255,255,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Age 11 to 15",
+            "legendgroup": "Age 11 to 15",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              1527.5,
+              1429.5,
+              1312.5,
+              1032,
+              989,
+              886.5
+            ],
+            "text": [
+              "5 to 10",
+              "5 to 10",
+              "5 to 10",
+              "5 to 10",
+              "5 to 10",
+              "5 to 10"
+            ],
+            "hovertext": [
+              "Number of EHCPs: 2413<br />Age group: Age 5 to 10<br />Calendar year: 2023",
+              "Number of EHCPs: 2223<br />Age group: Age 5 to 10<br />Calendar year: 2022",
+              "Number of EHCPs: 2107<br />Age group: Age 5 to 10<br />Calendar year: 2021",
+              "Number of EHCPs: 1746<br />Age group: Age 5 to 10<br />Calendar year: 2020",
+              "Number of EHCPs: 1624<br />Age group: Age 5 to 10<br />Calendar year: 2019",
+              "Number of EHCPs: 1449<br />Age group: Age 5 to 10<br />Calendar year: 2018"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(255,255,255,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Age 5 to 10",
+            "legendgroup": "Age 5 to 10",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              2023,
+              2022,
+              2021,
+              2020,
+              2019,
+              2018
+            ],
+            "y": [
+              160.5,
+              159,
+              129.5,
+              79.5,
+              88.5,
+              81
+            ],
+            "text": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "hovertext": [
+              "Number of EHCPs:  321<br />Age group: Under 5<br />Calendar year: 2023",
+              "Number of EHCPs:  318<br />Age group: Under 5<br />Calendar year: 2022",
+              "Number of EHCPs:  259<br />Age group: Under 5<br />Calendar year: 2021",
+              "Number of EHCPs:  159<br />Age group: Under 5<br />Calendar year: 2020",
+              "Number of EHCPs:  177<br />Age group: Under 5<br />Calendar year: 2019",
+              "Number of EHCPs:  162<br />Age group: Under 5<br />Calendar year: 2018"
+            ],
+            "textfont": {
+              "size": 11.338582677165356,
+              "color": "rgba(255,255,255,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "name": "Under 5",
+            "legendgroup": "Under 5",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 44.499792444997915
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              2017.2549999999999,
+              2023.7450000000001
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022",
+              "2023"
+            ],
+            "tickvals": [
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022",
+              "2023"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Calendar year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -436.75,
+              9171.75
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "2500",
+              "5000",
+              "7500"
+            ],
+            "tickvals": [
+              0,
+              2500,
+              4999.9999999999991,
+              7500
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "2500",
+              "5000",
+              "7500"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Number of EHCPs",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Age group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "mainstream_with_sen_la_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              14.15,
+              14.02,
+              14.619999999999999,
+              15.039999999999999,
+              15.710000000000001,
+              16.579999999999998
+            ],
+            "text": [
+              "% of pupils: 14.15<br />Norfolk",
+              "% of pupils: 14.02<br />Norfolk",
+              "% of pupils: 14.62<br />Norfolk",
+              "% of pupils: 15.04<br />Norfolk",
+              "% of pupils: 15.71<br />Norfolk",
+              "% of pupils: 16.58<br />Norfolk"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "All SEN",
+            "legendgroup": "All SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              1.5700000000000001,
+              1.5800000000000001,
+              1.52,
+              1.9099999999999999,
+              2.1099999999999999,
+              2.5299999999999998
+            ],
+            "text": [
+              "% of pupils: 1.57<br />Norfolk",
+              "% of pupils: 1.58<br />Norfolk",
+              "% of pupils: 1.52<br />Norfolk",
+              "% of pupils: 1.91<br />Norfolk",
+              "% of pupils: 2.11<br />Norfolk",
+              "% of pupils: 2.53<br />Norfolk"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "EHC plan",
+            "legendgroup": "EHC plan",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              12.58,
+              12.449999999999999,
+              13.1,
+              13.140000000000001,
+              13.609999999999999,
+              14.039999999999999
+            ],
+            "text": [
+              "% of pupils: 12.58<br />Norfolk",
+              "% of pupils: 12.45<br />Norfolk",
+              "% of pupils: 13.1<br />Norfolk",
+              "% of pupils: 13.14<br />Norfolk",
+              "% of pupils: 13.61<br />Norfolk",
+              "% of pupils: 14.04<br />Norfolk"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              16.579999999999998,
+              15.710000000000001,
+              15.039999999999999,
+              14.619999999999999,
+              14.02,
+              14.15
+            ],
+            "text": [
+              "% of pupils: 16.58<br />Norfolk",
+              "% of pupils: 15.71<br />Norfolk",
+              "% of pupils: 15.04<br />Norfolk",
+              "% of pupils: 14.62<br />Norfolk",
+              "% of pupils: 14.02<br />Norfolk",
+              "% of pupils: 14.15<br />Norfolk"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "All SEN",
+            "legendgroup": "All SEN",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              2.5299999999999998,
+              2.1099999999999999,
+              1.9099999999999999,
+              1.52,
+              1.5800000000000001,
+              1.5700000000000001
+            ],
+            "text": [
+              "% of pupils: 2.53<br />Norfolk",
+              "% of pupils: 2.11<br />Norfolk",
+              "% of pupils: 1.91<br />Norfolk",
+              "% of pupils: 1.52<br />Norfolk",
+              "% of pupils: 1.58<br />Norfolk",
+              "% of pupils: 1.57<br />Norfolk"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "EHC plan",
+            "legendgroup": "EHC plan",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              14.039999999999999,
+              13.609999999999999,
+              13.140000000000001,
+              13.1,
+              12.449999999999999,
+              12.58
+            ],
+            "text": [
+              "% of pupils: 14.04<br />Norfolk",
+              "% of pupils: 13.61<br />Norfolk",
+              "% of pupils: 13.14<br />Norfolk",
+              "% of pupils: 13.1<br />Norfolk",
+              "% of pupils: 12.45<br />Norfolk",
+              "% of pupils: 12.58<br />Norfolk"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              6.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22",
+              "2022/23"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              3.9999999999999996,
+              5,
+              6
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22",
+              "2022/23"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.82899999999999996,
+              17.408999999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "5",
+              "10",
+              "15"
+            ],
+            "tickvals": [
+              0,
+              5,
+              10,
+              15
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "5",
+              "10",
+              "15"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "SEN provision",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "percent_pupils_ehcp_la_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              3.0800000000000001,
+              3.23,
+              3.29,
+              3.79,
+              4.1200000000000001,
+              4.6799999999999997
+            ],
+            "text": [
+              "% of pupils:  3.08<br />SEN provision: EHC plan<br />Academic year: 2017/18",
+              "% of pupils:  3.23<br />SEN provision: EHC plan<br />Academic year: 2018/19",
+              "% of pupils:  3.29<br />SEN provision: EHC plan<br />Academic year: 2019/20",
+              "% of pupils:  3.79<br />SEN provision: EHC plan<br />Academic year: 2020/21",
+              "% of pupils:  4.12<br />SEN provision: EHC plan<br />Academic year: 2021/22",
+              "% of pupils:  4.68<br />SEN provision: EHC plan<br />Academic year: 2022/23"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "EHC plan",
+            "legendgroup": "EHC plan",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              12.51,
+              12.43,
+              13.07,
+              13.1,
+              13.609999999999999,
+              13.93
+            ],
+            "text": [
+              "% of pupils: 12.51<br />SEN provision: SEN support<br />Academic year: 2017/18",
+              "% of pupils: 12.43<br />SEN provision: SEN support<br />Academic year: 2018/19",
+              "% of pupils: 13.07<br />SEN provision: SEN support<br />Academic year: 2019/20",
+              "% of pupils: 13.10<br />SEN provision: SEN support<br />Academic year: 2020/21",
+              "% of pupils: 13.61<br />SEN provision: SEN support<br />Academic year: 2021/22",
+              "% of pupils: 13.93<br />SEN provision: SEN support<br />Academic year: 2022/23"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              4.6799999999999997,
+              4.1200000000000001,
+              3.79,
+              3.29,
+              3.23,
+              3.0800000000000001
+            ],
+            "text": [
+              "% of pupils:  4.68<br />SEN provision: EHC plan<br />Academic year: 2022/23",
+              "% of pupils:  4.12<br />SEN provision: EHC plan<br />Academic year: 2021/22",
+              "% of pupils:  3.79<br />SEN provision: EHC plan<br />Academic year: 2020/21",
+              "% of pupils:  3.29<br />SEN provision: EHC plan<br />Academic year: 2019/20",
+              "% of pupils:  3.23<br />SEN provision: EHC plan<br />Academic year: 2018/19",
+              "% of pupils:  3.08<br />SEN provision: EHC plan<br />Academic year: 2017/18"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "EHC plan",
+            "legendgroup": "EHC plan",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              13.93,
+              13.609999999999999,
+              13.1,
+              13.07,
+              12.43,
+              12.51
+            ],
+            "text": [
+              "% of pupils: 13.93<br />SEN provision: SEN support<br />Academic year: 2022/23",
+              "% of pupils: 13.61<br />SEN provision: SEN support<br />Academic year: 2021/22",
+              "% of pupils: 13.10<br />SEN provision: SEN support<br />Academic year: 2020/21",
+              "% of pupils: 13.07<br />SEN provision: SEN support<br />Academic year: 2019/20",
+              "% of pupils: 12.43<br />SEN provision: SEN support<br />Academic year: 2018/19",
+              "% of pupils: 12.51<br />SEN provision: SEN support<br />Academic year: 2017/18"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              6.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22",
+              "2022/23"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              3.9999999999999996,
+              5,
+              6
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22",
+              "2022/23"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.69650000000000001,
+              14.6265
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "5",
+              "10"
+            ],
+            "tickvals": [
+              0,
+              5,
+              10
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "5",
+              "10"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "SEN provision",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "provider_types_la_time": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              4.6200000000000001,
+              4.5700000000000003,
+              4.5700000000000003,
+              4.7199999999999998,
+              4.8700000000000001,
+              5.0499999999999998
+            ],
+            "text": [
+              "% of pupils: 4.62<br />School type: Independent school<br />Academic year: 2022/23",
+              "% of pupils: 4.57<br />School type: Independent school<br />Academic year: 2021/22",
+              "% of pupils: 4.57<br />School type: Independent school<br />Academic year: 2020/21",
+              "% of pupils: 4.72<br />School type: Independent school<br />Academic year: 2019/20",
+              "% of pupils: 4.87<br />School type: Independent school<br />Academic year: 2018/19",
+              "% of pupils: 5.05<br />School type: Independent school<br />Academic year: 2017/18"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(27,158,119,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(27,158,119,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Independent school",
+            "legendgroup": "Independent school",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              0.28000000000000003,
+              0.26000000000000001,
+              0.29999999999999999,
+              0.31,
+              0.31,
+              0.31
+            ],
+            "text": [
+              "% of pupils: 0.28<br />School type: State-funded AP school<br />Academic year: 2022/23",
+              "% of pupils: 0.26<br />School type: State-funded AP school<br />Academic year: 2021/22",
+              "% of pupils: 0.3<br />School type: State-funded AP school<br />Academic year: 2020/21",
+              "% of pupils: 0.31<br />School type: State-funded AP school<br />Academic year: 2019/20",
+              "% of pupils: 0.31<br />School type: State-funded AP school<br />Academic year: 2018/19",
+              "% of pupils: 0.31<br />School type: State-funded AP school<br />Academic year: 2017/18"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(217,95,2,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(217,95,2,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "State-funded AP school",
+            "legendgroup": "State-funded AP school",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              1.55,
+              1.4399999999999999,
+              1.3100000000000001,
+              1.26,
+              1.2,
+              1.1399999999999999
+            ],
+            "text": [
+              "% of pupils: 1.55<br />School type: State-funded special school<br />Academic year: 2022/23",
+              "% of pupils: 1.44<br />School type: State-funded special school<br />Academic year: 2021/22",
+              "% of pupils: 1.31<br />School type: State-funded special school<br />Academic year: 2020/21",
+              "% of pupils: 1.26<br />School type: State-funded special school<br />Academic year: 2019/20",
+              "% of pupils: 1.2<br />School type: State-funded special school<br />Academic year: 2018/19",
+              "% of pupils: 1.14<br />School type: State-funded special school<br />Academic year: 2017/18"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(117,112,179,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(117,112,179,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "State-funded special school",
+            "legendgroup": "State-funded special school",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              5.0499999999999998,
+              4.8700000000000001,
+              4.7199999999999998,
+              4.5700000000000003,
+              4.5700000000000003,
+              4.6200000000000001
+            ],
+            "text": [
+              "% of pupils: 5.05<br />School type: Independent school<br />Academic year: 2017/18",
+              "% of pupils: 4.87<br />School type: Independent school<br />Academic year: 2018/19",
+              "% of pupils: 4.72<br />School type: Independent school<br />Academic year: 2019/20",
+              "% of pupils: 4.57<br />School type: Independent school<br />Academic year: 2020/21",
+              "% of pupils: 4.57<br />School type: Independent school<br />Academic year: 2021/22",
+              "% of pupils: 4.62<br />School type: Independent school<br />Academic year: 2022/23"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(27,158,119,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Independent school",
+            "legendgroup": "Independent school",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              0.31,
+              0.31,
+              0.31,
+              0.29999999999999999,
+              0.26000000000000001,
+              0.28000000000000003
+            ],
+            "text": [
+              "% of pupils: 0.31<br />School type: State-funded AP school<br />Academic year: 2017/18",
+              "% of pupils: 0.31<br />School type: State-funded AP school<br />Academic year: 2018/19",
+              "% of pupils: 0.31<br />School type: State-funded AP school<br />Academic year: 2019/20",
+              "% of pupils: 0.3<br />School type: State-funded AP school<br />Academic year: 2020/21",
+              "% of pupils: 0.26<br />School type: State-funded AP school<br />Academic year: 2021/22",
+              "% of pupils: 0.28<br />School type: State-funded AP school<br />Academic year: 2022/23"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(217,95,2,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "State-funded AP school",
+            "legendgroup": "State-funded AP school",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "y": [
+              1.1399999999999999,
+              1.2,
+              1.26,
+              1.3100000000000001,
+              1.4399999999999999,
+              1.55
+            ],
+            "text": [
+              "% of pupils: 1.14<br />School type: State-funded special school<br />Academic year: 2017/18",
+              "% of pupils: 1.2<br />School type: State-funded special school<br />Academic year: 2018/19",
+              "% of pupils: 1.26<br />School type: State-funded special school<br />Academic year: 2019/20",
+              "% of pupils: 1.31<br />School type: State-funded special school<br />Academic year: 2020/21",
+              "% of pupils: 1.44<br />School type: State-funded special school<br />Academic year: 2021/22",
+              "% of pupils: 1.55<br />School type: State-funded special school<br />Academic year: 2022/23"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(117,112,179,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "State-funded special school",
+            "legendgroup": "State-funded special school",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 28.559568285595674
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              6.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22",
+              "2022/23"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              3.9999999999999996,
+              5,
+              6
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2017/18",
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22",
+              "2022/23"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.2525,
+              5.3025000000000002
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "tickvals": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of all pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "School type",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    }
   }
 }

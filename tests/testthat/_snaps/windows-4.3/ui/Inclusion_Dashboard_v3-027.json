@@ -1,35 +1,36 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
-    "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "ccg_choice": "NHS North Central London CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
     "ks4_destinations_la_type_filter": "Employment",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
-    "ks4_destinations_reg_type_filter": "Employment",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
     "la_choice": "Camden",
     "level_choice": "Regions",
-    "link_to_la_dashboard": 0,
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
-    "navlistPanel": "England and Regions",
-    "nhs_region_choice": "Midlands",
+    "navlistPanel": "Local Areas",
+    "nhs_region_choice": "London",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
     "percent_pupils_ehcp_reg_filter": "EHC plan",
@@ -37,16 +38,513 @@
     "provider_types_la_time_filter": "all pupils",
     "provider_types_reg_bench_filter": "all pupils",
     "provider_types_reg_time_filter": "all pupils",
-    "region_choice": "East Midlands",
+    "region_choice": "London",
     "remove": 0,
     "tabsetpanels_la": "Experiences",
-    "tabsetpanels_reg": "Experiences"
+    "tabsetpanels_reg": "Outcomes"
   },
   "output": {
-    "absence_reg_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> SEN Status <\/th> <th style='text-align: right;'> Overall absence % <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2021/22 <\/td> <td> London <\/td> <td> All SEN <\/td> <td align=\"right\"> 8.68 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> North West <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.06 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> England <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.25 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.36 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> North East <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.40 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> West Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.41 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East of England <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.53 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> Yorkshire and The Humber <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.57 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> South East <\/td> <td> All SEN <\/td> <td align=\"right\"> 10.61 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> South West <\/td> <td> All SEN <\/td> <td align=\"right\"> 11.22 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "autism_nat_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Month <\/th> <th style='text-align: left;'> Provider <\/th> <th style='text-align: left;'> Age group <\/th> <th style='text-align: left;'> % with first appointment\n after more than 13 weeks <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> June 2023 <\/td> <td> HUMBER TEACHING NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 3 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> THE RETREAT <\/td> <td> Age: Under 10 <\/td> <td> 6 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> MANCHESTER UNIVERSITY NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 7 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NORTH EAST LONDON NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 7 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> CORNWALL PARTNERSHIP NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 7 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NORTH STAFFORDSHIRE COMBINED HEALTHCARE NHST <\/td> <td> Age: Under 10 <\/td> <td> 8 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> ROTHERHAM DONCASTER &amp; SOUTH HUMBER NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 8 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> GLOUCESTERSHIRE HEALTH &amp; CARE NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 9 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SW COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 9 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> BERKSHIRE HEALTHCARE NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 12 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> LANCASHIRE &amp; SOUTH CUMBRIA NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 13 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SW YORKSHIRE PARTNERSHIP NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 13 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NORFOLK COMMUNITY HEALTH &amp; CARE NHST <\/td> <td> Age: Under 10 <\/td> <td> 13 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NAVIGO HEALTH &amp; SOCIAL CARE CIC <\/td> <td> Age: Under 10 <\/td> <td> 14 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SOUTH LONDON &amp; MAUDSLEY NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 15 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SURREY &amp; BORDERS PARTNERSHIP NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 17 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> COVENTRY &amp; WARWICKSHIRE PARTNERSHIP NHST <\/td> <td> Age: Under 10 <\/td> <td> 18 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SOUTH EAST COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 18 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NORTH WEST COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 19 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> BIRMINGHAM COMMUNITY HEALTHCARE NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 20 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SW LONDON &amp; ST GEORGE'S MENTAL HEALTH NHST <\/td> <td> Age: Under 10 <\/td> <td> 21 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NORTH EAST &amp; YORKSHIRE COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 21 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> People aged under 10 <\/td> <td> Age: Under 10 <\/td> <td> 22 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> MIDLANDS PARTNERSHIP NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 22 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> KENT COMMUNITY HEALTH NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 24 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> BRADFORD DISTRICT CARE NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 24 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> MIDLANDS COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 25 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> LEEDS COMMUNITY HEALTHCARE NHST <\/td> <td> Age: Under 10 <\/td> <td> 26 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> TEES, ESK &amp; WEAR VALLEYS NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 27 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> CUMBRIA, NORTHUMBERLAND, TYNE &amp; WEAR NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 27 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> LONDON COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 27 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> CENTRAL &amp; NORTH WEST LONDON NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 33 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> EAST OF ENGLAND COMMISSIONING REGION <\/td> <td> Age: Under 10 <\/td> <td> 35 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> BLACK COUNTRY HEALTHCARE NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 39 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> BIRMINGHAM &amp; SOLIHULL MENTAL HEALTH NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 42 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SUSSEX PARTNERSHIP NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 45 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> ALDER HEY CHILDREN'S NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 46 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> CHESHIRE &amp; WIRRAL PARTNERSHIP NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 46 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> WEST SUFFOLK NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 49 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> GIPSIL LTD <\/td> <td> Age: Under 10 <\/td> <td> 50 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> CAMBRIDGESHIRE &amp; PETERBOROUGH NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 50 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> WIRRAL UNIVERSITY TEACHING HOSPITAL NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 51 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> WHITTINGTON HEALTH NHST <\/td> <td> Age: Under 10 <\/td> <td> 52 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> DORSET HEALTHCARE UNIVERSITY NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 56 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> SHEFFIELD CHILDREN'S NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 57 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NORTHUMBRIA HEALTHCARE NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 57 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> HERTFORDSHIRE PARTNERSHIP UNIVERSITY NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 64 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> LIVEWELL SOUTHWEST <\/td> <td> Age: Under 10 <\/td> <td> 65 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> WEST LONDON NHST <\/td> <td> Age: Under 10 <\/td> <td> 65 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> NOTTINGHAM UNIVERSITY HOSPITALS NHST <\/td> <td> Age: Under 10 <\/td> <td> 83 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> GREATER MANCHESTER MENTAL HEALTH NHS FT <\/td> <td> Age: Under 10 <\/td> <td> 85 <\/td> <\/tr>\n  <tr> <td> June 2023 <\/td> <td> HERTFORDSHIRE COMMUNITY NHST <\/td> <td> Age: Under 10 <\/td> <td> 90 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "ks4_destinations_reg_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> Destination <\/th> <th style='text-align: right;'> % of pupils <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Unknown <\/td> <td align=\"right\"> 2.40 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Unknown <\/td> <td align=\"right\"> 2.40 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Unknown <\/td> <td align=\"right\"> 2.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Unknown <\/td> <td align=\"right\"> 2.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Unknown <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Unknown <\/td> <td align=\"right\"> 1.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Unknown <\/td> <td align=\"right\"> 1.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Unknown <\/td> <td align=\"right\"> 1.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Unknown <\/td> <td align=\"right\"> 1.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Unknown <\/td> <td align=\"right\"> 1.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Unknown <\/td> <td align=\"right\"> 1.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Not sustained <\/td> <td align=\"right\"> 11.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Not sustained <\/td> <td align=\"right\"> 10.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Not sustained <\/td> <td align=\"right\"> 9.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Not sustained <\/td> <td align=\"right\"> 9.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Not sustained <\/td> <td align=\"right\"> 9.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Not sustained <\/td> <td align=\"right\"> 8.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Not sustained <\/td> <td align=\"right\"> 7.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Not sustained <\/td> <td align=\"right\"> 7.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Not sustained <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Not sustained <\/td> <td align=\"right\"> 6.00 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Not sustained <\/td> <td align=\"right\"> 5.60 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 3.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 2.60 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 2.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 2.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 2.00 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 1.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 1.60 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 0.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 0.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 0.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Employment <\/td> <td align=\"right\"> 3.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Employment <\/td> <td align=\"right\"> 3.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Employment <\/td> <td align=\"right\"> 3.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Employment <\/td> <td align=\"right\"> 3.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Employment <\/td> <td align=\"right\"> 3.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Employment <\/td> <td align=\"right\"> 3.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Employment <\/td> <td align=\"right\"> 2.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Employment <\/td> <td align=\"right\"> 2.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Employment <\/td> <td align=\"right\"> 1.40 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Employment <\/td> <td align=\"right\"> 1.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Employment <\/td> <td align=\"right\"> 0.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Education (other) <\/td> <td align=\"right\"> 10.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Education (other) <\/td> <td align=\"right\"> 10.60 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Education (other) <\/td> <td align=\"right\"> 10.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Education (other) <\/td> <td align=\"right\"> 10.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Education (other) <\/td> <td align=\"right\"> 10.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Education (other) <\/td> <td align=\"right\"> 9.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Education (other) <\/td> <td align=\"right\"> 9.00 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Education (other) <\/td> <td align=\"right\"> 8.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Education (other) <\/td> <td align=\"right\"> 8.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Education (other) <\/td> <td align=\"right\"> 7.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Education (other) <\/td> <td align=\"right\"> 7.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Further education <\/td> <td align=\"right\"> 55.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Further education <\/td> <td align=\"right\"> 55.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Further education <\/td> <td align=\"right\"> 55.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Further education <\/td> <td align=\"right\"> 54.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Further education <\/td> <td align=\"right\"> 53.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Further education <\/td> <td align=\"right\"> 51.60 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Further education <\/td> <td align=\"right\"> 51.60 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Further education <\/td> <td align=\"right\"> 47.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Further education <\/td> <td align=\"right\"> 41.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Further education <\/td> <td align=\"right\"> 39.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Further education <\/td> <td align=\"right\"> 35.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> School sixth form <\/td> <td align=\"right\"> 32.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> School sixth form <\/td> <td align=\"right\"> 31.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> School sixth form <\/td> <td align=\"right\"> 30.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> School sixth form <\/td> <td align=\"right\"> 19.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> School sixth form <\/td> <td align=\"right\"> 18.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> School sixth form <\/td> <td align=\"right\"> 17.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> School sixth form <\/td> <td align=\"right\"> 15.40 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> School sixth form <\/td> <td align=\"right\"> 13.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> School sixth form <\/td> <td align=\"right\"> 13.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> School sixth form <\/td> <td align=\"right\"> 12.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> School sixth form <\/td> <td align=\"right\"> 10.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Inner London <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 13.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> London <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 9.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North West <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 9.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South East <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 9.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Yorkshire and The Humber <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 8.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Outer London <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 7.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> West Midlands <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 4.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East of England <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 4.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 3.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> South West <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 3.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> North East <\/td> <td> Sixth form college <\/td> <td align=\"right\"> 2.90 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "timeliness_reg_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> % of EHCPs issued within 20 weeks <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2022 <\/td> <td> North West <\/td> <td> 62.7 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> Yorkshire and The Humber <\/td> <td> 62.6 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> North East <\/td> <td> 57.8 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> London <\/td> <td> 54.7 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> West Midlands <\/td> <td> 50.1 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> South East <\/td> <td> 45.8 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> South West <\/td> <td> 35.2 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> East of England <\/td> <td> 32.4 <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> East Midlands <\/td> <td> 32.1 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "tribunals_reg_bench_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> Appeal Rate <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2022 <\/td> <td> North West <\/td> <td> 1.35% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> Yorkshire and The Humber <\/td> <td> 1.5% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> North East <\/td> <td> 1.71% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> London <\/td> <td> 1.82% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> England <\/td> <td> 2.33% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> South West <\/td> <td> 2.47% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> East of England <\/td> <td> 2.49% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> West Midlands <\/td> <td> 2.61% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> East Midlands <\/td> <td> 2.87% <\/td> <\/tr>\n  <tr> <td> 2022 <\/td> <td> South East <\/td> <td> 3.56% <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "ks4_destinations_la_type": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              1.3,
+              1.3999999999999999,
+              0,
+              1.3999999999999999
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 1.3<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2019/20<br />% of pupils: 1.4<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2020/21<br />% of pupils: 0<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2021/22<br />% of pupils: 1.4<br />Characteristic: EHC plan or Statement"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "EHC plan or Statement",
+            "legendgroup": "EHC plan or Statement",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              0.90000000000000002,
+              2,
+              0.80000000000000004,
+              1.7
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 0.9<br />Characteristic: Identified SEN",
+              "Academic year: 2019/20<br />% of pupils: 2<br />Characteristic: Identified SEN",
+              "Academic year: 2020/21<br />% of pupils: 0.8<br />Characteristic: Identified SEN",
+              "Academic year: 2021/22<br />% of pupils: 1.7<br />Characteristic: Identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Identified SEN",
+            "legendgroup": "Identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              1.1000000000000001,
+              1.1000000000000001,
+              0.5,
+              1
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 1.1<br />Characteristic: No identified SEN",
+              "Academic year: 2019/20<br />% of pupils: 1.1<br />Characteristic: No identified SEN",
+              "Academic year: 2020/21<br />% of pupils: 0.5<br />Characteristic: No identified SEN",
+              "Academic year: 2021/22<br />% of pupils: 1<br />Characteristic: No identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(244,106,37,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(244,106,37,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "No identified SEN",
+            "legendgroup": "No identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(244,106,37,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              0.69999999999999996,
+              2.2999999999999998,
+              1.3,
+              1.8
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 0.7<br />Characteristic: SEN support",
+              "Academic year: 2019/20<br />% of pupils: 2.3<br />Characteristic: SEN support",
+              "Academic year: 2020/21<br />% of pupils: 1.3<br />Characteristic: SEN support",
+              "Academic year: 2021/22<br />% of pupils: 1.8<br />Characteristic: SEN support"
+            ],
+            "type": "scatter",
+            "mode": "markers+lines",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 39.186384391863839
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              4.5999999999999996
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Academic year",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -5.1000000000000005,
+              107.09999999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "tickvals": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    }
   }
 }

@@ -52,19 +52,24 @@ support_links <- function() {
         column(
           width = 12,
           h2("Give us feedback"),
-          "This dashboard is a new service that we are developing. During the prototyping and user-testing phase, if you have any feedback or suggestions for improvements, please send them to ",
+          "This dashboard is a new service that we will continue to develop with your feedback. Please send any feedback or suggestions for improvements to ",
           a(
-            href = "mailto:tanya.harn@education.gov.uk",
-            "Tanya Harn", .noWS = c("after")
-          ), ".", br(),
+            href = "mailto:sendap.dashboard@education.gov.uk",
+            "sendap.dashboard@education.gov.uk", .noWS = c("after")
+          ), ".",
+          br(),
           "If you spot any errors or bugs while using this dashboard, please screenshot and email them to ",
-          a(href = "mailto:stuart.fraser@education.gov.uk", "Stuart Fraser", .noWS = c("after")), ".",
+          a(
+            href = "mailto:sendap.dashboard@education.gov.uk",
+            "sendap.dashboard@education.gov.uk", .noWS = c("after")
+          ), ".",
           br(),
           h2("Find more information on the data"),
           "The majority of the data used to produce the dashboard, along with methodological information can be found on ",
           a(href = "https://explore-education-statistics.service.gov.uk/", "Explore Education Statistics", .noWS = c("after"), target = "_blank"),
           ".",
-          "Some non-education data is also used; including healthcare information from NHS England. Each graph or table has its data source linked in the right-hand side panel.",
+          "Some non-education data is also used; including healthcare information from NHS England. Each graph or table has its data source linked in the right-hand side panel. We are also pleased to make available",
+          a(href = "not a link yet", "a more comprehensive list of all metrics and data sources."),
           br(),
           h2("Contact us"),
           "If you have questions about the dashboard or data within it, please contact us at ",

@@ -40,7 +40,7 @@ summary_metrics %>%
     x = mean_rank,
     xmin = min_rank,
     xmax = max_rank,
-    y = fct_reorder(metric, as.numeric(Theme)),
+    y = fct_reorder(metric, -as.numeric(Theme)),
     label = metric,
     colour = Theme,
     fill = Theme,
@@ -61,7 +61,7 @@ summary_metrics %>%
   # Circles
   geom_point_interactive(
     shape = 16,
-    size = 10.5, hover_nearest = TRUE
+    size = 10, hover_nearest = TRUE
   ) +
   geom_linerange_interactive(linewidth = 1) +
   # Text with rank numbers to put on the circles
