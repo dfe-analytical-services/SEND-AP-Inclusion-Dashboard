@@ -16,6 +16,7 @@ shhh(library(tools))
 shhh(library(testthat))
 shhh(library(shinytest2))
 shhh(library(shinydashboard))
+shhh(library(bslib))
 shhh(library(shinyWidgets))
 shhh(library(shinyGovstyle))
 shhh(library(plotly))
@@ -32,6 +33,9 @@ shhh(library(stringr))
 shhh(library(fresh))
 shhh(library(shinyalert))
 shhh(library(shinyscroll))
+shhh(library(scales))
+
+
 # shhh(library(shinya11y)) #accessibility testing only in local version
 # shhh(library(rlang))
 
@@ -58,8 +62,11 @@ move_here <- reactiveVal("")
 move_target <- reactiveVal("")
 this_tab <- reactiveVal("")
 trigger <- reactiveVal(FALSE)
+no_dest_data <- reactiveVal(FALSE)
 
 useShinyjs() # Activates shinyjs which allows toggling of visibility for some objects
+
+enableBookmarking("url") # "Bookmarking" means storing user inputs in the URL
 
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
@@ -96,6 +103,13 @@ theme_update(
 # Default height of sparklines in pixels
 sparkline_height <- 170
 
+# Define months in text so they can be ordered in tables (R won't allow a date without a day, and if you order
+# the text DT reorders it alphabetically)
+
+month_order <- seq.Date(ymd("2017-01-01"), floor_date(Sys.Date(), "month"), "month") %>%
+  format("%b %Y")
+
+month_order <- factor(month_order, levels = month_order)
 # Colours  ---------------------------------------------------------------------------------
 
 # set colours for native R
@@ -106,39 +120,61 @@ af_orange <- "#F46A25" # No SEN
 af_grey <- "#3D3D3D" # My area
 af_purple <- "#A285D1" # Other areas
 
-af_palette <- c(af_darkblue, af_darkblue, af_turquoise, af_darkpink, af_darkpink, af_orange, af_orange, af_grey, af_purple, "#667585", "#9A8574")
+af_palette <- c(af_darkblue, af_darkblue, af_darkblue, af_darkblue, af_turquoise, af_turquoise, af_turquoise, af_darkpink, af_darkpink, af_darkpink, af_darkpink, af_orange, af_orange, af_grey, af_purple, "#667585", "#9A8574", af_darkblue)
 
-names(af_palette) <- c("EHC plan", "EHC plan or Statement", "SEN support", "All SEN", "Identified SEN", "No SEN", "No identified SEN", "My area", "Other areas", "Identified LLDD", "No identified LLDD")
+names(af_palette) <- c("EHC plan", "EHC plan or Statement", "Compulsory schooling age", "CINO at 31 March", "Above compulsory schooling age", "SEN support", "CLA 12 months at 31 March", "All SEN", "Identified SEN", "Identified SEN (mainstream)", "CPPO at 31 March", "No SEN", "No identified SEN", "My area", "Other areas", "Identified LLDD (mainstream)", "No identified LLDD", "Specialist provision")
 af_gradient <- c("#0b2841", "#0e3657", "#12436d", "#41698a", "#718ea7")
 
 # set same for summary boxes because shinydashboard doesn't natively allow user-defined colours, so have to hack the
 # defaults using the fresh package
 dfe_colours <- create_theme(
   adminlte_color(
-    light_blue = af_turquoise,
+    green = "#00857c", # was af_turquoise but not enough contrast for white text
     blue = af_darkblue,
     red = af_darkpink,
     orange = af_orange,
     black = af_grey,
-    purple = af_purple,
-    green = "#00703C"
+    purple = "#7947b6" # was af_purple but not enough contrast for white text
   )
 )
 
-dest_1618_palette <- c(
+
+# focus_colours
+focused <- "#12436D"
+not_focused <- "#BFBFBF"
+
+
+dest_palette <- c(
   "#CC7A88", "#B33E52",
+  "#C7B8E6", "#967ACC",
+  "#E6D2B8", "#CCAA7A", "#B3823E", "#B3823E", "#7a592a",
+  "#12436D"
+)
+
+names(dest_palette) <- c("Unknown", "Not sustained", "Apprenticeship", "Employment", "Education (other)", "Further education", "Higher education", "School sixth form", "Sixth form college", "Overall sustained")
+
+ap_palette <- c(
+  "#12436d", "#B33E52",
   "#C7B8E6", "#967ACC",
   "#E6D2B8", "#CCAA7A", "#B3823E", "#7a592a"
 )
-dest_ks4_palette <- c(
-  "#CC7A88", "#B33E52",
-  "#C7B8E6", "#967ACC",
-  "#E6D2B8", "#CCAA7A", "#B3823E", "#7a592a"
+
+ofsted_palette <- c("#73a773", "red", "red", "#73a773", "orange", "#73a773", "red", "white")
+names(ofsted_palette) <- c(
+  "No Written Statement of Action (previous framework)",
+  "Written Statement of Action (previous framework); not revisited",
+  "WSoA (previous framework); progress not made on all weaknesses",
+  "WSoA (previous framework); progress made on all weaknesses",
+  "Inconsistent experiences and outcomes (new framework)",
+  "Typically positive experiences and outcomes (new framework)",
+  "Widespread and/or systemic failings (new framework)",
+  "Area not yet inspected"
 )
 
-ofsted_palette <- c("red", "#73a773", "#73a773", "orange", "white", "red")
+nhs_palette <- c(af_darkblue, af_turquoise, af_darkpink, af_orange)
+names(nhs_palette) <- c("Audiology", "Community Paediatric Service", "Occupational Therapy", "Speech And Language")
 
-
+char_gradient_ap <- c("#0b2841", "#12436d", "#41698a", "#718ea7", "#28A197", "black")
 
 # Input lists (LA/Regions) ---------------------------------------------------------------------------------
 

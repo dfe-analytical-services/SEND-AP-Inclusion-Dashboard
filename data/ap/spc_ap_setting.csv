@@ -1,0 +1,708 @@
+﻿time_period,time_identifier,geographic_level,country_code,country_name,region_code,region_name,new_la_code,la_name,old_la_code,setting_type,placements
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000030,Walsall,335,One on one tuition,21
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000031,Peterborough,874,Education setting with URN,111
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000008,Croydon,306,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000034,Thurrock,883,One on one tuition,42
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000019,Islington,206,Non-maintained further education college,11
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000051,Shropshire,893,Registered provider with UKPRN,3
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000027,Somerset,933,Registered provider with UKPRN,6
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000014,Haringey,309,Education setting with URN,152
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000015,Harrow,310,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000028,Staffordshire,860,Education setting with URN,699
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000031,Waltham Forest,320,Non-maintained further education college,39
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000032,Wandsworth,212,Education setting with URN,268
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000021,Stoke-on-Trent,861,Other unregistered provider,19
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000046,Isle of Wight,921,Work based placement,18
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000007,Derbyshire,830,Other unregistered provider,89
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000012,North East Lincolnshire,812,One on one tuition,32
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000016,Havering,311,Registered provider with UKPRN,9
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000030,Tower Hamlets,211,Unknown,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000005,Brent,304,One on one tuition,16
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000013,North Lincolnshire,813,Other unregistered provider,28
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000031,Wolverhampton,336,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,One on one tuition,194
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000027,Richmond upon Thames,318,One on one tuition,2
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000025,Oxfordshire,931,Education setting with URN,369
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000024,Nottinghamshire,891,Education setting with URN,385
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000037,West Berkshire,869,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000006,Halton,876,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000017,Lancashire,888,One on one tuition,54
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000059,Dorset,838,Registered provider with UKPRN,90
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000057,Northumberland,929,Education setting with URN,200
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000032,West Sussex,938,Registered provider with UKPRN,31
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000051,Shropshire,893,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000032,Bradford,380,One on one tuition,11
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000006,Halton,876,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000041,Wokingham,872,Education setting with URN,151
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000024,Sunderland,394,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,Other unregistered provider,65
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000018,Leicestershire,855,Education setting with URN,444
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000027,Somerset,933,Non-maintained further education college,32
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E10000023,North Yorkshire,815,Education setting with URN,218
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000020,Kensington and Chelsea,207,Education setting with URN,62
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000003,Manchester,352,Education setting with URN,257
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000025,South Gloucestershire,803,Education setting with URN,110
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000017,Rutland,857,One on one tuition,11
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000034,Kirklees,382,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000023,Lewisham,209,One on one tuition,42
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000026,Redbridge,317,Other unregistered provider,42
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000009,Blackpool,890,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000022,North Tyneside,392,Education setting with URN,81
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000026,Coventry,331,Other unregistered provider,6
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000030,Walsall,335,Education setting with URN,173
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000025,Oxfordshire,931,One on one tuition,8
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000016,Kent,886,Education setting with URN,1906
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000031,Peterborough,874,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000027,Somerset,933,One on one tuition,76
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000053,Isles of Scilly,420,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000051,Shropshire,893,One on one tuition,41
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000019,Sheffield,373,Education setting with URN,119
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000017,Lancashire,888,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000025,Newham,316,Education setting with URN,90
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000020,Telford and Wrekin,894,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000014,Hampshire,850,One on one tuition,118
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000036,Bracknell Forest,867,Education setting with URN,65
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,Registered provider with UKPRN,44
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000011,East Riding of Yorkshire,811,Other unregistered provider,15
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000025,Birmingham,330,Non-maintained further education college,41
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000007,Camden,202,Education setting with URN,58
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000010,Wigan,359,Education setting with URN,162
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000010,"Kingston upon Hull, City of",810,Education setting with URN,34
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000013,St. Helens,342,One on one tuition,6
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000059,Dorset,838,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000027,Torbay,880,Other unregistered provider,23
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,Non-maintained further education college,7
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,Registered provider with UKPRN,1
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000001,Hartlepool,805,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000017,Hillingdon,312,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000056,Central Bedfordshire,823,Other unregistered provider,8
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000029,Suffolk,935,Non-maintained further education college,10
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000023,Lewisham,209,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000037,Gateshead,390,Education setting with URN,150
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000005,Darlington,841,Education setting with URN,58
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000032,West Sussex,938,Education setting with URN,759
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000028,Sandwell,333,Education setting with URN,221
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000018,Leicestershire,855,Registered provider with UKPRN,72
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000015,Hertfordshire,919,One on one tuition,24
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000016,Havering,311,One on one tuition,35
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000045,Southampton,852,Non-maintained further education college,4
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000012,Essex,881,Education setting with URN,297
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,Registered provider with UKPRN,5
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000025,Birmingham,330,One on one tuition,255
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000002,Barking and Dagenham,301,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000026,Plymouth,879,Education setting with URN,59
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000006,Cumbria,909,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,Non-maintained further education college,7
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000055,Bedford,822,Education setting with URN,7
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000030,Walsall,335,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000017,Doncaster,371,Education setting with URN,301
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000015,Hertfordshire,919,Education setting with URN,370
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000032,Bradford,380,Registered provider with UKPRN,5
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,One on one tuition,33
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000021,Kingston upon Thames,314,Education setting with URN,159
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000027,Richmond upon Thames,318,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,Other unregistered provider,6
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000025,Oxfordshire,931,Registered provider with UKPRN,30
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000059,Dorset,838,One on one tuition,79
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000002,Middlesbrough,806,Other unregistered provider,34
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000005,Rochdale,354,Education setting with URN,94
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000042,Milton Keynes,826,Non-maintained further education college,23
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000027,Richmond upon Thames,318,Work based placement,7
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000001,Hartlepool,805,Education setting with URN,77
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000003,Barnet,302,Education setting with URN,139
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000007,Stockport,356,One on one tuition,23
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000051,Shropshire,893,Education setting with URN,143
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000023,Lewisham,209,Registered provider with UKPRN,6
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000007,Camden,202,One on one tuition,9
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000027,Dudley,332,Non-maintained further education college,32
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000017,Rutland,857,Registered provider with UKPRN,17
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000059,Dorset,838,Work based placement,12
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000019,Sheffield,373,One on one tuition,15
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000012,Liverpool,341,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000033,Calderdale,381,Other unregistered provider,4
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000022,Bath and North East Somerset,800,Registered provider with UKPRN,55
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000046,Isle of Wight,921,One on one tuition,41
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000047,County Durham,840,Non-maintained further education college,22
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000030,Surrey,936,Education setting with URN,1542
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000025,Newham,316,One on one tuition,17
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,Work based placement,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000024,Merton,315,One on one tuition,17
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000021,Stoke-on-Trent,861,Work based placement,40
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000018,Hounslow,313,Other unregistered provider,4
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000004,Oldham,353,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000023,Lewisham,209,Education setting with URN,445
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000003,Cambridgeshire,873,Registered provider with UKPRN,203
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000008,Croydon,306,Education setting with URN,267
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000042,Milton Keynes,826,One on one tuition,35
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000008,Devon,878,Work based placement,3
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000008,Devon,878,Other unregistered provider,57
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000047,County Durham,840,One on one tuition,5
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000018,Rotherham,372,One on one tuition,19
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000013,Gloucestershire,916,Registered provider with UKPRN,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000016,Barnsley,370,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000027,Dudley,332,One on one tuition,29
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000045,Southampton,852,One on one tuition,8
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000040,Windsor and Maidenhead,868,Non-maintained further education college,25
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000009,Blackpool,890,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000017,Lancashire,888,Education setting with URN,555
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000015,Wirral,344,One on one tuition,2
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000018,Nottingham,892,One on one tuition,17
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000034,Kirklees,382,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000032,Bradford,380,Education setting with URN,215
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000015,Derby,831,Education setting with URN,223
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000009,Trafford,358,One on one tuition,17
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000029,Solihull,334,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000002,Barking and Dagenham,301,One on one tuition,8
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000009,Blackpool,890,Work based placement,7
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000006,Cumbria,909,One on one tuition,37
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000039,Slough,871,Education setting with URN,51
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000053,Isles of Scilly,420,Education setting with URN,1
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000013,Gloucestershire,916,Other unregistered provider,46
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000029,Suffolk,935,Registered provider with UKPRN,17
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000037,West Berkshire,869,Education setting with URN,87
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000031,Waltham Forest,320,One on one tuition,36
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000012,North East Lincolnshire,812,Education setting with URN,191
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,Education setting with URN,398
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000008,Devon,878,Registered provider with UKPRN,58
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000039,Slough,871,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000006,Cumbria,909,Education setting with URN,278
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000034,Worcestershire,885,One on one tuition,129
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000005,Brent,304,Education setting with URN,190
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000016,Barnsley,370,Registered provider with UKPRN,46
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000003,Cambridgeshire,873,Other unregistered provider,37
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000045,Southampton,852,Education setting with URN,55
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000011,East Sussex,845,One on one tuition,3
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000014,York,816,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,Non-maintained further education college,12
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000015,Wirral,344,Education setting with URN,204
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000027,Dudley,332,Education setting with URN,267
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000061,North Northamptonshire,940,Education setting with URN,187
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000034,Thurrock,883,Education setting with URN,48
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000002,Bury,351,Other unregistered provider,27
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000019,Islington,206,One on one tuition,11
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000042,Milton Keynes,826,Education setting with URN,67
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000021,Newcastle upon Tyne,391,Other unregistered provider,6
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000008,Croydon,306,One on one tuition,42
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,Education setting with URN,985
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000027,Richmond upon Thames,318,Education setting with URN,175
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000029,Solihull,334,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000031,Wolverhampton,336,Non-maintained further education college,27
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000003,Cambridgeshire,873,One on one tuition,93
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000007,Stockport,356,Education setting with URN,196
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000003,Redcar and Cleveland,807,Education setting with URN,107
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000014,York,816,One on one tuition,13
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000024,Merton,315,Registered provider with UKPRN,2
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000009,Blackpool,890,One on one tuition,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000031,Waltham Forest,320,Other unregistered provider,5
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000014,Hampshire,850,Education setting with URN,1031
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000019,Islington,206,Work based placement,3
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000015,Harrow,310,Non-maintained further education college,5
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000001,City of London,201,Registered provider with UKPRN,2
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000039,Slough,871,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000029,Suffolk,935,Education setting with URN,373
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000031,Warwickshire,937,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000002,Bury,351,One on one tuition,8
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000024,North Somerset,802,One on one tuition,29
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,Education setting with URN,521
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000029,Solihull,334,One on one tuition,15
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000027,Dudley,332,Other unregistered provider,41
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000059,Dorset,838,Education setting with URN,467
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000016,Barnsley,370,Education setting with URN,266
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000018,Rotherham,372,Work based placement,7
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000010,Enfield,308,One on one tuition,42
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000025,Birmingham,330,Education setting with URN,664
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000018,Hounslow,313,Education setting with URN,215
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000046,Isle of Wight,921,Education setting with URN,83
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000027,Torbay,880,Work based placement,4
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000018,Nottingham,892,Non-maintained further education college,16
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000047,County Durham,840,Work based placement,35
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000030,Tower Hamlets,211,Education setting with URN,108
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000008,Devon,878,One on one tuition,24
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000002,Bury,351,Education setting with URN,248
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000024,Merton,315,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000033,Westminster,213,One on one tuition,6
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000006,Cumbria,909,Other unregistered provider,9
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000016,Havering,311,Education setting with URN,58
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000016,Barnsley,370,One on one tuition,15
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000036,Wakefield,384,One on one tuition,21
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000011,East Sussex,845,Education setting with URN,387
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000024,Sunderland,394,Education setting with URN,121
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000009,Trafford,358,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000029,Suffolk,935,One on one tuition,58
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000018,Rotherham,372,Non-maintained further education college,49
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000013,St. Helens,342,Education setting with URN,127
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000009,Blackpool,890,Education setting with URN,126
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000008,Croydon,306,Registered provider with UKPRN,4
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000003,Redcar and Cleveland,807,One on one tuition,5
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000029,Suffolk,935,Other unregistered provider,49
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000034,Kirklees,382,Education setting with URN,173
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000004,Oldham,353,One on one tuition,5
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000018,Hounslow,313,One on one tuition,65
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000045,Southampton,852,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000027,Somerset,933,Education setting with URN,364
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000018,Nottingham,892,Other unregistered provider,22
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000013,Gloucestershire,916,Education setting with URN,360
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000047,County Durham,840,Registered provider with UKPRN,8
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000006,Halton,876,Education setting with URN,58
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000012,Essex,881,Other unregistered provider,281
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000001,Bolton,350,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000019,Islington,206,Education setting with URN,51
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000019,Sheffield,373,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,One on one tuition,5
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,Registered provider with UKPRN,15
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000024,Nottinghamshire,891,Non-maintained further education college,13
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000032,West Sussex,938,Other unregistered provider,105
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000047,County Durham,840,Education setting with URN,155
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000031,Warwickshire,937,Education setting with URN,233
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000017,Hillingdon,312,One on one tuition,10
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000033,Calderdale,381,One on one tuition,18
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000019,Lincolnshire,925,Education setting with URN,303
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,Non-maintained further education college,6
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000034,Worcestershire,885,Education setting with URN,338
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000035,Medway,887,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000014,Hampshire,850,Other unregistered provider,4
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000040,Windsor and Maidenhead,868,Education setting with URN,118
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000013,St. Helens,342,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000011,East Riding of Yorkshire,811,Education setting with URN,75
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000033,Southend-on-Sea,882,Registered provider with UKPRN,8
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000025,Newham,316,Other unregistered provider,10
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000021,Kingston upon Thames,314,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,Non-maintained further education college,5
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000007,Stockport,356,Other unregistered provider,9
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000031,Waltham Forest,320,Education setting with URN,140
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,Registered provider with UKPRN,24
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000004,Bexley,303,Education setting with URN,90
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000017,Doncaster,371,Non-maintained further education college,32
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000052,Cornwall,908,One on one tuition,32
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000009,Trafford,358,Education setting with URN,114
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000012,Liverpool,341,Education setting with URN,159
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000011,Greenwich,203,One on one tuition,10
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000002,Barking and Dagenham,301,Education setting with URN,54
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000011,East Riding of Yorkshire,811,One on one tuition,112
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000015,Harrow,310,Registered provider with UKPRN,1
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000018,Nottingham,892,Education setting with URN,66
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,One on one tuition,12
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000051,Shropshire,893,Other unregistered provider,8
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000050,Cheshire West and Chester,896,Non-maintained further education college,3
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000036,Wakefield,384,Education setting with URN,127
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000027,Somerset,933,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000006,Bromley,305,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000019,Lincolnshire,925,One on one tuition,91
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000026,Redbridge,317,One on one tuition,26
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000005,Rochdale,354,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000013,Hammersmith and Fulham,205,Non-maintained further education college,30
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000001,Hartlepool,805,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000013,North Lincolnshire,813,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000027,Torbay,880,Education setting with URN,47
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000024,Sunderland,394,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000031,Warwickshire,937,One on one tuition,29
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000038,Reading,870,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000018,Rotherham,372,Education setting with URN,130
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000056,Central Bedfordshire,823,Education setting with URN,5
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000015,Hertfordshire,919,Other unregistered provider,19
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000016,Havering,311,Other unregistered provider,15
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000029,Sutton,319,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000024,Merton,315,Education setting with URN,350
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000004,Bexley,303,One on one tuition,1
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000020,Telford and Wrekin,894,One on one tuition,12
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000030,Swindon,866,Education setting with URN,35
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,Work based placement,5
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000006,Bromley,305,One on one tuition,66
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000011,Greenwich,203,Work based placement,5
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000004,Oldham,353,Education setting with URN,79
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000025,Oxfordshire,931,Other unregistered provider,5
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000056,Central Bedfordshire,823,Registered provider with UKPRN,92
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000016,Leicester,856,One on one tuition,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,One on one tuition,6
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000031,Peterborough,874,Other unregistered provider,5
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000037,Gateshead,390,Non-maintained further education college,11
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,Registered provider with UKPRN,39
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000038,Reading,870,One on one tuition,14
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000035,Medway,887,Education setting with URN,294
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000002,Middlesbrough,806,Registered provider with UKPRN,44
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000007,Derbyshire,830,Education setting with URN,259
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000013,North Lincolnshire,813,One on one tuition,2
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000015,Derby,831,Other unregistered provider,5
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000001,Bolton,350,Non-maintained further education college,21
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000028,Southwark,210,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000026,Coventry,331,One on one tuition,14
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000008,Devon,878,Education setting with URN,938
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000033,Southend-on-Sea,882,One on one tuition,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000009,Ealing,307,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000033,Westminster,213,Education setting with URN,86
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000015,Harrow,310,Education setting with URN,171
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E10000023,North Yorkshire,815,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000033,Calderdale,381,Non-maintained further education college,5
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000017,Rutland,857,Other unregistered provider,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000014,Haringey,309,Other unregistered provider,22
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000021,Stoke-on-Trent,861,Education setting with URN,444
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000015,Harrow,310,One on one tuition,4
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000019,Lincolnshire,925,Registered provider with UKPRN,1
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,Other unregistered provider,15
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000057,Northumberland,929,Non-maintained further education college,7
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000024,North Somerset,802,Education setting with URN,136
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000021,Stoke-on-Trent,861,One on one tuition,20
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000001,Bolton,350,One on one tuition,5
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000052,Cornwall,908,Registered provider with UKPRN,22
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000022,North Tyneside,392,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000011,East Riding of Yorkshire,811,Registered provider with UKPRN,1
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000021,Newcastle upon Tyne,391,Education setting with URN,149
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000034,Thurrock,883,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000028,Southwark,210,One on one tuition,105
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000029,Solihull,334,Education setting with URN,168
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000031,Wolverhampton,336,One on one tuition,7
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000018,Leicestershire,855,Other unregistered provider,42
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000003,Cambridgeshire,873,Education setting with URN,273
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,Other unregistered provider,5
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000033,Calderdale,381,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000035,Medway,887,One on one tuition,68
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,Education setting with URN,142
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000014,York,816,Education setting with URN,15
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000031,Warwickshire,937,Registered provider with UKPRN,53
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000012,North East Lincolnshire,812,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000010,Enfield,308,Education setting with URN,211
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000005,Brent,304,Other unregistered provider,150
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000007,Warrington,877,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000035,Leeds,383,Education setting with URN,266
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000028,Sandwell,333,Other unregistered provider,16
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000013,Hammersmith and Fulham,205,Registered provider with UKPRN,4
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000014,Sefton,343,Education setting with URN,203
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000043,Brighton and Hove,846,One on one tuition,7
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000020,Telford and Wrekin,894,Education setting with URN,93
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000028,Staffordshire,860,One on one tuition,54
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000007,Warrington,877,Education setting with URN,93
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000015,Derby,831,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000032,Wandsworth,212,One on one tuition,29
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000025,South Gloucestershire,803,One on one tuition,19
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000023,"Bristol, City of",801,Other unregistered provider,12
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000037,Gateshead,390,Other unregistered provider,15
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000030,Surrey,936,Registered provider with UKPRN,51
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000011,Knowsley,340,Non-maintained further education college,116
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000010,Wigan,359,Other unregistered provider,22
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000058,"Bournemouth, Christchurch and Poole",839,Registered provider with UKPRN,24
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000026,Redbridge,317,Education setting with URN,67
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000029,Sutton,319,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000054,Wiltshire,865,Education setting with URN,268
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000057,Northumberland,929,One on one tuition,30
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,Education setting with URN,156
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000013,Hammersmith and Fulham,205,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000004,Stockton-on-Tees,808,Education setting with URN,131
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000055,Bedford,822,Registered provider with UKPRN,70
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000041,Wokingham,872,One on one tuition,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000011,Greenwich,203,Education setting with URN,134
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000052,Cornwall,908,Education setting with URN,271
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000016,Kent,886,One on one tuition,251
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000003,Barnet,302,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000001,Hartlepool,805,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000036,Bracknell Forest,867,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000054,Wiltshire,865,Registered provider with UKPRN,15
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000044,Portsmouth,851,Education setting with URN,30
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000010,"Kingston upon Hull, City of",810,Work based placement,33
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000050,Cheshire West and Chester,896,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000030,Surrey,936,Other unregistered provider,23
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000058,"Bournemouth, Christchurch and Poole",839,Other unregistered provider,63
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000008,Blackburn with Darwen,889,Education setting with URN,68
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000054,Wiltshire,865,One on one tuition,28
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000033,Calderdale,381,Education setting with URN,105
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,One on one tuition,28
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000028,Sandwell,333,Registered provider with UKPRN,43
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000050,Cheshire West and Chester,896,Work based placement,9
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000021,Kingston upon Thames,314,Work based placement,9
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000017,Hillingdon,312,Education setting with URN,227
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000054,Wiltshire,865,Other unregistered provider,35
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000014,Hampshire,850,Non-maintained further education college,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000017,Doncaster,371,Work based placement,4
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,Other unregistered provider,1
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,Work based placement,13
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,Education setting with URN,205
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000002,Middlesbrough,806,Education setting with URN,56
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000010,Wigan,359,Non-maintained further education college,18
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000024,Nottinghamshire,891,One on one tuition,72
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000055,Bedford,822,Other unregistered provider,89
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000035,Leeds,383,One on one tuition,25
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000043,Brighton and Hove,846,Education setting with URN,128
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000023,South Tyneside,393,Education setting with URN,73
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000024,Nottinghamshire,891,Other unregistered provider,516
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000062,West Northamptonshire,941,Education setting with URN,202
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000031,Wolverhampton,336,Education setting with URN,165
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000019,"Herefordshire, County of",884,Education setting with URN,86
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000010,Wigan,359,One on one tuition,8
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000043,Brighton and Hove,846,Registered provider with UKPRN,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000013,Hammersmith and Fulham,205,One on one tuition,6
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000029,Sutton,319,Education setting with URN,122
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000024,Nottinghamshire,891,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000009,Ealing,307,Education setting with URN,312
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000055,Bedford,822,One on one tuition,5
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000032,Wandsworth,212,Other unregistered provider,7
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000017,Doncaster,371,One on one tuition,40
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000028,Staffordshire,860,Other unregistered provider,2
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000021,Kingston upon Thames,314,One on one tuition,11
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000028,Southwark,210,Education setting with URN,203
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000001,Bolton,350,Education setting with URN,205
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000023,"Bristol, City of",801,Education setting with URN,162
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000030,Surrey,936,One on one tuition,120
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000025,South Gloucestershire,803,Work based placement,2
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000050,Cheshire West and Chester,896,One on one tuition,4
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000012,North East Lincolnshire,812,Non-maintained further education college,3
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000058,"Bournemouth, Christchurch and Poole",839,One on one tuition,24
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000016,Kent,886,Other unregistered provider,74
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000058,"Bournemouth, Christchurch and Poole",839,Education setting with URN,399
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,Registered provider with UKPRN,13
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000026,Coventry,331,Education setting with URN,103
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,Non-maintained further education college,8
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000033,Southend-on-Sea,882,Education setting with URN,30
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E10000023,North Yorkshire,815,One on one tuition,10
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000020,Kensington and Chelsea,207,One on one tuition,8
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,Education setting with URN,232
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000030,Walsall,335,Non-maintained further education college,10
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000009,Ealing,307,One on one tuition,27
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000016,Kent,886,Work based placement,9
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E10000023,North Yorkshire,815,Other unregistered provider,23
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000025,South Gloucestershire,803,Non-maintained further education college,25
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000035,Leeds,383,Registered provider with UKPRN,4
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000038,Reading,870,Education setting with URN,77
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000029,Sutton,319,One on one tuition,22
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000009,Ealing,307,Other unregistered provider,3
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000013,Hammersmith and Fulham,205,Education setting with URN,84
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000036,Bracknell Forest,867,One on one tuition,3
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000013,North Lincolnshire,813,Education setting with URN,134
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000057,Northumberland,929,Work based placement,1
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000057,Northumberland,929,Other unregistered provider,241
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000007,Warrington,877,Registered provider with UKPRN,1
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000006,Bromley,305,Education setting with URN,322
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000041,Wokingham,872,Other unregistered provider,18
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000050,Cheshire West and Chester,896,Education setting with URN,118
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000019,"Herefordshire, County of",884,One on one tuition,4
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000023,Lewisham,209,Non-maintained further education college,1
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000016,Leicester,856,Education setting with URN,91
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000019,Lincolnshire,925,Total,395
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000006,Salford,355,Total,258
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000026,Plymouth,879,Total,59
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000016,Leicester,856,Total,93
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000023,Lewisham,209,Total,495
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000036,Wakefield,384,Total,148
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000024,North Somerset,802,Total,165
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000060,Buckinghamshire,825,Total,280
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000015,Hertfordshire,919,Total,413
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000052,Cornwall,908,Total,325
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000024,Merton,315,Total,370
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000014,York,816,Total,29
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000015,Wirral,344,Total,206
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000001,City of London,201,Total,2
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000054,Wiltshire,865,Total,346
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000055,Bedford,822,Total,171
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000002,Barking and Dagenham,301,Total,63
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000034,Worcestershire,885,Total,467
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000001,Hartlepool,805,Total,82
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000030,Walsall,335,Total,206
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000033,Calderdale,381,Total,134
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000032,Wandsworth,212,Total,304
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000006,Halton,876,Total,60
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000009,Trafford,358,Total,133
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000013,Gloucestershire,916,Total,408
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000027,Richmond upon Thames,318,Total,185
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000013,North Lincolnshire,813,Total,166
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000037,Gateshead,390,Total,176
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000040,Windsor and Maidenhead,868,Total,143
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000011,East Sussex,845,Total,390
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000025,Oxfordshire,931,Total,412
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000050,Cheshire West and Chester,896,Total,137
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000005,Brent,304,Total,356
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000033,Southend-on-Sea,882,Total,42
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000058,"Bournemouth, Christchurch and Poole",839,Total,510
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000012,Liverpool,341,Total,161
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000017,Lancashire,888,Total,611
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000033,Westminster,213,Total,92
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000007,Warrington,877,Total,95
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000004,Stockton-on-Tees,808,Total,131
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000015,Derby,831,Total,229
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000010,Wigan,359,Total,210
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000004,Oldham,353,Total,87
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000031,Wolverhampton,336,Total,202
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000025,Birmingham,330,Total,960
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000009,Ealing,307,Total,344
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000034,Kirklees,382,Total,175
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000028,Staffordshire,860,Total,755
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000039,Slough,871,Total,55
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000018,Hounslow,313,Total,284
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000029,Sutton,319,Total,146
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000016,Barnsley,370,Total,328
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000024,Nottinghamshire,891,Total,987
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000001,Bolton,350,Total,233
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000020,Kensington and Chelsea,207,Total,70
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000034,Thurrock,883,Total,91
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000061,North Northamptonshire,940,Total,187
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000013,St. Helens,342,Total,134
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000047,County Durham,840,Total,225
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000023,South Tyneside,393,Total,73
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000007,Stockport,356,Total,228
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000020,Norfolk,926,Total,1247
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000027,Torbay,880,Total,74
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000044,Portsmouth,851,Total,30
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000015,Harrow,310,Total,183
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000028,Southwark,210,Total,310
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000028,Sandwell,333,Total,280
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000031,Peterborough,874,Total,117
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000019,Sheffield,373,Total,135
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000025,Newham,316,Total,117
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000017,Rutland,857,Total,32
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000011,East Riding of Yorkshire,811,Total,203
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E10000031,Warwickshire,937,Total,317
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000012,Hackney,204,Total,409
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000022,Bath and North East Somerset,800,Total,55
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000020,Telford and Wrekin,894,Total,106
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000002,Middlesbrough,806,Total,134
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000030,Tower Hamlets,211,Total,112
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000006,Bromley,305,Total,389
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000045,Southampton,852,Total,68
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000016,Havering,311,Total,117
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000029,Solihull,334,Total,186
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000008,Tameside,357,Total,217
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000026,Redbridge,317,Total,135
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000053,Isles of Scilly,420,Total,2
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000012,North East Lincolnshire,812,Total,228
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000021,Newcastle upon Tyne,391,Total,155
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000008,Blackburn with Darwen,889,Total,68
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000032,West Sussex,938,Total,895
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000013,Hammersmith and Fulham,205,Total,126
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000037,West Berkshire,869,Total,88
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000043,Brighton and Hove,846,Total,139
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000049,Cheshire East,895,Total,575
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000008,Devon,878,Total,1080
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000018,Leicestershire,855,Total,558
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000005,Rochdale,354,Total,95
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000025,South Gloucestershire,803,Total,156
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000026,Coventry,331,Total,123
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000042,Milton Keynes,826,Total,125
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000010,Enfield,308,Total,253
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000041,Wokingham,872,Total,171
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000021,Kingston upon Thames,314,Total,180
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000017,Doncaster,371,Total,377
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E10000023,North Yorkshire,815,Total,253
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E10000006,Cumbria,909,Total,325
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000007,Camden,202,Total,67
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000030,Swindon,866,Total,35
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000018,Nottingham,892,Total,121
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E06000056,Central Bedfordshire,823,Total,105
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000022,Lambeth,208,Total,241
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000002,Bury,351,Total,283
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000003,Barnet,302,Total,141
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000057,Northumberland,929,Total,479
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E06000062,West Northamptonshire,941,Total,202
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000024,Sunderland,394,Total,125
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000016,Kent,886,Total,2240
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000029,Suffolk,935,Total,507
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000032,Bradford,380,Total,231
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000014,Haringey,309,Total,174
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000014,Hampshire,850,Total,1155
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000046,Isle of Wight,921,Total,142
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E08000027,Dudley,332,Total,369
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000003,Cambridgeshire,873,Total,606
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E06000010,"Kingston upon Hull, City of",810,Total,67
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000018,Rotherham,372,Total,205
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000011,Greenwich,203,Total,149
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000036,Bracknell Forest,867,Total,70
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000051,Shropshire,893,Total,196
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000004,Bexley,303,Total,91
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000003,Manchester,352,Total,257
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000011,Knowsley,340,Total,116
+202223,Academic year,Local authority,E92000001,England,E12000006,East of England,E10000012,Essex,881,Total,578
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000035,Medway,887,Total,364
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E10000030,Surrey,936,Total,1736
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000059,Dorset,838,Total,650
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000003,Redcar and Cleveland,807,Total,112
+202223,Academic year,Local authority,E92000001,England,E12000004,East Midlands,E10000007,Derbyshire,830,Total,348
+202223,Academic year,Local authority,E92000001,England,E12000003,Yorkshire and The Humber,E08000035,Leeds,383,Total,295
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000008,Croydon,306,Total,315
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000017,Hillingdon,312,Total,240
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E06000023,"Bristol, City of",801,Total,174
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000021,Stoke-on-Trent,861,Total,523
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000031,Waltham Forest,320,Total,220
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E08000022,North Tyneside,392,Total,84
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E06000009,Blackpool,890,Total,141
+202223,Academic year,Local authority,E92000001,England,E12000001,North East,E06000005,Darlington,841,Total,58
+202223,Academic year,Local authority,E92000001,England,E12000007,London,E09000019,Islington,206,Total,76
+202223,Academic year,Local authority,E92000001,England,E12000008,South East,E06000038,Reading,870,Total,92
+202223,Academic year,Local authority,E92000001,England,E12000005,West Midlands,E06000019,"Herefordshire, County of",884,Total,90
+202223,Academic year,Local authority,E92000001,England,E12000009,South West,E10000027,Somerset,933,Total,479
+202223,Academic year,Local authority,E92000001,England,E12000002,North West,E08000014,Sefton,343,Total,203
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,Education setting with URN,1358
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,Non-maintained further education college,41
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,One on one tuition,42
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,Other unregistered provider,305
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,Registered provider with UKPRN,52
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,Total,1834
+202223,Academic year,Regional,E92000001,England,E12000001,North East,,,,Work based placement,36
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,Education setting with URN,4226
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,Non-maintained further education college,178
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,One on one tuition,239
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,Other unregistered provider,91
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,Registered provider with UKPRN,58
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,Total,4833
+202223,Academic year,Regional,E92000001,England,E12000002,North West,,,,Work based placement,41
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Education setting with URN,2369
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Non-maintained further education college,94
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,One on one tuition,333
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Other unregistered provider,76
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Registered provider with UKPRN,56
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Total,2974
+202223,Academic year,Regional,E92000001,England,E12000003,Yorkshire and The Humber,,,,Work based placement,46
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Education setting with URN,2160
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Non-maintained further education college,30
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,One on one tuition,193
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Other unregistered provider,678
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Registered provider with UKPRN,90
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Total,3152
+202223,Academic year,Regional,E92000001,England,E12000004,East Midlands,,,,Work based placement,1
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Education setting with URN,3797
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Non-maintained further education college,111
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,One on one tuition,630
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Other unregistered provider,98
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Registered provider with UKPRN,99
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Total,4780
+202223,Academic year,Regional,E92000001,England,E12000005,West Midlands,,,,Work based placement,45
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Education setting with URN,2499
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Non-maintained further education college,18
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,One on one tuition,421
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Other unregistered provider,504
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Registered provider with UKPRN,434
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Total,3877
+202223,Academic year,Regional,E92000001,England,E12000006,East of England,,,,Work based placement,1
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Education setting with URN,5550
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Non-maintained further education college,116
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,One on one tuition,680
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Other unregistered provider,331
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Registered provider with UKPRN,44
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Total,6756
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Unknown,4
+202223,Academic year,Regional,E92000001,England,E12000007,London,,,,Work based placement,31
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,Education setting with URN,7432
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,Non-maintained further education college,60
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,One on one tuition,692
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,Other unregistered provider,237
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,Registered provider with UKPRN,140
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,Total,8595
+202223,Academic year,Regional,E92000001,England,E12000008,South East,,,,Work based placement,34
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,Education setting with URN,3617
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,Non-maintained further education college,59
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,One on one tuition,311
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,Other unregistered provider,237
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,Registered provider with UKPRN,272
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,Total,4518
+202223,Academic year,Regional,E92000001,England,E12000009,South West,,,,Work based placement,22
+202223,Academic year,National,E92000001,England,,,,,,Education setting with URN,33008
+202223,Academic year,National,E92000001,England,,,,,,Non-maintained further education college,707
+202223,Academic year,National,E92000001,England,,,,,,One on one tuition,3541
+202223,Academic year,National,E92000001,England,,,,,,Other unregistered provider,2557
+202223,Academic year,National,E92000001,England,,,,,,Registered provider with UKPRN,1245
+202223,Academic year,National,E92000001,England,,,,,,Total,41319
+202223,Academic year,National,E92000001,England,,,,,,Unknown,4
+202223,Academic year,National,E92000001,England,,,,,,Work based placement,257

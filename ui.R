@@ -70,7 +70,7 @@ ui <- function(input, output, session) {
         href = "dfefavicon.png"
       ),
       # Add title for browser tabs
-      tags$title("SEND and AP Inclusion Dashboard Prototype")
+      tags$title("SEND and AP Dashboard")
     ),
     tags$html(lang = "en"),
     shinyjs::useShinyjs(),
@@ -107,7 +107,7 @@ ui <- function(input, output, session) {
     shinyGovstyle::header(
       main_text = "DfE",
       main_link = "https://www.gov.uk/government/organisations/department-for-education",
-      secondary_text = "SEND and AP Inclusion Dashboard",
+      secondary_text = "SEND and AP Dashboard",
       logo = "images/DfE_logo.png"
     ),
     shinyGovstyle::banner(

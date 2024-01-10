@@ -1,34 +1,35 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
     "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Overall sustained",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
-    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_la_type_filter": "Overall sustained",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
-    "ks4_destinations_reg_type_filter": "Employment",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
     "la_choice": "Leicester",
-    "level_choice": "Regions",
-    "link_to_la_dashboard": 0,
+    "level_choice": "",
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
-    "navlistPanel": "England and Regions",
+    "navlistPanel": "Local Areas",
     "nhs_region_choice": "Midlands",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
@@ -40,12 +41,176 @@
     "region_choice": "East Midlands",
     "remove": 0,
     "tabsetpanels_la": "Outcomes",
-    "tabsetpanels_reg": "Outcomes"
+    "tabsetpanels_reg": "Summary"
   },
   "output": {
-    "destinations_1618_reg_time_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> SEN Status <\/th> <th style='text-align: left;'> Destination <\/th> <th style='text-align: right;'> % of pupils <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 18.50 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 9.10 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Higher education <\/td> <td align=\"right\"> 41.40 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Further education <\/td> <td align=\"right\"> 9.20 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Education (other) <\/td> <td align=\"right\"> 5.80 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Not sustained <\/td> <td align=\"right\"> 11.40 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Unknown <\/td> <td align=\"right\"> 4.60 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 18.80 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 8.10 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Higher education <\/td> <td align=\"right\"> 42.30 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Further education <\/td> <td align=\"right\"> 7.60 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Education (other) <\/td> <td align=\"right\"> 6.20 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Not sustained <\/td> <td align=\"right\"> 12.30 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Unknown <\/td> <td align=\"right\"> 4.60 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 16.10 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 5.90 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Higher education <\/td> <td align=\"right\"> 47.30 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Further education <\/td> <td align=\"right\"> 6.80 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Education (other) <\/td> <td align=\"right\"> 8.70 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Not sustained <\/td> <td align=\"right\"> 10.70 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Unknown <\/td> <td align=\"right\"> 4.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 15.70 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Apprenticeship <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Higher education <\/td> <td align=\"right\"> 45.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Further education <\/td> <td align=\"right\"> 6.30 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Education (other) <\/td> <td align=\"right\"> 8.10 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Not sustained <\/td> <td align=\"right\"> 12.80 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Identified SEN <\/td> <td> Unknown <\/td> <td align=\"right\"> 5.00 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "ks1_phonics_reg_time_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> SEN Status <\/th> <th style='text-align: right;'> Percent meeting expected standards in Y1 <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2015/16 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 41.18 <\/td> <\/tr>\n  <tr> <td> 2015/16 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 17.24 <\/td> <\/tr>\n  <tr> <td> 2015/16 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 84.58 <\/td> <\/tr>\n  <tr> <td> 2015/16 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 42.48 <\/td> <\/tr>\n  <tr> <td> 2016/17 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 41.55 <\/td> <\/tr>\n  <tr> <td> 2016/17 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 15.87 <\/td> <\/tr>\n  <tr> <td> 2016/17 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 85.42 <\/td> <\/tr>\n  <tr> <td> 2016/17 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 44.44 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 41.49 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 15.79 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 86.84 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 44.91 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 39.37 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 15.48 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 86.88 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 43.01 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 35.50 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 14.84 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 81.21 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 40.33 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 40.36 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 16.79 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 85.23 <\/td> <\/tr>\n  <tr> <td> 2022/23 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 45.64 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "ks2_attainment_reg_time_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> SEN Status <\/th> <th style='text-align: right;'> Percent meeting expected standards <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 21.35 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 6.80 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 72.11 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 23.96 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> All SEN <\/td> <td align=\"right\"> 17.29 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> EHC plan <\/td> <td align=\"right\"> 6.60 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> No SEN <\/td> <td align=\"right\"> 67.29 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> SEN support <\/td> <td align=\"right\"> 19.86 <\/td> <\/tr>\n   <\/tbody> <\/table>",
-    "ks4_attainment_reg_time_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Region <\/th> <th style='text-align: left;'> SEN provision <\/th> <th style='text-align: right;'> Average progress 8 score <\/th> <th style='text-align: right;'> Progress 8 score (lower confidence interval) <\/th> <th style='text-align: right;'> Progress 8 score (upper confidence interval) <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> Any SEN <\/td> <td align=\"right\"> -0.64 <\/td> <td align=\"right\"> -0.68 <\/td> <td align=\"right\"> -0.61 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> East Midlands <\/td> <td> No identified SEN <\/td> <td align=\"right\"> 0.04 <\/td> <td align=\"right\"> 0.03 <\/td> <td align=\"right\"> 0.05 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> Any SEN <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> East Midlands <\/td> <td> No identified SEN <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> Any SEN <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> East Midlands <\/td> <td> No identified SEN <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <td align=\"right\" class='NA'> NA <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> Any SEN <\/td> <td align=\"right\"> -0.69 <\/td> <td align=\"right\"> -0.72 <\/td> <td align=\"right\"> -0.66 <\/td> <\/tr>\n  <tr> <td> 2021/22 <\/td> <td> East Midlands <\/td> <td> No identified SEN <\/td> <td align=\"right\"> 0.09 <\/td> <td align=\"right\"> 0.08 <\/td> <td align=\"right\"> 0.10 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "destinations_1618_la_type_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local Authority<\/th>\n      <th>SEN Status<\/th>\n      <th>Destination<\/th>\n      <th>% of pupils<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "asc"
+            ],
+            [
+              3,
+              "desc"
+            ],
+            [
+              0,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
   }
 }

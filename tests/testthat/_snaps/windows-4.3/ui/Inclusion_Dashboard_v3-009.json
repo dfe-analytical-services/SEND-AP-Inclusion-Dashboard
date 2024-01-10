@@ -1,30 +1,31 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
-    "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "ccg_choice": "NHS Bedfordshire, Luton and Milton Keynes CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Overall sustained",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
-    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_la_type_filter": "Overall sustained",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
-    "ks4_destinations_reg_type_filter": "Employment",
-    "la_choice": "Leicester",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
+    "la_choice": "Bedford",
     "level_choice": "",
-    "link_to_la_dashboard": 0,
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
     "myregion_switch": false,
@@ -43,6 +44,813 @@
     "tabsetpanels_reg": "Summary"
   },
   "output": {
-    "destinations_1618_la_type_table": "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> Academic Year <\/th> <th style='text-align: left;'> Local Authority <\/th> <th style='text-align: left;'> SEN Status <\/th> <th style='text-align: left;'> Destination <\/th> <th style='text-align: right;'> % of pupils <\/th>  <\/tr> <\/thead> <tbody>\n  <tr> <td> 2017/18 <\/td> <td> Leicester <\/td> <td> Identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 21.80 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> Leicester <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 20.80 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> Leicester <\/td> <td> No identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 23.20 <\/td> <\/tr>\n  <tr> <td> 2017/18 <\/td> <td> Leicester <\/td> <td> No identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 12.50 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> Leicester <\/td> <td> Identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 22.70 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> Leicester <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 0.00 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> Leicester <\/td> <td> No identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 23.60 <\/td> <\/tr>\n  <tr> <td> 2018/19 <\/td> <td> Leicester <\/td> <td> No identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 8.30 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> Leicester <\/td> <td> Identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 20.90 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> Leicester <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 11.10 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> Leicester <\/td> <td> No identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 22.20 <\/td> <\/tr>\n  <tr> <td> 2019/20 <\/td> <td> Leicester <\/td> <td> No identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 10.40 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Leicester <\/td> <td> Identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 18.90 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Leicester <\/td> <td> Identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 22.20 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Leicester <\/td> <td> No identified LLDD <\/td> <td> Employment <\/td> <td align=\"right\"> 20.50 <\/td> <\/tr>\n  <tr> <td> 2020/21 <\/td> <td> Leicester <\/td> <td> No identified SEN <\/td> <td> Employment <\/td> <td align=\"right\"> 5.90 <\/td> <\/tr>\n   <\/tbody> <\/table>"
+    "destinations_1618_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local Authority<\/th>\n      <th>SEN Status<\/th>\n      <th>Destination<\/th>\n      <th>% of students<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "asc"
+            ],
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ks1_phonics_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local authority<\/th>\n      <th>SEN Status<\/th>\n      <th>Percent meeting expected standards in Y1<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ks2_attainment_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local authority<\/th>\n      <th>SEN Status<\/th>\n      <th>Percent meeting expected standard<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ks4_attainment_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local authority<\/th>\n      <th>SEN provision<\/th>\n      <th>Average progress 8 score<\/th>\n      <th>Progress 8 score (lower confidence interval)<\/th>\n      <th>Progress 8 score (upper confidence interval)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                3,
+                4,
+                5
+              ]
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "mentalhealth_ccg_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year ending<\/th>\n      <th>Former CCG area<\/th>\n      <th>Number of children and young people<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "desc"
+            ]
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": 2
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-core-1.13.4"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.4",
+          "src": {
+            "href": "jszip-1.13.4"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.4",
+          "src": {
+            "href": "pdfmake-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.4",
+          "src": {
+            "href": "dt-ext-buttons-1.13.4"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
   }
 }

@@ -4,6 +4,7 @@ library(dplyr)
 library(openxlsx)
 library(lubridate)
 library(tidyr)
+library(data.table)
 
 # This code is required because some files require manual changes, due to the way they're published 
 
@@ -36,9 +37,9 @@ get_ees_data <- function(
   # this is the name of the file you want available in the zip file retrievable from the 'Download all data (zip)' link on EES
   desired_file_name, 
   # State which folder WITHIN the zip downloaded contains the file you want 
-  zip_subfolder_to_extract,
+  zip_subfolder_to_extract = "data/",
   # State filepath you want to save the file desired 
-  output_dir) {
+  output_dir = getwd()) {
   
   # State what year and publication is being used 
   publication_name <- read_html(url) %>% html_nodes(".govuk-heading-xl") %>% html_text()
@@ -166,6 +167,7 @@ la_region_lookup <- rio::import("data/lookups/la_region_lookup_raw.xlsx", skip =
   select(-`2021/22`) %>%
   drop_na(la_name) %>% # remove blank rows, comments etc
   fill(region) # the source data uses merged cells, fill the gaps in the region column
+
 
 #------------------------------
 # SEND Tribunal appeal rate (https://www.gov.uk/government/statistics/tribunal-statistics-quarterly-january-to-march-2022)
@@ -368,11 +370,43 @@ specialist_spend_202021 <- rio::import("data/finance/2021-22-High-Needs-LA-Bench
   ) %>%
   tidyr::drop_na(la_name, `state_2020-21`)
 
+# The HN Benchmarking tool for 2022-23 was broken while the dashboard was in production so its owner sent us this data file of what
+# ought to be in there instead. Can be replaced by the benchmarking tool once that's updated
+# note that in this case the data is raw outturn and not per-head so we need to divide through by population
+specialist_spend_202122 <- rio::import("data/finance/Outturn data 202122.xlsx",
+                                       #sheet = "values_202122",
+                                       range = c("B6:DO165")) %>%
+  select(
+    region = 1,
+    la_code = 2,
+    "la_name" = 3,
+    "pop2to18_2021-22" = "2-18 Population (ONS mid-2021 projection)",
+    "specialschools_sf_2021-22" = "Special schools and academies (1)...103",
+    "ap_sf_2021-22" = "PRUs and AP academies (1)...104",
+    "specialschools_ind_2021-22" = "Special schools and academies (2)...111",
+    "ap_ind_2021-22" = "PRUs and AP academies (2)...112"
+  ) %>%
+  filter(!(la_name %in% c("Dorset", "Bournemouth", "Poole", "Northamptonshire"))) %>% # blank rows due to LA reorgs
+  mutate(la_name = recode(la_name,
+                          "Dorset (New, LA code 838)" = "Dorset"
+  )) %>%
+  rowwise() %>%
+  mutate(
+    "pop2to18_2021-22" = as.numeric(`pop2to18_2021-22`),
+    "independent_2021-22" = sum(as.numeric(`specialschools_ind_2021-22`), as.numeric(`ap_ind_2021-22`),
+                                na.rm = TRUE
+    ),
+    "state_2021-22" = sum(as.numeric(`specialschools_sf_2021-22`), as.numeric(`ap_sf_2021-22`),
+                          na.rm = TRUE
+    ),
+    "total_2021-22" = sum(`independent_2021-22`, `state_2021-22`))%>%
+  tidyr::drop_na(la_name, `state_2021-22`)
 
-# Combine the three years into one table
+# Combine the four years into one table
 specialist_spend_1 <- specialist_spend_201819 %>%
   left_join(specialist_spend_201920) %>%
   left_join(specialist_spend_202021) %>%
+  left_join(specialist_spend_202122) %>%
   select(la_name, starts_with(c("state", "ind", "total", "pop2to18")))
 
 specialist_spend_1 <- specialist_spend_1 %>% # Cleaning up the ADCS' list of LAs to match our names
@@ -464,7 +498,7 @@ nat_specialist_spend <- specialist_spend %>%
             total_spend = sum(total_spend, na.rm = T)) %>%
   mutate( `Spend per head`= total_spend/ pop_est)
 
-rm(specialist_spend_a, specialist_spend_b, specialist_spend_201819, specialist_spend_201920, specialist_spend_202021)
+rm(specialist_spend_a, specialist_spend_b, specialist_spend_201819, specialist_spend_201920, specialist_spend_202021, specialist_spend_202122)
 
 # Next 
 
@@ -482,7 +516,7 @@ GET(ofsted_old_url, write_disk(ofsted_old_file_name_path, overwrite = TRUE))
 ofsted_official_31_Dec_22 <- rio::import(ofsted_old_file_name_path, sheet = "Area_SEND_up_to_31_Aug_2022", skip = 4) %>%
   select(la_code = Local.authority.code,
          la_name = Area.name,
-         inspect_publish_date_old_framework = Inspection.start.date,
+         inspect_publish_date_old_framework = Inspection.publication.date,
          inspect_outcome_wsoa_old_framework = Inspection.outcome..written.statement.of.action.required.,
          revisit_outcome_prog_vs_weaknesses_old_framework = `Revisit.outcome..sufficient.progress.in.addressing.all.significant.weaknesses.`,
          revisit_publish_date_old_framework = `Revisit.publication.date`)
@@ -523,26 +557,26 @@ get_ofsted_mi_link <- function(url) {
 
   ofsted_mi_links <- link_elements %>% html_attr("href") %>% as.data.frame() %>%
     rename(dwnld_link = 1) %>%
-    filter(grepl("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file", dwnld_link)) %>%
+    filter(grepl("https://assets.publishing.service.gov.uk/", dwnld_link)) %>%
     distinct() %>%
     as.vector()
 }
 
 # Get Ofsted MI data 
-ofsted_spring_mi <- get_ofsted_mi_link(url = paste0(
+ofsted_mi <- get_ofsted_mi_link(url = paste0(
   # Standard part of link 
   "https://www.gov.uk/government/statistical-data-sets/area-send-inspections-and-outcomes-in-england-management-information", 
   # term/year part of link
-  "-spring-term-2022-to-2023"))
+  "-summer-term-2022-to-2023"))
 
 # Import 
-mi_ofsted_autumn_2223 <- rio::import(paste0(ofsted_spring_mi$dwnld_link),
-                                     sheet = "Area_SEND_as_at_31_Mar_2023",
+mi_ofsted_winter_2223 <- rio::import(paste0(ofsted_mi$dwnld_link),
+                                     sheet = "All_ASEND_Jan_2023_to_Aug_2023",
                                      skip = 4) 
-write.csv(mi_ofsted_autumn_2223, paste0("data/ofsted/", "mi_ofsted_autumn_2223.csv"))
+write.csv(mi_ofsted_winter_2223, paste0("data/ofsted/", "mi_ofsted_winter_2223.csv"))
 
 # Wrangle / clean the data 
-mi_oftsed_new_framework <- mi_ofsted_autumn_2223  %>%
+mi_oftsed_new_framework <- mi_ofsted_winter_2223  %>%
   select(la_name = Local.area.partnership, # ‘Local area partnership’ refers to those in education, health and care who are responsible for the strategic planning, commissioning, management, delivery and evaluation of arrangements for children and young people with SEND who live in a local area. A local area is the geographic footprint of a local authority.  
          inspect_publish_date_new_framework = Inspection.publication.date,
          inspection_outcome_new_framework = Inspection.outcome,
@@ -563,18 +597,21 @@ ofsted <- la_region_lookup %>%
   mutate(across(c("inspection_outcome_new_framework"), ~ifelse(is.na(.x), "Not yet inspected under new framework", .x))) %>%
   mutate(across(c(inspect_publish_date_old_framework, inspect_publish_date_new_framework), ~as.Date(.x, format = "%d/%m/%Y"))) %>% 
   mutate(summary_outcome = case_when(inspection_outcome_new_framework != "Not yet inspected under new framework" ~ paste(inspection_outcome_new_framework, "(new framework)"), 
-                                    # revisit_outcome_prog_vs_weaknesses_old_framework == "Yes" ~ "No Written Statement of Action (old framework)",
-                                    inspect_outcome_wsoa_old_framework == "Yes" ~ "Written Statement of Action (old framework)",
+                                    revisit_outcome_prog_vs_weaknesses_old_framework == "Yes" ~ "WSoA (previous framework); progress made on all weaknesses",
+                                    revisit_outcome_prog_vs_weaknesses_old_framework %in% c("Some", "No") ~ "WSoA (previous framework); progress not made on all weaknesses",
+                                    inspect_outcome_wsoa_old_framework == "Yes" ~ "Written Statement of Action (previous framework); not revisited",
                                     la_name %in% c("North Northamptonshire", "West Northamptonshire") ~ "Area not yet inspected",
-                                    .default = "No Written Statement of Action (old framework)"), 
+                                    .default = "No Written Statement of Action (previous framework)"), 
         box_colour = case_when(
              summary_outcome %in% c(
-               "Written Statement of Action (old framework)",
+               "WSoA (previous framework); progress not made on all weaknesses",
+               "Written Statement of Action (previous framework); not revisited",
                "Widespread and/or systemic failings (new framework)"
              ) ~ "maroon",
              summary_outcome %in% c(
-               "No Written Statement of Action (old framework)",
-               "Typically positive experiences and outcomes (new framework)"
+               "No Written Statement of Action (previous framework)",
+               "Typically positive experiences and outcomes (new framework)",
+               "WSoA (previous framework); progress made on all weaknesses"
              ) ~ "green",
              summary_outcome == "Inconsistent experiences and outcomes (new framework)" ~ "orange", 
              summary_outcome == "Area not yet inspected" ~ "black"
@@ -589,11 +626,160 @@ ofsted <- la_region_lookup %>%
  
 
 # Specify when ADCS spreadsheet has been updated here
-ofsted_data_updated <- "Inspection reports data last updated 11th September 2023."
+ofsted_data_updated <- "Inspection reports data last updated 11th December 2023."
 
 
 # Next 
 
+#=================================
+# Community Health - waiting times 
+#=================================
+# This is a multi-step process 
+
+### 1. Goes to landing page where all publications are presented
+# create empty vectors  
+date_vector <- c()
+link_vector <- c()
+
+# Nested loop to combine and print
+#some string manipulation is required because of financial years being used 
+for (year in 2022:2023) {
+  for (monthnum in c(4:12, 1:3)) {
+    if(monthnum < 10){
+      url_month <- paste0("0", as.character(monthnum))
+    } else {
+      url_month <- as.character(monthnum)
+    }
+    financial_year <- if(monthnum > 5){  # this rather odd number is the combination of financial years and the lag in when publications happen
+      paste(year, str_split_i(as.character(year + 1), "0", 2), sep = "-")
+    } else {
+      paste(year-1, str_split_i(as.character(year), "0", 2), sep = "-")
+    }
+    
+    link <- paste0(
+      "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/", year, "/", url_month, "/", 
+      "Community-health-services-waiting-lists-", paste(financial_year, 
+                                                        as.character(lubridate::month(ymd(010101) + months(monthnum-3), label = TRUE, abbr = FALSE)), sep = "-"), ".xlsx")
+    
+    date_str <- paste(year, monthnum, "01", sep = "-")
+    date <- as.Date(date_str)
+    
+    # Append the date and link to their respective vectors
+    date_vector <- c(date_vector, date)
+    link_vector <- c(link_vector, link)    
+  }
+}
+
+# Format the 'Date' column in your dataframe 
+ch_web_df <- data.frame(Date = format(as.Date(date_vector), format = ymc_date_format), Link = link_vector) %>%
+  # remove future publication dates that have live links already 
+  filter(Date <= Sys.Date()) %>% 
+  #manually add in some non-standard URLs
+  mutate(Link = case_when(Date == ymd("2023-10-01") ~ gsub(".xlsx", "-revised.xlsx", Link),
+                          Date == ymd("2023-06-01") ~ gsub(".xlsx", "-2.xlsx", Link), 
+                          .default = Link))
+
+non_standard <- ch_web_df[13,] %>%
+  mutate(Link =  gsub("February", "January", Link), 
+         Date = "2023-03-01")
+
+ch_web_df <- bind_rows(ch_web_df[1:22,], non_standard) # we also don't want the original January data...
+# Classify whether the link works or not 
+ch_web_df$link_is_valid <- sapply(ch_web_df$Link, valid_url)
+ch_web_df <- ch_web_df %>% filter(link_is_valid == T) 
+
+# Each publication covers a month (at least for the breakdowns by waiting time we're interested in), so we need all of them
+
+ch_time_series_link <- ch_web_df$Link
+ch_dates <- ch_web_df$Date
+
+#Since these are downloaded as Excel files rather than zip files we don't need to do the usual unzip/temp directory rigmarole
+for(i in 1:length(ch_time_series_link)) {
+  download.file(ch_time_series_link[i], paste0("data/nhs/", "community_health_", as.character(ch_dates[i]), ".xlsx"), quiet = TRUE, mode = "wb")
+  outDir<-"data/nhs"
+  ls_files <- list.files(outDir, pattern = ".xlsx")
+}
+
+#get contents
+contents <- map(paste0("data/nhs/", ls_files), openxlsx::readWorkbook, sheet = "Contents")
+actual_dates <- vector("character", length = length(contents))
+
+for(i in 1:length(contents)){
+  date_string <- unlist(strsplit(contents[[i]][3,], ", "))[2]
+  actual_dates[i] <- date_string
+}
+
+
+# at this point a manual input is required - from the contents pages need to figure out which sheets are actually required
+# Currently the intention is to look at people waiting > 18 weeks as the 12-18 week group is seen as the longest reasonable waiting time
+# This means we want tables 4f and 4g, plus 3 for the national summary and 4 for the total size of the waiting list so can calculate proportions
+sheets <- c("Table 3", "Table 4", "Table 4f", "Table 4g")
+# the metrics we're using are (says Sophie) 
+# speech and language therapy, occupational therapy, pediatrics, audiology (or as the tables call them)
+# unfortunately there are variations in capitalisation (again), which we'll get around by listing both versions and using any_of()
+relevant_columns <- c("...1", "...2", "level", "name", "Organisation Type", "Organisation type", "Organisation Name", "Organisation name", "(CYP) Audiology", "(CYP) Community paediatric service", "(CYP) Therapy interventions: Occupational therapy", "(CYP) Therapy interventions: occupational therapy", "(CYP) Therapy interventions: Speech and language", "(CYP) Therapy interventions: speech and language")
+sum_relevant_rows <- c("(CYP) Audiology", "(CYP) Community paediatric service", "(CYP) Therapy interventions: Occupational therapy", "(CYP) Therapy interventions: occupational therapy", "(CYP) Therapy interventions: Speech and language", "(CYP) Therapy interventions: speech and language")
+sum_relevant_columns <- c("...1", "Total waiting list", "Waiting >18-52 weeks", "Waiting >52 weeks")
+ch_frames <- data.frame(file = paste0("data/nhs/", ls_files), date = actual_dates) %>% 
+  cross_join(data.frame(sheet = sheets)) 
+
+### 3. wrangles the data 
+# nhs_region_lookup <- rio::import("data/lookups/Sub_ICB_Locations_to_Integrated_Care_Boards_to_NHS_England_(Region)_(July_2022)_Lookup_in_England.csv") %>%
+ch_tables <- pmap(ch_frames[,c(1, 3)], import, skip = 4) # calling pmap with a data frame as an argument supplies each row as inputs in turn, so this is just an easy way to load all the tables
+
+names(ch_tables) <- paste(ch_frames$sheet, ch_frames$date)
+ch_summaries <- ch_tables[sapply(ch_tables, length) == 9] # summary tables are nine columns
+ch_detail <- ch_tables[sapply(ch_tables, length) != 9] # region/LA tables aren't 
+
+ch_summaries <- map(ch_summaries, select, any_of(sum_relevant_columns)) %>% 
+                map(setnames, "...1", "Therapy") %>% 
+                map(filter, Therapy %in% sum_relevant_rows) %>% 
+                map2(.y = sub("Table 3", "", names(ch_summaries)), .f = \(x, y) mutate(x, Date = y)) %>% 
+                map(.f = \(x) mutate(x, across(contains("aiting"), as.numeric))) %>% 
+                map(.f = \(x) mutate(x, `Percentage waiting more than 18 weeks` = 100* (`Waiting >18-52 weeks` + `Waiting >52 weeks`) / `Total waiting list`))
+
+eng_communityhealth <- bind_rows(ch_summaries) %>% 
+  mutate(formattedDate = as.Date(paste("01", Date, sep = " "), format = "%d %B %Y"), 
+         #fix how the therapies are formatted
+         Therapy = gsub("\\(CYP\\) ", "", Therapy), # R doesn't parse the regex itself so the bracket needs to be escaped twice
+         Therapy = gsub("Therapy interventions: ", "", Therapy))
+
+eng_communityhealth$Therapy <- unlist(map(eng_communityhealth$Therapy, simpleCap))
+
+ch_detailed <- map(ch_detail, select, any_of(relevant_columns)) %>% 
+  map(setnames, c("...1", "...2"), c("Organisation Type", "Organisation Name"), skip_absent = TRUE) %>%
+  map(setnames, c("level", "name"), c("Organisation Type", "Organisation Name"), skip_absent = TRUE) %>%
+  map(setnames, c("(CYP) Therapy interventions: occupational therapy", "(CYP) Therapy interventions: speech and language"), c("(CYP) Therapy interventions: Occupational therapy", "(CYP) Therapy interventions: Speech and language"), skip_absent = TRUE) %>% # fix capitalisation
+  map2(.y = names(ch_detail), .f = \(x, y) mutate(x, Category = case_when(grepl("^Table 4f", y) ~ "Waiting >18-52 weeks", 
+                                                                          grepl("^Table 4g", y) ~ "Waiting >52 weeks", 
+                                                                          grepl("^Table 4", y) ~ "Total waiting list", 
+                                                                          .default = NA_character_))) %>% # this should cause warnings/errors later, which is useful since it should never happen 
+  map2(.y = sub("Table 4\\D", "", names(ch_detail)), .f = \(x, y) mutate(x, Date = y)) %>% 
+  map(.f = \(x) mutate(x, across(contains("aiting"), as.numeric))) 
+
+la_communityhealth <- bind_rows(ch_detailed) %>%  # unfortunately this needs to be pivoted because it's currently the wrong way around - we want waiting times wide and services long
+  mutate(Date = gsub("^ ", "", Date), 
+         formattedDate = as.Date(paste("01", Date, sep = " "), format = "%d %B %Y")) %>% 
+  pivot_longer(3:6, names_to = "Therapy", values_to = "Number_CYP") %>% 
+  pivot_wider(names_from = Category, values_from = Number_CYP) %>% 
+  mutate(`Percentage waiting more than 18 weeks` = 100*(`Waiting >18-52 weeks` + `Waiting >52 weeks`) / `Total waiting list`, 
+         Therapy = gsub("\\(CYP\\) ", "", Therapy), # R doesn't parse the regex itself so the bracket needs to be escaped twice
+         Therapy = gsub("Therapy interventions: ", "", Therapy))
+
+la_communityhealth$Therapy <- unlist(map(la_communityhealth$Therapy, simpleCap))
+
+# finally, we need to fix the organisation type column, which due to the vagaries of Excel only has the type in the first instance of each number
+# to fix this we can "interpolate" type since the type of any given row is the non-NA type most immediately above it. 
+# need to do this as a loop rather than with lead() and lag() since want R to fix each row sequentially 
+for(i in 2:nrow(la_communityhealth)){
+  if (is.na(la_communityhealth$`Organisation Type`[i])){
+    la_communityhealth$`Organisation Type`[i] <- la_communityhealth$`Organisation Type`[i-1]
+  }
+}
+write.csv(la_communityhealth, "data/nhs/la_ch_time_series_derived.csv")
+write.csv(eng_communityhealth, "data/nhs/eng_ch_time_series_derived.csv")
+
+# Next 
 
 #------------------------------
 # KS2 attainment, REVISED stats (webscraping used)
@@ -604,8 +790,7 @@ ofsted_data_updated <- "Inspection reports data last updated 11th September 2023
 
 print("MANUAL CHANGES: The only manual changes required for this metric are to make sure the revised stats are gathered, not provisional")
 
-# Manual part to update 
-ks2_year_rev <- "2021-22"
+ks2_year_rev <- "2022-23" # !!! update this manually 
 
 # The rest of this ks2 section is automated... 
 
@@ -619,7 +804,7 @@ ks2_yr_start <- "2019" # Hardcoded as the way KS2 was awarded changed in 2019 so
 ks2_yr_end <- paste0("20",substr(KS2_year_of_pub, start = nchar(KS2_year_of_pub) -1, stop = nchar(KS2_year_of_pub) - 0))
 # State the file with correct year we want
 
-ks2_file_name <- paste0("ks2_regional_local_authority_and_pupil_characteristics_",ks2_yr_start,"_and_",ks2_yr_end,"_revised.csv")
+ks2_file_name <- paste0("ks2_regional_local_authority_and_pupil_characteristics_",ks2_yr_start,"_to_",ks2_yr_end,"_revised.csv")
 
 # Save latest ks2 data 
 get_ees_data(
@@ -631,6 +816,9 @@ get_ees_data(
 
 # import and wrangle the data 
 ks2_attainment <- rio::import(paste0("data/","attainment_ks2/", ks2_file_name)) %>%
+  rename(
+    characteristic_group = breakdown_topic,
+    characteristic = breakdown) %>%
   fsubset(characteristic_group == "SEN status" &
             gender == "Total" &
             characteristic != "SEN unclassified") %>%
@@ -640,10 +828,11 @@ ks2_attainment <- rio::import(paste0("data/","attainment_ks2/", ks2_file_name)) 
     characteristic, pt_rwm_met_expected_standard,
     t_rwm_met_expected_standard, t_rwm_eligible_pupils
   ) %>%
-  ftransform(`Percent meeting expected standards` = round(
+  ftransform(`Percent meeting expected standard` = round(
     100 * (as.numeric(t_rwm_met_expected_standard) / as.numeric(t_rwm_eligible_pupils)),
     digits = 2
   )) %>%
   time_period_to_academic_year()
 
 # End
+

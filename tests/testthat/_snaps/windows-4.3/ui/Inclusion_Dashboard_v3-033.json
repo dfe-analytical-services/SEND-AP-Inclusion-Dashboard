@@ -1,34 +1,35 @@
 {
   "input": {
-    "absence_la_filter": "All SEN",
-    "absence_reg_filter": "All SEN",
     "autism_nat_bench_filter": "Age: Under 10",
-    "ccg_choice": null,
-    "destinations_1618_la_bench_filter": "Identified SEN",
-    "destinations_1618_la_time_filter": "Identified SEN",
-    "destinations_1618_la_type_filter": "Employment",
-    "destinations_1618_reg_bench_filter": "Identified SEN",
-    "destinations_1618_reg_time_filter": "Identified SEN",
-    "destinations_1618_reg_type_filter": "Employment",
+    "ccg_choice": "NHS North Central London CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
     "ks1_phonics_la_filter": "All SEN",
     "ks1_phonics_reg_filter": "All SEN",
     "ks2_attainment_la_filter": "All SEN",
     "ks2_attainment_reg_filter": "All SEN",
-    "ks4_attainment_la_bench_filter": "Any SEN",
-    "ks4_attainment_reg_bench_filter": "Any SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
     "ks4_destinations_la_bench_filter": "Identified SEN",
     "ks4_destinations_la_time_filter": "Identified SEN",
     "ks4_destinations_la_type_filter": "Employment",
     "ks4_destinations_reg_bench_filter": "Identified SEN",
     "ks4_destinations_reg_time_filter": "Identified SEN",
     "ks4_destinations_reg_type_filter": "Employment",
-    "la_choice": "Derby",
+    "la_choice": "Camden",
     "level_choice": "Regions",
-    "link_to_la_dashboard": 0,
     "mainstream_with_sen_la_filter": "EHC plan",
     "mainstream_with_sen_reg_filter": "EHC plan",
-    "myregion_switch": true,
-    "navlistPanel": "Local Areas",
+    "myregion_switch": false,
+    "navlistPanel": "England and Regions",
     "nhs_region_choice": "London",
     "ofsted_table_choice": "Summary",
     "percent_pupils_ehcp_la_filter": "EHC plan",
@@ -39,32 +40,48 @@
     "provider_types_reg_time_filter": "all pupils",
     "region_choice": "London",
     "remove": 0,
-    "tabsetpanels_la": "Financial Sustainability",
+    "tabsetpanels_la": "Experiences",
     "tabsetpanels_reg": "Experiences"
   },
   "output": {
-    "dsg_deficit_la_bench": {
+    "ks4_destinations_reg_type": {
       "x": {
         "data": [
           {
-            "orientation": "v",
-            "width": 0.90000000000000036,
-            "base": -0.28000000000000003,
-            "x": 5,
-            "y": 0.28000000000000003,
-            "text": "DSG cumulative balance as a % of the total budget: -0.28<br />Derby",
-            "type": "bar",
-            "textposition": "none",
+            "x": [
+              1,
+              2,
+              4,
+              3
+            ],
+            "y": [
+              1.2,
+              1.1000000000000001,
+              0.90000000000000002,
+              0.59999999999999998
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 1.2<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2019/20<br />% of pupils: 1.1<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2021/22<br />% of pupils: 0.9<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2020/21<br />% of pupils: 0.6<br />Characteristic: EHC plan or Statement"
+            ],
+            "type": "scatter",
+            "mode": "markers",
             "marker": {
               "autocolorscale": false,
-              "color": "rgba(61,61,61,1)",
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
               "line": {
                 "width": 1.8897637795275593,
-                "color": "transparent"
+                "color": "rgba(18,67,109,1)"
               }
             },
-            "name": "Derby",
-            "legendgroup": "Derby",
+            "hoveron": "points",
+            "name": "EHC plan or Statement",
+            "legendgroup": "EHC plan or Statement",
             "showlegend": true,
             "xaxis": "x",
             "yaxis": "y",
@@ -72,99 +89,157 @@
             "frame": null
           },
           {
-            "orientation": "v",
-            "width": [
-              0.89999999999999991,
-              0.90000000000000013,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.89999999999999947,
-              0.89999999999999858,
-              0.89999999999999858
+            "x": [
+              1,
+              3,
+              2,
+              4
             ],
-            "base": [
-              -4.2000000000000002,
-              -3.1200000000000001,
-              -0.97999999999999998,
-              -0.79000000000000004,
-              0,
-              0,
-              0,
-              0,
-              0
+            "y": [
+              2.2000000000000002,
+              1.2,
+              1.8999999999999999,
+              2.2000000000000002
             ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 2.2<br />Characteristic: Identified SEN",
+              "Academic year: 2020/21<br />% of pupils: 1.2<br />Characteristic: Identified SEN",
+              "Academic year: 2019/20<br />% of pupils: 1.9<br />Characteristic: Identified SEN",
+              "Academic year: 2021/22<br />% of pupils: 2.2<br />Characteristic: Identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(128,22,80,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(128,22,80,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "Identified SEN",
+            "legendgroup": "Identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              4,
+              3
+            ],
+            "y": [
+              1.3999999999999999,
+              1.3,
+              1.5,
+              0.80000000000000004
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 1.4<br />Characteristic: No identified SEN",
+              "Academic year: 2019/20<br />% of pupils: 1.3<br />Characteristic: No identified SEN",
+              "Academic year: 2021/22<br />% of pupils: 1.5<br />Characteristic: No identified SEN",
+              "Academic year: 2020/21<br />% of pupils: 0.8<br />Characteristic: No identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(244,106,37,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(244,106,37,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "No identified SEN",
+            "legendgroup": "No identified SEN",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              4,
+              3
+            ],
+            "y": [
+              2.5,
+              2.2000000000000002,
+              2.7000000000000002,
+              1.3999999999999999
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 2.5<br />Characteristic: SEN support",
+              "Academic year: 2019/20<br />% of pupils: 2.2<br />Characteristic: SEN support",
+              "Academic year: 2021/22<br />% of pupils: 2.7<br />Characteristic: SEN support",
+              "Academic year: 2020/21<br />% of pupils: 1.4<br />Characteristic: SEN support"
+            ],
+            "type": "scatter",
+            "mode": "markers",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(40,161,151,1)",
+              "opacity": 1,
+              "size": 5.6692913385826778,
+              "symbol": "circle",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "rgba(40,161,151,1)"
+              }
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
             "x": [
               1,
               2,
               3,
-              4,
-              6,
-              7,
-              8,
-              9,
-              10
+              4
             ],
             "y": [
-              4.2000000000000002,
-              3.1200000000000001,
-              0.97999999999999998,
-              0.79000000000000004,
-              0.60999999999999999,
-              0.81999999999999995,
-              1.05,
-              2.02,
-              4.7000000000000002
+              1.2,
+              1.1000000000000001,
+              0.59999999999999998,
+              0.90000000000000002
             ],
             "text": [
-              "DSG cumulative balance as a % of the total budget: -4.20<br />Leicestershire",
-              "DSG cumulative balance as a % of the total budget: -3.12<br />Rutland",
-              "DSG cumulative balance as a % of the total budget: -0.98<br />Leicester",
-              "DSG cumulative balance as a % of the total budget: -0.79<br />Derbyshire",
-              "DSG cumulative balance as a % of the total budget:  0.61<br />West Northamptonshire",
-              "DSG cumulative balance as a % of the total budget:  0.82<br />North Northamptonshire",
-              "DSG cumulative balance as a % of the total budget:  1.05<br />Nottinghamshire",
-              "DSG cumulative balance as a % of the total budget:  2.02<br />Lincolnshire",
-              "DSG cumulative balance as a % of the total budget:  4.70<br />Nottingham"
+              "Academic year: 2018/19<br />% of pupils: 1.2<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2019/20<br />% of pupils: 1.1<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2020/21<br />% of pupils: 0.6<br />Characteristic: EHC plan or Statement",
+              "Academic year: 2021/22<br />% of pupils: 0.9<br />Characteristic: EHC plan or Statement"
             ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(162,133,209,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Other LA",
-            "legendgroup": "Other LA",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "x": [
-              0.40000000000000002,
-              10.6
-            ],
-            "y": [
-              -2.2599999999999998,
-              -2.2599999999999998
-            ],
-            "text": "",
             "type": "scatter",
             "mode": "lines",
             "line": {
-              "width": 1,
-              "color": "rgba(0,0,0,1)",
-              "dash": "dash",
-              "showlegend": "false"
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
             },
             "hoveron": "points",
+            "name": "EHC plan or Statement",
+            "legendgroup": "EHC plan or Statement",
             "showlegend": false,
             "xaxis": "x",
             "yaxis": "y",
@@ -172,17 +247,104 @@
             "frame": null
           },
           {
-            "x": 3,
-            "y": -2.0599999999999996,
-            "text": "England average",
-            "hovertext": "outcome: -2.26",
-            "textfont": {
-              "size": 13.228346456692915,
-              "color": "rgba(61,61,61,1)"
-            },
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              2.2000000000000002,
+              1.8999999999999999,
+              1.2,
+              2.2000000000000002
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 2.2<br />Characteristic: Identified SEN",
+              "Academic year: 2019/20<br />% of pupils: 1.9<br />Characteristic: Identified SEN",
+              "Academic year: 2020/21<br />% of pupils: 1.2<br />Characteristic: Identified SEN",
+              "Academic year: 2021/22<br />% of pupils: 2.2<br />Characteristic: Identified SEN"
+            ],
             "type": "scatter",
-            "mode": "text",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(128,22,80,1)",
+              "dash": "solid"
+            },
             "hoveron": "points",
+            "name": "Identified SEN",
+            "legendgroup": "Identified SEN",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              1.3999999999999999,
+              1.3,
+              0.80000000000000004,
+              1.5
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 1.4<br />Characteristic: No identified SEN",
+              "Academic year: 2019/20<br />% of pupils: 1.3<br />Characteristic: No identified SEN",
+              "Academic year: 2020/21<br />% of pupils: 0.8<br />Characteristic: No identified SEN",
+              "Academic year: 2021/22<br />% of pupils: 1.5<br />Characteristic: No identified SEN"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(244,106,37,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "No identified SEN",
+            "legendgroup": "No identified SEN",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "y": [
+              2.5,
+              2.2000000000000002,
+              1.3999999999999999,
+              2.7000000000000002
+            ],
+            "text": [
+              "Academic year: 2018/19<br />% of pupils: 2.5<br />Characteristic: SEN support",
+              "Academic year: 2019/20<br />% of pupils: 2.2<br />Characteristic: SEN support",
+              "Academic year: 2020/21<br />% of pupils: 1.4<br />Characteristic: SEN support",
+              "Academic year: 2021/22<br />% of pupils: 2.7<br />Characteristic: SEN support"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(40,161,151,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "SEN support",
+            "legendgroup": "SEN support",
             "showlegend": false,
             "xaxis": "x",
             "yaxis": "y",
@@ -194,8 +356,8 @@
           "margin": {
             "t": 24.855680088556802,
             "r": 6.6417600664175991,
-            "b": 25.4600802546008,
-            "l": 44.499792444997915
+            "b": 36.086896360868963,
+            "l": 39.186384391863839
           },
           "plot_bgcolor": "rgba(255,255,255,1)",
           "paper_bgcolor": "rgba(255,255,255,1)",
@@ -214,56 +376,38 @@
             "autorange": false,
             "range": [
               0.40000000000000002,
-              10.6
+              4.5999999999999996
             ],
             "tickmode": "array",
             "ticktext": [
-              "Leicestershire",
-              "Rutland",
-              "Leicester",
-              "Derbyshire",
-              "Derby",
-              "West Northamptonshire",
-              "North Northamptonshire",
-              "Nottinghamshire",
-              "Lincolnshire",
-              "Nottingham"
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
             ],
             "tickvals": [
               1,
               2,
               3,
-              4,
-              5,
-              6.0000000000000009,
-              7,
-              8,
-              9,
-              10
+              4
             ],
             "categoryorder": "array",
             "categoryarray": [
-              "Leicestershire",
-              "Rutland",
-              "Leicester",
-              "Derbyshire",
-              "Derby",
-              "West Northamptonshire",
-              "North Northamptonshire",
-              "Nottinghamshire",
-              "Lincolnshire",
-              "Nottingham"
+              "2018/19",
+              "2019/20",
+              "2020/21",
+              "2021/22"
             ],
             "nticks": null,
             "ticks": "outside",
             "tickcolor": "rgba(51,51,51,1)",
             "ticklen": 3.3208800332087995,
             "tickwidth": 0.60379636967432737,
-            "showticklabels": false,
+            "showticklabels": true,
             "tickfont": {
-              "color": null,
-              "family": null,
-              "size": 0
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
             },
             "tickangle": 0,
             "showline": true,
@@ -275,7 +419,7 @@
             "zeroline": false,
             "anchor": "y",
             "title": {
-              "text": "Derby is ranked 5th largest deficit, out of 10 LAs in 2021-22",
+              "text": "Academic year",
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
@@ -293,28 +437,31 @@
             "type": "linear",
             "autorange": false,
             "range": [
-              -4.6450000000000005,
-              5.1450000000000005
+              -5,
+              105
             ],
             "tickmode": "array",
             "ticktext": [
-              "-2.5",
-              "0.0",
-              "2.5",
-              "5.0"
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
             ],
             "tickvals": [
-              -2.5,
               0,
-              2.5,
-              4.9999999999999991
+              24.999999999999996,
+              50,
+              75,
+              100
             ],
             "categoryorder": "array",
             "categoryarray": [
-              "-2.5",
-              "0.0",
-              "2.5",
-              "5.0"
+              "0",
+              "25",
+              "50",
+              "75",
+              "100"
             ],
             "nticks": null,
             "ticks": "outside",
@@ -337,7 +484,7 @@
             "zeroline": false,
             "anchor": "x",
             "title": {
-              "text": "DSG cumulative balance as a % of the total budget",
+              "text": "% of pupils",
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
@@ -376,7 +523,7 @@
               "size": 13.283520132835198
             },
             "title": {
-              "text": "chosen_la",
+              "text": "Group",
               "font": {
                 "color": "rgba(0,0,0,1)",
                 "family": "",
@@ -385,1081 +532,6 @@
             },
             "orientation": "h",
             "y": -0.20000000000000001
-          },
-          "hovermode": "closest",
-          "barmode": "relative",
-          "dragmode": false
-        },
-        "config": {
-          "doubleClick": "reset",
-          "modeBarButtonsToAdd": [
-            "hoverclosest",
-            "hovercompare"
-          ],
-          "showSendToCloud": false,
-          "displaylogo": false,
-          "toImageButtonOptions": {
-            "format": "png"
-          },
-          "modeBarButtons": [
-            "toImage"
-          ]
-        },
-        "source": "A",
-        "highlight": {
-          "on": "plotly_click",
-          "persistent": false,
-          "dynamic": false,
-          "selectize": false,
-          "opacityDim": 0.20000000000000001,
-          "selected": {
-            "opacity": 1
-          },
-          "debounce": 0
-        },
-        "shinyEvents": [
-          "plotly_hover",
-          "plotly_click",
-          "plotly_selected",
-          "plotly_relayout",
-          "plotly_brushed",
-          "plotly_brushing",
-          "plotly_clickannotation",
-          "plotly_doubleclick",
-          "plotly_deselect",
-          "plotly_afterplot",
-          "plotly_sunburstclick"
-        ],
-        "base_url": "https://plot.ly"
-      },
-      "evals": [
-
-      ],
-      "jsHooks": [
-
-      ],
-      "deps": [
-        {
-          "name": "setprototypeof",
-          "version": "0.1",
-          "src": {
-            "href": "setprototypeof-0.1"
-          },
-          "meta": null,
-          "script": "setprototypeof.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "typedarray",
-          "version": "0.1",
-          "src": {
-            "href": "typedarray-0.1"
-          },
-          "meta": null,
-          "script": "typedarray.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "jquery",
-          "version": "3.5.1",
-          "src": {
-            "href": "jquery-3.5.1"
-          },
-          "meta": null,
-          "script": "jquery.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
-          "name": "crosstalk",
-          "version": "1.2.0",
-          "src": {
-            "href": "crosstalk-1.2.0"
-          },
-          "meta": null,
-          "script": "js/crosstalk.min.js",
-          "stylesheet": "css/crosstalk.min.css",
-          "head": null,
-          "attachment": null,
-          "all_files": true
-        },
-        {
-          "name": "plotly-htmlwidgets-css",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-htmlwidgets-css-2.11.1"
-          },
-          "meta": null,
-          "script": null,
-          "stylesheet": "plotly-htmlwidgets.css",
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        },
-        {
-          "name": "plotly-main",
-          "version": "2.11.1",
-          "src": {
-            "href": "plotly-main-2.11.1"
-          },
-          "meta": null,
-          "script": "plotly-latest.min.js",
-          "stylesheet": null,
-          "head": null,
-          "attachment": null,
-          "all_files": false
-        }
-      ]
-    },
-    "specialist_spend_la_bench": {
-      "x": {
-        "data": [
-          {
-            "orientation": "v",
-            "width": 0.89999999999999858,
-            "base": 0,
-            "x": 9,
-            "y": 148.13310424187904,
-            "text": "Spend per head: 148.13310<br />Derby",
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(61,61,61,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Derby",
-            "legendgroup": "Derby",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": 0.89999999999999858,
-            "base": 0,
-            "x": 11,
-            "y": 241.4223407754188,
-            "text": "Spend per head: 241.42234<br />Derby",
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(61,61,61,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Derby",
-            "legendgroup": "Derby",
-            "showlegend": false,
-            "xaxis": "x2",
-            "yaxis": "y2",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": 0.89999999999999858,
-            "base": 0,
-            "x": 11,
-            "y": 389.55544501729787,
-            "text": "Spend per head: 389.55545<br />Derby",
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(61,61,61,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Derby",
-            "legendgroup": "Derby",
-            "showlegend": false,
-            "xaxis": "x3",
-            "yaxis": "y3",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.90000000000000036,
-              0.90000000000000036,
-              0.89999999999999858,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.89999999999999991,
-              0.90000000000000036,
-              0.89999999999999947,
-              0.89999999999999858,
-              0.90000000000000013
-            ],
-            "base": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
-            "x": [
-              6,
-              5,
-              10,
-              7,
-              4,
-              1,
-              3,
-              8,
-              11,
-              2
-            ],
-            "y": [
-              90.092227634903793,
-              88.831873696309145,
-              175.06119076646968,
-              99.208373735775922,
-              65.391266697503141,
-              0,
-              18.726731055472019,
-              99.45183893684073,
-              208.48889307592282,
-              0
-            ],
-            "text": [
-              "Spend per head:  90.09223<br />Derbyshire",
-              "Spend per head:  88.83187<br />Leicester",
-              "Spend per head: 175.06119<br />Leicestershire",
-              "Spend per head:  99.20837<br />Lincolnshire",
-              "Spend per head:  65.39127<br />Northamptonshire",
-              "Spend per head:   0.00000<br />North Northamptonshire",
-              "Spend per head:  18.72673<br />Nottingham",
-              "Spend per head:  99.45184<br />Nottinghamshire",
-              "Spend per head: 208.48889<br />Rutland",
-              "Spend per head:   0.00000<br />West Northamptonshire"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(77,130,100,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Other LA (Ind/non-maintained spending)",
-            "legendgroup": "Other LA (Ind/non-maintained spending)",
-            "showlegend": true,
-            "xaxis": "x",
-            "yaxis": "y",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.90000000000000036,
-              0.89999999999999858,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.89999999999999947,
-              0.89999999999999991,
-              0.89999999999999858,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.90000000000000013
-            ],
-            "base": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
-            "x": [
-              7,
-              10,
-              5,
-              6,
-              8,
-              1,
-              9,
-              4,
-              3,
-              2
-            ],
-            "y": [
-              120.43531672770646,
-              230.3977748255333,
-              112.95851203806342,
-              114.94336018391118,
-              150.86808659552491,
-              0,
-              160.79457649851722,
-              104.42798530186813,
-              59.000704708482957,
-              0
-            ],
-            "text": [
-              "Spend per head: 120.43532<br />Derbyshire",
-              "Spend per head: 230.39777<br />Leicester",
-              "Spend per head: 112.95851<br />Leicestershire",
-              "Spend per head: 114.94336<br />Lincolnshire",
-              "Spend per head: 150.86809<br />Northamptonshire",
-              "Spend per head:   0.00000<br />North Northamptonshire",
-              "Spend per head: 160.79458<br />Nottingham",
-              "Spend per head: 104.42799<br />Nottinghamshire",
-              "Spend per head:  59.00070<br />Rutland",
-              "Spend per head:   0.00000<br />West Northamptonshire"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(26,153,249,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Other LA (State spending)",
-            "legendgroup": "Other LA (State spending)",
-            "showlegend": true,
-            "xaxis": "x2",
-            "yaxis": "y2",
-            "hoverinfo": "text",
-            "frame": null
-          },
-          {
-            "orientation": "v",
-            "width": [
-              0.90000000000000036,
-              0.89999999999999858,
-              0.89999999999999858,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.89999999999999991,
-              0.90000000000000036,
-              0.90000000000000036,
-              0.89999999999999947,
-              0.90000000000000013
-            ],
-            "base": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
-            "x": [
-              5,
-              10,
-              9,
-              6,
-              7,
-              1,
-              3,
-              4,
-              8,
-              2
-            ],
-            "y": [
-              210.52754436261026,
-              319.22964852184248,
-              288.0197028045331,
-              214.1517339196871,
-              216.25935329302806,
-              0,
-              179.52130755398923,
-              203.87982423870886,
-              267.48959778440576,
-              0
-            ],
-            "text": [
-              "Spend per head: 210.52754<br />Derbyshire",
-              "Spend per head: 319.22965<br />Leicester",
-              "Spend per head: 288.01970<br />Leicestershire",
-              "Spend per head: 214.15173<br />Lincolnshire",
-              "Spend per head: 216.25935<br />Northamptonshire",
-              "Spend per head:   0.00000<br />North Northamptonshire",
-              "Spend per head: 179.52131<br />Nottingham",
-              "Spend per head: 203.87982<br />Nottinghamshire",
-              "Spend per head: 267.48960<br />Rutland",
-              "Spend per head:   0.00000<br />West Northamptonshire"
-            ],
-            "type": "bar",
-            "textposition": "none",
-            "marker": {
-              "autocolorscale": false,
-              "color": "rgba(162,133,209,1)",
-              "line": {
-                "width": 1.8897637795275593,
-                "color": "transparent"
-              }
-            },
-            "name": "Other LA (Total spending)",
-            "legendgroup": "Other LA (Total spending)",
-            "showlegend": true,
-            "xaxis": "x3",
-            "yaxis": "y3",
-            "hoverinfo": "text",
-            "frame": null
-          }
-        ],
-        "layout": {
-          "margin": {
-            "t": 35.482496194824961,
-            "r": 6.6417600664175991,
-            "b": 25.4600802546008,
-            "l": 44.499792444997915
-          },
-          "plot_bgcolor": "rgba(255,255,255,1)",
-          "paper_bgcolor": "rgba(255,255,255,1)",
-          "font": {
-            "color": "rgba(0,0,0,1)",
-            "family": "",
-            "size": 13.283520132835198
-          },
-          "xaxis": {
-            "domain": [
-              0,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              0.40000000000000002,
-              11.6
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "North Northamptonshire*Independent or non-maintained",
-              "West Northamptonshire*Independent or non-maintained",
-              "Nottingham*Independent or non-maintained",
-              "Northamptonshire*Independent or non-maintained",
-              "Leicester*Independent or non-maintained",
-              "Derbyshire*Independent or non-maintained",
-              "Lincolnshire*Independent or non-maintained",
-              "Nottinghamshire*Independent or non-maintained",
-              "Derby*Independent or non-maintained",
-              "Leicestershire*Independent or non-maintained",
-              "Rutland*Independent or non-maintained"
-            ],
-            "tickvals": [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "North Northamptonshire*Independent or non-maintained",
-              "West Northamptonshire*Independent or non-maintained",
-              "Nottingham*Independent or non-maintained",
-              "Northamptonshire*Independent or non-maintained",
-              "Leicester*Independent or non-maintained",
-              "Derbyshire*Independent or non-maintained",
-              "Lincolnshire*Independent or non-maintained",
-              "Nottinghamshire*Independent or non-maintained",
-              "Derby*Independent or non-maintained",
-              "Leicestershire*Independent or non-maintained",
-              "Rutland*Independent or non-maintained"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": false,
-            "tickfont": {
-              "color": null,
-              "family": null,
-              "size": 0
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "y",
-            "title": "",
-            "hoverformat": ".2f"
-          },
-          "annotations": [
-            {
-              "text": "Local authorities in East Midlands in 2020-21 (dark bar is Derby)",
-              "x": 0.5,
-              "y": 0,
-              "showarrow": false,
-              "ax": 0,
-              "ay": 0,
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              },
-              "xref": "paper",
-              "yref": "paper",
-              "textangle": 0,
-              "xanchor": "center",
-              "yanchor": "top",
-              "annotationType": "axis",
-              "yshift": -6.6417600664175991
-            },
-            {
-              "text": "Spend per head",
-              "x": 0,
-              "y": 0.5,
-              "showarrow": false,
-              "ax": 0,
-              "ay": 0,
-              "font": {
-                "color": "rgba(0,0,0,1)",
-                "family": "",
-                "size": 13.283520132835198
-              },
-              "xref": "paper",
-              "yref": "paper",
-              "textangle": -90,
-              "xanchor": "right",
-              "yanchor": "center",
-              "annotationType": "axis",
-              "xshift": -30.552096305520966
-            },
-            {
-              "text": "Independent or non-maintained",
-              "x": 0.5,
-              "y": 1,
-              "showarrow": false,
-              "ax": 0,
-              "ay": 0,
-              "font": {
-                "color": "rgba(26,26,26,1)",
-                "family": "",
-                "size": 10.62681610626816
-              },
-              "xref": "paper",
-              "yref": "paper",
-              "textangle": 0,
-              "xanchor": "center",
-              "yanchor": "bottom"
-            },
-            {
-              "text": "State",
-              "x": 0.5,
-              "y": 0.63874108456922907,
-              "showarrow": false,
-              "ax": 0,
-              "ay": 0,
-              "font": {
-                "color": "rgba(26,26,26,1)",
-                "family": "",
-                "size": 10.62681610626816
-              },
-              "xref": "paper",
-              "yref": "paper",
-              "textangle": 0,
-              "xanchor": "center",
-              "yanchor": "bottom"
-            },
-            {
-              "text": "Total",
-              "x": 0.5,
-              "y": 0.30540775123589575,
-              "showarrow": false,
-              "ax": 0,
-              "ay": 0,
-              "font": {
-                "color": "rgba(26,26,26,1)",
-                "family": "",
-                "size": 10.62681610626816
-              },
-              "xref": "paper",
-              "yref": "paper",
-              "textangle": 0,
-              "xanchor": "center",
-              "yanchor": "bottom"
-            }
-          ],
-          "yaxis": {
-            "domain": [
-              0.69459224876410441,
-              1
-            ],
-            "automargin": true,
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              -19.477772250864895,
-              409.03321726816279
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "£0",
-              "£100",
-              "£200",
-              "£300",
-              "£400"
-            ],
-            "tickvals": [
-              0,
-              100,
-              200,
-              300,
-              400
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "£0",
-              "£100",
-              "£200",
-              "£300",
-              "£400"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "x",
-            "title": "",
-            "hoverformat": ".2f"
-          },
-          "shapes": [
-            {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
-
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0.69459224876410441,
-              "y1": 1
-            },
-            {
-              "type": "rect",
-              "fillcolor": "rgba(255,255,255,1)",
-              "line": {
-                "color": "rgba(0,0,0,1)",
-                "width": 1.2075927393486547,
-                "linetype": "solid"
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 21.253632212536321,
-              "yanchor": 1,
-              "ysizemode": "pixel"
-            },
-            {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
-
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0.36125891543077099,
-              "y1": 0.63874108456922907
-            },
-            {
-              "type": "rect",
-              "fillcolor": "rgba(255,255,255,1)",
-              "line": {
-                "color": "rgba(0,0,0,1)",
-                "width": 1.2075927393486547,
-                "linetype": "solid"
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 21.253632212536321,
-              "yanchor": 0.63874108456922907,
-              "ysizemode": "pixel"
-            },
-            {
-              "type": "rect",
-              "fillcolor": null,
-              "line": {
-                "color": null,
-                "width": 0,
-                "linetype": [
-
-                ]
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 0.30540775123589575
-            },
-            {
-              "type": "rect",
-              "fillcolor": "rgba(255,255,255,1)",
-              "line": {
-                "color": "rgba(0,0,0,1)",
-                "width": 1.2075927393486547,
-                "linetype": "solid"
-              },
-              "yref": "paper",
-              "xref": "paper",
-              "x0": 0,
-              "x1": 1,
-              "y0": 0,
-              "y1": 21.253632212536321,
-              "yanchor": 0.30540775123589575,
-              "ysizemode": "pixel"
-            }
-          ],
-          "xaxis2": {
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              0.40000000000000002,
-              11.6
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "North Northamptonshire*State",
-              "West Northamptonshire*State",
-              "Rutland*State",
-              "Nottinghamshire*State",
-              "Leicestershire*State",
-              "Lincolnshire*State",
-              "Derbyshire*State",
-              "Northamptonshire*State",
-              "Nottingham*State",
-              "Leicester*State",
-              "Derby*State"
-            ],
-            "tickvals": [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "North Northamptonshire*State",
-              "West Northamptonshire*State",
-              "Rutland*State",
-              "Nottinghamshire*State",
-              "Leicestershire*State",
-              "Lincolnshire*State",
-              "Derbyshire*State",
-              "Northamptonshire*State",
-              "Nottingham*State",
-              "Leicester*State",
-              "Derby*State"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": false,
-            "tickfont": {
-              "color": null,
-              "family": null,
-              "size": 0
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "domain": [
-              0,
-              1
-            ],
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "y2",
-            "title": "",
-            "hoverformat": ".2f"
-          },
-          "yaxis2": {
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              -19.477772250864895,
-              409.03321726816279
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "£0",
-              "£100",
-              "£200",
-              "£300",
-              "£400"
-            ],
-            "tickvals": [
-              0,
-              100,
-              200,
-              300,
-              400
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "£0",
-              "£100",
-              "£200",
-              "£300",
-              "£400"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "domain": [
-              0.36125891543077099,
-              0.63874108456922907
-            ],
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "x",
-            "title": "",
-            "hoverformat": ".2f"
-          },
-          "xaxis3": {
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              0.40000000000000002,
-              11.6
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "North Northamptonshire*Total",
-              "West Northamptonshire*Total",
-              "Nottingham*Total",
-              "Nottinghamshire*Total",
-              "Derbyshire*Total",
-              "Lincolnshire*Total",
-              "Northamptonshire*Total",
-              "Rutland*Total",
-              "Leicestershire*Total",
-              "Leicester*Total",
-              "Derby*Total"
-            ],
-            "tickvals": [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "North Northamptonshire*Total",
-              "West Northamptonshire*Total",
-              "Nottingham*Total",
-              "Nottinghamshire*Total",
-              "Derbyshire*Total",
-              "Lincolnshire*Total",
-              "Northamptonshire*Total",
-              "Rutland*Total",
-              "Leicestershire*Total",
-              "Leicester*Total",
-              "Derby*Total"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": false,
-            "tickfont": {
-              "color": null,
-              "family": null,
-              "size": 0
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "domain": [
-              0,
-              1
-            ],
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "y3",
-            "title": "",
-            "hoverformat": ".2f"
-          },
-          "yaxis3": {
-            "type": "linear",
-            "autorange": false,
-            "range": [
-              -19.477772250864895,
-              409.03321726816279
-            ],
-            "tickmode": "array",
-            "ticktext": [
-              "£0",
-              "£100",
-              "£200",
-              "£300",
-              "£400"
-            ],
-            "tickvals": [
-              0,
-              100,
-              200,
-              300,
-              400
-            ],
-            "categoryorder": "array",
-            "categoryarray": [
-              "£0",
-              "£100",
-              "£200",
-              "£300",
-              "£400"
-            ],
-            "nticks": null,
-            "ticks": "outside",
-            "tickcolor": "rgba(51,51,51,1)",
-            "ticklen": 3.3208800332087995,
-            "tickwidth": 0.60379636967432737,
-            "showticklabels": true,
-            "tickfont": {
-              "color": "rgba(77,77,77,1)",
-              "family": "",
-              "size": 10.62681610626816
-            },
-            "tickangle": 0,
-            "showline": true,
-            "linecolor": "rgba(0,0,0,1)",
-            "linewidth": 0.60379636967432737,
-            "showgrid": false,
-            "domain": [
-              0,
-              0.30540775123589575
-            ],
-            "gridcolor": null,
-            "gridwidth": 0,
-            "zeroline": false,
-            "anchor": "x",
-            "title": "",
-            "hoverformat": ".2f"
-          },
-          "showlegend": false,
-          "legend": {
-            "bgcolor": "rgba(255,255,255,1)",
-            "bordercolor": "transparent",
-            "borderwidth": 1.7179670722977816,
-            "font": {
-              "color": "rgba(0,0,0,1)",
-              "family": "",
-              "size": 13.283520132835198
-            }
           },
           "hovermode": "closest",
           "barmode": "relative",
