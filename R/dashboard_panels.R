@@ -92,25 +92,27 @@ dashboard_panel <- function() {
         column(
           width = 12,
           id = "lapickbox",
-          div(
+          div(id = "collapse-la",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
-            gov_row(
-              column(
+            box(collapsible = TRUE,
                 width = 12,
-                pickerInput("la_choice",
-                  label = h2("Select local authority to display graphs"),
-                  choices = list(
-                    "Please Select Local Authority" = "",
-                    "East Midlands" = `East Midlands`,
-                    "East of England" = `East of England`,
-                    "London" = `London`,
-                    "North East" = `North East`,
-                    "North West" = `North West`,
-                    "South East" = `South East`,
-                    "South West" = `South West`,
-                    "West Midlands" = `West Midlands`,
-                    "Yorkshire and the Humber" = `Yorkshire and the Humber`
+                background = "aqua",
+                gov_row(
+                   column(width = 12,
+                   pickerInput("la_choice",
+                     label = h2("Select local authority to display graphs"),
+                     choices = list(
+                     "Please Select Local Authority" = "",
+                     "East Midlands" = `East Midlands`,
+                     "East of England" = `East of England`,
+                     "London" = `London`,
+                     "North East" = `North East`,
+                     "North West" = `North West`,
+                     "South East" = `South East`,
+                     "South West" = `South West`,
+                     "West Midlands" = `West Midlands`,
+                     "Yorkshire and the Humber" = `Yorkshire and the Humber`
                   ),
                   choicesOpt = list(style = ("color: darkgrey")),
                   selected = NULL,
@@ -150,8 +152,10 @@ dashboard_panel <- function() {
                   right = TRUE
                 )
               )
-            ),
-            htmlOutput("la_changed")
+              ),
+            div(style = "text-indent: 30px margin-bottom: 5px", 
+                htmlOutput("la_changed"))
+          )
           )
         ),
         column(
@@ -1807,8 +1811,12 @@ regional_dashboard_panel <- function() {
           width = 12,
           id = "engregbox",
           div(
+            id = "collapse-engreg",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
+            box(background = "aqua", 
+                collapsible = TRUE,
+                width = 12,
             gov_row(
               column(
                 width = 12,
@@ -1836,6 +1844,7 @@ regional_dashboard_panel <- function() {
                 )
               )
             )
+          )
           )
         ),
         column(
