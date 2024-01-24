@@ -312,7 +312,7 @@ DTise <- function(df, order, hidden = NULL) {
     extensions = "Buttons",
     options = list(
       order = order,
-      columnDefs = list(list(visible = FALSE, targets = hidden)), 
+      columnDefs = list(list(visible = FALSE, targets = hidden)),
       pageLength = 20,
       dom = "lftBp",
       buttons = list("copy", list(

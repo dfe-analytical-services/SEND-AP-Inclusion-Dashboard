@@ -80,5 +80,12 @@
 .btn-box-tool{
   padding: 8px;
   font-size: 14px; 
+}
+
+.fas .fa-minus{
   color: white;
+}
+
+.fas .fa-plus{
+  color: black;
 }
