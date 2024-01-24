@@ -71,6 +71,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -83,12 +96,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 4
             }
           ],
           "autoWidth": false,
@@ -115,6 +122,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -229,6 +237,19 @@
             3,
             "desc"
           ],
+          "columnDefs": [
+            {
+              "targets": 3,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -241,12 +262,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 3
             }
           ],
           "autoWidth": false,
@@ -273,6 +288,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -389,6 +405,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 3,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -401,12 +430,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 3
             }
           ],
           "autoWidth": false,
@@ -433,6 +456,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -549,6 +573,15 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -561,12 +594,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 3
             }
           ],
           "autoWidth": false,

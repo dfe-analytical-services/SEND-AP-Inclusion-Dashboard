@@ -134,7 +134,8 @@ dfe_colours <- create_theme(
     red = af_darkpink,
     orange = af_orange,
     black = af_grey,
-    purple = "#7947b6" # was af_purple but not enough contrast for white text
+    purple = "#7947b6", # was af_purple but not enough contrast for white text
+    aqua = "#1d70b8"
   )
 )
 

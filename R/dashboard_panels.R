@@ -93,65 +93,74 @@ dashboard_panel <- function() {
           width = 12,
           id = "lapickbox",
           div(
+            id = "collapse-la",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
-            gov_row(
-              column(
-                width = 12,
-                pickerInput("la_choice",
-                  label = h2("Select local authority to display graphs"),
-                  choices = list(
-                    "Please Select Local Authority" = "",
-                    "East Midlands" = `East Midlands`,
-                    "East of England" = `East of England`,
-                    "London" = `London`,
-                    "North East" = `North East`,
-                    "North West" = `North West`,
-                    "South East" = `South East`,
-                    "South West" = `South West`,
-                    "West Midlands" = `West Midlands`,
-                    "Yorkshire and the Humber" = `Yorkshire and the Humber`
+            box(
+              collapsible = TRUE,
+              width = 12,
+              background = "aqua",
+              gov_row(
+                column(
+                  width = 12,
+                  pickerInput("la_choice",
+                    label = h2("Select local authority to display graphs"),
+                    choices = list(
+                      "Please Select Local Authority" = "",
+                      "East Midlands" = `East Midlands`,
+                      "East of England" = `East of England`,
+                      "London" = `London`,
+                      "North East" = `North East`,
+                      "North West" = `North West`,
+                      "South East" = `South East`,
+                      "South West" = `South West`,
+                      "West Midlands" = `West Midlands`,
+                      "Yorkshire and the Humber" = `Yorkshire and the Humber`
+                    ),
+                    choicesOpt = list(style = ("color: darkgrey")),
+                    selected = NULL,
+                    options = pickerOptions(
+                      livemaxOptions = 1,
+                      liveSearch = TRUE
+                    )
                   ),
-                  choicesOpt = list(style = ("color: darkgrey")),
-                  selected = NULL,
-                  options = pickerOptions(
-                    livemaxOptions = 1,
-                    liveSearch = TRUE
-                  )
-                ),
-                pickerInput("ccg_choice",
-                  label = h3("Select NHS England sub-ICB location to display graphs"),
-                  choices = list(
-                    "Please Select NHS area" = "",
-                    "East of England" = `East of England (NHS)`,
-                    "London" = `London (NHS)`,
-                    "Midlands" = `Midlands (NHS)`,
-                    "North East and Yorkshire" = `North East and Yorkshire (NHS)`,
-                    "North West" = `North West (NHS)`,
-                    "South East" = `South East (NHS)`,
-                    "South West" = `South West (NHS)`
+                  pickerInput("ccg_choice",
+                    label = h3("Select NHS England sub-ICB location to display graphs"),
+                    choices = list(
+                      "Please Select NHS area" = "",
+                      "East of England" = `East of England (NHS)`,
+                      "London" = `London (NHS)`,
+                      "Midlands" = `Midlands (NHS)`,
+                      "North East and Yorkshire" = `North East and Yorkshire (NHS)`,
+                      "North West" = `North West (NHS)`,
+                      "South East" = `South East (NHS)`,
+                      "South West" = `South West (NHS)`
+                    ),
+                    selected = NULL,
+                    options = pickerOptions(
+                      livemaxOptions = 1,
+                      liveSearch = TRUE
+                    )
                   ),
-                  selected = NULL,
-                  options = pickerOptions(
-                    livemaxOptions = 1,
-                    liveSearch = TRUE
+                  conditionalPanel(
+                    condition = "input.tabsetpanels_la == 'Summary'",
+                    selectInput(
+                      inputId = "summary_sen_type_la",
+                      label = "Choose SEN type used for Summary (applies to KS1, KS2, destination, absence and children in need metrics)",
+                      choices = list("All SEN", "EHC plan", "SEN support")
+                    )
+                  ),
+                  materialSwitch(
+                    inputId = "myregion_switch", label = "Compare to local areas in the same region only",
+                    right = TRUE
                   )
-                ),
-                conditionalPanel(
-                  condition = "input.tabsetpanels_la == 'Summary'",
-                  selectInput(
-                    inputId = "summary_sen_type_la",
-                    label = "Choose SEN type used for Summary (applies to KS1, KS2, destination, absence and children in need metrics)",
-                    choices = list("All SEN", "EHC plan", "SEN support")
-                  )
-                ),
-                materialSwitch(
-                  inputId = "myregion_switch", label = "Compare to local areas in the same region only",
-                  right = TRUE
                 )
+              ),
+              div(
+                style = "text-indent: 30px margin-bottom: 5px",
+                htmlOutput("la_changed")
               )
-            ),
-            htmlOutput("la_changed")
+            )
           )
         ),
         column(
@@ -1807,32 +1816,38 @@ regional_dashboard_panel <- function() {
           width = 12,
           id = "engregbox",
           div(
+            id = "collapse-engreg",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
-            gov_row(
-              column(
-                width = 12,
-                pickerInput("level_choice",
-                  label = h2("Select England or region-level view"),
-                  choices = list("Pick England or Regions" = "", "England", "Regions"),
-                  selected = NULL,
-                  options = pickerOptions(maxOptions = 1, )
-                ),
-                conditionalPanel(
-                  condition = "input.level_choice == 'Regions'",
-                  selectInput(
-                    inputId = "region_choice",
-                    label = "Choose region",
-                    choices = region_list
-                  )
-                ),
-                conditionalPanel(
-                  condition = "input.tabsetpanels_reg == 'Summary'",
-                  selectInput(
-                    inputId = "summary_sen_type",
-                    label = "Choose SEN type used for summary (applies to KS1, KS2, destination, absence and children in need metrics)",
-                    choices = list("All SEN", "EHC plan", "SEN support")
+            box(
+              background = "aqua",
+              collapsible = TRUE,
+              width = 12,
+              gov_row(
+                column(
+                  width = 12,
+                  pickerInput("level_choice",
+                    label = h2("Select England or region-level view"),
+                    choices = list("Pick England or Regions" = "", "England", "Regions"),
+                    selected = NULL,
+                    options = pickerOptions(maxOptions = 1, )
                   ),
+                  conditionalPanel(
+                    condition = "input.level_choice == 'Regions'",
+                    selectInput(
+                      inputId = "region_choice",
+                      label = "Choose region",
+                      choices = region_list
+                    )
+                  ),
+                  conditionalPanel(
+                    condition = "input.tabsetpanels_reg == 'Summary'",
+                    selectInput(
+                      inputId = "summary_sen_type",
+                      label = "Choose SEN type used for summary (applies to KS1, KS2, destination, absence and children in need metrics)",
+                      choices = list("All SEN", "EHC plan", "SEN support")
+                    ),
+                  )
                 )
               )
             )

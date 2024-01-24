@@ -306,12 +306,13 @@ use_horizontal_legend <- function(p) {
 }
 
 # Set all the standard options for a DT table
-DTise <- function(df, order) {
+DTise <- function(df, order, hidden = NULL) {
   output <- DT::datatable(df,
     rownames = FALSE,
     extensions = "Buttons",
     options = list(
       order = order,
+      columnDefs = list(list(visible = FALSE, targets = hidden)),
       pageLength = 20,
       dom = "lftBp",
       buttons = list("copy", list(

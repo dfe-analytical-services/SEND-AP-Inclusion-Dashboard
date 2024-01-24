@@ -62,3 +62,30 @@
   margin-top: 5px;
   padding-top: 0px;
 }
+
+#collapse-la {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+#collapse-engreg {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.box-header{
+  padding: 0px;
+}
+
+.btn-box-tool{
+  padding: 8px;
+  font-size: 14px; 
+}
+
+.fa-minus{
+  color: white;
+}
+
+.fa-plus{
+  color: black;
+}
