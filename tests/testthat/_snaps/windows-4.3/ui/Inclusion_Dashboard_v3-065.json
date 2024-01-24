@@ -59,6 +59,21 @@
               "asc"
             ]
           ],
+          "columnDefs": [
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -71,18 +86,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": [
-                5,
-                6,
-                7,
-                8,
-                9
-              ]
             }
           ],
           "autoWidth": false,
@@ -229,6 +232,20 @@
               "asc"
             ]
           ],
+          "columnDefs": [
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": [
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -241,17 +258,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": [
-                5,
-                6,
-                7,
-                8
-              ]
             }
           ],
           "autoWidth": false,

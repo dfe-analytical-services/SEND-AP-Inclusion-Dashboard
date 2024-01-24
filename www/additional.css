@@ -76,3 +76,9 @@
 .box-header{
   padding: 0px;
 }
+
+.btn-box-tool{
+  padding: 8px;
+  font-size: 14px; 
+  color: white;
+}

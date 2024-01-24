@@ -63,6 +63,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -75,12 +88,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 4
             }
           ],
           "autoWidth": false,
@@ -107,6 +114,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -227,6 +235,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 3,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -240,9 +261,6 @@
               ],
               "text": "Download"
             }
-          ],
-          "columnDefs": [
-
           ],
           "autoWidth": false,
           "orderClasses": false,
@@ -268,6 +286,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -388,6 +407,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 3,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -400,12 +432,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 3
             }
           ],
           "autoWidth": false,
@@ -432,6 +458,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -552,6 +579,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 4
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -564,12 +604,6 @@
                 "pdf"
               ],
               "text": "Download"
-            }
-          ],
-          "columnDefs": [
-            {
-              "className": "dt-right",
-              "targets": 4
             }
           ],
           "autoWidth": false,
@@ -596,6 +630,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -716,6 +751,19 @@
               "desc"
             ]
           ],
+          "columnDefs": [
+            {
+              "targets": 2,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 2
+            }
+          ],
           "pageLength": 20,
           "dom": "lftBp",
           "buttons": [
@@ -729,9 +777,6 @@
               ],
               "text": "Download"
             }
-          ],
-          "columnDefs": [
-
           ],
           "autoWidth": false,
           "orderClasses": false,
@@ -757,6 +802,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
@@ -865,7 +911,7 @@
         "extensions": [
           "Buttons"
         ],
-        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Region<\/th>\n      <th>Appeal Rate<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Region<\/th>\n      <th>Appeal Rate (%)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
         "options": {
           "order": [
             [
@@ -876,6 +922,19 @@
               2,
               "desc"
             ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 2,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 2
+            }
           ],
           "pageLength": 20,
           "dom": "lftBp",
@@ -890,9 +949,6 @@
               ],
               "text": "Download"
             }
-          ],
-          "columnDefs": [
-
           ],
           "autoWidth": false,
           "orderClasses": false,
@@ -918,6 +974,7 @@
         }
       },
       "evals": [
+        "options.columnDefs.0.render",
         "options.ajax.data"
       ],
       "jsHooks": [
