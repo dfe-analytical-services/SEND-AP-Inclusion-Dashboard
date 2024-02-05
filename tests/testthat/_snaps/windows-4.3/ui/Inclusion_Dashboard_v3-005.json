@@ -78,6 +78,26 @@
             {
               "className": "dt-right",
               "targets": 4
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Destination",
+              "targets": 3
+            },
+            {
+              "name": "% of students",
+              "targets": 4
             }
           ],
           "pageLength": 20,
@@ -140,9 +160,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -157,9 +177,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -171,9 +191,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -188,9 +208,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -207,9 +227,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
