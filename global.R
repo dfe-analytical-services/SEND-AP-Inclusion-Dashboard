@@ -34,6 +34,7 @@ shhh(library(fresh))
 shhh(library(shinyalert))
 shhh(library(shinyscroll))
 shhh(library(scales))
+shhh(library(dfeshiny))
 
 
 # shhh(library(shinya11y)) #accessibility testing only in local version
@@ -43,7 +44,7 @@ shhh(library(scales))
 
 source("R/functions.R")
 # source("R/support_links.R")
-google_analytics_key <- "PWT1GGJ14N"
+google_analytics_key <- "23W9Y1400B"
 # Load in pre-processed data
 load("data/prepared_data.Rdata")
 
