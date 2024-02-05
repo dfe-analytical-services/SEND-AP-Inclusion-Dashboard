@@ -35,6 +35,7 @@ shhh(library(shinyalert))
 shhh(library(shinyscroll))
 shhh(library(scales))
 shhh(library(dfeshiny))
+shhh(library(shinydashboard))
 
 
 # shhh(library(shinya11y)) #accessibility testing only in local version
