@@ -11,46 +11,91 @@ server <- function(input, output, session) {
   hide(id = "loading-content", anim = TRUE, animType = "fade")
   show("app-content")
 
-  # Bookmarking ------------------------------------------------------------------------------
-  # The template uses bookmarking to store input choices in the url. You can
-  # exclude specific inputs using the list here:
-  # we need to exclude stuff here or the app will crash with a maximum URI length error
-  # excluding Plotly and DT save-state stuff that the end-user can't really control
-  # this means we need a list of all the tables
-  edu_metrics <- c(
-    "destinations_1618", "ks1_phonics", "ks2_attainment", "ks4_attainment", "mentalhealth_ccg", "destinations_1618",
-    "eyfsp", "ap_counts", "ap_characteristics", "timeliness", "tribunals", "absence", "ks4_destinations",
-    "tribunals_reg_bench_table", "absence_reg_bench_table", "percent_pupils_ehcp", "ehcp_ageprofile",
-    "mainstream_with_sen", "provider_types", "ap_absences", "ap_ofsted", "ap_uap", "ap_counts",
-    "ap_counts", "discontinued"
-  )
-  other_tables <- c(
-    "mentalhealth_ccg_time_table", "mentalhealth_ccg_bench_table", "mentalhealth_reg_time_table", "reg_ofsted_rating",
-    "mentalhealth_reg_bench_table", "autism_ccg_time_table", "autism_nat_time_table", "autism_nat_bench_table",
-    "ap_summary_table", "summary_table"
-  )
-  edu_tables <- unlist(map(edu_metrics, paste0, c("_la_time_table", "_la_bench_table", "_reg_time_table", "_reg_bench_table")))
-  all_tables <- c(edu_tables, other_tables)
-  tables_exclude <- unlist(map(all_tables, paste0, c("_rows_current", "_rows_all", "_rows_selected", "_columns_selected", "_state", "_search", "_cell_clicked", "_cells_selected")))
-  setBookmarkExclude(c(
-    "cookies", "link_to_app_content_tab", "cookieAccept", "cookieReject", "cookieLink", "hideAccept", "hideReject",
-    "remove", ".clientValue-default-plotlyCrosstalkOpts", "plotly_hover-A", "plotly_afterplot-A", "plotly_relayout-A",
-    "link_eyfsp_reg_panel", "link_ks1_phonics_reg_panel", "link_ks2_attainment_reg_panel", "link_ks4_attainment_reg_panel",
-    "link_mh_reg_panel", "link_ofsted_reg_panel", "link_1618_reg_panel", "link_disco_reg_panel", "link_timeliness_reg_panel",
-    "link_absence_reg_panel", "link_autism_reg_panel", "link_ks4_destinations_reg_panel", "link_statefunded_reg_panel",
-    "link_mainstream_reg_panel", "link_special_reg_panel", "link_cin_reg_panel", "link_cin_reg_panel", "link_deficit_reg_panel",
-    "link_spend_reg_panel", "link_ap_sf_count_panel", "link_ap_la_count_panel", "link_uap_sa_count_panel", "link_uap_la_count_panel",
-    "link_ap_sen_panel", "link_ap_absence_panel", "link_ap_ofsted_panel", tables_exclude
-  ))
+  ## COOKIES DIALOGUE
 
+  # output if cookie is unspecified
+  observeEvent(input$cookies, {
+    if (!(isTRUE(getOption("shiny.testmode")))) { # only bother with cookies outside of test mode, the popup breaks shinydriver
+      if (!is.null(input$cookies)) {
+        if (!("dfe_analytics" %in% names(input$cookies))) { # only pop-up if not already set and not in test mode
 
-  observe({
-    # Trigger this observer every time an input changes
-    reactiveValuesToList(input)
-    session$doBookmark()
+          shinyalert(
+            inputId = "cookie_consent",
+            title = "Cookie consent",
+            text = "This site uses cookies to record traffic flow using Google Analytics",
+            size = "s",
+            closeOnEsc = TRUE,
+            closeOnClickOutside = FALSE,
+            html = FALSE,
+            type = "",
+            showConfirmButton = TRUE,
+            showCancelButton = TRUE,
+            confirmButtonText = "Accept",
+            confirmButtonCol = "#AEDEF4",
+            timer = 0,
+            imageUrl = "",
+            animation = TRUE
+          )
+        } else {
+          msg <- list(
+            name = "dfe_analytics",
+            value = input$cookies$dfe_analytics
+          )
+          session$sendCustomMessage("analytics-consent", msg)
+          if ("cookies" %in% names(input)) {
+            if ("dfe_analytics" %in% names(input$cookies)) {
+              if (input$cookies$dfe_analytics == "denied") {
+                ga_msg <- list(name = paste0("_ga_", google_analytics_key))
+                session$sendCustomMessage("cookie-remove", ga_msg)
+              }
+            }
+          }
+        }
+      }
+    }
   })
-  onBookmarked(function(url) {
-    updateQueryString(url)
+
+  observeEvent(input$cookie_consent, {
+    msg <- list(
+      name = "dfe_analytics",
+      value = ifelse(input$cookie_consent, "granted", "denied")
+    )
+    session$sendCustomMessage("cookie-set", msg)
+    session$sendCustomMessage("analytics-consent", msg)
+    if ("cookies" %in% names(input)) {
+      if ("dfe_analytics" %in% names(input$cookies)) {
+        if (input$cookies$dfe_analytics == "denied") {
+          ga_msg <- list(name = paste0("_ga_", google_analytics_key))
+          session$sendCustomMessage("cookie-remove", ga_msg)
+        }
+      }
+    }
+  })
+
+  observeEvent(input$remove, {
+    msg <- list(name = "dfe_analytics", value = "denied")
+    session$sendCustomMessage("cookie-remove", msg)
+    session$sendCustomMessage("analytics-consent", msg)
+  })
+
+  cookies_data <- reactive({
+    input$cookies
+  })
+
+  output$cookie_status <- renderText({
+    cookie_text_stem <- "To better understand the reach of our dashboard tools, this site uses cookies to identify numbers of unique users as part of Google Analytics. You have chosen to"
+    cookie_text_tail <- "the use of cookies on this website."
+    if ("cookies" %in% names(input)) {
+      if ("dfe_analytics" %in% names(input$cookies)) {
+        if (input$cookies$dfe_analytics == "granted") {
+          paste(cookie_text_stem, "accept", cookie_text_tail)
+        } else {
+          paste(cookie_text_stem, "reject", cookie_text_tail)
+        }
+      }
+    } else {
+      "Cookies consent has not been confirmed."
+    }
   })
 
   # Dynamic UI elements ---------------------------------------------------------------------------
@@ -482,95 +527,6 @@ server <- function(input, output, session) {
     )
   })
 
-  ## COOKIES DIALOGUE
-
-  # output if cookie is unspecified
-  observeEvent(input$cookies, {
-    if (!(isTRUE(getOption("shiny.testmode")))) { # only bother with cookies outside of test mode, the popup breaks shinydriver
-      if (!is.null(input$cookies)) {
-        if (!("dfe_analytics" %in% names(input$cookies))) { # only pop-up if not already set and not in test mode
-
-          shinyalert(
-            inputId = "cookie_consent",
-            title = "Cookie consent",
-            text = "This site uses cookies to record traffic flow using Google Analytics",
-            size = "s",
-            closeOnEsc = TRUE,
-            closeOnClickOutside = FALSE,
-            html = FALSE,
-            type = "",
-            showConfirmButton = TRUE,
-            showCancelButton = TRUE,
-            confirmButtonText = "Accept",
-            confirmButtonCol = "#AEDEF4",
-            timer = 0,
-            imageUrl = "",
-            animation = TRUE
-          )
-        } else {
-          msg <- list(
-            name = "dfe_analytics",
-            value = input$cookies$dfe_analytics
-          )
-          session$sendCustomMessage("analytics-consent", msg)
-          if ("cookies" %in% names(input)) {
-            if ("dfe_analytics" %in% names(input$cookies)) {
-              if (input$cookies$dfe_analytics == "denied") {
-                ga_msg <- list(name = paste0("_ga_", google_analytics_key))
-                session$sendCustomMessage("cookie-remove", ga_msg)
-              }
-            }
-          }
-        }
-      }
-    }
-  })
-
-  observeEvent(input$cookie_consent, {
-    msg <- list(
-      name = "dfe_analytics",
-      value = ifelse(input$cookie_consent, "granted", "denied")
-    )
-    session$sendCustomMessage("cookie-set", msg)
-    session$sendCustomMessage("analytics-consent", msg)
-    if ("cookies" %in% names(input)) {
-      if ("dfe_analytics" %in% names(input$cookies)) {
-        if (input$cookies$dfe_analytics == "denied") {
-          ga_msg <- list(name = paste0("_ga_", google_analytics_key))
-          session$sendCustomMessage("cookie-remove", ga_msg)
-        }
-      }
-    }
-  })
-
-  observeEvent(input$remove, {
-    msg <- list(name = "dfe_analytics", value = "denied")
-    session$sendCustomMessage("cookie-remove", msg)
-    session$sendCustomMessage("analytics-consent", msg)
-  })
-
-  cookies_data <- reactive({
-    input$cookies
-  })
-
-  output$cookie_status <- renderText({
-    cookie_text_stem <- "To better understand the reach of our dashboard tools, this site uses cookies to identify numbers of unique users as part of Google Analytics. You have chosen to"
-    cookie_text_tail <- "the use of cookies on this website."
-    if ("cookies" %in% names(input)) {
-      if ("dfe_analytics" %in% names(input$cookies)) {
-        if (input$cookies$dfe_analytics == "granted") {
-          paste(cookie_text_stem, "accept", cookie_text_tail)
-        } else {
-          paste(cookie_text_stem, "reject", cookie_text_tail)
-        }
-      }
-    } else {
-      "Cookies consent has not been confirmed."
-    }
-  })
-
-
-  #  output$cookie_status <- renderText(as.character(input$cookies))
 
 
   # OUTCOMES GRAPHS ---------------------------------------------------------------------------

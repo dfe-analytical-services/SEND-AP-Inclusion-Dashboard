@@ -72,6 +72,46 @@
                 8,
                 9
               ]
+            },
+            {
+              "name": "Local Authority",
+              "targets": 0
+            },
+            {
+              "name": "Theme",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Metric",
+              "targets": 3
+            },
+            {
+              "name": "Detail",
+              "targets": 4
+            },
+            {
+              "name": "Outcome",
+              "targets": 5
+            },
+            {
+              "name": "LA Rank (most recent year)",
+              "targets": 6
+            },
+            {
+              "name": "Out of",
+              "targets": 7
+            },
+            {
+              "name": "Highest LA rank",
+              "targets": 8
+            },
+            {
+              "name": "Lowest LA rank",
+              "targets": 9
             }
           ],
           "pageLength": 20,
@@ -133,9 +173,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -150,9 +190,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -164,9 +204,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -181,9 +221,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -200,9 +240,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -244,6 +284,42 @@
                 7,
                 8
               ]
+            },
+            {
+              "name": "Local Authority",
+              "targets": 0
+            },
+            {
+              "name": "Theme",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Metric",
+              "targets": 3
+            },
+            {
+              "name": "Detail",
+              "targets": 4
+            },
+            {
+              "name": "Outcome",
+              "targets": 5
+            },
+            {
+              "name": "LA Rank (most recent year)",
+              "targets": 6
+            },
+            {
+              "name": "Highest LA rank",
+              "targets": 7
+            },
+            {
+              "name": "Lowest LA rank",
+              "targets": 8
             }
           ],
           "pageLength": 20,
@@ -305,9 +381,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -322,9 +398,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -336,9 +412,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -353,9 +429,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -372,9 +448,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",

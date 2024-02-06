@@ -78,6 +78,26 @@
             {
               "className": "dt-right",
               "targets": 4
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Destination",
+              "targets": 3
+            },
+            {
+              "name": "% of students",
+              "targets": 4
             }
           ],
           "pageLength": 20,
@@ -140,9 +160,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -157,9 +177,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -171,9 +191,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -188,9 +208,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -207,9 +227,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -246,6 +266,22 @@
                 2,
                 3
               ]
+            },
+            {
+              "name": "Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "Plans discontinued (compulsory school age)",
+              "targets": 2
+            },
+            {
+              "name": "Plans discontinued (above compulsory school age)",
+              "targets": 3
             }
           ],
           "pageLength": 20,
@@ -307,9 +343,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -324,9 +360,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -338,9 +374,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -355,9 +391,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -374,9 +410,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -416,6 +452,22 @@
             },
             {
               "className": "dt-right",
+              "targets": 3
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Percent meeting expected standards in Y1",
               "targets": 3
             }
           ],
@@ -479,9 +531,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -496,9 +548,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -510,9 +562,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -527,9 +579,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -546,9 +598,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -588,6 +640,18 @@
             },
             {
               "className": "dt-right",
+              "targets": 2
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "SEN Status",
+              "targets": 1
+            },
+            {
+              "name": "Percent meeting expected standard",
               "targets": 2
             }
           ],
@@ -651,9 +715,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -668,9 +732,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -682,9 +746,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -699,9 +763,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -718,9 +782,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -773,6 +837,30 @@
                 4,
                 5
               ]
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Average progress 8 score",
+              "targets": 3
+            },
+            {
+              "name": "Progress 8 score (lower confidence interval)",
+              "targets": 4
+            },
+            {
+              "name": "Progress 8 score (upper confidence interval)",
+              "targets": 5
             }
           ],
           "pageLength": 20,
@@ -837,9 +925,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -854,9 +942,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -868,9 +956,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -885,9 +973,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -904,9 +992,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
@@ -947,6 +1035,22 @@
                 2,
                 3
               ]
+            },
+            {
+              "name": "Year ending",
+              "targets": 0
+            },
+            {
+              "name": "NHS Region",
+              "targets": 1
+            },
+            {
+              "name": "Number of children and young people",
+              "targets": 2
+            },
+            {
+              "name": "order",
+              "targets": 3
             }
           ],
           "pageLength": 20,
@@ -1009,9 +1113,9 @@
         },
         {
           "name": "dt-core",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-core-1.13.4"
+            "href": "dt-core-1.13.6"
           },
           "meta": null,
           "script": "js/jquery.dataTables.min.js",
@@ -1026,9 +1130,9 @@
         },
         {
           "name": "jszip",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "jszip-1.13.4"
+            "href": "jszip-1.13.6"
           },
           "meta": null,
           "script": "jszip.min.js",
@@ -1040,9 +1144,9 @@
         },
         {
           "name": "pdfmake",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "pdfmake-1.13.4"
+            "href": "pdfmake-1.13.6"
           },
           "meta": null,
           "script": [
@@ -1057,9 +1161,9 @@
         },
         {
           "name": "dt-ext-buttons",
-          "version": "1.13.4",
+          "version": "1.13.6",
           "src": {
-            "href": "dt-ext-buttons-1.13.4"
+            "href": "dt-ext-buttons-1.13.6"
           },
           "meta": null,
           "script": [
@@ -1076,9 +1180,9 @@
         },
         {
           "name": "crosstalk",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "src": {
-            "href": "crosstalk-1.2.0"
+            "href": "crosstalk-1.2.1"
           },
           "meta": null,
           "script": "js/crosstalk.min.js",
