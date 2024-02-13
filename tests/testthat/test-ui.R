@@ -263,7 +263,7 @@ outputs_reg_ap_bench_table <- outputs_la_ap_bench_table %>%
 
 # 1. Does it load  -------------------------------------------------------------------------------------------------------------------
 app <- AppDriver$new(
-  variant = platform_variant(), name = "Inclusion_Dashboard_v3",
+  name = "Inclusion_Dashboard_v3",
   height = 1026, width = 1778, load_timeout = 10000000, expect_values_screenshot_args = FALSE, timeout = 100000
 ) # disable screenshots in release version
 
