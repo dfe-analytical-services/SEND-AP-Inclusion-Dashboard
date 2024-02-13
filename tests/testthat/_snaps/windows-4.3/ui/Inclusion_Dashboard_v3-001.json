@@ -95,11 +95,15 @@
     "cin_regt_toggle": "Chart",
     "cin_sc_la_filter": "CINO at 31 March",
     "cin_sc_reg_filter": "CINO at 31 March",
+    "cookie_consent_clear": 0,
     "cookies": [
       "GA1.1.1768633568.1681211064",
       "granted",
       "GS1.1.1697116218.108.0.1697116314.0.0.0"
     ],
+    "cookies-cookie_accept": 0,
+    "cookies-cookie_link": 0,
+    "cookies-cookie_reject": 0,
     "dest18_lab_toggle": "Chart",
     "dest18_lat_toggle": "Chart",
     "dest18_regb_toggle": "Chart",
@@ -243,7 +247,6 @@
     "provider_types_reg_panel": "Change over time",
     "provider_types_reg_time_filter": "all pupils",
     "region_choice": "East Midlands",
-    "remove": 0,
     "specialist_spend_la_panel": "Change over time",
     "spend_lab_toggle": "Chart",
     "spend_lat_toggle": "Chart",

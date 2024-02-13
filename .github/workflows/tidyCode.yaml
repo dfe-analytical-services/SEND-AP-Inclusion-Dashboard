@@ -10,7 +10,7 @@ jobs:
   tidyCode:
     runs-on: ${{ matrix.config.os }}
 
-    name: tidycode
+    name: tidyCode
 
     strategy:
       fail-fast: false

@@ -68,8 +68,6 @@ no_dest_data <- reactiveVal(FALSE)
 
 useShinyjs() # Activates shinyjs which allows toggling of visibility for some objects
 
-enableBookmarking("url") # "Bookmarking" means storing user inputs in the URL
-
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
 
