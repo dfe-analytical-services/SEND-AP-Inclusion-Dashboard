@@ -38,6 +38,7 @@ shhh(library(shinydashboard))
 shhh(library(dplyr))
 shhh(library(tidyr))
 shhh(library(tibble))
+shhh(library(forcats))
 
 
 # shhh(library(shinya11y)) #accessibility testing only in local version
