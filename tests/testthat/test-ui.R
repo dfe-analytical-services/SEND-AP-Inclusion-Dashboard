@@ -1,5 +1,3 @@
-library(tidyverse)
-
 # Shorthand for frequently used tab names
 LAC <- "Local area comparison"
 RC <- "Regional comparison"

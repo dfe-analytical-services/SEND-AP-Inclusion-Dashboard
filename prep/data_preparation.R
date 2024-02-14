@@ -11,7 +11,6 @@
 # to either add the file to .gitignore or add an entry for the file into
 # datafiles_log.csv.
 
-library(tidyverse)
 library(collapse)
 library(sf)
 library(geojsonsf)
@@ -25,6 +24,8 @@ library(RCurl)
 library(gsubfn)
 library(forcats)
 library(rio)
+library(dplyr)
+library(tidyr)
 
 #==============================
 # Pre-step

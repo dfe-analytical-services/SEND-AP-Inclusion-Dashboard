@@ -3,7 +3,8 @@
 # rather than processing all the metrics on-the-fly.
 # Note that it does not (currently) do anything relating to the England and regions summary
 
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 library(collapse)
 
 # Create function to add rank numbers to an LA benchmarking dataframe, specifying the outcome to be ranked by

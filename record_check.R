@@ -14,7 +14,8 @@
 # This will sometimes require combining the data frames if there's separate ones for England/Regions/LAs
 
 # libraries
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 library(collapse)
 library(data.table)
 
