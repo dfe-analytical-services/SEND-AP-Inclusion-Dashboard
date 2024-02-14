@@ -1,6 +1,7 @@
 # Script for creating an LA to Region Lookup Table
 
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 
 # Download a custom table in ODS format from: https://explore-education-statistics.service.gov.uk/data-tables/permalink/b5ad776d-bdb8-42d0-02e5-08daf870ec67
 # Re-save as XLSX
