@@ -1,0 +1,1163 @@
+{
+  "input": {
+    "autism_nat_bench_filter": "Age: Under 10",
+    "ccg_choice": "NHS Birmingham and Solihull CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
+    "ks1_phonics_la_filter": "All SEN",
+    "ks1_phonics_reg_filter": "All SEN",
+    "ks2_attainment_la_filter": "All SEN",
+    "ks2_attainment_reg_filter": "All SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
+    "ks4_destinations_la_bench_filter": "Identified SEN",
+    "ks4_destinations_la_time_filter": "Identified SEN",
+    "ks4_destinations_la_type_filter": "Overall sustained",
+    "ks4_destinations_reg_bench_filter": "Identified SEN",
+    "ks4_destinations_reg_time_filter": "Identified SEN",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
+    "la_choice": "Birmingham",
+    "level_choice": "Regions",
+    "mainstream_with_sen_la_filter": "EHC plan",
+    "mainstream_with_sen_reg_filter": "EHC plan",
+    "myregion_switch": false,
+    "navlistPanel": "Local Areas",
+    "nhs_region_choice": "London",
+    "ofsted_table_choice": "Summary",
+    "percent_pupils_ehcp_la_filter": "EHC plan",
+    "percent_pupils_ehcp_reg_filter": "EHC plan",
+    "provider_types_la_bench_filter": "all pupils",
+    "provider_types_la_time_filter": "all pupils",
+    "provider_types_reg_bench_filter": "all pupils",
+    "provider_types_reg_time_filter": "all pupils",
+    "region_choice": "London",
+    "tabsetpanels_la": "Experiences",
+    "tabsetpanels_reg": "Outcomes"
+  },
+  "output": {
+    "absence_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local Authority<\/th>\n      <th>SEN Status<\/th>\n      <th>Absence measure<\/th>\n      <th>Percentage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              0,
+              "desc"
+            ],
+            [
+              2,
+              "desc"
+            ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 4
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "SEN Status",
+              "targets": 2
+            },
+            {
+              "name": "Absence measure",
+              "targets": 3
+            },
+            {
+              "name": "Percentage",
+              "targets": 4
+            }
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-1.13.6"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.6",
+          "src": {
+            "href": "jszip-1.13.6"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.6",
+          "src": {
+            "href": "pdfmake-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-ext-buttons-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "autism_ccg_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Month<\/th>\n      <th>Sub-ICB Area<\/th>\n      <th>Age group<\/th>\n      <th>% with first appointment\n after more than 13 weeks<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "asc"
+            ],
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 3,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            },
+            {
+              "name": "Month",
+              "targets": 0
+            },
+            {
+              "name": "Sub-ICB Area",
+              "targets": 1
+            },
+            {
+              "name": "Age group",
+              "targets": 2
+            },
+            {
+              "name": "% with first appointment\n after more than 13 weeks",
+              "targets": 3
+            }
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-1.13.6"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.6",
+          "src": {
+            "href": "jszip-1.13.6"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.6",
+          "src": {
+            "href": "pdfmake-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-ext-buttons-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ch_prov_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Date<\/th>\n      <th>Provider<\/th>\n      <th>Therapy<\/th>\n      <th>Percentage waiting more than 18 weeks<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              3,
+              "desc"
+            ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 3,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 3
+            },
+            {
+              "name": "Date",
+              "targets": 0
+            },
+            {
+              "name": "Provider",
+              "targets": 1
+            },
+            {
+              "name": "Therapy",
+              "targets": 2
+            },
+            {
+              "name": "Percentage waiting more than 18 weeks",
+              "targets": 3
+            }
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-1.13.6"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.6",
+          "src": {
+            "href": "jszip-1.13.6"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.6",
+          "src": {
+            "href": "pdfmake-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-ext-buttons-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "ks4_destinations_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Academic Year<\/th>\n      <th>Local Authority<\/th>\n      <th>SEN status<\/th>\n      <th>Destination<\/th>\n      <th>% of pupils<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              3,
+              "desc"
+            ],
+            [
+              4,
+              "desc"
+            ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 4,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 4
+            },
+            {
+              "name": "Academic Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "SEN status",
+              "targets": 2
+            },
+            {
+              "name": "Destination",
+              "targets": 3
+            },
+            {
+              "name": "% of pupils",
+              "targets": 4
+            }
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-1.13.6"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.6",
+          "src": {
+            "href": "jszip-1.13.6"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.6",
+          "src": {
+            "href": "pdfmake-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-ext-buttons-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "timeliness_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Local Authority<\/th>\n      <th>% of EHCPs issued within 20 weeks<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "desc"
+            ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 2,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 2
+            },
+            {
+              "name": "Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "% of EHCPs issued within 20 weeks",
+              "targets": 2
+            }
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-1.13.6"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.6",
+          "src": {
+            "href": "jszip-1.13.6"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.6",
+          "src": {
+            "href": "pdfmake-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-ext-buttons-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "tribunals_la_bench_table": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Year<\/th>\n      <th>Local Authority<\/th>\n      <th>Appeal Rate (%)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "order": [
+            [
+              2,
+              "desc"
+            ]
+          ],
+          "columnDefs": [
+            {
+              "targets": 2,
+              "render": "function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 2, 3, \",\", \".\", null);\n  }"
+            },
+            {
+              "visible": false
+            },
+            {
+              "className": "dt-right",
+              "targets": 2
+            },
+            {
+              "name": "Year",
+              "targets": 0
+            },
+            {
+              "name": "Local Authority",
+              "targets": 1
+            },
+            {
+              "name": "Appeal Rate (%)",
+              "targets": 2
+            }
+          ],
+          "pageLength": 20,
+          "dom": "lftBp",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.columnDefs.0.render",
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-core-1.13.6"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.13.6",
+          "src": {
+            "href": "jszip-1.13.6"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.13.6",
+          "src": {
+            "href": "pdfmake-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.13.6",
+          "src": {
+            "href": "dt-ext-buttons-1.13.6"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    }
+  }
+}

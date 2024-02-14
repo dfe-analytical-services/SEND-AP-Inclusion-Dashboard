@@ -1,0 +1,203 @@
+{
+  "input": {
+    "autism_nat_bench_filter": "Age: Under 10",
+    "ccg_choice": null,
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Further education",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "All destination measures",
+    "destinations_1618_reg_type_filter": "Overall sustained",
+    "ks1_phonics_la_filter": "All SEN",
+    "ks1_phonics_reg_filter": "All SEN",
+    "ks2_attainment_la_filter": "All SEN",
+    "ks2_attainment_reg_filter": "All SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
+    "ks4_destinations_la_bench_filter": "Identified SEN",
+    "ks4_destinations_la_time_filter": "Identified SEN",
+    "ks4_destinations_la_type_filter": "Employment",
+    "ks4_destinations_reg_bench_filter": "Identified SEN",
+    "ks4_destinations_reg_time_filter": "Identified SEN",
+    "ks4_destinations_reg_type_filter": "Employment",
+    "la_choice": "Middlesbrough",
+    "level_choice": "Regions",
+    "mainstream_with_sen_la_filter": "EHC plan",
+    "mainstream_with_sen_reg_filter": "EHC plan",
+    "myregion_switch": false,
+    "navlistPanel": "England and Regions",
+    "nhs_region_choice": "North East and Yorkshire",
+    "ofsted_table_choice": "Summary",
+    "percent_pupils_ehcp_la_filter": "EHC plan",
+    "percent_pupils_ehcp_reg_filter": "EHC plan",
+    "provider_types_la_bench_filter": "all pupils",
+    "provider_types_la_time_filter": "all pupils",
+    "provider_types_reg_bench_filter": "all pupils",
+    "provider_types_reg_time_filter": "all pupils",
+    "region_choice": "North East",
+    "tabsetpanels_la": "Summary",
+    "tabsetpanels_reg": "Summary"
+  },
+  "output": {
+    "box_1618dest": {
+      "html": "<table style=\"background-color:blue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2021/22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">79.3% (→)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">78.5%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2020/21<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_KS4dest": {
+      "html": "<table style=\"background-color:lightblue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2021/22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">86% (→)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">87.6%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2020/21<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_absence": {
+      "html": "<table style=\"background-color:lightblue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">10.6% (→)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">10.4%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_apabsence": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">42.9% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">40.1%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_apchars": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">65.9% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">59.6%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_apcount_la": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">1,733 (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">1,425<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_apcount_sa": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td width=\"100\"><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">No previous data<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">1,578<\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td><span style=\"font-size: 16px\">available for comparison<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span> <\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_apcount_sf": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">1,005 (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">877<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_apofsted": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2023 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">88.9% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">83.3%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2022<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_autism": {
+      "html": "<table style=\"background-color:lightblue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2023-06-30 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">22% (↓)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">24%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2023-05-31<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_budget": {
+      "html": "<table style=\"background-color:black color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2021-22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">-1.1% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">-0.8%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2020-21<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_cin": {
+      "html": "<table style=\"background-color:orange color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">202122 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">47.3% (→)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">46.4%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 202021<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_eyfsp": {
+      "html": "<table style=\"background-color:blue color: white\">\n  <tr>\n    <td width=\"100\"><span style=\"font-size: 16px;\">2021/22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">No previous data<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">18.7<\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td><span style=\"font-size: 16px\">available for comparison<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span> <\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_ks1_phonics": {
+      "html": "<table style=\"background-color:blue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">41.1% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">37.5%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_ks2_attainment": {
+      "html": "<table style=\"background-color:blue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">22.1% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">18.6%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_ks4_attainment": {
+      "html": "<table style=\"background-color:blue color: white\">\n  <tr>\n    <td width=\"100\"><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previous year not<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">-0.87<\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td><span style=\"font-size: 16px\">comparable to current<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span> <\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_mainstream": {
+      "html": "<table style=\"background-color:orange color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">16.2% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">15.5%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_mentalhealth": {
+      "html": "<table style=\"background-color:blue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">August 2023 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">125,955 (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">119,620<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in June 2022<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_ofsted": {
+      "html": "<table style=\"background-color: blue color: white\">\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">8.3%<\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n  <\/tr>\n  <tr>\n    <td><span style=\"font-size: 16px\">Date of last inspection: 10 Nov 2023<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_percap": {
+      "html": "<table style=\"background-color:black color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2021-22 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">£ 294 (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">£268<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2020-21<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_special": {
+      "html": "<table style=\"background-color:orange color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">5.3% (→)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">5.1%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_statefunded": {
+      "html": "<table style=\"background-color:orange color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">4.6% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">4.1%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021/22<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_timeliness": {
+      "html": "<table style=\"background-color:lightblue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">57.8% (↓)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">71.8%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_tribunals": {
+      "html": "<table style=\"background-color:lightblue color: white\">\n  <tr>\n    <td><span style=\"font-size: 16px;\">2022 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">Previously:<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">1.7% (↑)<\/span>\n    <\/td>\n    <td>\n      <span> <\/span>\n    <\/td>\n    <td><span style=\"font-size: 21px\">1.2%<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td><\/td>\n    <td><\/td>\n    <td><span style=\"font-size: 14px\">in 2021<\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_uapcount_la": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td width=\"100\"><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">No previous data<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">476<\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td><span style=\"font-size: 16px\">available for comparison<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span> <\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    },
+    "box_uapcount_sa": {
+      "html": "<table style=\"background-color:purple color: white\">\n  <tr>\n    <td width=\"100\"><span style=\"font-size: 16px;\">2022/23 value:  <\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td>\n      <span style=\"font-size: 16px\">No previous data<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span style=\"font-size: 32px\">831<\/span>\n    <\/td>\n    <td width=\"15\"><\/td>\n    <td><span style=\"font-size: 16px\">available for comparison<\/span>\n    <\/td>\n  <\/tr>\n  <tr>\n    <td>\n      <span> <\/span>\n    <\/td>\n  <\/tr>\n<\/table>",
+      "deps": [
+
+      ]
+    }
+  }
+}

@@ -1,0 +1,4170 @@
+{
+  "input": {
+    "autism_nat_bench_filter": "Age: Under 10",
+    "ccg_choice": "NHS Bedfordshire, Luton and Milton Keynes CCG",
+    "destinations_1618_la_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_la_bench_filter_two": "Overall sustained",
+    "destinations_1618_la_time_filter": "Identified LLDD (mainstream)",
+    "destinations_1618_la_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_la_type_filter": "Overall sustained",
+    "destinations_1618_reg_bench_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_bench_filter_two": "Overall sustained",
+    "destinations_1618_reg_time_filter": "Identified SEN (mainstream)",
+    "destinations_1618_reg_time_filter_two": "Overall sustained destination (education, apprenticeship or employment)",
+    "destinations_1618_reg_type_filter": "Overall sustained",
+    "ks1_phonics_la_filter": "All SEN",
+    "ks1_phonics_reg_filter": "All SEN",
+    "ks2_attainment_la_filter": "All SEN",
+    "ks2_attainment_reg_filter": "All SEN",
+    "ks4_attainment_la_bench_filter": "All SEN",
+    "ks4_attainment_reg_bench_filter": "All SEN",
+    "ks4_destinations_la_bench_filter": "Identified SEN",
+    "ks4_destinations_la_time_filter": "Identified SEN",
+    "ks4_destinations_la_type_filter": "Overall sustained",
+    "ks4_destinations_reg_bench_filter": "Identified SEN",
+    "ks4_destinations_reg_time_filter": "Identified SEN",
+    "ks4_destinations_reg_type_filter": "Overall sustained",
+    "la_choice": "Bedford",
+    "level_choice": "",
+    "mainstream_with_sen_la_filter": "EHC plan",
+    "mainstream_with_sen_reg_filter": "EHC plan",
+    "myregion_switch": true,
+    "navlistPanel": "Local Areas",
+    "nhs_region_choice": "Midlands",
+    "ofsted_table_choice": "Summary",
+    "percent_pupils_ehcp_la_filter": "EHC plan",
+    "percent_pupils_ehcp_reg_filter": "EHC plan",
+    "provider_types_la_bench_filter": "all pupils",
+    "provider_types_la_time_filter": "all pupils",
+    "provider_types_reg_bench_filter": "all pupils",
+    "provider_types_reg_time_filter": "all pupils",
+    "region_choice": "East Midlands",
+    "tabsetpanels_la": "Outcomes",
+    "tabsetpanels_reg": "Summary"
+  },
+  "output": {
+    "destinations_1618_la_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": 0.89999999999999858,
+            "base": 0,
+            "x": 11,
+            "y": 95.099999999999994,
+            "text": "Bedford<br />% of students:95.1",
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Bedford",
+            "legendgroup": "Bedford",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000013,
+              0.89999999999999991
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              10,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              92.900000000000006,
+              89.299999999999997,
+              88.599999999999994,
+              87.5,
+              87.200000000000003,
+              83.299999999999997,
+              81.799999999999997,
+              80,
+              79.799999999999997,
+              78.799999999999997
+            ],
+            "text": [
+              "Southend-on-Sea<br />% of students:92.9",
+              "Hertfordshire<br />% of students:89.3",
+              "Peterborough<br />% of students:88.6",
+              "Suffolk<br />% of students:87.5",
+              "Central Bedfordshire<br />% of students:87.2",
+              "Thurrock<br />% of students:83.3",
+              "Norfolk<br />% of students:81.8",
+              "Luton<br />% of students:80",
+              "Cambridgeshire<br />% of students:79.8",
+              "Essex<br />% of students:78.8"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(191,191,191,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Other LA",
+            "legendgroup": "Other LA",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              83.900000000000006,
+              83.900000000000006
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(61,61,61,1)",
+              "dash": "dash"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 3,
+            "y": 91.095000000000013,
+            "text": "England average",
+            "hovertext": "England average:  83.9",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 25.4600802546008,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "Essex",
+              "Cambridgeshire",
+              "Luton",
+              "Norfolk",
+              "Thurrock",
+              "Central Bedfordshire",
+              "Suffolk",
+              "Peterborough",
+              "Hertfordshire",
+              "Southend-on-Sea",
+              "Bedford"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "Essex",
+              "Cambridgeshire",
+              "Luton",
+              "Norfolk",
+              "Thurrock",
+              "Central Bedfordshire",
+              "Suffolk",
+              "Peterborough",
+              "Hertfordshire",
+              "Southend-on-Sea",
+              "Bedford"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": false,
+            "tickfont": {
+              "color": null,
+              "family": null,
+              "size": 0
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Bedford is the highest out of 11 LAs in 2021/22",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -4.7549999999999999,
+              99.85499999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "25",
+              "50",
+              "75"
+            ],
+            "tickvals": [
+              0,
+              24.999999999999996,
+              49.999999999999993,
+              75
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "25",
+              "50",
+              "75"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of students",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Local Authority",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "eyfsp_la_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": 0.90000000000000036,
+            "base": 0,
+            "x": 5,
+            "y": 17.399999999999999,
+            "text": "Bedford <br />Percentage of children with a good level of development: 17.4",
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Bedford",
+            "legendgroup": "Bedford",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000013,
+              0.89999999999999991
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              11,
+              10,
+              9,
+              8,
+              7,
+              6,
+              4,
+              3,
+              2,
+              1
+            ],
+            "y": [
+              20.699999999999999,
+              19.399999999999999,
+              18.800000000000001,
+              18.699999999999999,
+              17.699999999999999,
+              17.600000000000001,
+              16.699999999999999,
+              15.300000000000001,
+              14,
+              12.800000000000001
+            ],
+            "text": [
+              "Norfolk <br />Percentage of children with a good level of development: 20.7",
+              "Peterborough <br />Percentage of children with a good level of development: 19.4",
+              "Essex <br />Percentage of children with a good level of development: 18.8",
+              "Cambridgeshire <br />Percentage of children with a good level of development: 18.7",
+              "Suffolk <br />Percentage of children with a good level of development: 17.7",
+              "Hertfordshire <br />Percentage of children with a good level of development: 17.6",
+              "Luton <br />Percentage of children with a good level of development: 16.7",
+              "Thurrock <br />Percentage of children with a good level of development: 15.3",
+              "Central Bedfordshire <br />Percentage of children with a good level of development: 14",
+              "Southend-on-Sea <br />Percentage of children with a good level of development: 12.8"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(191,191,191,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Other LA",
+            "legendgroup": "Other LA",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              18.800000000000001,
+              18.800000000000001
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 3,
+            "y": 20.240000000000002,
+            "text": "England average",
+            "hovertext": "England average:  18.8",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 25.4600802546008,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "Southend-on-Sea",
+              "Central Bedfordshire",
+              "Thurrock",
+              "Luton",
+              "Bedford",
+              "Hertfordshire",
+              "Suffolk",
+              "Cambridgeshire",
+              "Essex",
+              "Peterborough",
+              "Norfolk"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "Southend-on-Sea",
+              "Central Bedfordshire",
+              "Thurrock",
+              "Luton",
+              "Bedford",
+              "Hertfordshire",
+              "Suffolk",
+              "Cambridgeshire",
+              "Essex",
+              "Peterborough",
+              "Norfolk"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": false,
+            "tickfont": {
+              "color": null,
+              "family": null,
+              "size": 0
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Bedford is ranked 7th, out of 11 LAs in 2021/22",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -1.0349999999999999,
+              21.734999999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "5",
+              "10",
+              "15",
+              "20"
+            ],
+            "tickvals": [
+              0,
+              5.0000000000000009,
+              10,
+              15,
+              20
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "5",
+              "10",
+              "15",
+              "20"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% children with a good level of development",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Local Authority",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks1_phonics_la_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": 0.89999999999999991,
+            "base": 0,
+            "x": 1,
+            "y": 35.420000000000002,
+            "text": "Bedford <br /> % meeting expected standards in Y1: 35.42 <br /> SEN status: All SEN",
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Bedford",
+            "legendgroup": "Bedford",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000013
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              11,
+              10,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            "y": [
+              44.75,
+              41.140000000000001,
+              40.850000000000001,
+              39.850000000000001,
+              39.789999999999999,
+              39.289999999999999,
+              39.200000000000003,
+              38.710000000000001,
+              37.460000000000001,
+              36.409999999999997
+            ],
+            "text": [
+              "Hertfordshire <br /> % meeting expected standards in Y1: 44.75 <br /> SEN status: All SEN",
+              "Thurrock <br /> % meeting expected standards in Y1: 41.14 <br /> SEN status: All SEN",
+              "Luton <br /> % meeting expected standards in Y1: 40.85 <br /> SEN status: All SEN",
+              "Suffolk <br /> % meeting expected standards in Y1: 39.85 <br /> SEN status: All SEN",
+              "Essex <br /> % meeting expected standards in Y1: 39.79 <br /> SEN status: All SEN",
+              "Central Bedfordshire <br /> % meeting expected standards in Y1: 39.29 <br /> SEN status: All SEN",
+              "Cambridgeshire <br /> % meeting expected standards in Y1: 39.2 <br /> SEN status: All SEN",
+              "Norfolk <br /> % meeting expected standards in Y1: 38.71 <br /> SEN status: All SEN",
+              "Southend-on-Sea <br /> % meeting expected standards in Y1: 37.46 <br /> SEN status: All SEN",
+              "Peterborough <br /> % meeting expected standards in Y1: 36.41 <br /> SEN status: All SEN"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(191,191,191,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Other LA",
+            "legendgroup": "Other LA",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              42.189999999999998,
+              42.189999999999998
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 3,
+            "y": 44.549500000000002,
+            "text": "England average",
+            "hovertext": "England average:  42.19",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 25.4600802546008,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "Bedford",
+              "Peterborough",
+              "Southend-on-Sea",
+              "Norfolk",
+              "Cambridgeshire",
+              "Central Bedfordshire",
+              "Essex",
+              "Suffolk",
+              "Luton",
+              "Thurrock",
+              "Hertfordshire"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "Bedford",
+              "Peterborough",
+              "Southend-on-Sea",
+              "Norfolk",
+              "Cambridgeshire",
+              "Central Bedfordshire",
+              "Essex",
+              "Suffolk",
+              "Luton",
+              "Thurrock",
+              "Hertfordshire"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": false,
+            "tickfont": {
+              "color": null,
+              "family": null,
+              "size": 0
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Bedford is the lowest out of 11 LAs in 2022/23",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -2.2375000000000003,
+              46.987499999999997
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "10",
+              "20",
+              "30",
+              "40"
+            ],
+            "tickvals": [
+              0,
+              10,
+              20,
+              29.999999999999996,
+              40
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "10",
+              "20",
+              "30",
+              "40"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% meeting expected standards in Y1",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Local Authority",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks2_attainment_la_bench": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": 0.89999999999999991,
+            "base": 0,
+            "x": 1,
+            "y": 10.640000000000001,
+            "text": "Bedford <br /> % meeting expected standard: 10.64 <br /> SEN status: All SEN",
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Bedford",
+            "legendgroup": "Bedford",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999858,
+              0.89999999999999947,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000036,
+              0.90000000000000013
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              11,
+              10,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ],
+            "y": [
+              24.18,
+              21.739999999999998,
+              18.780000000000001,
+              18.170000000000002,
+              17.890000000000001,
+              17.239999999999998,
+              16.510000000000002,
+              15.779999999999999,
+              14.43,
+              14.15
+            ],
+            "text": [
+              "Thurrock <br /> % meeting expected standard: 24.18 <br /> SEN status: All SEN",
+              "Hertfordshire <br /> % meeting expected standard: 21.74 <br /> SEN status: All SEN",
+              "Essex <br /> % meeting expected standard: 18.78 <br /> SEN status: All SEN",
+              "Suffolk <br /> % meeting expected standard: 18.17 <br /> SEN status: All SEN",
+              "Luton <br /> % meeting expected standard: 17.89 <br /> SEN status: All SEN",
+              "Southend-on-Sea <br /> % meeting expected standard: 17.24 <br /> SEN status: All SEN",
+              "Cambridgeshire <br /> % meeting expected standard: 16.51 <br /> SEN status: All SEN",
+              "Peterborough <br /> % meeting expected standard: 15.78 <br /> SEN status: All SEN",
+              "Norfolk <br /> % meeting expected standard: 14.43 <br /> SEN status: All SEN",
+              "Central Bedfordshire <br /> % meeting expected standard: 14.15 <br /> SEN status: All SEN"
+            ],
+            "type": "bar",
+            "textposition": "none",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(191,191,191,1)",
+              "line": {
+                "width": 1.8897637795275593,
+                "color": "transparent"
+              }
+            },
+            "name": "Other LA",
+            "legendgroup": "Other LA",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              20,
+              20
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 3,
+            "y": 21.25,
+            "text": "England average",
+            "hovertext": "England average:  20",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 25.4600802546008,
+            "l": 33.872976338729757
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "Bedford",
+              "Central Bedfordshire",
+              "Norfolk",
+              "Peterborough",
+              "Cambridgeshire",
+              "Southend-on-Sea",
+              "Luton",
+              "Suffolk",
+              "Essex",
+              "Hertfordshire",
+              "Thurrock"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "Bedford",
+              "Central Bedfordshire",
+              "Norfolk",
+              "Peterborough",
+              "Cambridgeshire",
+              "Southend-on-Sea",
+              "Luton",
+              "Suffolk",
+              "Essex",
+              "Hertfordshire",
+              "Thurrock"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": false,
+            "tickfont": {
+              "color": null,
+              "family": null,
+              "size": 0
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Bedford is the lowest out of 11 LAs in 2022/23",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -1.2090000000000001,
+              25.388999999999999
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "5",
+              "10",
+              "15",
+              "20",
+              "25"
+            ],
+            "tickvals": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "5",
+              "10",
+              "15",
+              "20",
+              "25"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "% of pupils meeting expected standard",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Local Authority",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "ks4_attainment_la_bench": {
+      "x": {
+        "data": [
+          {
+            "x": 6,
+            "y": -0.64000000000000001,
+            "text": "Average progress 8 score: -0.64<br />Bedford",
+            "type": "scatter",
+            "mode": "lines+markers",
+            "opacity": 1,
+            "line": {
+              "color": "transparent"
+            },
+            "error_y": {
+              "array": 0.17000000000000004,
+              "arrayminus": 0.17000000000000004,
+              "type": "data",
+              "width": 0,
+              "symmetric": false,
+              "color": "rgba(18,67,109,1)"
+            },
+            "name": "Bedford",
+            "legendgroup": "Bedford",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(18,67,109,1)",
+              "opacity": 1,
+              "size": 1.8897637795275593,
+              "symbol": "square-open",
+              "line": {
+                "width": 3.7795275590551185,
+                "color": "rgba(18,67,109,1)"
+              }
+            },
+            "hoveron": "points",
+            "frame": null
+          },
+          {
+            "x": [
+              11,
+              10,
+              9,
+              8,
+              7,
+              5,
+              4,
+              2,
+              3,
+              1
+            ],
+            "y": [
+              -0.28999999999999998,
+              -0.51000000000000001,
+              -0.54000000000000004,
+              -0.56000000000000005,
+              -0.58999999999999997,
+              -0.65000000000000002,
+              -0.66000000000000003,
+              -0.72999999999999998,
+              -0.72999999999999998,
+              -0.98999999999999999
+            ],
+            "text": [
+              "Average progress 8 score: -0.29<br />Hertfordshire",
+              "Average progress 8 score: -0.51<br />Cambridgeshire",
+              "Average progress 8 score: -0.54<br />Thurrock",
+              "Average progress 8 score: -0.56<br />Norfolk",
+              "Average progress 8 score: -0.59<br />Peterborough",
+              "Average progress 8 score: -0.65<br />Luton",
+              "Average progress 8 score: -0.66<br />Suffolk",
+              "Average progress 8 score: -0.73<br />Central Bedfordshire",
+              "Average progress 8 score: -0.73<br />Essex",
+              "Average progress 8 score: -0.99<br />Southend-on-Sea"
+            ],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "opacity": 1,
+            "line": {
+              "color": "transparent"
+            },
+            "error_y": {
+              "array": [
+                0.05999999999999997,
+                0.080000000000000016,
+                0.16000000000000003,
+                0.070000000000000062,
+                0.14999999999999997,
+                0.14000000000000001,
+                0.09000000000000008,
+                0.13,
+                0.059999999999999942,
+                0.17999999999999994
+              ],
+              "arrayminus": [
+                0.050000000000000044,
+                0.089999999999999969,
+                0.14999999999999991,
+                0.07999999999999996,
+                0.16000000000000003,
+                0.14000000000000001,
+                0.07999999999999996,
+                0.13,
+                0.060000000000000053,
+                0.16999999999999993
+              ],
+              "type": "data",
+              "width": 0,
+              "symmetric": false,
+              "color": "rgba(191,191,191,1)"
+            },
+            "name": "Other LAs",
+            "legendgroup": "Other LAs",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(191,191,191,1)",
+              "opacity": 1,
+              "size": 1.8897637795275593,
+              "symbol": "square-open",
+              "line": {
+                "width": 3.7795275590551185,
+                "color": "rgba(191,191,191,1)"
+              }
+            },
+            "hoveron": "points",
+            "frame": null
+          },
+          {
+            "x": [
+              0.40000000000000002,
+              11.6
+            ],
+            "y": [
+              -0.62,
+              -0.62
+            ],
+            "text": "",
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1,
+              "color": "rgba(0,0,0,1)",
+              "dash": "dash",
+              "showlegend": "false"
+            },
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": 3,
+            "y": -0.41999999999999998,
+            "text": "England average",
+            "hovertext": "outcome: -0.62",
+            "textfont": {
+              "size": 13.228346456692915,
+              "color": "rgba(61,61,61,1)"
+            },
+            "type": "scatter",
+            "mode": "text",
+            "hoveron": "points",
+            "showlegend": false,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 25.4600802546008,
+            "l": 44.499792444997915
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.40000000000000002,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "Southend-on-Sea",
+              "Central Bedfordshire",
+              "Essex",
+              "Suffolk",
+              "Luton",
+              "Bedford",
+              "Peterborough",
+              "Norfolk",
+              "Thurrock",
+              "Cambridgeshire",
+              "Hertfordshire"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "Southend-on-Sea",
+              "Central Bedfordshire",
+              "Essex",
+              "Suffolk",
+              "Luton",
+              "Bedford",
+              "Peterborough",
+              "Norfolk",
+              "Thurrock",
+              "Cambridgeshire",
+              "Hertfordshire"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": false,
+            "tickfont": {
+              "color": null,
+              "family": null,
+              "size": 0
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Bedford is ranked 6th, out of 11 LAs in 2022/23",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -1.2064999999999999,
+              -0.1835
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "-1.2",
+              "-1.0",
+              "-0.8",
+              "-0.6",
+              "-0.4",
+              "-0.2"
+            ],
+            "tickvals": [
+              -1.2000000000000002,
+              -1.0000000000000002,
+              -0.80000000000000016,
+              -0.60000000000000009,
+              -0.40000000000000013,
+              -0.20000000000000018
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "-1.2",
+              "-1.0",
+              "-0.8",
+              "-0.6",
+              "-0.4",
+              "-0.2"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Average Progress 8 score",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Local Authority",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "mentalhealth_ccg_bench": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600
+            ],
+            "y": [
+              14760,
+              15050,
+              15370,
+              15725,
+              15975,
+              16085,
+              16180,
+              16335,
+              16490,
+              16550,
+              16675,
+              16925,
+              17170,
+              17180,
+              17415,
+              17440,
+              17400,
+              17400,
+              17415,
+              17380,
+              17315,
+              17335,
+              17695,
+              17570,
+              13085,
+              13135,
+              13125,
+              13095,
+              12865,
+              12820
+            ],
+            "text": [
+              "Number of children and young people: 14760<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 15050<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 15370<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 15725<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 15975<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16085<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16180<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16335<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16490<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16550<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16675<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 16925<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17170<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17180<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17415<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17440<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17400<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17400<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17415<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17380<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17315<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17335<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17695<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 17570<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 13085<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 13135<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 13125<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 13095<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 12865<br />NHS Bedfordshire, Luton and Milton Keynes CCG",
+              "Number of children and young people: 12820<br />NHS Bedfordshire, Luton and Milton Keynes CCG"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(18,67,109,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "NHS Bedfordshire, Luton and Milton Keynes CCG",
+            "legendgroup": "NHS Bedfordshire, Luton and Milton Keynes CCG",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600,
+              null,
+              18717,
+              18747,
+              18778,
+              18808,
+              18839,
+              18870,
+              18900,
+              18931,
+              18961,
+              18992,
+              19023,
+              19051,
+              19082,
+              19112,
+              19143,
+              19173,
+              19204,
+              19235,
+              19265,
+              19296,
+              19326,
+              19357,
+              19388,
+              19416,
+              19447,
+              19477,
+              19508,
+              19538,
+              19569,
+              19600
+            ],
+            "y": [
+              1985,
+              1970,
+              1990,
+              2030,
+              2015,
+              2005,
+              2025,
+              2025,
+              2080,
+              2085,
+              2080,
+              2150,
+              2165,
+              2200,
+              2235,
+              2250,
+              2250,
+              2235,
+              2220,
+              2255,
+              2230,
+              2215,
+              2230,
+              2245,
+              2220,
+              2240,
+              2240,
+              2255,
+              2250,
+              2250,
+              null,
+              8785,
+              8915,
+              8910,
+              9020,
+              8980,
+              9015,
+              8960,
+              9490,
+              9785,
+              10040,
+              10235,
+              10205,
+              10375,
+              10595,
+              10825,
+              10980,
+              11335,
+              12010,
+              12610,
+              12885,
+              13135,
+              13265,
+              13485,
+              13945,
+              14400,
+              14730,
+              14940,
+              15335,
+              15890,
+              15855,
+              null,
+              1045,
+              1055,
+              1045,
+              1075,
+              1095,
+              1095,
+              1120,
+              1155,
+              1160,
+              1185,
+              1205,
+              1230,
+              1255,
+              1285,
+              1315,
+              1345,
+              1370,
+              1360,
+              1390,
+              1425,
+              1460,
+              1485,
+              1505,
+              1500,
+              1515,
+              1530,
+              1525,
+              1550,
+              1550,
+              1535,
+              null,
+              4270,
+              4355,
+              4440,
+              4500,
+              4535,
+              4565,
+              4610,
+              4630,
+              4660,
+              4635,
+              4610,
+              4590,
+              4585,
+              4625,
+              4680,
+              4690,
+              4585,
+              4595,
+              4630,
+              4645,
+              4670,
+              4665,
+              4785,
+              4825,
+              4955,
+              5105,
+              5220,
+              5325,
+              5270,
+              5255,
+              null,
+              5570,
+              5920,
+              6200,
+              6400,
+              6530,
+              6685,
+              6815,
+              7010,
+              7185,
+              7240,
+              7360,
+              7465,
+              7595,
+              7535,
+              7580,
+              7575,
+              7435,
+              7470,
+              7600,
+              7470,
+              7565,
+              7515,
+              7600,
+              7685,
+              7930,
+              7995,
+              8085,
+              8205,
+              8230,
+              8310,
+              null,
+              4185,
+              4230,
+              4400,
+              4515,
+              4545,
+              4570,
+              4640,
+              4785,
+              5010,
+              5205,
+              5465,
+              5600,
+              5780,
+              5910,
+              6005,
+              6080,
+              6135,
+              6105,
+              6085,
+              6025,
+              5975,
+              5845,
+              5735,
+              5670,
+              5565,
+              5505,
+              5440,
+              5455,
+              5415,
+              5455,
+              null,
+              2865,
+              2860,
+              2950,
+              3035,
+              3090,
+              3130,
+              3185,
+              3200,
+              3285,
+              3330,
+              3400,
+              3475,
+              3535,
+              3565,
+              3605,
+              3600,
+              3540,
+              3520,
+              3480,
+              3485,
+              3465,
+              3420,
+              3490,
+              3510,
+              3485,
+              3565,
+              3605,
+              3730,
+              3820,
+              3800,
+              null,
+              10130,
+              10425,
+              10745,
+              11030,
+              11255,
+              11395,
+              11515,
+              11385,
+              11270,
+              11175,
+              11105,
+              11060,
+              11025,
+              10860,
+              11170,
+              11180,
+              11085,
+              10945,
+              10755,
+              11080,
+              11455,
+              11770,
+              12200,
+              12695,
+              12930,
+              13030,
+              12920,
+              12915,
+              12800,
+              12840,
+              null,
+              3175,
+              3155,
+              3330,
+              3410,
+              3500,
+              3510,
+              3600,
+              3645,
+              3720,
+              3790,
+              3855,
+              3885,
+              3915,
+              3920,
+              3920,
+              3950,
+              3850,
+              3850,
+              3795,
+              3810,
+              3810,
+              3765,
+              3785,
+              3800,
+              3715,
+              3745,
+              3665,
+              3735,
+              3775,
+              3760,
+              null,
+              1690,
+              1735,
+              1760,
+              1770,
+              1770,
+              1755,
+              1760,
+              1755,
+              1775,
+              1765,
+              1765,
+              1800,
+              1800,
+              1810,
+              1820,
+              1820,
+              1820,
+              1805,
+              1810,
+              1830,
+              1850,
+              1860,
+              1875,
+              1885,
+              1920,
+              1905,
+              1910,
+              1950,
+              1925,
+              1930,
+              null,
+              1540,
+              1540,
+              1560,
+              1620,
+              1625,
+              1615,
+              1635,
+              1640,
+              1660,
+              1635,
+              1620,
+              1630,
+              1630,
+              1635,
+              1620,
+              1605,
+              1550,
+              1535,
+              1465,
+              1470,
+              1500,
+              1435,
+              1645,
+              1680,
+              1660,
+              1650,
+              1670,
+              1680,
+              1675,
+              1660,
+              null,
+              2245,
+              2260,
+              2300,
+              2320,
+              2315,
+              2335,
+              2335,
+              2365,
+              2385,
+              2400,
+              2410,
+              2430,
+              2440,
+              2485,
+              2550,
+              2545,
+              2535,
+              2545,
+              2560,
+              2570,
+              2565,
+              2560,
+              2605,
+              2625,
+              2720,
+              2805,
+              2830,
+              2965,
+              2965,
+              2970,
+              null,
+              1980,
+              1985,
+              2070,
+              2165,
+              2195,
+              2205,
+              2270,
+              2395,
+              2500,
+              2610,
+              2770,
+              2885,
+              2965,
+              3030,
+              3060,
+              3085,
+              3105,
+              3100,
+              3070,
+              3035,
+              3015,
+              2925,
+              2890,
+              2875,
+              2865,
+              2820,
+              2810,
+              2835,
+              2855,
+              2870
+            ],
+            "text": [
+              "Number of children and young people:  1985<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  1970<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  1990<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2030<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2015<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2005<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2025<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2025<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2080<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2085<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2080<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2150<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2165<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2200<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2235<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2250<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2250<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2235<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2220<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2255<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2230<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2215<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2230<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2245<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2220<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2240<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2240<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2255<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2250<br />NHS Basildon and Brentwood CCG",
+              "Number of children and young people:  2250<br />NHS Basildon and Brentwood CCG",
+              null,
+              "Number of children and young people:  8785<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  8915<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  8910<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  9020<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  8980<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  9015<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  8960<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  9490<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people:  9785<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10040<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10235<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10205<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10375<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10595<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10825<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 10980<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 11335<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 12010<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 12610<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 12885<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 13135<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 13265<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 13485<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 13945<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 14400<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 14730<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 14940<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 15335<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 15890<br />NHS Cambridgeshire and Peterborough CCG",
+              "Number of children and young people: 15855<br />NHS Cambridgeshire and Peterborough CCG",
+              null,
+              "Number of children and young people:  1045<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1055<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1045<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1075<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1095<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1095<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1120<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1155<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1160<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1185<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1205<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1230<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1255<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1285<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1315<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1345<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1370<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1360<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1390<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1425<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1460<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1485<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1505<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1500<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1515<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1530<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1525<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1550<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1550<br />NHS Castle Point and Rochford CCG",
+              "Number of children and young people:  1535<br />NHS Castle Point and Rochford CCG",
+              null,
+              "Number of children and young people:  4270<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4355<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4440<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4500<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4535<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4565<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4610<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4630<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4660<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4635<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4610<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4590<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4585<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4625<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4680<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4690<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4585<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4595<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4630<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4645<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4670<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4665<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4785<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4825<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  4955<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  5105<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  5220<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  5325<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  5270<br />NHS East and North Hertfordshire CCG",
+              "Number of children and young people:  5255<br />NHS East and North Hertfordshire CCG",
+              null,
+              "Number of children and young people:  5570<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  5920<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  6200<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  6400<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  6530<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  6685<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  6815<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7010<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7185<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7240<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7360<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7465<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7595<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7535<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7580<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7575<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7435<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7470<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7600<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7470<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7565<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7515<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7600<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7685<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7930<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  7995<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  8085<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  8205<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  8230<br />NHS Herts Valleys CCG",
+              "Number of children and young people:  8310<br />NHS Herts Valleys CCG",
+              null,
+              "Number of children and young people:  4185<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4230<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4400<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4515<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4545<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4570<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4640<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  4785<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5010<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5205<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5465<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5600<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5780<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5910<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  6005<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  6080<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  6135<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  6105<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  6085<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  6025<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5975<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5845<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5735<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5670<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5565<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5505<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5440<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5455<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5415<br />NHS Ipswich and East Suffolk CCG",
+              "Number of children and young people:  5455<br />NHS Ipswich and East Suffolk CCG",
+              null,
+              "Number of children and young people:  2865<br />NHS Mid Essex CCG",
+              "Number of children and young people:  2860<br />NHS Mid Essex CCG",
+              "Number of children and young people:  2950<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3035<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3090<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3130<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3185<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3200<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3285<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3330<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3400<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3475<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3535<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3565<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3605<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3600<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3540<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3520<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3480<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3485<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3465<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3420<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3490<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3510<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3485<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3565<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3605<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3730<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3820<br />NHS Mid Essex CCG",
+              "Number of children and young people:  3800<br />NHS Mid Essex CCG",
+              null,
+              "Number of children and young people: 10130<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 10425<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 10745<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11030<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11255<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11395<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11515<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11385<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11270<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11175<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11105<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11060<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11025<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 10860<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11170<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11180<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11085<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 10945<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 10755<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11080<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11455<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 11770<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12200<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12695<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12930<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 13030<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12920<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12915<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12800<br />NHS Norfolk and Waveney CCG",
+              "Number of children and young people: 12840<br />NHS Norfolk and Waveney CCG",
+              null,
+              "Number of children and young people:  3175<br />NHS North East Essex CCG",
+              "Number of children and young people:  3155<br />NHS North East Essex CCG",
+              "Number of children and young people:  3330<br />NHS North East Essex CCG",
+              "Number of children and young people:  3410<br />NHS North East Essex CCG",
+              "Number of children and young people:  3500<br />NHS North East Essex CCG",
+              "Number of children and young people:  3510<br />NHS North East Essex CCG",
+              "Number of children and young people:  3600<br />NHS North East Essex CCG",
+              "Number of children and young people:  3645<br />NHS North East Essex CCG",
+              "Number of children and young people:  3720<br />NHS North East Essex CCG",
+              "Number of children and young people:  3790<br />NHS North East Essex CCG",
+              "Number of children and young people:  3855<br />NHS North East Essex CCG",
+              "Number of children and young people:  3885<br />NHS North East Essex CCG",
+              "Number of children and young people:  3915<br />NHS North East Essex CCG",
+              "Number of children and young people:  3920<br />NHS North East Essex CCG",
+              "Number of children and young people:  3920<br />NHS North East Essex CCG",
+              "Number of children and young people:  3950<br />NHS North East Essex CCG",
+              "Number of children and young people:  3850<br />NHS North East Essex CCG",
+              "Number of children and young people:  3850<br />NHS North East Essex CCG",
+              "Number of children and young people:  3795<br />NHS North East Essex CCG",
+              "Number of children and young people:  3810<br />NHS North East Essex CCG",
+              "Number of children and young people:  3810<br />NHS North East Essex CCG",
+              "Number of children and young people:  3765<br />NHS North East Essex CCG",
+              "Number of children and young people:  3785<br />NHS North East Essex CCG",
+              "Number of children and young people:  3800<br />NHS North East Essex CCG",
+              "Number of children and young people:  3715<br />NHS North East Essex CCG",
+              "Number of children and young people:  3745<br />NHS North East Essex CCG",
+              "Number of children and young people:  3665<br />NHS North East Essex CCG",
+              "Number of children and young people:  3735<br />NHS North East Essex CCG",
+              "Number of children and young people:  3775<br />NHS North East Essex CCG",
+              "Number of children and young people:  3760<br />NHS North East Essex CCG",
+              null,
+              "Number of children and young people:  1690<br />NHS Southend CCG",
+              "Number of children and young people:  1735<br />NHS Southend CCG",
+              "Number of children and young people:  1760<br />NHS Southend CCG",
+              "Number of children and young people:  1770<br />NHS Southend CCG",
+              "Number of children and young people:  1770<br />NHS Southend CCG",
+              "Number of children and young people:  1755<br />NHS Southend CCG",
+              "Number of children and young people:  1760<br />NHS Southend CCG",
+              "Number of children and young people:  1755<br />NHS Southend CCG",
+              "Number of children and young people:  1775<br />NHS Southend CCG",
+              "Number of children and young people:  1765<br />NHS Southend CCG",
+              "Number of children and young people:  1765<br />NHS Southend CCG",
+              "Number of children and young people:  1800<br />NHS Southend CCG",
+              "Number of children and young people:  1800<br />NHS Southend CCG",
+              "Number of children and young people:  1810<br />NHS Southend CCG",
+              "Number of children and young people:  1820<br />NHS Southend CCG",
+              "Number of children and young people:  1820<br />NHS Southend CCG",
+              "Number of children and young people:  1820<br />NHS Southend CCG",
+              "Number of children and young people:  1805<br />NHS Southend CCG",
+              "Number of children and young people:  1810<br />NHS Southend CCG",
+              "Number of children and young people:  1830<br />NHS Southend CCG",
+              "Number of children and young people:  1850<br />NHS Southend CCG",
+              "Number of children and young people:  1860<br />NHS Southend CCG",
+              "Number of children and young people:  1875<br />NHS Southend CCG",
+              "Number of children and young people:  1885<br />NHS Southend CCG",
+              "Number of children and young people:  1920<br />NHS Southend CCG",
+              "Number of children and young people:  1905<br />NHS Southend CCG",
+              "Number of children and young people:  1910<br />NHS Southend CCG",
+              "Number of children and young people:  1950<br />NHS Southend CCG",
+              "Number of children and young people:  1925<br />NHS Southend CCG",
+              "Number of children and young people:  1930<br />NHS Southend CCG",
+              null,
+              "Number of children and young people:  1540<br />NHS Thurrock CCG",
+              "Number of children and young people:  1540<br />NHS Thurrock CCG",
+              "Number of children and young people:  1560<br />NHS Thurrock CCG",
+              "Number of children and young people:  1620<br />NHS Thurrock CCG",
+              "Number of children and young people:  1625<br />NHS Thurrock CCG",
+              "Number of children and young people:  1615<br />NHS Thurrock CCG",
+              "Number of children and young people:  1635<br />NHS Thurrock CCG",
+              "Number of children and young people:  1640<br />NHS Thurrock CCG",
+              "Number of children and young people:  1660<br />NHS Thurrock CCG",
+              "Number of children and young people:  1635<br />NHS Thurrock CCG",
+              "Number of children and young people:  1620<br />NHS Thurrock CCG",
+              "Number of children and young people:  1630<br />NHS Thurrock CCG",
+              "Number of children and young people:  1630<br />NHS Thurrock CCG",
+              "Number of children and young people:  1635<br />NHS Thurrock CCG",
+              "Number of children and young people:  1620<br />NHS Thurrock CCG",
+              "Number of children and young people:  1605<br />NHS Thurrock CCG",
+              "Number of children and young people:  1550<br />NHS Thurrock CCG",
+              "Number of children and young people:  1535<br />NHS Thurrock CCG",
+              "Number of children and young people:  1465<br />NHS Thurrock CCG",
+              "Number of children and young people:  1470<br />NHS Thurrock CCG",
+              "Number of children and young people:  1500<br />NHS Thurrock CCG",
+              "Number of children and young people:  1435<br />NHS Thurrock CCG",
+              "Number of children and young people:  1645<br />NHS Thurrock CCG",
+              "Number of children and young people:  1680<br />NHS Thurrock CCG",
+              "Number of children and young people:  1660<br />NHS Thurrock CCG",
+              "Number of children and young people:  1650<br />NHS Thurrock CCG",
+              "Number of children and young people:  1670<br />NHS Thurrock CCG",
+              "Number of children and young people:  1680<br />NHS Thurrock CCG",
+              "Number of children and young people:  1675<br />NHS Thurrock CCG",
+              "Number of children and young people:  1660<br />NHS Thurrock CCG",
+              null,
+              "Number of children and young people:  2245<br />NHS West Essex CCG",
+              "Number of children and young people:  2260<br />NHS West Essex CCG",
+              "Number of children and young people:  2300<br />NHS West Essex CCG",
+              "Number of children and young people:  2320<br />NHS West Essex CCG",
+              "Number of children and young people:  2315<br />NHS West Essex CCG",
+              "Number of children and young people:  2335<br />NHS West Essex CCG",
+              "Number of children and young people:  2335<br />NHS West Essex CCG",
+              "Number of children and young people:  2365<br />NHS West Essex CCG",
+              "Number of children and young people:  2385<br />NHS West Essex CCG",
+              "Number of children and young people:  2400<br />NHS West Essex CCG",
+              "Number of children and young people:  2410<br />NHS West Essex CCG",
+              "Number of children and young people:  2430<br />NHS West Essex CCG",
+              "Number of children and young people:  2440<br />NHS West Essex CCG",
+              "Number of children and young people:  2485<br />NHS West Essex CCG",
+              "Number of children and young people:  2550<br />NHS West Essex CCG",
+              "Number of children and young people:  2545<br />NHS West Essex CCG",
+              "Number of children and young people:  2535<br />NHS West Essex CCG",
+              "Number of children and young people:  2545<br />NHS West Essex CCG",
+              "Number of children and young people:  2560<br />NHS West Essex CCG",
+              "Number of children and young people:  2570<br />NHS West Essex CCG",
+              "Number of children and young people:  2565<br />NHS West Essex CCG",
+              "Number of children and young people:  2560<br />NHS West Essex CCG",
+              "Number of children and young people:  2605<br />NHS West Essex CCG",
+              "Number of children and young people:  2625<br />NHS West Essex CCG",
+              "Number of children and young people:  2720<br />NHS West Essex CCG",
+              "Number of children and young people:  2805<br />NHS West Essex CCG",
+              "Number of children and young people:  2830<br />NHS West Essex CCG",
+              "Number of children and young people:  2965<br />NHS West Essex CCG",
+              "Number of children and young people:  2965<br />NHS West Essex CCG",
+              "Number of children and young people:  2970<br />NHS West Essex CCG",
+              null,
+              "Number of children and young people:  1980<br />NHS West Suffolk CCG",
+              "Number of children and young people:  1985<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2070<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2165<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2195<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2205<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2270<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2395<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2500<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2610<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2770<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2885<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2965<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3030<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3060<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3085<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3105<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3100<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3070<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3035<br />NHS West Suffolk CCG",
+              "Number of children and young people:  3015<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2925<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2890<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2875<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2865<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2820<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2810<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2835<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2855<br />NHS West Suffolk CCG",
+              "Number of children and young people:  2870<br />NHS West Suffolk CCG"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.8897637795275593,
+              "color": "rgba(162,133,209,0.2)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "Other CCG",
+            "legendgroup": "Other CCG",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 24.855680088556802,
+            "r": 6.6417600664175991,
+            "b": 36.086896360868963,
+            "l": 49.813200498131998
+          },
+          "plot_bgcolor": "rgba(255,255,255,1)",
+          "paper_bgcolor": "rgba(255,255,255,1)",
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 13.283520132835198
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              18672.849999999999,
+              19644.150000000001
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "2021-07",
+              "2022-01",
+              "2022-07",
+              "2023-01",
+              "2023-07"
+            ],
+            "tickvals": [
+              18809,
+              18993,
+              19174,
+              19358,
+              19539
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "2021-07",
+              "2022-01",
+              "2022-07",
+              "2023-01",
+              "2023-07"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "y",
+            "title": {
+              "text": "Clinical Commissioning Groups in East of England",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -884.75,
+              18579.75
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "5000",
+              "10000",
+              "15000"
+            ],
+            "tickvals": [
+              0,
+              5000,
+              10000,
+              15000.000000000002
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "5000",
+              "10000",
+              "15000"
+            ],
+            "nticks": null,
+            "ticks": "outside",
+            "tickcolor": "rgba(51,51,51,1)",
+            "ticklen": 3.3208800332087995,
+            "tickwidth": 0.60379636967432737,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 10.62681610626816
+            },
+            "tickangle": 0,
+            "showline": true,
+            "linecolor": "rgba(0,0,0,1)",
+            "linewidth": 0.60379636967432737,
+            "showgrid": false,
+            "gridcolor": null,
+            "gridwidth": 0,
+            "zeroline": false,
+            "anchor": "x",
+            "title": {
+              "text": "Number of children and young people",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": "rgba(255,255,255,1)",
+            "bordercolor": "transparent",
+            "borderwidth": 1.7179670722977816,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 13.283520132835198
+            },
+            "title": {
+              "text": "Clinical Commissioning Group",
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 13.283520132835198
+              }
+            },
+            "orientation": "h",
+            "y": -0.20000000000000001
+          },
+          "hovermode": "closest",
+          "barmode": "relative",
+          "dragmode": false
+        },
+        "config": {
+          "doubleClick": "reset",
+          "modeBarButtonsToAdd": [
+            "hoverclosest",
+            "hovercompare"
+          ],
+          "showSendToCloud": false,
+          "displaylogo": false,
+          "toImageButtonOptions": {
+            "format": "png"
+          },
+          "modeBarButtons": [
+            "toImage"
+          ]
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.20000000000000001,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot",
+          "plotly_sunburstclick"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "setprototypeof",
+          "version": "0.1",
+          "src": {
+            "href": "setprototypeof-0.1"
+          },
+          "meta": null,
+          "script": "setprototypeof.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "3.5.1",
+          "src": {
+            "href": "jquery-3.5.1"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.1",
+          "src": {
+            "href": "crosstalk-1.2.1"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-2.11.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "2.11.1",
+          "src": {
+            "href": "plotly-main-2.11.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    }
+  }
+}

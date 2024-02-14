@@ -77,16 +77,8 @@ ui <- function(input, output, session) {
     useShinydashboard(),
     use_shinyscroll(),
     # Setting up cookie consent based on a cookie recording the consent:
-    # https://book.javascript-for-r.com/shiny-cookies.html
-    tags$head(
-      tags$script(
-        src = paste0(
-          "https://cdn.jsdelivr.net/npm/js-cookie@rc/",
-          "dist/js.cookie.min.js"
-        )
-      ),
-      tags$script(src = "cookie-consent.js"),
-    ),
+    dfe_cookie_script(),
+    cookie_banner_ui("cookies", name = "SEND and AP Dashboard"),
     use_theme(dfe_colours),
     # use_tota11y(),  #only do this in dev version for accessibility testing
     tags$head(includeHTML(("google-analytics.html"))),
@@ -105,10 +97,12 @@ ui <- function(input, output, session) {
       )
     ),
     shinyGovstyle::header(
-      main_text = "DfE",
+      main_text = "",
       main_link = "https://www.gov.uk/government/organisations/department-for-education",
-      secondary_text = "SEND and AP Dashboard",
-      logo = "images/DfE_logo.png"
+      secondary_text = "SEND and AP dashboard",
+      logo = "images/DfE_logo_landscape.png",
+      logo_width = 150,
+      logo_height = 32
     ),
     shinyGovstyle::banner(
       "beta banner",
@@ -124,7 +118,12 @@ ui <- function(input, output, session) {
       regional_dashboard_panel(),
       dashboard_panel(),
       a11y_panel(),
-      support_links()
+      support_panel(
+        team_email = "sendap.dashboard@education.gov.uk",
+        repo_name = "SEND-AP-Inclusion-Dashboard",
+        form_url = NULL,
+        ees_publication = TRUE
+      )
     ),
     tags$script(
       src = "script.js"

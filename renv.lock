@@ -607,16 +607,19 @@
     "dfeshiny": {
       "Package": "dfeshiny",
       "Version": "0.1.1",
-      "Source": "git",
-      "RemoteType": "git",
-      "RemoteUrl": "https://github.com/dfe-analytical-services/dfeshiny",
-      "RemoteRef": "",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "dfe-analytical-services",
+      "RemoteRepo": "dfeshiny",
+      "RemoteRef": "cookie-module",
+      "RemoteSha": "8efeaea6ac938b5491b8612dfbcf5c15fef9707f",
       "Requirements": [
         "shiny",
         "shinyGovstyle",
         "styler"
       ],
-      "Hash": "18ef87ef6400ddf97ba458852ba7442c"
+      "Hash": "64dcc7a612f593f05e5b0c56bb8efbec"
     },
     "diffobj": {
       "Package": "diffobj",
