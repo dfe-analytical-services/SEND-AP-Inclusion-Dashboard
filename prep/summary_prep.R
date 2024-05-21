@@ -8,13 +8,17 @@ library(collapse)
 
 # Create function to add rank numbers to an LA benchmarking dataframe, specifying the outcome to be ranked by
 
-add_ranks_and_select <- function(df, metric_name, detail, outcome, year = time_period) {
+add_ranks_and_select <- function(df, metric_name, detail, outcome, year = time_period, rev = FALSE) {
   out <- sym(outcome)
   df <- df %>%
     drop_na(!!outcome) %>%
     ungroup() %>%
     group_by({{ year }})
-  df <- arrange(df, desc(df[[outcome]]))
+  if(rev == TRUE){
+    df <- arrange(df, df[[outcome]])
+  } else {
+    df <- arrange(df, desc(df[[outcome]]))
+  } 
   df <- df %>%
     mutate(
       rank = row_number(),
@@ -63,7 +67,8 @@ outof <- function(df, rank = mean_rank){
 
 ## KS2 attainment (switchable)
 summary_ks2_attainment <- ks2_attainment %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
+  collapse::fsubset(geographic_level == "Local authority" & 
+                  !(la_name %in% small_LAs)) %>%
   # time_period == max(time_period)) %>%
   split(.$characteristic) %>% 
   map(
@@ -79,7 +84,8 @@ summary_ks2_attainment <- ks2_attainment %>%
 ## EYFSP (switchable)
 summary_eyfsp <- eyfsp %>%
   collapse::fsubset(geographic_level == "Local authority" & 
-                    characteristic_type != "Unclassified") %>%
+                    characteristic_type != "Unclassified" & 
+                      !(la_name %in% small_LAs)) %>%
   # time_period == max(time_period)) %>%
   split(.$characteristic) %>% 
   map(
@@ -93,8 +99,10 @@ summary_eyfsp <- eyfsp %>%
 
 ## KS1 phonics (switchable)
 summary_ks1_phonics <- ks1_phonics %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs)) %>%
   # time_period == max(time_period)) %>%
+  mutate(characteristic = if_else(characteristic == "EHC plan or Statement","EHC plan", characteristic)) %>% 
   split(.$characteristic) %>% 
   map(
     add_ranks_and_select, 
@@ -125,16 +133,18 @@ summary_destinations_1618 <- destinations_1618 %>%
   collapse::fsubset(geographic_level == "Local authority" &
     characteristic == "Identified LLDD (mainstream)" &
     # time_period == max(time_period) &
-    destination_raw == "all_notsust") %>%
+    destination_raw == "overall"  & 
+      !(la_name %in% small_LAs)) %>%
   add_ranks_and_select(
     outcome = "% of pupils",
     metric_name = "16-18 destinations",
-    detail = "% of pupils with self-identified learning difficulty, disability or physical illness in a non-sustained destination after 16-18 study"
+    detail = "% of pupils with self-identified learning difficulty, disability or physical illness in a sustained destination after 16-18 study"
   ) %>% 
   mutate(sen_status = "Not switchable")
 
 summary_disco <- discontinued_plans %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs)) %>%
   add_ranks_and_select(
     outcome = "discontinued_schoolage",
     metric_name = "Discontinued EHC plans",
@@ -144,25 +154,29 @@ mutate(sen_status = "Not switchable")
 
 # EHCP timeliness
 summary_timeliness <- ehcp_timeliness %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
-  mutate(year = as.numeric(year)) %>% 
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs)) %>%
+  mutate(year = as.numeric(time_period)) %>% 
   # time_period == max(time_period)) %>%
   add_ranks_and_select(
     outcome = "% of EHCPs issued within 20 weeks",
     metric_name = "EHCP timeliness",
     detail = "% of EHCPs issued within 20 weeks"
   ) %>% 
-  mutate(sen_status = "Not switchable")
+  mutate(sen_status = "Not switchable", 
+         Outcome = round(Outcome, 2))
 
 # Tribunal appeal rate
 summary_tribunals <- tribunals %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs)) %>%
   # year == max(year)) %>%
   add_ranks_and_select(
     outcome = "SEND Tribunal Appeal Rate",
     metric_name = "Tribunal appeal rate",
     detail = "Rate of appeals to SEND Tribunal",
-    year = year
+    year = year, 
+    rev = TRUE
   )  %>% 
   mutate(sen_status = "Not switchable")
 
@@ -173,14 +187,16 @@ summary_absence <- absence %>%
     "EHCP or Statement" = "EHC plan"
   )) %>%
   collapse::fsubset(geographic_level == "Local authority" &
-    `Absence measure` == "Overall") %>%
+    `Absence measure` == "Overall" & 
+      !(la_name %in% small_LAs)) %>%
   # time_period == max(time_period)) %>%
   split(.$sen) %>% 
   map(add_ranks_and_select,
     "Absence",
     "Overall absence %", 
     "Percentage", 
-    time_period
+    time_period, 
+    rev = TRUE
   )  %>% 
   map2(.y = names(.), .f = \(x, y) mutate(x, sen_status = y)) %>% 
   bind_rows()
@@ -193,12 +209,13 @@ summary_ks4_destinations <- ks4_destinations %>%
     .default = characteristic
   )) %>%
   collapse::fsubset(geographic_level == "Local authority" &
-    destination_raw == "all_notsust") %>%
+    destination_raw == "overall" & 
+      !(la_name %in% small_LAs)) %>%
   # time_period == max(time_period)) %>%
   split(.$sen) %>% 
   map(add_ranks_and_select,
       "KS4 Destinations",
-      "% of pupils in a non-sustained destination after KS4", 
+      "% of pupils in a sustained destination after KS4", 
       "% of pupils", 
       time_period
   )  %>% 
@@ -207,14 +224,16 @@ summary_ks4_destinations <- ks4_destinations %>%
 
 # DSG deficit
 summary_dsg_deficit <- dsg_deficit %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs)) %>%
   # time_period == max(time_period)) %>%
   add_ranks_and_select(
     outcome = "DSG cumulative balance as a % of the total income",
     metric_name = "DSG cumulative balance",
     detail = "DSG cumulative balance as a % of the total income"
   ) %>% 
-  mutate(sen_status = "Not switchable")
+  mutate(sen_status = "Not switchable", 
+         Outcome = round(Outcome, 2))
 
 # Autism waiting times (REMOVED - different scale since more LAs than CCGs)
 # summary_autism <- autism %>%
@@ -228,7 +247,8 @@ summary_dsg_deficit <- dsg_deficit %>%
 # Specialist spend
 summary_specialist_spend <- specialist_spend %>%
   collapse::fsubset( # year == max(year) &
-    category == "Independent or non-maintained"
+    category == "Independent or non-maintained" & 
+      !(la_name %in% small_LAs)
   ) %>%
   add_ranks_and_select(
     outcome = "Spend per head",
@@ -236,11 +256,13 @@ summary_specialist_spend <- specialist_spend %>%
     detail = "Spend per head on special schools and AP in the independent or non-maintained sector",
     year = year
   ) %>% 
-  mutate(sen_status = "Not switchable")
+  mutate(sen_status = "Not switchable", 
+         Outcome = round(Outcome, 2))
 
 # SEN provision
 summary_percent_pupils_ehcp <- percent_pupils_ehcp %>%
-  collapse::fsubset(geographic_level == "Local authority" &
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs) & 
     # time_period == max(time_period) &
     `SEN provision` == "EHC plan") %>%
   add_ranks_and_select(
@@ -252,11 +274,12 @@ summary_percent_pupils_ehcp <- percent_pupils_ehcp %>%
 
 # Pupils in mainstream with SEN
 summary_mainstream_with_sen <- mainstream_with_sen %>%
-  collapse::fsubset(geographic_level == "Local authority") %>%
+  collapse::fsubset(geographic_level == "Local authority" & 
+                      !(la_name %in% small_LAs)) %>%
       split(.$`SEN provision`) %>% 
   map(add_ranks_and_select, 
     "Pupils in mainstream with SEN",
-    "% of pupils in mainstream schools who have EHC plans",
+    "% of pupils in mainstream schools who have selected SEN type",
     "% of pupils",
     time_period
   ) %>% 
@@ -270,7 +293,8 @@ summary_provider_types <- provider_types_grouped %>%
     "pupils on SEN support" = "SEN support"
   )) %>%
   fsubset(geographic_level == "Local authority" &
-    sen == "EHC plan") %>%
+    sen == "EHC plan" & 
+      !(la_name %in% small_LAs)) %>%
   # academic_year == max(academic_year)) %>%
   ungroup() %>%
   add_ranks_and_select(
@@ -284,14 +308,16 @@ summary_provider_types <- provider_types_grouped %>%
 # CIN Pupils with SEN
 summary_cin_with_sen <- cin_la %>%
   collapse::fsubset(geographic_level == "Local authority" & 
-                    social_care_group == "CINO at 31 March" ) %>%
+                    social_care_group == "CINO at 31 March"  & 
+                      !(la_name %in% small_LAs)) %>%
   split(.$`SEN Provision`) %>% 
   map(
   add_ranks_and_select,
   "Children in need with SEN",
   "% of pupils in mainstream schools who have EHC plans",
   "Percentage of children",
-  time_period
+  time_period, 
+  rev = TRUE
   ) %>% 
   map2(.y = names(.), .f = \(x, y) mutate(x, sen_status = y)) %>% 
   bind_rows()
@@ -299,7 +325,8 @@ summary_cin_with_sen <- cin_la %>%
 # Number of pupils at state-funded AP
 summary_ap_counts_sf <- ap_counts %>% 
   collapse::fsubset(geographic_level == "Local authority" & 
-                    prov_type == "State-funded AP school") %>% 
+                    prov_type == "State-funded AP school"  & 
+                      !(la_name %in% small_LAs)) %>% 
   add_ranks_and_select("Number of pupils at state-funded AP", 
                        "Total number of pupils in state-funded Alternative Provision",
                        "Total", 
@@ -311,7 +338,8 @@ summary_ap_counts_sf <- outof(summary_ap_counts_sf)
 # Number of pupils at school-arranged AP
 summary_ap_counts_sa <- ap_counts %>% 
   collapse::fsubset(geographic_level == "Local authority" & 
-                      prov_type == "School arranged AP") %>% 
+                      prov_type == "School arranged AP" & 
+                      !(la_name %in% small_LAs)) %>% 
   add_ranks_and_select("Number of pupils at school-arranged AP", 
                        "Total number of pupils in school-arranged Alternative Provision",
                        "Total", 
@@ -323,7 +351,8 @@ summary_ap_counts_sa <- outof(summary_ap_counts_sa)
 # Number of placements at LA funded AP
 summary_ap_counts_la <- ap_counts %>% 
   collapse::fsubset(geographic_level == "Local authority" & 
-                      prov_type == "LA funded AP placements") %>% 
+                      prov_type == "LA funded AP placements" & 
+                      !(la_name %in% small_LAs)) %>% 
   add_ranks_and_select("Number of pupils at LA-funded AP", 
                        "Total number of pupils in LA-funded Alternative Provision",
                        "Total", 
@@ -335,7 +364,9 @@ summary_ap_counts_la <- outof(summary_ap_counts_la)
 # Number of pupils at school-arranged unregistered AP
 summary_ap_counts_sa_u <- uap_counts %>% 
   collapse::fsubset(geographic_level == "Local authority" & 
-                      prov_type == "School arranged unregistered AP pupils") %>% 
+                      prov_type == "School arranged unregistered AP pupils"  & 
+                      !(la_name %in% small_LAs) &
+                      setting_type == "Grand total unregistered AP (all setting types)") %>% 
   group_by(time_period, la_name) %>% 
   summarise("Total" = sum(Total)) %>% 
   add_ranks_and_select("Number of pupils at unregistered school-arranged AP", 
@@ -349,7 +380,9 @@ summary_ap_counts_sa_u <- outof(summary_ap_counts_sa_u)
 # Number of placements at LA funded unregisered AP
 summary_ap_counts_la_u <- uap_counts %>% 
   collapse::fsubset(geographic_level == "Local authority" & 
-                      prov_type == "LA funded unregistered AP placements") %>% 
+                      prov_type == "LA funded unregistered AP placements" & 
+                      !(la_name %in% small_LAs) &
+                      setting_type == "Grand total unregistered AP (all setting types)") %>% 
   group_by(time_period, la_name) %>% 
   summarise("Total" = sum(Total)) %>% 
   add_ranks_and_select("Number of pupils at unregistered LA-funded AP", 
@@ -366,7 +399,8 @@ summary_ap_characteristics <- ap_characteristics %>%
                     prov_type == "State-funded AP school" &
                     Characteristic %in% c("All SEN",
                                           "EHC plan",
-                                          "SEN Support")) %>%
+                                          "SEN Support")  & 
+                      !(la_name %in% small_LAs)) %>%
   mutate(Characteristic = case_when(Characteristic %in% "SEN Support" ~ "SEN support",
                                     T ~ Characteristic)) %>%
   split(.$Characteristic) %>% 
@@ -383,11 +417,13 @@ summary_ap_characteristics <- ap_characteristics %>%
 # % any absence at state-funded AP
 summary_ap_absence <- sf_ap_absence %>% 
   fsubset(geographic_level == "Local authority" &
-          `Absence measure` == "Overall absence %") %>% 
+          `Absence measure` == "Overall absence %" & 
+            !(la_name %in% small_LAs)) %>% 
   add_ranks_and_select("Overall absence %", 
                        "Overall absence rate in state-funded alternative provision",
                        "Percentage", 
-                       time_period) %>% 
+                       time_period, 
+                       rev = TRUE) %>% 
   mutate(sen_status = "Not switchable")
 
 summary_ap_absence <- outof(summary_ap_absence)

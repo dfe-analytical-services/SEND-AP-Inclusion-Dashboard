@@ -47,7 +47,7 @@
 }
 
 @media screen and (min-width: 750px){
-#lapickbox {
+#labox {
   position: sticky;
   top: 10px;
   z-index: 10;
@@ -64,12 +64,18 @@
 }
 
 #collapse-la {
-  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 0px;
 }
 
 #collapse-engreg {
-  padding: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 0px;
 }
 
@@ -77,15 +83,66 @@
   padding: 0px;
 }
 
-.btn-box-tool{
-  padding: 8px;
-  font-size: 14px; 
+.bttn-bordered.bttn-default {
+    border-color: hsla(0,0%,100%,.4);
+    color: #1d70b8;
 }
 
-.fa-minus{
-  color: white;
+@media screen and (min-width: 750px){
+.bttn-bordered {
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
+}
 }
 
-.fa-plus{
-  color: black;
+@media screen and (max-width: 1400px){
+.bttn-bordered.bttn-md {
+  font-size: 10pt;
+  padding: 7px;
+  margin-bottom: 12px;
+  margin-right: 10px;
+}
+}
+
+@media screen and (max-width: 1024px){
+.bttn-bordered.bttn-md {
+  font-size: 8pt;
+  padding: 5px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+}
+
+.bttn-bordered {
+  color: #1d70b8;
+  background-color: #fff;
+  box-shadow: 0 2px 0 #144e81;
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: center
+}
+
+.bttn-bordered:hover {
+    background-color: #e8f1f8
+}
+
+
+.bttn-bordered:focus {
+    border-color: #fd0;
+    outline: 3px solid rgba(0,0,0,0);
+    box-shadow: inset 0 0 0 1px #fd0
+}
+
+.bttn-bordered:focus:not(:active):not(:hover) {
+    border-color: #fd0;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 2px 0 #0b0c0c
 }

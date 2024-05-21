@@ -508,3 +508,16 @@ useShinydashboard <- function() {
   ))
   htmltools::attachDependencies(tags$div(class = "main-sidebar", style = "display: none;"), value = deps)
 }
+
+# expandable, which makes boxes, oddly, collapsible. Stolen from the template - code written by Charlotte Foster 
+expandable <-function(inputId, label, contents){
+  govDetails <- shiny::tags$details(class = "govuk-details", id = inputId,
+                                    shiny::tags$summary(
+                                      class = "govuk-details__summary",
+                                      shiny::tags$span(class = "govuk-details__summary-text",
+                                                                         label)
+                                    ),
+                                    shiny::tags$div(contents)
+  )
+}
+

@@ -66,8 +66,6 @@ no_dest_data <- reactiveVal(FALSE)
 
 useShinyjs() # Activates shinyjs which allows toggling of visibility for some objects
 
-enableBookmarking("url") # "Bookmarking" means storing user inputs in the URL
-
 # appLoadingCSS ----------------------------------------------------------------------------
 # Set up loading screen
 
@@ -129,7 +127,7 @@ af_gradient <- c("#0b2841", "#0e3657", "#12436d", "#41698a", "#718ea7")
 # defaults using the fresh package
 dfe_colours <- create_theme(
   adminlte_color(
-    green = "#00857c", # was af_turquoise but not enough contrast for white text
+    green = "#006d66", # was af_turquoise but not enough contrast for white text
     blue = af_darkblue,
     red = af_darkpink,
     orange = af_orange,

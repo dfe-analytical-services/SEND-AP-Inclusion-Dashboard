@@ -2129,11 +2129,11 @@ cin_la <- read_csv("data/cin/sen_la.csv") %>%
 # Prep geog. files
 #================================
 
-local_authorities <- geojsonsf::geojson_sf("prep/Counties_and_Unitary_Authorities_(December_2022)_UK_BFC.geojson") %>%
-  sf::st_transform(crs = 27700)
+local_authorities <- sf::read_sf("prep/CTYUA_MAY_2023_UK_BGC.shp") %>% 
+  mutate(FID = row_number()) # because this code originally used the GEOJSON which had this column in
 
-sub_icb_locations <- geojsonsf::geojson_sf("prep/Sub_Integrated_Care_Board_Locations_(July_2022)_EN_BFC.geojson") %>%
-  sf::st_transform(crs = 27700)
+sub_icb_locations <- sf::read_sf("prep/SICBL_APR_2023_EN_BGC.shp") %>% 
+  mutate(OBJECTID = row_number()) # because this code originally used the GEOJSON which had this column in
 
 # The below code gives a pure "which LAs overlap with which sub-ICB locations (CCGs)" answer
 # However if a border is shared it counts this as overlap
@@ -2173,7 +2173,7 @@ shrinkIfPossible <- function(sf, size) {
 }
 
 # Shrink the local authority boundaries by 100m to avoid excessive matches
-la_geom_smaller <- shrinkIfPossible(local_authorities, 100)
+la_geom_smaller <- shrinkIfPossible(local_authorities, 150)
 
 intersects_raw_smaller <- la_geom_smaller %>%
   sf::st_intersects(
@@ -2192,12 +2192,12 @@ la_ccg_lookup <- intersects_raw_smaller %>%
     y = local_authorities,
     by = c(la_row = "FID")
   ) %>%
-  select(la_row, ccg_row, "la_name" = CTYUA22NM) %>%
+  select(la_row, ccg_row, "la_name" = CTYUA23NM) %>%
   left_join(
     y = sub_icb_locations,
     by = c(ccg_row = "OBJECTID")
   ) %>%
-  select(la_row, la_name, ccg_row, "subicb_long_name" = SICBL22NM) %>%
+  select(la_row, la_name, ccg_row, "subicb_long_name" = SICBL23NM) %>%
   separate(
     col = "subicb_long_name",
     into = c("icb_name", "nhs_code"),
@@ -2213,7 +2213,10 @@ la_ccg_lookup <- intersects_raw_smaller %>%
 Nhants <- la_ccg_lookup[la_ccg_lookup$la_name == "North Northamptonshire", ] %>% # Nhants will be identical
   mutate(la_name = "Northamptonshire")
 
+Cumb <- la_ccg_lookup[la_ccg_lookup$la_name %in% c("Cumberland", "Westmorland and Furness"), ] %>% 
+  mutate(la_name = "Cumbria")
 la_ccg_lookup <- bind_rows(la_ccg_lookup, Nhants)
+la_ccg_lookup <- bind_rows(la_ccg_lookup, Cumb)
 
 ##### National stats for summary and England average lines
 
