@@ -198,7 +198,7 @@ server <- function(input, output, session) {
     this_tab("Alternative provision")
     move_target("ap_count_reg_panel")
   })
-  
+
   observeEvent(input$link_ap_dse_count_panel, {
     updateTabsetPanel(session, "tabsetpanels_reg", selected = "Alternative provision")
     updateTabsetPanel(session, "ap_count_reg_panel", selected = "Change over time")
@@ -320,27 +320,27 @@ server <- function(input, output, session) {
     )
   })
 
-  
+
   observe({
     toggle("lapickbox", condition = input$hide_la_selectors %% 2 == 0)
     toggle("laselected", condition = input$hide_la_selectors %% 2 == 1)
   })
-  
+
   observe({
     toggle("regpickbox", condition = input$hide_reg_selectors %% 2 == 0)
     toggle("regselected", condition = input$hide_reg_selectors %% 2 == 1)
   })
-  
+
   observe({
     toggle("la_s_text", condition = input$hide_la_selectors %% 2 == 1)
     toggle("reg_text", condition = input$hide_reg_selectors %% 2 == 1 && input$level_choice == "Regions")
     toggle("lev_text", condition = input$hide_reg_selectors %% 2 == 1)
   })
-  
+
   observe({
     toggle("myregion_text", condition = input$myregion_switch && input$hide_la_selectors %% 2 == 1)
   })
-  
+
   ## COOKIES DIALOGUE
 
   # output if cookie is unspecified
@@ -492,9 +492,9 @@ server <- function(input, output, session) {
       )
     return(DTise(
       ks2_attainment_lat,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('Percent meeting expected standard', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("Percent meeting expected standard", 2))
   })
 
 
@@ -590,9 +590,9 @@ server <- function(input, output, session) {
       arrange(desc(`Percent meeting expected standard`))
     return(DTise(
       ks2_attainment_lab,
-      list(list(3, "desc"))) %>% 
-        formatRound('Percent meeting expected standard', 2)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound("Percent meeting expected standard", 2))
   })
 
   ## KS2 Attainment (region/time)
@@ -688,9 +688,9 @@ server <- function(input, output, session) {
 
       return(DTise(
         ks2_attainment_ret,
-        list(list(2, "asc"), list(0, "desc"))) %>% 
-          formatRound('Percent meeting expected standard', 2)
-      )
+        list(list(2, "asc"), list(0, "desc"))
+      ) %>%
+        formatRound("Percent meeting expected standard", 2))
     } else {
       ks2_attainment_et <- ks2_attainment %>%
         fsubset(geographic_level == "National") %>%
@@ -707,9 +707,9 @@ server <- function(input, output, session) {
         )
       return(DTise(
         ks2_attainment_et,
-        list(list(2, "asc"), list(0, "desc"))) %>% 
-          formatRound('Percent meeting expected standard', 1)
-      )
+        list(list(2, "asc"), list(0, "desc"))
+      ) %>%
+        formatRound("Percent meeting expected standard", 1))
     }
   })
 
@@ -803,9 +803,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ks2_attainment_reb,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('Percent meeting expected standard', 2)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("Percent meeting expected standard", 2))
   })
 
   ### KS1 Phonics ####
@@ -863,9 +863,9 @@ server <- function(input, output, session) {
     names(ks1_phonics_la_tt)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       ks1_phonics_la_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('Percent meeting expected standards in Y1', 2)
-    ) 
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("Percent meeting expected standards in Y1", 2))
   })
 
   ## KS1 Phonics (LA/bench)
@@ -957,9 +957,9 @@ server <- function(input, output, session) {
       arrange(desc(`Percent meeting expected standards in Y1`))
     return(DTise(
       ks1_phonics_lab,
-      list(list(3, "desc"))) %>% 
-        formatRound('Percent meeting expected standards in Y1', 2)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound("Percent meeting expected standards in Y1", 2))
   })
 
   ## KS1 Phonics (region/time)
@@ -1063,9 +1063,9 @@ server <- function(input, output, session) {
 
       return(DTise(
         ks1_phonics_ret,
-        list(list(2, "asc"), list(0, "desc"))) %>% 
-          formatRound('Percent meeting expected standards in Y1', 2)
-      )
+        list(list(2, "asc"), list(0, "desc"))
+      ) %>%
+        formatRound("Percent meeting expected standards in Y1", 2))
     } else {
       ks1_phonics_et <- ks1_phonics %>%
         fsubset(geographic_level == "National") %>%
@@ -1082,9 +1082,9 @@ server <- function(input, output, session) {
         )
       return(DTise(
         ks1_phonics_et,
-        list(list(2, "asc"), list(0, "desc"))) %>% 
-          formatRound('Percent meeting expected standards in Y1', 2)
-      )
+        list(list(2, "asc"), list(0, "desc"))
+      ) %>%
+        formatRound("Percent meeting expected standards in Y1", 2))
     }
   })
 
@@ -1172,9 +1172,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ks1_phonics_reb,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('Percent meeting expected standards in Y1', 2)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("Percent meeting expected standards in Y1", 2))
   })
 
 
@@ -1185,10 +1185,10 @@ server <- function(input, output, session) {
   output$eyfsp_la_time <- renderPlotly({
     # req(input$la_choice)
     validate(need(input$la_choice != "Northamptonshire", message = "No data for years prior to 2021-22 (so see North or West Northamptonshire for relevant results)"))
-    
+
     eyfsp_la_time <- eyfsp %>%
-      fsubset(la_name == input$la_choice & 
-                characteristic_type != "Unclassified") %>% # this is a very small number of children and I'm not sure it tells us anything
+      fsubset(la_name == input$la_choice &
+        characteristic_type != "Unclassified") %>% # this is a very small number of children and I'm not sure it tells us anything
       AY_to_date(academic_year) %>%
       ggplot(aes(
         x = AY_date,
@@ -1214,8 +1214,8 @@ server <- function(input, output, session) {
         labels = c("2021/22", "2022/23", "2023/24", "2024/25", "2025/26")[1:length(seq.Date(ymd("2021-09-01"), Sys.Date(), "year"))]
       ) +
       coord_cartesian(ylim = c(0, NA))
-    
-    
+
+
     eyfsp_la_time %>%
       ggplotly(
         tooltip = c("text")
@@ -1232,13 +1232,13 @@ server <- function(input, output, session) {
       fsubset(la_name == input$la_choice) %>%
       fselect(academic_year, la_name, characteristic_type, gld_percentage) %>%
       arrange(academic_year, characteristic_type)
-    
+
     names(eyfsp_la_tt)[1:4] <- c("Academic Year", "Local Authority", "SEN Status", "% of children with good level of development")
     return(DTise(
       eyfsp_la_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of children with good level of development', 2)
-    ) 
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of children with good level of development", 2))
   })
   ## EYFSP (LA/bench) ##
 
@@ -1248,14 +1248,14 @@ server <- function(input, output, session) {
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eyfsp %>%
       collapse::fsubset(characteristic_type == input$eyfsp_la_filter &
-        time_period == comparison_year &   
+        time_period == comparison_year &
         geographic_level == "National") %>%
       mutate(outcome = gld_percentage)
 
     # Wrangle data into ggplot object
     eyfsp_la_bench_data <- eyfsp %>%
       collapse::fsubset(geographic_level == "Local authority" &
-        time_period == comparison_year &                  
+        time_period == comparison_year &
         !(la_name %in% small_LAs) &
         characteristic_type == input$eyfsp_la_filter) %>%
       collapse::ftransform(chosen_la = ifelse(la_name == input$la_choice,
@@ -1308,11 +1308,11 @@ server <- function(input, output, session) {
 
   output$eyfsp_la_bench_table <- renderDT({
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(eyfsp))
-    
+
     eyfsp_la_bench_data <- eyfsp %>%
       collapse::fsubset(geographic_level == "Local authority" &
         !(la_name %in% small_LAs) &
-        time_period == comparison_year &  
+        time_period == comparison_year &
         characteristic_type == input$eyfsp_la_filter) %>%
       collapse::ftransform(chosen_la = ifelse(la_name == input$la_choice,
         yes = input$la_choice,
@@ -1335,9 +1335,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       eyfsp_la_bt,
-      list(list(3, "desc"))) %>% 
-        formatRound('% of children with good development', 1)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound("% of children with good development", 1))
   })
 
   ## EYFSP (Region/time) ##
@@ -1345,14 +1345,14 @@ server <- function(input, output, session) {
   output$eyfsp_reg_time <- renderPlotly({
     if (input$level_choice == "Regions") {
       validate(need(input$region_choice,
-                    message = "Please select a region"
+        message = "Please select a region"
       ))
-      
+
       eyfsp_reg_time <- eyfsp %>%
         filter(
           region_name == input$region_choice,
           characteristic_type != "Unclassified" &
-          geographic_level == "Regional"
+            geographic_level == "Regional"
         ) %>%
         AY_to_date(time_period) %>%
         ggplot(aes(
@@ -1381,8 +1381,8 @@ server <- function(input, output, session) {
         coord_cartesian(ylim = c(0, NA))
     } else {
       eyfsp_reg_time <- eyfsp %>%
-        filter(geographic_level == "National" & 
-              characteristic_type != "Unclassified") %>% 
+        filter(geographic_level == "National" &
+          characteristic_type != "Unclassified") %>%
         AY_to_date(time_period) %>%
         ggplot(aes(
           x = AY_date,
@@ -1409,7 +1409,7 @@ server <- function(input, output, session) {
         ) +
         coord_cartesian(ylim = c(0, NA))
     }
-    
+
     eyfsp_reg_time %>%
       ggplotly(
         tooltip = c("text")
@@ -1420,19 +1420,22 @@ server <- function(input, output, session) {
       ) %>%
       save_plot_button_only()
   })
-  
+
   output$eyfsp_reg_time_table <- renderDT({
-    eyfsp_rt_data <- eyfsp %>% 
+    eyfsp_rt_data <- eyfsp %>%
       fsubset(geographic_level == "Regional" &
-        region_name == input$region_choice 
-      ) %>% 
-    select(`Academic year` = academic_year,
-           region_name, 
-           `SEN Status` = characteristic_type, 
-           `% of children with a good level of development` = gld_percentage)
-    
-    table_bench_time(eyfsp_rt_data, var_filter = quote(`SEN Status`), 
-                     outcome_var = quote(`% of children with a good level of development`)) %>% 
+        region_name == input$region_choice) %>%
+      select(
+        `Academic year` = academic_year,
+        region_name,
+        `SEN Status` = characteristic_type,
+        `% of children with a good level of development` = gld_percentage
+      )
+
+    table_bench_time(eyfsp_rt_data,
+      var_filter = quote(`SEN Status`),
+      outcome_var = quote(`% of children with a good level of development`)
+    ) %>%
       formatRound("% of children with a good level of development", 1)
   })
   ## EYFSP (Region/bench) ##
@@ -1515,9 +1518,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       eyfsp_reb,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('% children with a good level of development', 1)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("% children with a good level of development", 1))
   })
 
   ### KS4 Attainment ####
@@ -1576,9 +1579,9 @@ server <- function(input, output, session) {
     names(ks4_attainment_la_tt)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       ks4_attainment_la_tt,
-      list(list(0, "desc"), list(2, "asc"))) %>% 
-        formatRound(columns = 4:6, 2)
-    )
+      list(list(0, "desc"), list(2, "asc"))
+    ) %>%
+      formatRound(columns = 4:6, 2))
   })
 
   ## KS4 Attainment(LA/bench)
@@ -1686,9 +1689,9 @@ server <- function(input, output, session) {
       arrange(desc(`Average progress 8 score`))
     return(DTise(
       ks4_attainment_lab,
-      list(list(3, "desc"))) %>% 
-        formatRound(columns = 4:6, 2)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound(columns = 4:6, 2))
   })
 
   ## KS4 Attainment(region/time)
@@ -1798,9 +1801,9 @@ server <- function(input, output, session) {
 
       return(DTise(
         ks4_att_ret,
-        list(list(2, "asc"), list(0, "desc"))) %>% 
-          formatRound(columns = 4:6, 2)
-      )
+        list(list(2, "asc"), list(0, "desc"))
+      ) %>%
+        formatRound(columns = 4:6, 2))
     } else {
       ks4_att_et <- ks4_attainment %>%
         fsubset(geographic_level == "National") %>%
@@ -1819,9 +1822,9 @@ server <- function(input, output, session) {
         )
       return(DTise(
         ks4_att_et,
-        list(list(2, "asc"), list(0, "desc"))) %>% 
-          formatRound(columns = 4:6, 2)
-      )
+        list(list(2, "asc"), list(0, "desc"))
+      ) %>%
+        formatRound(columns = 4:6, 2))
     }
   })
 
@@ -1925,9 +1928,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ks4_att_reb,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound(columns = 4:6, 2)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound(columns = 4:6, 2))
   })
 
   ### KS4 destinations ####
@@ -2005,9 +2008,9 @@ server <- function(input, output, session) {
     names(ks4_destinations_la_tt)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       ks4_destinations_la_tt,
-      list(list(3, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 1)
-    )
+      list(list(3, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 1))
   })
 
   ## KS4 destinations (LA/type)
@@ -2067,9 +2070,9 @@ server <- function(input, output, session) {
     names(ks4_destinations_la_typet)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       ks4_destinations_la_typet,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 1)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 1))
   })
 
   ### 16-18 destinations ####
@@ -2158,9 +2161,9 @@ server <- function(input, output, session) {
     names(destinations_1618_la_tt)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       destinations_1618_la_tt,
-      list(list(2, "asc"), list(3, "desc"), list(0, "desc")) ) %>% 
-        formatRound('% of students', 1)
-    )
+      list(list(2, "asc"), list(3, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of students", 1))
   })
 
   ## 16-18 destinations (LA/type)
@@ -2230,9 +2233,9 @@ server <- function(input, output, session) {
     names(destinations_1618_la_typet)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       destinations_1618_la_typet,
-      list(list(2, "asc"), list(3, "desc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 1)
-    )
+      list(list(2, "asc"), list(3, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 1))
   })
 
 
@@ -2328,9 +2331,9 @@ server <- function(input, output, session) {
     names(destinations_1618_la_bt)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       destinations_1618_la_bt,
-      list(list(3, "asc"), list(4, "desc")) ) %>% 
-        formatRound('% of students', 1)
-    )
+      list(list(3, "asc"), list(4, "desc"))
+    ) %>%
+      formatRound("% of students", 1))
   })
 
   ## 16-18 destinations (region/time)
@@ -2466,9 +2469,9 @@ server <- function(input, output, session) {
       return(DTise(
         destinations_1618_reg_tt,
         list(list(2, "asc"), list(3, "desc"), list
-        (0, "desc"))) %>% 
-          formatRound('% of students', 1)
-      )
+        (0, "desc"))
+      ) %>%
+        formatRound("% of students", 1))
     } else {
       destinations_1618_reg_tt <- destinations_1618_nat_overall %>%
         fsubset(characteristic == input$destinations_1618_reg_time_filter &
@@ -2488,9 +2491,9 @@ server <- function(input, output, session) {
         )
       return(DTise(
         destinations_1618_reg_tt,
-        list(list(2, "asc"), list(3, "desc"), list(0, "desc")) ) %>% 
-          formatRound('% of students', 1)
-      )
+        list(list(2, "asc"), list(3, "desc"), list(0, "desc"))
+      ) %>%
+        formatRound("% of students", 1))
     }
   })
 
@@ -2618,9 +2621,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       destinations_1618_reg_typet,
-      list(list(2, "asc"), list(3, "desc"), list(0, "desc")) ) %>% 
-        formatRound('% of students', 1)
-    )
+      list(list(2, "asc"), list(3, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of students", 1))
   })
 
   ## 16-18 destinations (region/bench)
@@ -2676,9 +2679,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       destinations_1618_reg_bt,
-      list(list(2, "asc"), list(3, "desc"), list(0, "desc"))) %>% 
-        formatRound('% of students', 1)
-    )
+      list(list(2, "asc"), list(3, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of students", 1))
   })
 
   ### Ofsted outcomes ####
@@ -2691,15 +2694,15 @@ server <- function(input, output, session) {
         fmutate(`Publication Date` = if_else(is.na(`Inspection publication date (new inspection framework)`),
           `Publication date (previous inspection framework)`,
           `Inspection publication date (new inspection framework)`
-          ))
+        ))
 
       if (nrow(ofsted_la > 0 & ofsted_la$box_colour != "black")) {
         valueBox(
           color = ofsted_la$box_colour,
-          value = if(ofsted_la$summary_outcome == "Written Statement of Action (previous framework); not revisited"){ 
-                          tags$p(ofsted_la$summary_outcome, style = "font-size: 40%") # otherwise it doesn't fit; note we have to use if/else because ifelse and if_else don't work for type reasons
+          value = if (ofsted_la$summary_outcome == "Written Statement of Action (previous framework); not revisited") {
+            tags$p(ofsted_la$summary_outcome, style = "font-size: 40%") # otherwise it doesn't fit; note we have to use if/else because ifelse and if_else don't work for type reasons
           } else {
-                          tags$p(ofsted_la$summary_outcome, style = "font-size: 50%")
+            tags$p(ofsted_la$summary_outcome, style = "font-size: 50%")
           },
           subtitle = paste("Report published: ", ofsted_la$`Publication Date`, ".")
         )
@@ -2731,7 +2734,7 @@ server <- function(input, output, session) {
       previous_ofsted <-
         valueBox(
           color = ofsted_old_la$box_colour,
-          value = if(ofsted_old_la$summary_outcome == "Written Statement of Action (previous framework); not revisited"){ 
+          value = if (ofsted_old_la$summary_outcome == "Written Statement of Action (previous framework); not revisited") {
             tags$p(ofsted_old_la$summary_outcome, style = "font-size: 40%") # otherwise it doesn't fit; note we have to use if/else because ifelse and if_else don't work for type reasons
           } else {
             tags$p(ofsted_old_la$summary_outcome, style = "font-size: 50%")
@@ -3289,7 +3292,7 @@ server <- function(input, output, session) {
       arrange(time_period) %>%
       ftransform(
         Year = as.character(round(time_period, 0)) # stop it being 2021.00 etc
-        ) %>%
+      ) %>%
       fselect(Year,
         `Local Authority` = la_name,
         `% of EHCPs issued within 20 weeks`
@@ -3297,9 +3300,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       timeliness_la_tt,
-      list(list(0, "desc"))) %>% 
-        formatRound(columns = c('% of EHCPs issued within 20 weeks'), digits = 1)
-    )
+      list(list(0, "desc"))
+    ) %>%
+      formatRound(columns = c("% of EHCPs issued within 20 weeks"), digits = 1))
   })
 
   ## EHCP Timeliness (LA/bench)
@@ -3380,7 +3383,7 @@ server <- function(input, output, session) {
       arrange(desc(`% of EHCPs issued within 20 weeks`)) %>%
       ftransform(
         Year = as.character(round(time_period, 0)) # stop it being 2021.00 etc
-       )
+      )
 
     if (input$myregion_switch == TRUE) {
       timeliness_la_bt <- timeliness_la_bt %>%
@@ -3395,9 +3398,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       timeliness_la_bt,
-      list(list(2, "desc"))) %>% 
-        formatRound(columns = c('% of EHCPs issued within 20 weeks'), digits = 1)
-    )
+      list(list(2, "desc"))
+    ) %>%
+      formatRound(columns = c("% of EHCPs issued within 20 weeks"), digits = 1))
   })
 
   ## EHCP Timeliness (region/time)
@@ -3467,7 +3470,7 @@ server <- function(input, output, session) {
         ftransform(
           Region = "England",
           Year = as.character(round(time_period, 0)) # stop it being 2021.00 etc
-          ) %>%
+        ) %>%
         fselect(
           Year,
           Region,
@@ -3476,9 +3479,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       timeliness_reg_tt,
-      list(list(0, "desc"), list(2, "desc")) ) %>% 
-        formatRound('% of EHCPs issued within 20 weeks', 1)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("% of EHCPs issued within 20 weeks", 1))
   })
 
   ## EHCP Timeliness (region/bench)
@@ -3606,7 +3609,7 @@ server <- function(input, output, session) {
       arrange(desc(`% of EHCPs issued within 20 weeks`)) %>%
       ftransform(
         Year = as.character(round(time_period, 0)) # stop it being 2021.00 etc
-        ) %>%
+      ) %>%
       fselect(Year,
         Region = region_name,
         `% of EHCPs issued within 20 weeks`
@@ -3614,9 +3617,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       timeliness_reg_bt,
-      list(list(0, "desc"), list(2, "desc"))) %>% 
-        formatRound('% of EHCPs issued within 20 weeks', 1)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("% of EHCPs issued within 20 weeks", 1))
   })
 
   ### Autism Waiting Times ####
@@ -3685,7 +3688,7 @@ server <- function(input, output, session) {
         ftransform(
           Month = factor(format(date, "%b %Y"), levels = month_order), # stop renderDT linewrapping the date
           `Age group` = factor(`Age group`, levels = c("Age: Under 10", "Age: 10 to 17", "Age: 18 to 24"))
-         ) %>%
+        ) %>%
         arrange(
           `Age group`,
           date
@@ -3698,9 +3701,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       autism_ccg_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% with first appointment\n after more than 13 weeks', 0)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% with first appointment\n after more than 13 weeks", 0))
   })
 
   ## Autism Waiting Times (CCG/bench)
@@ -3840,9 +3843,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       autism_ccg_b,
-      list(list(2, "asc"), list(3, "desc"))) %>% 
-        formatRound('% with first appointment\n after more than 13 weeks', 0)
-    )
+      list(list(2, "asc"), list(3, "desc"))
+    ) %>%
+      formatRound("% with first appointment\n after more than 13 weeks", 0))
   })
 
   ## Autism Waiting Times (National/time)
@@ -3902,9 +3905,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       autism_nat_tt,
-      list(list(2, "desc"), list(0, "desc"))) %>% 
-        formatRound('% with first appointment\n after more than 13 weeks', 0)
-    )
+      list(list(2, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("% with first appointment\n after more than 13 weeks", 0))
   })
 
   ## Autism Waiting Times (provider/bench)
@@ -3982,7 +3985,7 @@ server <- function(input, output, session) {
       arrange(`% with first appointment after more than 13 weeks`) %>%
       fmutate(
         Month = factor(format(date, "%b %Y"), levels = month_order) # use month name to stop renderDT linewrapping the date
-     ) %>%
+      ) %>%
       fselect(Month,
         Provider = nhs_name,
         `Age group`,
@@ -3991,9 +3994,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       autism_nat_b,
-      list(list(0, "desc"), list(2, "desc"), list(3, "desc"))) %>% 
-        formatRound('% with first appointment\n after more than 13 weeks', 0)
-    )
+      list(list(0, "desc"), list(2, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("% with first appointment\n after more than 13 weeks", 0))
   })
 
   ### Community Health waiting times ###
@@ -4089,9 +4092,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ch_prov_b,
-      list(list(3, "desc"))) %>% 
-        formatRound('Percentage waiting more than 18 weeks', 1)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound("Percentage waiting more than 18 weeks", 1))
   })
 
   ## Community Health Waiting Times (Region/time)
@@ -4183,9 +4186,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ch_nat_tt,
-      list(list(2, "desc"), list(0, "desc"))) %>% 
-        formatRound('Percentage waiting more than 18 weeks', 1)
-    )
+      list(list(2, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("Percentage waiting more than 18 weeks", 1))
   })
 
   ## Community Health Waiting Times (Region/bench)
@@ -4281,9 +4284,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ch_nat_bt,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('Percentage waiting more than 18 weeks', 1)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("Percentage waiting more than 18 weeks", 1))
   })
 
   ### Mental Health Service access ####
@@ -4343,23 +4346,22 @@ server <- function(input, output, session) {
           `Year ending`
         ) %>%
         ftransform(
-        `Year ending` = factor(format(`Year ending`, "%b %Y", levels = month_order)),
-        `Number of children and young people` = round(`Number of children and young people`, 0),
-        order = as.numeric(`Year ending`) # as.numeric on a factor gives you the index of the level, so we can use this to order
-  ) %>%
-    fselect(`Year ending`,
-            `NHS Region` = nhs_name,
-            `Number of children and young people`, 
-            order
-    ) 
+          `Year ending` = factor(format(`Year ending`, "%b %Y", levels = month_order)),
+          `Number of children and young people` = round(`Number of children and young people`, 0),
+          order = as.numeric(`Year ending`) # as.numeric on a factor gives you the index of the level, so we can use this to order
+        ) %>%
+        fselect(`Year ending`,
+          `NHS Region` = nhs_name,
+          `Number of children and young people`,
+          order
+        )
     }
-  return(DTise(
-    mentalhealth_ccg_tt,
-    list(list(3, "desc")), 
-    hidden = 3) %>% # sort on the order column but hide it
-      formatRound('Number of children and young people', 0)
-  )
-      
+    return(DTise(
+      mentalhealth_ccg_tt,
+      list(list(3, "desc")),
+      hidden = 3
+    ) %>% # sort on the order column but hide it
+      formatRound("Number of children and young people", 0))
   })
 
   ## Mental Health Access (CCG/bench)
@@ -4436,9 +4438,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       mentalhealth_ccg_bt,
-      list(list(2, "desc"))) %>% 
-        formatRound('Number of children and young people', 0)
-    )
+      list(list(2, "desc"))
+    ) %>%
+      formatRound("Number of children and young people", 0))
   })
 
   ## Mental Health Access (region/time)
@@ -4547,16 +4549,16 @@ server <- function(input, output, session) {
       ) %>%
       fselect(`Year ending`,
         `NHS Region` = nhs_name,
-        `Number of children and young people`, 
+        `Number of children and young people`,
         order
-      ) 
+      )
 
     return(DTise(
       mentalhealth_reg_tt,
-      list(list(3, "desc")), 
-      hidden = 3) %>% # sort on the order column but hide it
-        formatRound('Number of children and young people', 0)
-    )
+      list(list(3, "desc")),
+      hidden = 3
+    ) %>% # sort on the order column but hide it
+      formatRound("Number of children and young people", 0))
   })
 
   ## Mental Health Access (region/bench)
@@ -4639,9 +4641,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       mentalhealth_reg_bt,
-      list(list(2, "desc"))) %>% 
-        formatRound('Number of children and young people', 0)
-    )
+      list(list(2, "desc"))
+    ) %>%
+      formatRound("Number of children and young people", 0))
   })
 
   output$nhs_value_box_ccg_newest <- renderValueBox({
@@ -4727,9 +4729,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       tribunals_la_tt,
-      list(list(0, "desc"))) %>% 
-        formatRound('Appeal Rate (%)', 2)
-    )
+      list(list(0, "desc"))
+    ) %>%
+      formatRound("Appeal Rate (%)", 2))
   })
 
   ## Tribunal Appeals (LA/bench)
@@ -4806,7 +4808,7 @@ server <- function(input, output, session) {
       collapse::fsubset(geographic_level == "Local authority" &
         !(la_name %in% small_LAs) &
         year == comparison_year) %>%
-    filter(if (input$myregion_switch == TRUE) {
+      filter(if (input$myregion_switch == TRUE) {
         region_name == region_name[la_name == input$la_choice][1]
       } else {
         region_name != "none"
@@ -4820,14 +4822,14 @@ server <- function(input, output, session) {
 
     return(DTise(
       tribunals_la_bt,
-      list(list(2, "desc"))) %>% 
-        formatRound('Appeal Rate (%)', 2)
-    )
+      list(list(2, "desc"))
+    ) %>%
+      formatRound("Appeal Rate (%)", 2))
   })
 
   ## Tribunal Appeals (region/time)
   output$tribunals_reg_time <- renderPlotly({
-     # req(input$level_choice)
+    # req(input$level_choice)
     if (input$level_choice == "Regions") {
       validate(need(input$region_choice, message = "Please select a region"))
       tribunals_reg_time <- tribunals_reg %>%
@@ -4899,7 +4901,7 @@ server <- function(input, output, session) {
       tribunals_reg_tt <- tribunals_reg %>%
         fsubset(region_name == "England") %>%
         arrange(year) %>%
-         fselect(
+        fselect(
           Year = year,
           Region = region_name,
           `Appeal Rate (%)` = `SEND Tribunal Appeal Rate`
@@ -4907,9 +4909,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       tribunals_reg_tt,
-      list(list(0, "desc"), list(2, "desc"))) %>% 
-        formatRound('Appeal Rate (%)', 2)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("Appeal Rate (%)", 2))
   })
 
   ## Tribunal Appeals (region/bench)
@@ -5023,9 +5025,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       tribunals_reg_bt,
-      list(list(0, "desc"), list(2, "desc"))) %>%
-        formatRound('Appeal Rate (%)', 2)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("Appeal Rate (%)", 2))
   })
 
   ### Absence ####
@@ -5090,9 +5092,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       absence_la_tt,
-      list(list(3, "desc"), list(0, "desc"))) %>% 
-        formatRound('Percentage', 1)
-    )
+      list(list(3, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("Percentage", 1))
   })
 
   ## SEN absence (LA/bench)
@@ -5192,9 +5194,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       absence_la_bt,
-      list(list(0, "desc"), list(2, "desc"))) %>% 
-        formatRound('Percentage', 1)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("Percentage", 1))
   })
 
   ## SEN absence (region/time)
@@ -5308,9 +5310,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       absence_reg_tt,
-      list(list(3, "desc"), list(0, "desc"))) %>% 
-        formatRound('Percentage', 1)
-    )
+      list(list(3, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("Percentage", 1))
   })
 
 
@@ -5413,9 +5415,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       absence_reg_bt,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('Percentage', 1)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("Percentage", 1))
   })
 
 
@@ -5496,9 +5498,9 @@ server <- function(input, output, session) {
     names(ks4_destinations_la_tt)[1:3] <- c("Academic Year", "Local Authority", "Characteristic")
     return(DTise(
       ks4_destinations_la_tt,
-      list(list(3, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 0)
-    )
+      list(list(3, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 0))
   })
 
 
@@ -5647,9 +5649,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       ks4_destinations_reg_tt,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('% of pupils', 0)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("% of pupils", 0))
   })
 
 
@@ -5739,9 +5741,9 @@ server <- function(input, output, session) {
 
       return(DTise(
         ks4_destinations_la_bt,
-        list(list(3, "desc"), list(4, "desc"))) %>% 
-          formatRound('% of pupils', 0)
-      )
+        list(list(3, "desc"), list(4, "desc"))
+      ) %>%
+        formatRound("% of pupils", 0))
     }
   })
 
@@ -5800,9 +5802,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ks4_dest_reg_bt,
-      list(list(0, "desc"), list(4, "desc"))) %>% 
-        formatRound('% of pupils', 0)
-    )
+      list(list(0, "desc"), list(4, "desc"))
+    ) %>%
+      formatRound("% of pupils", 0))
   })
 
 
@@ -5869,9 +5871,9 @@ server <- function(input, output, session) {
     names(ks4_destinations_la_typet)[1:3] <- c("Academic Year", "Local Authority", "SEN Status")
     return(DTise(
       ks4_destinations_la_typet,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 0)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 0))
   })
 
 
@@ -5995,9 +5997,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ks4_destinations_reg_typet,
-      list(list(2, "desc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 0)
-    )
+      list(list(2, "desc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 0))
   })
 
 
@@ -6061,9 +6063,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       dsg_la_tt,
-      list(list(0, "desc"))) %>% 
-        formatRound('DSG cumulative balance as a % of the total income', 2)
-    )
+      list(list(0, "desc"))
+    ) %>%
+      formatRound("DSG cumulative balance as a % of the total income", 2))
   })
 
   ## DSG deficit (LA/bench)
@@ -6267,9 +6269,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       dsg_la_bt,
-      list(list(2, "desc"))) %>% 
-        formatRound('DSG cumulative balance as a % of the total income', 2)
-    )
+      list(list(2, "desc"))
+    ) %>%
+      formatRound("DSG cumulative balance as a % of the total income", 2))
   })
 
   ## DSG deficit (region/time)
@@ -6341,9 +6343,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       dsg_deficit_reg_tt,
-      list(list(0, "desc"))) %>% 
-        formatRound('DSG cumulative balance as a % of the total income', 2)
-    )
+      list(list(0, "desc"))
+    ) %>%
+      formatRound("DSG cumulative balance as a % of the total income", 2))
   })
 
   ## DSG deficit (region/bench)
@@ -6438,9 +6440,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       dsg_reg_bt,
-      list(list(2, "desc"))) %>% 
-        formatRound('DSG cumulative balance as a % of the total income', 2)
-    )
+      list(list(2, "desc"))
+    ) %>%
+      formatRound("DSG cumulative balance as a % of the total income", 2))
   })
 
   ### Specialist Spend  ####
@@ -6507,9 +6509,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       spec_la_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('Per capita spend on special schools and AP', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("Per capita spend on special schools and AP", 2))
   })
 
   ## Specialist Spend (reg/time)
@@ -6587,9 +6589,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       spec_reg_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('Per capita spend on special schools and AP', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("Per capita spend on special schools and AP", 2))
   })
 
 
@@ -6885,9 +6887,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ehcp_ppc_la_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 2))
   })
 
   ## % of pupils with EHCP (LA/bench)
@@ -6983,9 +6985,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ppc_ehcp_la_bt,
-      list(list(3, "desc"))) %>% 
-        formatRound('% of pupils', 2)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound("% of pupils", 2))
   })
 
   ## % of pupils with EHCP (region/time)
@@ -7073,9 +7075,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       pp_ehcp_reg_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 2))
   })
 
   ## % of pupils with EHCP (region/bench)
@@ -7169,9 +7171,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       pp_ehcp_reg_bt,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('% of pupils', 2)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("% of pupils", 2))
   })
 
   ### EHCP Age profile ####
@@ -7222,7 +7224,7 @@ server <- function(input, output, session) {
         time_period,
         desc(`Age group`)
       ) %>%
-       fselect(
+      fselect(
         Year = time_period,
         `Local Authority` = la_name,
         `Age group`,
@@ -7231,9 +7233,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       ehcp_age_la_tt,
-      list(list(0, "desc"), list(2, "desc"))) %>% 
-        formatRound('Number of EHCPs', 0)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("Number of EHCPs", 0))
   })
 
   ## EHCP age profile (region/time)
@@ -7319,7 +7321,7 @@ server <- function(input, output, session) {
         ) %>%
         fmutate(
           region_name = "England"
-        ) %>% 
+        ) %>%
         fselect(
           Year = time_period,
           Region = region_name,
@@ -7329,9 +7331,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       ehcp_age_reg_tt,
-      list(list(0, "desc"), list(2, "desc"))) %>% 
-        formatRound('Number of EHCPs', 0)
-    )
+      list(list(0, "desc"), list(2, "desc"))
+    ) %>%
+      formatRound("Number of EHCPs", 0))
   })
 
   ### % of mainstream pupils with SEN ####
@@ -7383,9 +7385,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       msen_la_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 2))
   })
 
   ## % of mainstream pupils with SEN (LA/bench)
@@ -7480,9 +7482,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       msen_la_bt,
-      list(3, "desc")) %>% 
-        formatRound('% of pupils', 1)
-    )
+      list(3, "desc")
+    ) %>%
+      formatRound("% of pupils", 1))
   })
 
   ## % of mainstream pupils with SEN (region/time)
@@ -7584,9 +7586,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       msen_reg_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils', 1)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils", 1))
   })
 
   ## % of mainstream pupils with SEN(region/bench)
@@ -7669,9 +7671,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       msen_reg_bt,
-      list(list(0, "desc"), list(3, "desc"))) %>% 
-        formatRound('% of pupils', 1)
-    )
+      list(list(0, "desc"), list(3, "desc"))
+    ) %>%
+      formatRound("% of pupils", 1))
   })
 
   ### SEN of Children in Need ###
@@ -7751,9 +7753,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       cin_la_tt,
-      list(list(2, "asc"), list(3, "asc"), list(0, "desc"))) %>% 
-        formatRound('Percentage of children', 1)
-    )
+      list(list(2, "asc"), list(3, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("Percentage of children", 1))
   })
 
   ## SEN of Children in Need (LA/bench) ##
@@ -7787,7 +7789,7 @@ server <- function(input, output, session) {
         region_name != "none"
       }) %>%
       # Add ranks
-      add_ranks(outcome = "Percentage of children", reverse = TRUE) # fewer CiN with recognised SEN is probably better 
+      add_ranks(outcome = "Percentage of children", reverse = TRUE) # fewer CiN with recognised SEN is probably better
 
     # Create rank statements to go on the X axis.
     cin_la_bench_data$rank_statement <- rank_statement_fun(cin_la_bench_data,
@@ -7860,9 +7862,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       cin_la_bt,
-      list(list(2, "asc"), list(3, "asc"), list(0, "desc"), list(4, "desc"))) %>% 
-        formatRound('Percentage of children', 1)
-    )
+      list(list(2, "asc"), list(3, "asc"), list(0, "desc"), list(4, "desc"))
+    ) %>%
+      formatRound("Percentage of children", 1))
   })
 
   ## SEN of Children in Need (Region/time) ##
@@ -7957,9 +7959,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       cin_reg_tt,
-      list(list(2, "asc"), list(3, "asc"), list(0, "desc"), list(4, "desc"))) %>% 
-        formatRound('Percentage of children', 1)
-    )
+      list(list(2, "asc"), list(3, "asc"), list(0, "desc"), list(4, "desc"))
+    ) %>%
+      formatRound("Percentage of children", 1))
   })
 
   ## SEN of Children in Need (Region/bench) ##
@@ -8127,9 +8129,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       types_la_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils (with SEN provision type)', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils (with SEN provision type)", 2))
   })
 
   ## Provider types (LA/bench)
@@ -8379,9 +8381,9 @@ server <- function(input, output, session) {
     }
     return(DTise(
       types_reg_tt,
-      list(list(2, "asc"), list(0, "desc"))) %>% 
-        formatRound('% of pupils (with SEN provision type)', 2)
-    )
+      list(list(2, "asc"), list(0, "desc"))
+    ) %>%
+      formatRound("% of pupils (with SEN provision type)", 2))
   })
 
   ## Provider types (region/bench)
@@ -8484,9 +8486,9 @@ server <- function(input, output, session) {
 
     return(DTise(
       types_reg_bt,
-      list(list(3, "desc"))) %>%
-        formatRound(columns = "% in independent/AP/special", digits = 1)
-    )
+      list(list(3, "desc"))
+    ) %>%
+      formatRound(columns = "% in independent/AP/special", digits = 1))
   })
 
   # ==========================================
@@ -8530,14 +8532,14 @@ server <- function(input, output, session) {
       }
 
     # Conditional English average line added if national_average created
-    ## It doesn't make sense to add this line for national counts,
-    if (!is.null(national_average) && is.data.frame(national_average)) {
+    ## It doesn't make sense to add this line for national counts, and the console output breaks shinytest
+    if (!is.null(national_average) && is.data.frame(national_average) && isFALSE(getOption("shiny.testmode"))) {
       print("Yes, national_average exists and is a data frame.")
       # Include the code related to national_average
       data <- data +
         add_england_line_bench(national_average) +
         add_england_label_bench_reg(national_average, nudge = 3)
-    } else {
+    } else if(isFALSE(getOption("shiny.testmode"))) {
       print("No valid national_average provided or it is not a data frame. Skipping related code.")
     }
 
@@ -8604,7 +8606,7 @@ server <- function(input, output, session) {
       select(
         `Academic year`,
         !!ensym(var),
-        `Type of AP`, 
+        `Type of AP`,
         `Total pupils` = Total
       )
     return(DTise(data, c(list(0, "desc"), list(2, "asc"))) %>%
@@ -8697,9 +8699,9 @@ server <- function(input, output, session) {
           region_name == region_name[la_name == input$la_choice]
         } else {
           region_name != "none"
-        }) %>% 
+        }) %>%
         add_ranks(outcome = "Total")
-    
+
 
       ap_counts_la_bench_data$rank_statement <- rank_statement_fun(ap_counts_la_bench_data,
         rank_col = rank,
@@ -8764,18 +8766,18 @@ server <- function(input, output, session) {
           region_name == chosen_region
         } else {
           region_name != "none"
-        }) %>% 
+        }) %>%
         arrange(desc(`Academic year`), desc(Total)) %>%
-          fselect(
-            `Academic year`,
-            `Local authority`,
-            `Type of AP`,
-            `Total pupils` = Total
+        fselect(
+          `Academic year`,
+          `Local authority`,
+          `Type of AP`,
+          `Total pupils` = Total
         ) %>%
         mutate(`Total pupils` = as.numeric(`Total pupils`))
 
-      return(DTise(ap_counts_la_bt, list(0, 4)) %>% 
-               formatRound('Total pupils', 0)) # this has already been ordered into desc
+      return(DTise(ap_counts_la_bt, list(0, 4)) %>%
+        formatRound("Total pupils", 0)) # this has already been ordered into desc
     } else {
       chosen_la %>% validate_if_no_la_data()
     }
@@ -8794,7 +8796,7 @@ server <- function(input, output, session) {
       collapse::fsubset(geographic_level == "Regional" &
         `Type of AP` == input$ap_counts_reg_bench_filter &
         time_period == max(time_period))
-        
+
     ap_counts_reg_bench <- plot_reg_bench(
       data = ap_counts_reg_bench_s1,
       outcome_var = ap_counts_reg_bench_s1$Total,
@@ -8808,10 +8810,10 @@ server <- function(input, output, session) {
     ap_counts_reg_type <- ap_counts %>%
       collapse::fsubset(geographic_level == "Regional" &
         `Type of AP` == input$ap_counts_reg_bench_filter &
-        time_period == max(time_period)) %>% 
+        time_period == max(time_period)) %>%
       table_bench_time(
         var_filter = quote(`Type of AP`),
-        outcome_var = quote(Total), 
+        outcome_var = quote(Total),
         digits = 0
       )
   })
@@ -8875,9 +8877,9 @@ server <- function(input, output, session) {
         `% of pupils`,
         `Total pupils`
       )
-    return(DTise(data, c(list(0, "desc"), list(2, "asc"), list(4, "asc"))) %>% 
-             formatRound('Total pupils', 0) %>% 
-             formatRound('% of pupils', 2))
+    return(DTise(data, c(list(0, "desc"), list(2, "asc"), list(4, "asc"))) %>%
+      formatRound("Total pupils", 0) %>%
+      formatRound("% of pupils", 2))
   }
 
   output$ap_characteristics_la_time <- renderPlotly({
@@ -9067,9 +9069,10 @@ server <- function(input, output, session) {
 
       return(DTise(
         ap_characteristics_la_bt,
-        c(list(0, "desc"), list(3, "asc"), list(5, "desc"))) %>% 
-          formatRound('% of pupils', 2) %>% 
-          formatRound('Total pupils', 0))
+        c(list(0, "desc"), list(3, "asc"), list(5, "desc"))
+      ) %>%
+        formatRound("% of pupils", 2) %>%
+        formatRound("Total pupils", 0))
     } else {
       chosen_la %>% validate_if_no_la_data()
     }
@@ -9140,9 +9143,10 @@ server <- function(input, output, session) {
 
     return(DTise(
       ap_characteristics_reg_bt,
-      c(list(0, "desc"), list(3, "asc"), list(5, "desc"))) %>% 
-        formatRound('% of pupils', 2) %>% 
-        formatRound('Total pupils', 0))
+      c(list(0, "desc"), list(3, "asc"), list(5, "desc"))
+    ) %>%
+      formatRound("% of pupils", 2) %>%
+      formatRound("Total pupils", 0))
   })
 
   # =====================================
@@ -9206,7 +9210,7 @@ server <- function(input, output, session) {
   table_ap_absences_time <- function(data, var) {
     data <- data %>%
       mutate(Region = Region, `Local authority` = la_name) %>%
-      arrange(desc(time_period), `Absence measure`)  %>%
+      arrange(desc(time_period), `Absence measure`) %>%
       select(
         `Academic Year` = academic_year,
         !!ensym(var), # `Local authority` or `Region`
@@ -9216,9 +9220,9 @@ server <- function(input, output, session) {
       ) %>%
       arrange(desc(`Academic Year`), `Absence measure`)
 
-    return(DTise(data, c(list(0, "desc"), list(3, "asc")))  %>% 
-             formatRound('Percentage', 2) %>% 
-             formatRound('Grand total enrolments', 0))
+    return(DTise(data, c(list(0, "desc"), list(3, "asc"))) %>%
+      formatRound("Percentage", 2) %>%
+      formatRound("Grand total enrolments", 0))
   }
 
 
@@ -9402,10 +9406,10 @@ server <- function(input, output, session) {
         ) %>%
         return(DTise(
           ap_absences_lab,
-          c(list(3, "desc")))  %>% 
-            formatRound('Percentage', 2) %>% 
-            formatRound('Grand total enrolments in LA', 0)
-          )
+          c(list(3, "desc"))
+        ) %>%
+          formatRound("Percentage", 2) %>%
+          formatRound("Grand total enrolments in LA", 0))
     } else {
       chosen_la %>% validate_if_no_la_data()
     }
@@ -9838,8 +9842,8 @@ server <- function(input, output, session) {
         `Setting type`,
         Total
       )
-    return(DTise(data, c(list(0, "desc"), list(2, "asc"))) %>% 
-             formatRound('Total', 0))
+    return(DTise(data, c(list(0, "desc"), list(2, "asc"))) %>%
+      formatRound("Total", 0))
   }
 
 
@@ -10017,8 +10021,8 @@ server <- function(input, output, session) {
       return(DTise(
         ap_uap_la_bt,
         c(list(0, "desc"), list(4, "desc"))
-      ) %>% 
-        formatRound('Total', 0))
+      ) %>%
+        formatRound("Total", 0))
     } else {
       chosen_la %>% validate_if_no_la_data()
     }
@@ -10053,12 +10057,12 @@ server <- function(input, output, session) {
       collapse::fsubset(geographic_level == "Regional" &
         `Type of AP` == input$ap_uap_reg_bench_filter &
         time_period == max(time_period)) %>%
-      group_by(`Type of AP`, `Academic year`, region_name, `Region`) %>% 
-      summarise(`Total pupils` = sum(Total)) %>% 
-      ungroup() %>% 
+      group_by(`Type of AP`, `Academic year`, region_name, `Region`) %>%
+      summarise(`Total pupils` = sum(Total)) %>%
+      ungroup() %>%
       table_bench_time(
         var_filter = quote(`Type of AP`),
-        outcome_var = quote(`Total pupils`), 
+        outcome_var = quote(`Total pupils`),
         digits = 0
       )
   })
@@ -10215,7 +10219,7 @@ server <- function(input, output, session) {
       )
     return(DTise(
       summary_table,
-      list(list(1, "asc"), list(3, "asc")) 
+      list(list(1, "asc"), list(3, "asc"))
     ))
   })
 
@@ -10257,7 +10261,7 @@ server <- function(input, output, session) {
     df <- eng_eyfsp %>%
       drop_na(gld_percentage) %>%
       geo_subset(lev = input$level_choice, reg = input$region_choice) %>%
-      fsubset(characteristic_type == input$summary_sen_type) %>% 
+      fsubset(characteristic_type == input$summary_sen_type) %>%
       arrange(desc(academic_year))
 
     eyfsp_data <- box_data(df, gld_percentage, academic_year)
@@ -11144,7 +11148,7 @@ server <- function(input, output, session) {
                                                                                          For data prior to that date, select Northamptonshire",
       input$la_choice == "Northamptonshire" ~ "Northamptonshire was divided into North and West Northamptonshire Unitary Authorities on 1st April 2021. Northamptonshire's value below refer to the last year it repored data.
                                                      For data subsequent to that date, select North or West Northamptonshire",
-      input$la_choice %in% c("Cumberland", "Westmorland and Furness" ) ~ "Cumberland and Westmorland and Furness were created out of former Cumbria County Council on 1st April 2023. Since most metrics except academic outcomes use data collected in January there is relatively little data from these LAs in this version of the dashboard. For older data, see Cumbria.",
+      input$la_choice %in% c("Cumberland", "Westmorland and Furness") ~ "Cumberland and Westmorland and Furness were created out of former Cumbria County Council on 1st April 2023. Since most metrics except academic outcomes use data collected in January there is relatively little data from these LAs in this version of the dashboard. For older data, see Cumbria.",
       input$la_choice == "Cumbria" ~ "Cumbria was divided into Cumberland and Westmorland and Furness on 1st April 2023. Since the data for many metrics is collected in January most data for this year still refers to Cumbria, but some (including academic outcomes) refers to the new unitary authorities. Cumbria's value below refer to the last year for which it reported data.",
       .default = ""
     )
@@ -11180,7 +11184,7 @@ server <- function(input, output, session) {
       .default = ""
     )
     old_la_ofsted <-
-     paste("Prior to the split this LA was part of", previous_la, "which had the following inspection outcome:")
+      paste("Prior to the split this LA was part of", previous_la, "which had the following inspection outcome:")
   })
 
   missing_data_1618dest_time <- reactive({
@@ -11204,25 +11208,28 @@ server <- function(input, output, session) {
   laselected <- reactive({
     paste0("Selected LA: ", input$la_choice, "\n", "Selected sub-ICB area: ", input$ccg_choice)
   })
-  
+
   regselected <- reactive({
     ifelse(test = input$level_choice == "England",
-           yes = paste0("Level: ", input$level_choice), 
-           no = paste0("Level: ", input$level_choice, " Region: ", input$region_choice))
+      yes = paste0("Level: ", input$level_choice),
+      no = paste0("Level: ", input$level_choice, " Region: ", input$region_choice)
+    )
   })
-  
+
   la_select_tog <- reactive({
-    ifelse(test = input$hide_la_selectors %% 2 == 0, 
-           yes = "Hide LA selection panel", 
-           no = "Show LA selection panel")
+    ifelse(test = input$hide_la_selectors %% 2 == 0,
+      yes = "Hide LA selection panel",
+      no = "Show LA selection panel"
+    )
   })
-  
+
   reg_select_tog <- reactive({
-    ifelse(test = input$hide_reg_selectors %% 2 == 0, 
-           yes = "Hide Regions selection panel", 
-           no = "Show Regions selection panel")
+    ifelse(test = input$hide_reg_selectors %% 2 == 0,
+      yes = "Hide Regions selection panel",
+      no = "Show Regions selection panel"
+    )
   })
-  
+
   output$nhants_excuse <- renderText(northants_KS4())
   output$nhants_excuse_bench <- renderText(northants_KS4()) # because you can't have two outputs with the same ID
   output$la_changed <- renderText(la_text())
@@ -11239,17 +11246,17 @@ server <- function(input, output, session) {
   output$myregion_text <- renderText("Comparing within region")
   output$showhide_la <- renderText(la_select_tog())
   output$showhide_reg <- renderText(reg_select_tog())
-  
+
   output$la_message <- renderUI({
-    if(input$hide_la_selectors %% 2 == 0){
+    if (input$hide_la_selectors %% 2 == 0) {
       h2(renderText("Select local authority to display graphs"))
     } else {
       h3(renderText(laselected()))
     }
   })
-  
+
   output$reg_message <- renderUI({
-    if(input$hide_reg_selectors %% 2 == 0){
+    if (input$hide_reg_selectors %% 2 == 0) {
       h2(renderText("Select England or region-level view"))
     } else {
       h3(renderText(regselected()))

@@ -91,82 +91,93 @@ dashboard_panel <- function() {
         ),
         column(
           width = 12,
-            id = "labox",
-          div(id = "collapse-la",
+          id = "labox",
+          div(
+            id = "collapse-la",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
+            gov_row(
+              column(
+                width = 12,
                 gov_row(
-                   column(width = 12,
-                    gov_row(
-                      column(width = 9, 
-                        div(uiOutput("la_message"),
-                        textOutput("myregion_text"),
-                        style = "padding-bottom: 0px"
-                    )),
-                    column(width = 3,
-                        div(actionBttn(inputId = "hide_la_selectors", 
-                                   label = textOutput("showhide_la"), 
-                                   style = "bordered", 
-                            )))),
-                    div(width = 12,
-                        style = "padding-top: 0px",
-                        id = "lapickbox",
-                   pickerInput("la_choice",
-                     label = "",
-                     choices = list(
-                     "Please Select Local Authority" = "",
-                     "East Midlands" = `East Midlands`,
-                     "East of England" = `East of England`,
-                     "London" = `London`,
-                     "North East" = `North East`,
-                     "North West" = `North West`,
-                     "South East" = `South East`,
-                     "South West" = `South West`,
-                     "West Midlands" = `West Midlands`,
-                     "Yorkshire and the Humber" = `Yorkshire and the Humber`
+                  column(
+                    width = 9,
+                    div(uiOutput("la_message"),
+                      textOutput("myregion_text"),
+                      style = "padding-bottom: 0px"
+                    )
                   ),
-                  choicesOpt = list(style = ("color: darkgrey")),
-                  selected = NULL,
-                  options = pickerOptions(
-                    livemaxOptions = 1,
-                    liveSearch = TRUE
+                  column(
+                    width = 3,
+                    div(actionBttn(
+                      inputId = "hide_la_selectors",
+                      label = textOutput("showhide_la"),
+                      style = "bordered",
+                    ))
                   )
                 ),
-                pickerInput("ccg_choice",
-                  label = h3("Select NHS England sub-ICB location to display graphs"),
-                  choices = list(
-                    "Please Select NHS area" = "",
-                    "East of England" = `East of England (NHS)`,
-                    "London" = `London (NHS)`,
-                    "Midlands" = `Midlands (NHS)`,
-                    "North East and Yorkshire" = `North East and Yorkshire (NHS)`,
-                    "North West" = `North West (NHS)`,
-                    "South East" = `South East (NHS)`,
-                    "South West" = `South West (NHS)`
+                div(
+                  width = 12,
+                  style = "padding-top: 0px",
+                  id = "lapickbox",
+                  pickerInput("la_choice",
+                    label = "",
+                    choices = list(
+                      "Please Select Local Authority" = "",
+                      "East Midlands" = `East Midlands`,
+                      "East of England" = `East of England`,
+                      "London" = `London`,
+                      "North East" = `North East`,
+                      "North West" = `North West`,
+                      "South East" = `South East`,
+                      "South West" = `South West`,
+                      "West Midlands" = `West Midlands`,
+                      "Yorkshire and the Humber" = `Yorkshire and the Humber`
+                    ),
+                    choicesOpt = list(style = ("color: darkgrey")),
+                    selected = NULL,
+                    options = pickerOptions(
+                      livemaxOptions = 1,
+                      liveSearch = TRUE
+                    )
                   ),
-                  selected = NULL,
-                  options = pickerOptions(
-                    livemaxOptions = 1,
-                    liveSearch = TRUE
+                  pickerInput("ccg_choice",
+                    label = h3("Select NHS England sub-ICB location to display graphs"),
+                    choices = list(
+                      "Please Select NHS area" = "",
+                      "East of England" = `East of England (NHS)`,
+                      "London" = `London (NHS)`,
+                      "Midlands" = `Midlands (NHS)`,
+                      "North East and Yorkshire" = `North East and Yorkshire (NHS)`,
+                      "North West" = `North West (NHS)`,
+                      "South East" = `South East (NHS)`,
+                      "South West" = `South West (NHS)`
+                    ),
+                    selected = NULL,
+                    options = pickerOptions(
+                      livemaxOptions = 1,
+                      liveSearch = TRUE
+                    )
+                  ),
+                  conditionalPanel(
+                    condition = "input.tabsetpanels_la == 'Summary'",
+                    selectInput(
+                      inputId = "summary_sen_type_la",
+                      label = "Choose SEN type used for Summary (applies to KS1, KS2, destination, absence and children in need metrics)",
+                      choices = list("All SEN", "EHC plan", "SEN support")
+                    )
+                  ),
+                  materialSwitch(
+                    inputId = "myregion_switch", label = "Compare to local areas in the same region only",
+                    right = TRUE
                   )
                 ),
-                conditionalPanel(
-                  condition = "input.tabsetpanels_la == 'Summary'",
-                  selectInput(
-                    inputId = "summary_sen_type_la",
-                    label = "Choose SEN type used for Summary (applies to KS1, KS2, destination, absence and children in need metrics)",
-                    choices = list("All SEN", "EHC plan", "SEN support")
-                  )
-                ),
-                materialSwitch(
-                  inputId = "myregion_switch", label = "Compare to local areas in the same region only",
-                  right = TRUE
-                )
-              ), 
-             ),
-            div(style = "text-indent: 30px margin-bottom: 5px", 
-                htmlOutput("la_changed"))
-          )
+              ),
+              div(
+                style = "text-indent: 30px margin-bottom: 5px",
+                htmlOutput("la_changed")
+              )
+            )
           )
         ),
         column(
@@ -1505,7 +1516,7 @@ dashboard_panel <- function() {
                   box(
                     width = info_width, title = "About this indicator", solidHeader = TRUE,
                     p("This publication provides statistics on the number of pupils at state-funded alternative provision schools (collected via the school census), school arranged alternative provision (collected via the school census), and LA arranged alternative provision (collected via the AP census)."),
-p("School arranged alternative provision figures refer to pupils in school arranged alternative provision at January 2023.
+                    p("School arranged alternative provision figures refer to pupils in school arranged alternative provision at January 2023.
 State-funded alternative provision figures include pupils placed by schools and local authorities and whose sole or main registration is in a state-funded AP school at the Spring census. The number of dual subsidiary registrations at a state-funded AP will be added separately in 2024, when a time series dataset will become available.
 Local authority funded placements in non state-funded provision figures refer to pupils with an open placement as at census date who have been recorded in the alternative provision census as being in a local authority funded alternative provision setting."),
                     tags$a(
@@ -1825,21 +1836,31 @@ regional_dashboard_panel <- function() {
             id = "collapse-engreg",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
-            gov_row(   
-             column(width = 12, 
+            gov_row(
+              column(
+                width = 12,
                 gov_row(
-                column(width = 9,
-                  div(    
-                  uiOutput("reg_message"), 
-                  style = "padding-bottom: 0 px"
-                  )), 
-                column(width = 3, 
-                    actionBttn(inputId = "hide_reg_selectors", 
-                               label = textOutput("showhide_reg"), 
-                               style = "bordered")))),
-              div(width = 12,
-                  id = "regpickbox",
-                  style = "padding-top: 0px",
+                  column(
+                    width = 9,
+                    div(
+                      uiOutput("reg_message"),
+                      style = "padding-bottom: 0 px"
+                    )
+                  ),
+                  column(
+                    width = 3,
+                    actionBttn(
+                      inputId = "hide_reg_selectors",
+                      label = textOutput("showhide_reg"),
+                      style = "bordered"
+                    )
+                  )
+                )
+              ),
+              div(
+                width = 12,
+                id = "regpickbox",
+                style = "padding-top: 0px",
                 pickerInput("level_choice",
                   label = "",
                   choices = list("Pick England or Regions" = "", "England", "Regions"),
@@ -2308,7 +2329,8 @@ regional_dashboard_panel <- function() {
                   )
                 )
               ),
-              fluidRow(class = "summary-box",
+              fluidRow(
+                class = "summary-box",
                 actionLink(
                   inputId = "link_ap_absence_panel", width = "33%", class = "link-box",
                   box(
