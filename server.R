@@ -3339,7 +3339,6 @@ server <- function(input, output, session) {
       time_period = time_period
     )
 
-
     timeliness_la_bench <- timeliness_la_bench_data %>%
       ggplot(aes(fct_reorder(la_name, `% of EHCPs issued within 20 weeks`),
         y = `% of EHCPs issued within 20 weeks`,
@@ -3352,7 +3351,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         x = timeliness_la_bench_data$rank_statement[timeliness_la_bench_data$la_name == input$la_choice],
         y = "% of EHCPs issued within 20 weeks\n (excluding exceptions)",
@@ -4781,7 +4780,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         x = tribunals_la_bench_data$rank_statement[tribunals_la_bench_data$la_name == input$la_choice],
         fill = "Local Authority"

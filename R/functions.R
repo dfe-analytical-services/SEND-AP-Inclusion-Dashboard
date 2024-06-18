@@ -475,8 +475,12 @@ add_england_line_bench <- function(df) {
   )
 }
 
+debug_annoying_return_value <- function(unknown_param){
+  print(as.character(unknown_param))
+}
+  
 # Label the England line on benchmarking graphs
-add_england_label_bench <- function(df, input, nudge = 0.25) {
+add_england_label_bench <- function(df, nudge = 0.25) {
   geom_text(
     data = df,
     colour = af_grey,
@@ -484,7 +488,7 @@ add_england_label_bench <- function(df, input, nudge = 0.25) {
     inherit.aes = FALSE,
     nudge_y = nudge,
     aes(
-      x = ifelse(test = isTRUE(input),
+      x = ifelse(test = input$navlistPanel == "England and Regions",
         yes = 3,
         no = 20
       ),

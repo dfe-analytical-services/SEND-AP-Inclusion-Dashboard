@@ -117,7 +117,7 @@ ui <- function(input, output, session) {
     ),
     shiny::navlistPanel(
       "",
-      id = "navlistPanel",
+      id = "panel_choice",
       widths = c(2, 10),
       well = FALSE,
       homepage_panel(),
