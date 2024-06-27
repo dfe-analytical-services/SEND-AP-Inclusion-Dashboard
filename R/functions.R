@@ -420,7 +420,7 @@ plot_la_bench <- function(data, outcome_var, hover_label, label_y, la_choice_val
       add_england_line_bench(national_average) +
       add_england_label_bench(national_average, nudge = 3)
   } else {
-    #print("No valid national_average provided or it is not a data frame. Skipping related code.")
+    # print("No valid national_average provided or it is not a data frame. Skipping related code.")
   }
 
   data <- data %>%
@@ -475,7 +475,7 @@ plot_reg_bench <- function(data, outcome_var, hover_label, label_y, region_choic
     } else {
       scale_fill_manual(values = c("English regions" = focused), na.value = focused)
     }
-  
+
   # Conditional English average line added if national_average created
   ## It doesn't make sense to add this line for national counts
   if (!is.null(national_average) && is.data.frame(national_average)) {
@@ -487,14 +487,14 @@ plot_reg_bench <- function(data, outcome_var, hover_label, label_y, region_choic
   } else {
     print("No valid national_average provided or it is not a data frame. Skipping related code.")
   }
-  
+
   data <- ggplotly(data, tooltip = c("text")) %>%
     save_plot_button_only() %>%
     layout(
       legend = list(orientation = "h", y = -0.2),
       dragmode = FALSE
     )
-  
+
   return(data) # plot this
 }
 
@@ -536,10 +536,10 @@ add_england_line_bench <- function(df) {
   )
 }
 
-debug_annoying_return_value <- function(unknown_param){
+debug_annoying_return_value <- function(unknown_param) {
   print(as.character(unknown_param))
 }
-  
+
 # Label the England line on benchmarking graphs
 add_england_label_bench <- function(df, nudge = 0.25) {
   geom_text(
