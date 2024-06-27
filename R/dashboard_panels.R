@@ -91,20 +91,37 @@ dashboard_panel <- function() {
         ),
         column(
           width = 12,
-          id = "lapickbox",
+          id = "labox",
           div(
             id = "collapse-la",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
-            box(
-              collapsible = TRUE,
-              width = 12,
-              background = "aqua",
-              gov_row(
-                column(
+            gov_row(
+              column(
+                width = 12,
+                gov_row(
+                  column(
+                    width = 9,
+                    div(uiOutput("la_message"),
+                      textOutput("myregion_text"),
+                      style = "padding-bottom: 0px"
+                    )
+                  ),
+                  column(
+                    width = 3,
+                    div(actionBttn(
+                      inputId = "hide_la_selectors",
+                      label = textOutput("showhide_la"),
+                      style = "bordered",
+                    ))
+                  )
+                ),
+                div(
                   width = 12,
+                  style = "padding-top: 0px",
+                  id = "lapickbox",
                   pickerInput("la_choice",
-                    label = h2("Select local authority to display graphs"),
+                    label = "",
                     choices = list(
                       "Please Select Local Authority" = "",
                       "East Midlands" = `East Midlands`,
@@ -154,7 +171,7 @@ dashboard_panel <- function() {
                     inputId = "myregion_switch", label = "Compare to local areas in the same region only",
                     right = TRUE
                   )
-                )
+                ),
               ),
               div(
                 style = "text-indent: 30px margin-bottom: 5px",
@@ -181,7 +198,7 @@ dashboard_panel <- function() {
                     as a starting point for discussions when comparing metrics as LAs face different local challenges with different cohorts of children and young people with SEND and in AP. An understanding
                     of each LA’s unique context is encouraged when exploring this data."),
                     p("The circles represent a metric on the dashboard, and the number in the circle is the selected LA's rank in the most current data for this metric. The median (middle), highest and lowest LAs are shown by the dotted vertical lines.
-                      The horizontal lines indicate the highest and lowest rank achieved by that LA over the range of the data currently available (there are no historic lines for Progress 8, which is a relative in-year measure not designed for comparison and for EYFSP where there is only a single year of data).
+                      The horizontal lines indicate the highest and lowest rank achieved by that LA over the range of the data currently available (there are no historic lines for Progress 8, which is a relative in-year measure not designed for comparison over time. For EYFSP there are only two years of data, so the line will only extend in one direction).
                       Names of metrics are shown to the left of the graph.
                       Hover over a circle with your mouse for a more detailed description of the metric.
                       Where an LA's rank has been very consistent across the years no line may be visible; with the size of the circles used a rank difference of at least 5 is required for visibility"),
@@ -258,7 +275,7 @@ dashboard_panel <- function() {
                     p("This graph covers the percentage of children with SEN with a good level of development. Specifically, the percentage of children who are at the expected level in the 12 ELGs within the 5 areas of learning relating to: communication and language; personal, social and emotional development; physical development; literacy; and mathematics."),
                     p("As part of the 2021/22 EYFS reforms introduced in September 2021, the EYFS profile was significantly revised. It is therefore not possible to directly compare assessment outcomes from 2021/22 with earlier years."),
                     tags$a(
-                      href = "https://explore-education-statistics.service.gov.uk/find-statistics/early-years-foundation-stage-profile-results/2021-22",
+                      href = "https://explore-education-statistics.service.gov.uk/find-statistics/early-years-foundation-stage-profile-results/",
                       "Source: Early years foundation stage profile results", target = "_blank"
                     )
                   )
@@ -308,7 +325,7 @@ dashboard_panel <- function() {
                     p("The data includes all pupils who participated in the phonics screening check, those disapplied, those absent for the entire period of which the check could be administered and those without results due to maladministration. Pupils with missing or invalid results are not included in the calculations."),
                     p("For full details and limitations, see the source publication linked below."),
                     tags$a(
-                      href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-1-and-phonics-screening-check-attainment/2021-22",
+                      href = "https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-1-and-phonics-screening-check-attainment/",
                       "Source: Key stage 1 and phonics screening check attainment.", target = "_blank"
                     )
                   )
@@ -406,7 +423,7 @@ dashboard_panel <- function() {
                   box(
                     width = info_width, title = "About this indicator", solidHeader = TRUE,
                     p("Progress 8 aims to capture the progress that pupils in a school make from the end of primary school to the end of KS4. It is a type of value-added measure, which means that pupils’ results in up to 8 qualifications are compared to other pupils nationally with similar prior attainment. Progress 8 is a relative in-year measure and is not designed for comparisons over time."),
-                    p("We have not included breakdowns for SEN and Education, Health and Care (EHC) plans because children with EHC planPs may do fewer than 8 qualifications or be entered for qualifications that are not approved to count towards KS4 performance measures. This is likely to impact their Progress 8 scores."),
+                    p("We have not included breakdowns for SEN and Education, Health and Care (EHC) plans because children with EHC plans may do fewer than 8 qualifications or be entered for qualifications that are not approved to count towards KS4 performance measures. This is likely to impact their Progress 8 scores."),
                     p("In 2022/23 there was a return to pre-pandemic standards for GCSEs, AS and A levels, with protection built into the grading process to recognise the disruption that students have faced. KS4 performance measures for 2022/23 that are based on qualification results reflect the return to pre-pandemic grading, and cannot be directly compared to measures from 2021/22, when a different grading approach was used."),
                     tags$div(
                       "For more information on how we calculate performance measures, and the factors affecting measures for 2022/23, please see the", a(href = "https://www.gov.uk/government/collections/school-and-college-performance-measures#key-stage-4-performance-measures", "KS4"), "technical guide."
@@ -647,7 +664,7 @@ dashboard_panel <- function() {
                     p(ofsted_data_updated)
                   ),
                   conditionalPanel(
-                    condition = "input.la_choice == 'North Northamptonshire' || input.la_choice == 'West Northamptonshire'",
+                    condition = "input.la_choice == 'North Northamptonshire' || input.la_choice == 'West Northamptonshire' || input.la_choice == 'Cumberland' || input.la_choice == 'Westmorland and Furness'",
                     box(
                       width = graph_width,
                       textOutput("la_split_ofsted"),
@@ -782,8 +799,8 @@ dashboard_panel <- function() {
                       tags$li("Number of EHC plans ceased because the special educational needs of the child or young person are being met without an EHC plan")
                     ),
                     tags$div(tags$a(
-                      href = "https://www.gov.uk/government/collections/tribunals-statistics#tribunal-statistics-quarterly",
-                      "Source: Tribunal Statistics Quarterly.", target = "_blank"
+                      href = "https://www.gov.uk/government/statistics/tribunal-statistics-quarterly-january-to-march-2023",
+                      "Source: Tribunal Statistics Quarterly (January to March).", target = "_blank"
                     ))
                   )
                 )
@@ -847,8 +864,8 @@ dashboard_panel <- function() {
                       tabPanel(
                         "Change over time",
                         p(),
-                        p("This information is only available at regional, national ICB and provider levels. The areas that best correspond to local authorities are sub-ICB areas and the data is not published at this level."),
-                        p("Provder-level comparison is available (for those providers which provided information)")
+                        p("This information is only available at regional, national, ICB and provider levels. The areas that best correspond to local authorities are sub-ICB areas and the data is not published at this level."),
+                        p("Provder-level comparison is available (for those providers which provided information).")
                       ),
                       tabPanel(
                         "Provider-level comparison",
@@ -1126,8 +1143,8 @@ dashboard_panel <- function() {
                         "Local area comparison",
                         selectInput("mainstream_with_sen_la_filter",
                           label = "Select SEN provision type for comparison",
-                          choices = list("EHC plan", "SEN support"),
-                          selected = "EHC plan"
+                          choices = list("All SEN", "EHC plan", "SEN support"),
+                          selected = "All SEN"
                         ),
                         radioGroupButtons(
                           "msen_lab_toggle",
@@ -1498,9 +1515,9 @@ dashboard_panel <- function() {
                   ),
                   box(
                     width = info_width, title = "About this indicator", solidHeader = TRUE,
-                    p("This publication provides statistics on the number of pupils at state-funded alternative provision schools (collected via the school census), school arranged alternative provision (collected via the school census), and LA arranged alternative provision (collected via the AP census).
-School arranged alternative provision figures refer to pupils in school arranged alternative provision at January 2023.
-State-funded alternative provision figures include pupils placed by schools and local authorities and whose sole or main registration is in a state-funded AP school at the Spring census.The number of dual subsidiary registrations at a state-funded AP will be added separately in 2024, when a time series dataset will become available.
+                    p("This publication provides statistics on the number of pupils at state-funded alternative provision schools (collected via the school census), school arranged alternative provision (collected via the school census), and LA arranged alternative provision (collected via the AP census)."),
+                    p("School arranged alternative provision figures refer to pupils in school arranged alternative provision at January 2023.
+State-funded alternative provision figures include pupils placed by schools and local authorities and whose sole or main registration is in a state-funded AP school at the Spring census. The number of dual subsidiary registrations at a state-funded AP will be added separately in 2024, when a time series dataset will become available.
 Local authority funded placements in non state-funded provision figures refer to pupils with an open placement as at census date who have been recorded in the alternative provision census as being in a local authority funded alternative provision setting."),
                     tags$a(
                       href = "https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics",
@@ -1581,7 +1598,7 @@ Local authority funded placements in non state-funded provision figures refer to
                     p(
                       "Sources used:",
                       tags$a(
-                        href = "https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics",
+                        href = "https://explore-education-statistics.service.gov.uk/find-statistics/special-educational-needs-in-england",
                         "Special educational needs in England (for state-funded AP data)"
                       ), " and ",
                       tags$a(
@@ -1819,35 +1836,52 @@ regional_dashboard_panel <- function() {
             id = "collapse-engreg",
             class = "well",
             style = "min-height: 100%; height: 100%; overflow-y: visible",
-            box(
-              background = "aqua",
-              collapsible = TRUE,
-              width = 12,
-              gov_row(
-                column(
-                  width = 12,
-                  pickerInput("level_choice",
-                    label = h2("Select England or region-level view"),
-                    choices = list("Pick England or Regions" = "", "England", "Regions"),
-                    selected = NULL,
-                    options = pickerOptions(maxOptions = 1, )
-                  ),
-                  conditionalPanel(
-                    condition = "input.level_choice == 'Regions'",
-                    selectInput(
-                      inputId = "region_choice",
-                      label = "Choose region",
-                      choices = region_list
+            gov_row(
+              column(
+                width = 12,
+                gov_row(
+                  column(
+                    width = 9,
+                    div(
+                      uiOutput("reg_message"),
+                      style = "padding-bottom: 0 px"
                     )
                   ),
-                  conditionalPanel(
-                    condition = "input.tabsetpanels_reg == 'Summary'",
-                    selectInput(
-                      inputId = "summary_sen_type",
-                      label = "Choose SEN type used for summary (applies to KS1, KS2, destination, absence and children in need metrics)",
-                      choices = list("All SEN", "EHC plan", "SEN support")
-                    ),
+                  column(
+                    width = 3,
+                    actionBttn(
+                      inputId = "hide_reg_selectors",
+                      label = textOutput("showhide_reg"),
+                      style = "bordered"
+                    )
                   )
+                )
+              ),
+              div(
+                width = 12,
+                id = "regpickbox",
+                style = "padding-top: 0px",
+                pickerInput("level_choice",
+                  label = "",
+                  choices = list("Pick England or Regions" = "", "England", "Regions"),
+                  selected = NULL,
+                  options = pickerOptions(maxOptions = 1, )
+                ),
+                conditionalPanel(
+                  condition = "input.level_choice == 'Regions'",
+                  selectInput(
+                    inputId = "region_choice",
+                    label = "Choose region",
+                    choices = region_list
+                  )
+                ),
+                conditionalPanel(
+                  condition = "input.tabsetpanels_reg == 'Summary'",
+                  selectInput(
+                    inputId = "summary_sen_type",
+                    label = "Choose SEN type used for summary (applies to KS1, KS2, destination, absence and children in need metrics)",
+                    choices = list("All SEN", "EHC plan", "SEN support")
+                  ),
                 )
               )
             )
@@ -1865,9 +1899,8 @@ regional_dashboard_panel <- function() {
                 box(
                   width = 12,
                   p("This page provides a snapshot of the latest data on one page for all metrics at a national or regional level depending on which option is selected."),
-                  p("A direction arrow indicates an increase or decrease in the latest value of a measure when compared with the previous period of data. The previous period in question is noted below the information on the size of the change."),
-                  p("Changes are expressed as percentage changes rather than percentage point changes; eg if a value is 2% this year after being 1% last year that is a 100% increase, not a 1% increase."),
-                  p("Caution should be taken when looking at comparisons for Progress 8 where changes to the methodology and approach to grading has impacted comparisons. For destination measures, the make up of the cohort has changed and will impact comparisons over time (see sources for further information)."),
+                  p("A direction arrow indicates an increase or decrease in the latest value of a measure when compared with the previous period of data. The previous period in question is noted below the information on the size of the change. If the change is less than 5% of the previous value, a right-facing arrow is used instead."),
+                  p("Progress 8 is not intended for year-to-year comparison so the previous year's value is not given. For destination measures, the make up of the cohort has changed and will impact comparisons over time (see sources for further information)."),
                 )
               ),
               h2("Outcomes"),
@@ -2230,6 +2263,7 @@ regional_dashboard_panel <- function() {
                     )
                   )
                 ),
+                class = "summary-box",
                 actionLink(
                   inputId = "link_ap_la_count_panel", width = "33%", class = "link-box",
                   box(
@@ -2247,7 +2281,6 @@ regional_dashboard_panel <- function() {
                 )
               ),
               fluidRow(
-                class = "summary-box",
                 actionLink(
                   inputId = "link_uap_sa_count_panel", width = "33%", class = "link-box",
                   box(
@@ -2278,6 +2311,7 @@ regional_dashboard_panel <- function() {
                     )
                   )
                 ),
+                class = "summary-box",
                 actionLink(
                   inputId = "link_ap_sen_panel", width = "33%", class = "link-box",
                   box(
@@ -2328,7 +2362,7 @@ regional_dashboard_panel <- function() {
                       uiOutput("box_apofsted"),
                     )
                   )
-                ),
+                )
               )
             ),
             tabPanel(
@@ -2379,7 +2413,7 @@ regional_dashboard_panel <- function() {
                     p("This graph covers the percentage of children with SEN with a good level of development. Specifically, the percentage of children who are at the expected level in the 12 ELGs within the 5 areas of learning relating to: communication and language; personal, social and emotional development; physical development; literacy; and mathematics."),
                     p("As part of the 2021/22 EYFS reforms introduced in September 2021, the EYFS profile was significantly revised. It is therefore not possible to directly compare assessment outcomes from 2021/22 with earlier years."),
                     tags$a(
-                      href = "https://explore-education-statistics.service.gov.uk/find-statistics/early-years-foundation-stage-profile-results/2021-22",
+                      href = "https://explore-education-statistics.service.gov.uk/find-statistics/early-years-foundation-stage-profile-results/",
                       "Source: Early years foundation stage profile results", target = "_blank"
                     )
                   )
@@ -2524,7 +2558,7 @@ regional_dashboard_panel <- function() {
                   box(
                     width = info_width, title = "About this indicator", solidHeader = TRUE,
                     p("Progress 8 aims to capture the progress that pupils in a school make from the end of primary school to the end of KS4. It is a type of value-added measure, which means that pupils’ results in up to 8 qualifications are compared to other pupils nationally with similar prior attainment. Progress 8 is a relative in-year measure and is not designed for comparisons over time."),
-                    p("We have not included breakdowns for SEN and Education, Health and Care (EHC) plans because children with EHC planPs may do fewer than 8 qualifications or be entered for qualifications that are not approved to count towards KS4 performance measures. This is likely to impact their Progress 8 scores."),
+                    p("We have not included breakdowns for SEN and Education, Health and Care (EHC) plans because children with EHC plans may do fewer than 8 qualifications or be entered for qualifications that are not approved to count towards KS4 performance measures. This is likely to impact their Progress 8 scores."),
                     p("In 2022/23 there was a return to pre-pandemic standards for GCSEs, AS and A levels, with protection built into the grading process to recognise the disruption that students have faced. KS4 performance measures for 2022/23 that are based on qualification results reflect the return to pre-pandemic grading, and cannot be directly compared to measures from 2021/22, when a different grading approach was used."),
                     tags$div(
                       "For more information on how we calculate performance measures, and the factors affecting measures for 2022/23, please see the", a(href = "https://www.gov.uk/government/collections/school-and-college-performance-measures#key-stage-4-performance-measures", "KS4"), "technical guide."
@@ -2891,8 +2925,8 @@ regional_dashboard_panel <- function() {
                       tags$li("Number of EHC plans ceased because the special educational needs of the child or young person are being met without an EHC plan")
                     ),
                     tags$div(tags$a(
-                      href = "https://www.gov.uk/government/collections/tribunals-statistics#tribunal-statistics-quarterly",
-                      "Source: Tribunal Statistics Quarterly.", target = "_blank"
+                      href = "https://www.gov.uk/government/statistics/tribunal-statistics-quarterly-january-to-march-2023",
+                      "Source: Tribunal Statistics Quarterly (January to March).", target = "_blank"
                     ))
                   )
                 )
@@ -3240,8 +3274,8 @@ regional_dashboard_panel <- function() {
                         "Regional comparison",
                         selectInput("mainstream_with_sen_reg_filter",
                           label = "Select SEN provision type for comparison",
-                          choices = list("EHC plan", "SEN support"),
-                          selected = "EHC plan"
+                          choices = list("All SEN", "EHC plan", "SEN support"),
+                          selected = "All SEN"
                         ),
                         radioGroupButtons(
                           "msen_regb_toggle",

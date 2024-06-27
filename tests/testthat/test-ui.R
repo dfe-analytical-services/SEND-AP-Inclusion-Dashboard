@@ -43,7 +43,7 @@ listInputs <- c(
   "mainstream_with_sen_la_filter",
   "mainstream_with_sen_reg_filter",
   "myregion_switch",
-  "navlistPanel",
+  "panel_choice",
   "region_choice",
   "nhs_region_choice",
   "ofsted_table_choice",
@@ -261,10 +261,12 @@ outputs_reg_ap_bench_table <- outputs_la_ap_bench_table %>%
 
 # 1. Does it load  -------------------------------------------------------------------------------------------------------------------
 app <- AppDriver$new(
-  name = "Inclusion_Dashboard_v3",
-  height = 1026, width = 1778, load_timeout = 10000000, expect_values_screenshot_args = FALSE, timeout = 100000
+  name = "SEND-AP-Inclusion-Dashboard",
+  height = 1026, width = 1778, load_timeout = 1000000, expect_values_screenshot_args = TRUE, timeout = 100000
 ) # disable screenshots in release version
 
+#watch the tests in browser for debugging
+app$view()
 
 test_that("Initial load test", {
   app$set_inputs(
@@ -279,7 +281,7 @@ test_that("Initial load test", {
 
 # 2. Check if Outcomes graphs have changed (LA/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   la_choice = "Middlesbrough",
   tabsetpanels_la = "Outcomes"
 )
@@ -288,7 +290,7 @@ app$set_inputs(
   ccg_choice = "NHS Tees Valley CCG" # have to do this one separately because otherwise it'll get wiped by the reactives
 )
 Sys.sleep(time = 5)
-# app$wait_for_value(input = "navlistPanel", ignore = list("Homepage"))
+# app$wait_for_value(input = "panel_choice", ignore = list("Homepage"))
 # app$wait_for_value(input = "ccg_choice", ignore = list(NULL))
 
 test_that("Outcomes: over time graphs, LA level", {
@@ -346,9 +348,10 @@ test_that("Outcomes: over time, 16-18 destinations all measures, LA level", {
 
 # 6/7. Check if Outcomes graphs have changed (LA/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Outcomes",
   la_choice = "Bedford",
+  eyfsp_la_filter = "All SEN",
   eyfsp_la_panel = LAC,
   ks2_attainment_la_panel = LAC,
   ks1_phonics_la_panel = LAC,
@@ -413,7 +416,7 @@ test_that("Outcomes: benchmarking graphs, LA level, region switch", {
 
 # 10. Check if 16-18 destination type graph has changed (LA/type) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Outcomes",
   la_choice = "Leicester",
   myregion_switch = FALSE,
@@ -443,7 +446,7 @@ test_that("Outcomes: 16-18 destinations by type, tables, LA level", {
 
 # 12. Check if  Outcomes graphs have changed (region/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   tabsetpanels_reg = "Outcomes"
 )
 app$set_inputs(
@@ -528,7 +531,7 @@ test_that("Outcomes, over time, tables, regions, comparison", {
 
 # 16. Check if Outcomes graphs have changed (Eng/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England",
   tabsetpanels_reg = "Outcomes"
 )
@@ -585,7 +588,7 @@ test_that("Outcomes, over time, tables, regions, time", {
 
 # 19. Check if 16-18 destination type graph has changed (region/type) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions",
   tabsetpanels_reg = "Outcomes"
 )
@@ -618,7 +621,7 @@ test_that("Outcomes: 16-18 destinations by type, region level, table", {
 
 # 21. Check if Experiences graphs have changed (LA/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Experiences",
   la_choice = "Stockton-on-Tees"
 )
@@ -656,7 +659,7 @@ test_that("Experiences, over time, LA/CCG level, tables", {
 
 # 23/24. Check if Experiences graphs have changed (LA/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   myregion_switch = FALSE,
   tabsetpanels_la = "Experiences",
   la_choice = "Birmingham",
@@ -716,7 +719,7 @@ test_that("Experiences, LA level, comparison, tables, region switch", {
 
 # 27. Check if KS4 destination type graph has changed (LA/type) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Experiences",
   la_choice = "Camden",
   timeliness_la_panel = LAC,
@@ -759,7 +762,7 @@ test_that("Experiences: KS4 destinations by type, LA level, tables", {
 
 # 29. Check if Experiences graphs have changed (region/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   tabsetpanels_reg = "Experiences",
   level_choice = "Regions",
   region_choice = "West Midlands"
@@ -792,7 +795,7 @@ test_that("Experiences, over time tables, region level", {
 
 # 31. Check if Experiences graphs have changed (region/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   tabsetpanels_reg = "Experiences",
   timeliness_reg_panel = RC,
   autism_reg_panel = "Provider-level comparison",
@@ -828,7 +831,7 @@ test_that("Experiences, region level, comparison, tables", {
 
 # 33. Check if KS4 destination type graph has changed (region/type) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions"
 )
 Sys.sleep(time = 0.5)
@@ -869,7 +872,7 @@ test_that("Experiences: KS4 destinations by type, region level, tables", {
 
 # 35. Check England level (time/graphs)
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England",
   tabsetpanels_reg = "Experiences",
   timeliness_reg_panel = CT,
@@ -907,7 +910,7 @@ test_that("Experiences, over time tables, England level", {
 
 # 37. Check England level (bench/graphs)
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   tabsetpanels_reg = "Experiences",
   timeliness_reg_panel = RC,
   autism_reg_panel = "Provider-level comparison",
@@ -937,7 +940,7 @@ test_that("Experiences: benchmarking graphs, region level", {
 
 # 38. Check if Financial sustainability graphs have changed (LA/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Financial sustainability",
   la_choice = "Hackney"
 )
@@ -973,7 +976,7 @@ test_that("Financial sustainability: over time graphs, LA level, tables", {
 
 # 40/41. Check if Financial sustainability graphs have changed (LA/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Financial sustainability",
   la_choice = "Derby",
   dsg_deficit_la_panel = LAC,
@@ -1035,7 +1038,7 @@ test_that("Financial sustainability: benchmarking, LA level, tables", {
 
 # 44. Check if Financial sustainability graphs have changed (region/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions"
 )
 Sys.sleep(time = 2)
@@ -1076,7 +1079,7 @@ test_that("Financial sustainability: over time tables, region level", {
 
 # 46. Check if Financial sustainability graphs have changed (region/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   region_choice = "South East",
   myregion_switch = FALSE
 )
@@ -1117,7 +1120,7 @@ test_that("Financial sustainability: benchmarking tables, region level", {
 
 # 48. Check if Financial sustainability graphs have changed (England/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England"
 )
 Sys.sleep(time = 0.5)
@@ -1178,7 +1181,7 @@ test_that("Financial sustainability: benchmarking graphs, region level", {
 
 # 51. Check if Identification of need graphs have changed (LA/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Identification of need",
   la_choice = "Norfolk"
 )
@@ -1210,7 +1213,7 @@ test_that("Identification of need: over time tables, LA level", {
 
 # 53/54. Check if Identification of need graphs have changed (LA/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Identification of need",
   la_choice = "Derby",
   percent_pupils_ehcp_la_panel = LAC,
@@ -1265,7 +1268,7 @@ test_that("Identification of need, comparison, LA level, tables", {
 
 # 57. Check if Identification of need graphs have changed (region/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions"
 )
 Sys.sleep(time = 0.5)
@@ -1301,7 +1304,7 @@ test_that("Identification of need: over time, tables, region level", {
 
 # 59. Check if Identification of need graphs have changed (region/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions"
 )
 Sys.sleep(time = 2)
@@ -1352,7 +1355,7 @@ test_that("Identification of need, regional comparison, tables", {
 
 # 61. Check if Identification of need graphs have changed (England/time) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England"
 )
 Sys.sleep(time = 3)
@@ -1387,7 +1390,7 @@ test_that("Identification of need: over time, tables, England level", {
 
 # 63. Check if Identification of need graphs have changed (region/bench) --------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England"
 )
 Sys.sleep(time = 0.5)
@@ -1411,7 +1414,7 @@ test_that("Identification of need: benchmarking graphs, region level", {
 
 # 64. Check LA Summary panel ------------------------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   tabsetpanels_la = "Summary",
   la_choice = "Middlesbrough"
 )
@@ -1439,7 +1442,7 @@ test_that("Summary: LA level, table", {
 
 # 66. Check national summary panel ------------------------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England",
   tabsetpanels_reg = "Summary"
 )
@@ -1454,7 +1457,7 @@ test_that("Summary: England level", {
 
 # 67. Check regional summary panel ------------------------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions",
   region_choice = "North East",
   tabsetpanels_reg = "Summary"
@@ -1472,7 +1475,7 @@ test_that("Summary: Regions level", {
 
 # 68. Check if AP graphs have changed (LA/time) -------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "Local Areas",
+  panel_choice = "Local Areas",
   la_choice = "Lancashire",
   tabsetpanels_la = "Alternative provision"
 )
@@ -1571,7 +1574,7 @@ test_that("AP: LA level, tables, benchmarking", {
 
 # 74. Check if AP graphs have changed (Region/time) -------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions",
   region_choice = "East of England",
   tabsetpanels_reg = "Alternative provision"
@@ -1606,7 +1609,7 @@ test_that("AP: Region level, tables, time", {
 
 # 76. Check if AP graphs have changed (Region/bench) -------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "Regions",
   region_choice = "North East",
   tabsetpanels_reg = "Alternative provision",
@@ -1647,7 +1650,7 @@ test_that("AP: Region level, tables, benchmarking", {
 
 # 78. Check if AP graphs have changed (England/time) -------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England",
   tabsetpanels_reg = "Alternative provision"
 )
@@ -1680,7 +1683,7 @@ test_that("AP: England level, tables, time", {
 
 # 80. Check if AP graphs have changed (England/bench) -------------------------------------------------------
 app$set_inputs(
-  navlistPanel = "England and Regions",
+  panel_choice = "England and Regions",
   level_choice = "England",
   tabsetpanels_reg = "Alternative provision",
   ap_counts_reg_panel = RC,

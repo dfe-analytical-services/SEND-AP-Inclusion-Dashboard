@@ -39,142 +39,6 @@ server <- function(input, output, session) {
   })
 
 
-
-
-  # ==========================================
-  # Generic functions used for viz
-  # ==========================================
-
-  format_axis_label <- function(label, max_length = 40) {
-    formatted_label <- strwrap(label, width = max_length, simplify = TRUE)
-    return(paste(formatted_label, collapse = "\n"))
-  }
-
-  # Generic bar chart plot function
-  plot_reg_bench <- function(data, outcome_var, hover_label, label_y, region_choice_validated, national_average = NULL) {
-    data <- data %>%
-      mutate(
-        chosen_region = case_when(
-          region_name == region_choice_validated & input$level_choice == "Regions" ~ region_choice_validated,
-          input$level_choice == "England" ~ "English regions",
-          TRUE ~ "Other region"
-        )
-      ) %>%
-      ggplot(aes(
-        x = fct_reorder(region_name, outcome_var),
-        y = outcome_var,
-        text = paste0(
-          Region, "\n", # always state region then line break
-          hover_label, ":", outcome_var
-        ),
-        fill = chosen_region,
-        label = ""
-      )) +
-      geom_col() +
-      labs(
-        x = "Regions in England",
-        y = label_y,
-        fill = "Region"
-      ) +
-      theme(
-        axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 1),
-        legend.position = "none"
-      ) +
-      if (input$level_choice == "Regions") {
-        scale_fill_manual(values = c("Other region" = af_purple), na.value = af_grey)
-      } else {
-        scale_fill_manual(values = c("English regions" = af_purple), na.value = af_grey)
-      }
-
-    # Conditional English average line added if national_average created
-    ## It doesn't make sense to add this line for national counts,
-    if (!is.null(national_average) && is.data.frame(national_average)) {
-      print("Yes, national_average exists and is a data frame.")
-      # Include the code related to national_average
-      data <- data +
-        add_england_line_bench(national_average) +
-        add_england_label_bench_reg(national_average, nudge = 3)
-    } else {
-      print("No valid national_average provided or it is not a data frame. Skipping related code.")
-    }
-
-    data <- ggplotly(data, tooltip = c("text")) %>%
-      save_plot_button_only() %>%
-      layout(
-        legend = list(orientation = "h", y = -0.2),
-        dragmode = FALSE
-      )
-
-    return(data) # plot this
-  }
-
-
-  # Generic LA bench chart plot function
-  plot_la_bench <- function(data, outcome_var, hover_label, label_y, la_choice_validated, national_average = NULL) {
-    data <- data %>%
-      ggplot(aes(
-        x = fct_reorder(la_name, !!sym(outcome_var)),
-        y = !!sym(outcome_var),
-        text = paste0(la_name, "\n", hover_label, ":", !!sym(outcome_var)),
-        fill = chosen_la,
-        label = ""
-      )) +
-      geom_col() +
-      labs(
-        x = data$rank_statement[data$la_name == la_choice_validated],
-        y = label_y,
-        fill = "Local Authority"
-      ) +
-      theme(axis.text.x = element_blank()) +
-      scale_fill_manual(values = c("Other LA" = not_focused), na.value = focused)
-
-    # Conditional English average line added if national_average created
-    if (!is.null(national_average) && is.data.frame(national_average)) {
-      print("Yes, national_average exists and is a data frame.")
-      # Include the code related to national_average
-      data <- data +
-        add_england_line_bench(national_average) +
-        add_england_label_bench(national_average, input = input, nudge = 3)
-    } else {
-      print("No valid national_average provided or it is not a data frame. Skipping related code.")
-    }
-
-    data <- data %>%
-      ggplotly(
-        tooltip = c("text"),
-      ) %>%
-      save_plot_button_only() %>%
-      layout(
-        legend = list(orientation = "h", y = -0.2),
-        dragmode = FALSE
-      )
-
-    return(data) # plot this
-  }
-
-
-  # Generic DT table plot function
-  table_bench_time <- function(data, var_filter, outcome_var, var_filter_two = NULL, digits = 2) {
-    data <- data %>%
-      mutate(Region = region_name) %>%
-      arrange(
-        desc(`Academic year`),
-        !!var_filter,
-        !!var_filter_two
-      ) %>%
-      select(
-        `Academic year`,
-        Region,
-        !!var_filter,
-        !!var_filter_two,
-        !!outcome_var
-      )
-    return(DTise(data, list(order = c(list(0, "desc"), list(2, "asc")))) %>%
-      formatRound(!!outcome_var, digits))
-  }
-
-
-
   # observers to turn the summary boxes into links
   # procedure uses three observers:
   # 1. Switches tabs, sets link target
@@ -344,6 +208,14 @@ server <- function(input, output, session) {
     move_target("ap_count_reg_panel")
   })
 
+  observeEvent(input$link_ap_dse_count_panel, {
+    updateTabsetPanel(session, "tabsetpanels_reg", selected = "Alternative provision")
+    updateTabsetPanel(session, "ap_count_reg_panel", selected = "Change over time")
+    updateSelectInput(session, "ap_counts_reg_time_filter", selected = "State-funded AP school")
+    this_tab("Alternative provision")
+    move_target("ap_count_reg_panel")
+  })
+
   observeEvent(input$link_uap_sa_count_panel, {
     updateTabsetPanel(session, "tabsetpanels_reg", selected = "Alternative provision")
     updateTabsetPanel(session, "ap_uap_panel_reg", selected = "Change over time")
@@ -409,6 +281,26 @@ server <- function(input, output, session) {
     ignoreInit = TRUE
   )
 
+  # observers to show/hide the top boxes
+  observe({
+    toggle("lapickbox", condition = input$hide_la_selectors %% 2 == 0)
+    toggle("laselected", condition = input$hide_la_selectors %% 2 == 1)
+  })
+
+  observe({
+    toggle("regpickbox", condition = input$hide_reg_selectors %% 2 == 0)
+    toggle("regselected", condition = input$hide_reg_selectors %% 2 == 1)
+  })
+
+  observe({
+    toggle("la_s_text", condition = input$hide_la_selectors %% 2 == 1)
+    toggle("reg_text", condition = input$hide_reg_selectors %% 2 == 1 && input$level_choice == "Regions")
+    toggle("lev_text", condition = input$hide_reg_selectors %% 2 == 1)
+  })
+
+  observe({
+    toggle("myregion_text", condition = input$myregion_switch && input$hide_la_selectors %% 2 == 1)
+  })
 
   # Render a region drop-down only if Regions level is selected
   output$region_choice_out <- renderUI({
@@ -502,6 +394,7 @@ server <- function(input, output, session) {
       fselect(
         `Academic Year` = academic_year,
         `SEN Status` = characteristic,
+        `Local Authority` = la_name,
         `Percent meeting expected standard`
       ) %>%
       arrange(
@@ -510,7 +403,7 @@ server <- function(input, output, session) {
       )
     return(DTise(
       ks2_attainment_lat,
-      list(list(1, "asc"), list(0, "desc"))
+      list(list(2, "asc"), list(0, "desc"))
     ) %>%
       formatRound("Percent meeting expected standard", 2))
   })
@@ -563,7 +456,7 @@ server <- function(input, output, session) {
       )) +
       geom_col() +
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         x = ks2_attainment_la_bench_data$rank_statement[ks2_attainment_la_bench_data$la_name == input$la_choice],
         y = "% of pupils meeting expected standard",
@@ -932,7 +825,7 @@ server <- function(input, output, session) {
       )) +
       geom_col() +
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         x = ks1_phonics_la_bench_data$rank_statement[ks1_phonics_la_bench_data$la_name == input$la_choice],
         y = "% meeting expected standards in Y1",
@@ -1238,14 +1131,15 @@ server <- function(input, output, session) {
     )
 
     eyfsp_la_bench <- eyfsp_la_bench_data %>%
-      ggplot(aes(fct_reorder(la_name, gld_percentage),
+      ggplot(aes(
+        x = fct_reorder(la_name, gld_percentage),
         y = gld_percentage,
         text = paste(la_name, "\nPercentage of children with a good level of development:", gld_percentage),
         fill = chosen_la
       )) +
       geom_col() +
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input, nudge = 0.5) +
+      add_england_label_bench(national_average, nudge = 0.5) +
       labs(
         x = eyfsp_la_bench_data$rank_statement[eyfsp_la_bench_data$la_name == input$la_choice],
         y = "% children with a good level of development",
@@ -1261,7 +1155,10 @@ server <- function(input, output, session) {
       ) %>%
       save_plot_button_only() %>%
       restyle_england_line() %>%
-      use_horizontal_legend()
+      layout(
+        legend = list(orientation = "h", y = -0.2),
+        dragmode = FALSE
+      )
   })
 
   output$eyfsp_la_bench_table <- renderDT({
@@ -1798,6 +1695,7 @@ server <- function(input, output, session) {
 
   ## KS4 destinations (LA/time)
   output$ks4_destinations_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
 
     ks4_destinations_la_time <- ks4_destinations %>%
@@ -1849,6 +1747,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ks4_destinations_la_tt <- ks4_destinations %>%
       fsubset(la_name == input$la_choice &
         characteristic == input$ks4_destinations_la_time_filter) %>%
@@ -1874,6 +1773,7 @@ server <- function(input, output, session) {
 
   ## KS4 destinations (LA/type)
   output$ks4_destinations_la_type <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ks4_destinations))
     # req(input$la_choice)
     if (nrow(fsubset(ks4_destinations, la_name == input$la_choice & time_period == comparison_year)) > 0) {
@@ -1909,6 +1809,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_la_type_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ks4_destinations_la_typet <- ks4_destinations %>%
       fsubset(la_name == input$la_choice &
         Destination == input$ks4_destinations_la_type_filter) %>%
@@ -1936,6 +1837,7 @@ server <- function(input, output, session) {
 
   ## 16-18 destinations (LA/time)
   output$destinations_1618_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
 
     destinations_1618_la_time <- destinations_1618_overall %>%
@@ -1997,6 +1899,7 @@ server <- function(input, output, session) {
 
 
   output$destinations_1618_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     destinations_1618_la_tt <- destinations_1618_overall %>%
       fsubset(la_name == input$la_choice &
         characteristic == input$destinations_1618_la_time_filter &
@@ -2023,6 +1926,7 @@ server <- function(input, output, session) {
 
   ## 16-18 destinations (LA/type)
   output$destinations_1618_la_type <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(destinations_1618_overall))
 
     ymax <- max(destinations_1618_overall$`% of pupils`)
@@ -2068,6 +1972,7 @@ server <- function(input, output, session) {
   })
 
   output$destinations_1618_la_type_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     destinations_1618_la_typet <- destinations_1618_overall %>%
       fsubset(la_name == input$la_choice &
         Destination == input$destinations_1618_la_type_filter) %>%
@@ -2095,6 +2000,7 @@ server <- function(input, output, session) {
 
   ## 16-18 destinations (LA/bench)
   output$destinations_1618_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(destinations_1618_overall))
 
     national_average <- destinations_1618_nat_overall %>%
@@ -2154,6 +2060,7 @@ server <- function(input, output, session) {
 
 
   output$destinations_1618_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(destinations_1618_overall))
 
     destinations_1618_la_bt <- destinations_1618_overall %>%
@@ -2550,7 +2457,11 @@ server <- function(input, output, session) {
       if (nrow(ofsted_la > 0 & ofsted_la$box_colour != "black")) {
         valueBox(
           color = ofsted_la$box_colour,
-          value = tags$p(ofsted_la$summary_outcome, style = "font-size: 50%"),
+          value = if (ofsted_la$summary_outcome == "Written Statement of Action (previous framework); not revisited") {
+            tags$p(ofsted_la$summary_outcome, style = "font-size: 40%") # otherwise it doesn't fit; note we have to use if/else because ifelse and if_else don't work for type reasons
+          } else {
+            tags$p(ofsted_la$summary_outcome, style = "font-size: 50%")
+          },
           subtitle = paste("Report published: ", ofsted_la$`Publication Date`, ".")
         )
       } else {
@@ -2571,7 +2482,7 @@ server <- function(input, output, session) {
 
   output$previous_ofsted <- renderValueBox({
     previous_la <- case_when(input$la_choice %in% c("North Northamptonshire", "West Northamptonshire") ~ "Northamptonshire",
-      input$la_choice %in% c("Northumberland", "Westmoreland and Furness") ~ "Cumbria",
+      input$la_choice %in% c("Cumberland", "Westmorland and Furness") ~ "Cumbria",
       .default = ""
     )
 
@@ -2581,7 +2492,11 @@ server <- function(input, output, session) {
       previous_ofsted <-
         valueBox(
           color = ofsted_old_la$box_colour,
-          value = tags$p(ofsted_old_la$summary_outcome, style = "font-size: 50%"),
+          value = if (ofsted_la$summary_outcome == "Written Statement of Action (previous framework); not revisited") {
+            tags$p(ofsted_la$summary_outcome, style = "font-size: 40%") # otherwise it doesn't fit; note we have to use if/else because ifelse and if_else don't work for type reasons
+          } else {
+            tags$p(ofsted_la$summary_outcome, style = "font-size: 50%")
+          },
           subtitle = paste("Report published: ", ofsted_old_la$`Publication date (previous inspection framework)`, ".")
         )
     } else {
@@ -2619,7 +2534,7 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "black",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$summary_outcome),
+            levels = names(ofsted_palette),
             values = ofsted_palette
           )
         )
@@ -2643,7 +2558,7 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$summary_outcome),
+            levels = names(ofsted_palette),
             values = ofsted_palette
           )
         )
@@ -2667,7 +2582,7 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$summary_outcome),
+            levels = names(ofsted_palette),
             values = ofsted_palette
           )
         )
@@ -2695,7 +2610,7 @@ server <- function(input, output, session) {
           fontWeight = "bold",
           color = "#161616",
           backgroundColor = styleEqual(
-            levels = unique(ofsted$summary_outcome),
+            levels = names(ofsted_palette),
             values = ofsted_palette
           )
         )
@@ -2706,6 +2621,7 @@ server <- function(input, output, session) {
 
   ## Discontinued Plans (LA/time)
   output$discontinued_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
 
     disco_la_time <- discontinued_plans %>%
@@ -2745,6 +2661,7 @@ server <- function(input, output, session) {
   })
 
   output$discontinued_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     discontinued_la_tt <- discontinued_plans %>%
       fsubset(la_name == input$la_choice) %>%
       fselect(time_period, la_name, discontinued_schoolage, discontinued_older) %>%
@@ -2759,6 +2676,7 @@ server <- function(input, output, session) {
 
   ## Discontinued Plans (LA/bench)
   output$discontinued_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, discontinued_plans)
 
     # Wrangle data into ggplot object
@@ -2823,6 +2741,7 @@ server <- function(input, output, session) {
   })
 
   output$discontinued_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, discontinued_plans)
 
     if (input$myregion_switch == TRUE) {
@@ -3091,6 +3010,7 @@ server <- function(input, output, session) {
 
   ## EHCP Timeliness (LA/time)
   output$timeliness_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     timeliness_la_time <- ehcp_timeliness %>%
       fsubset(la_name == input$la_choice) %>%
       ggplot(aes(
@@ -3124,6 +3044,7 @@ server <- function(input, output, session) {
   })
 
   output$timeliness_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     timeliness_la_tt <- ehcp_timeliness %>%
       fsubset(la_name == input$la_choice) %>%
       arrange(time_period) %>%
@@ -3144,6 +3065,7 @@ server <- function(input, output, session) {
 
   ## EHCP Timeliness (LA/bench)
   output$timeliness_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ehcp_timeliness))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_ehcp_timeliness %>%
@@ -3188,7 +3110,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         x = timeliness_la_bench_data$rank_statement[timeliness_la_bench_data$la_name == input$la_choice],
         y = "% of EHCPs issued within 20 weeks\n (excluding exceptions)",
@@ -3209,6 +3131,7 @@ server <- function(input, output, session) {
   })
 
   output$timeliness_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ehcp_timeliness))
 
     timeliness_la_bt <- ehcp_timeliness %>%
@@ -3554,7 +3477,7 @@ server <- function(input, output, session) {
         collapse::fsubset(date == max(date)) %>%
         collapse::ftransform(chosen_ccg = ifelse(nhs_name == input$ccg_choice,
           yes = input$ccg_choice,
-          no = "Other CCG"
+          no = "Other Sub-ICB"
         )) %>%
         filter(if (input$myregion_switch == TRUE) {
           nhs_region == nhs_region[nhs_name == input$ccg_choice][1]
@@ -3570,7 +3493,7 @@ server <- function(input, output, session) {
         rank_col = rank,
         name_col = nhs_name,
         time_period = year,
-        geog = "CCGs"
+        geog = "Sub-ICB regions"
       )
 
       autism_ccg_bench <- autism_ccg_bench_data %>%
@@ -3604,9 +3527,9 @@ server <- function(input, output, session) {
           )
         ) +
         labs(
-          x = "Clinical Commissioning Groups (CCGs) in England",
+          x = "Sub-ICB regions in England",
           y = "% with first appointment after more than 13 weeks",
-          fill = "Clinical Commissioning Group"
+          fill = "Sub-ICB region"
         ) +
         scale_y_continuous(limits = c(0, 100)) +
         theme(axis.text.x = element_blank()) +
@@ -4282,7 +4205,7 @@ server <- function(input, output, session) {
   output$mentalhealth_reg_time <- renderPlotly({
     if (input$level_choice == "Regions") {
       # req(input$nhs_region_choice)
-      mentalhealth_reg_time_data <- mentalhealth %>%
+      mentalhealth_reg_time_data <- mentalhealth_reg %>%
         fsubset(BREAKDOWN2 %in% c("Commissioning Region") &
           `Year ending` > (ymd("2021-07-01"))) %>% # boundary changes make regions data before this point not comparable
         fsubset(nhs_name == input$nhs_region_choice)
@@ -4367,7 +4290,7 @@ server <- function(input, output, session) {
 
   output$mentalhealth_reg_time_table <- renderDT({
     if (input$level_choice == "Regions") {
-      mentalhealth_reg_tt <- mentalhealth %>%
+      mentalhealth_reg_tt <- mentalhealth_reg %>%
         fsubset(BREAKDOWN2 %in% c("Commissioning Region") &
           `Year ending` > (ymd("2021-07-01"))) %>% # boundary changes make regions data before this point not comparable
         fsubset(nhs_name == input$nhs_region_choice)
@@ -4520,6 +4443,7 @@ server <- function(input, output, session) {
 
   ## Tribunal Appeals (LA/time)
   output$tribunals_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     tribunals_la_time <- tribunals %>%
       fsubset(la_name == input$la_choice) %>%
       mutate(`Appeal Rate` = paste0(`SEND Tribunal Appeal Rate`, "%")) %>%
@@ -4551,6 +4475,7 @@ server <- function(input, output, session) {
   })
 
   output$tribunals_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     tribunals_la_tt <- tribunals %>%
       fsubset(la_name == input$la_choice) %>%
       arrange(year) %>%
@@ -4569,6 +4494,7 @@ server <- function(input, output, session) {
 
   ## Tribunal Appeals (LA/bench)
   output$tribunals_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(tribunals), column = "year")
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_tribunals %>%
@@ -4613,7 +4539,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         x = tribunals_la_bench_data$rank_statement[tribunals_la_bench_data$la_name == input$la_choice],
         fill = "Local Authority"
@@ -4633,6 +4559,7 @@ server <- function(input, output, session) {
   })
 
   output$tribunals_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(tribunals), column = "year")
 
     tribunals_la_bt <- tribunals %>%
@@ -4864,6 +4791,7 @@ server <- function(input, output, session) {
   ### Absence ####
   ## SEN Absence (LA/time)
   output$absence_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ylabel <- paste0("% of sessions missed due to absence (Autumn/Spring terms)")
     absence_la_time <- absence %>%
       fsubset(la_name == input$la_choice &
@@ -4903,6 +4831,7 @@ server <- function(input, output, session) {
   })
 
   output$absence_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     absence_la_tt <- absence %>%
       fsubset(la_name == input$la_choice &
         `Absence measure` == input$absence_la_auth_filter) %>%
@@ -4928,6 +4857,7 @@ server <- function(input, output, session) {
 
   ## SEN absence (LA/bench)
   output$absence_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(absence))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_absence %>%
@@ -4977,7 +4907,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average, ) +
       labs(
         x = absence_la_bench_data$rank_statement[absence_la_bench_data$la_name == input$la_choice],
         y = paste0(ylabel),
@@ -4997,6 +4927,7 @@ server <- function(input, output, session) {
   })
 
   output$absence_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(absence))
 
     absence_la_bt <- absence %>%
@@ -5253,6 +5184,7 @@ server <- function(input, output, session) {
 
   ## KS4 destinations (LA/time)
   output$ks4_destinations_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ks4_destinations_la_time <- ks4_destinations_overall %>%
       fsubset(la_name == input$la_choice &
         characteristic == input$ks4_destinations_la_time_filter &
@@ -5304,6 +5236,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ks4_destinations_la_tt <- ks4_destinations_overall %>%
       fsubset(la_name == input$la_choice &
         characteristic == input$ks4_destinations_la_time_filter &
@@ -5483,6 +5416,7 @@ server <- function(input, output, session) {
 
   ## KS4 destinations (LA/bench)
   output$ks4_destinations_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ks4_destinations_overall))
 
     national_average <- ks4_destinations_nat_overall %>%
@@ -5539,6 +5473,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ks4_destinations_overall))
 
     if (nrow(fsubset(ks4_destinations_overall, la_name == input$la_choice & time_period == comparison_year)) > 0) {
@@ -5633,6 +5568,7 @@ server <- function(input, output, session) {
 
   ## KS4 destinations (LA/type)
   output$ks4_destinations_la_type <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ks4_destinations_overall))
     # req(input$la_choice)
     if (nrow(fsubset(ks4_destinations_overall, la_name == input$la_choice & time_period == comparison_year)) > 0) {
@@ -5674,6 +5610,7 @@ server <- function(input, output, session) {
   })
 
   output$ks4_destinations_la_type_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ks4_destinations_la_typet <- ks4_destinations_overall %>%
       fsubset(la_name == input$la_choice &
         Destination == input$ks4_destinations_la_type_filter) %>%
@@ -5696,8 +5633,6 @@ server <- function(input, output, session) {
     ) %>%
       formatRound("% of pupils", 0))
   })
-
-
 
   ## KS4 destinations (region/type)
   output$ks4_destinations_reg_type <- renderPlotly({
@@ -5832,6 +5767,7 @@ server <- function(input, output, session) {
 
   ## DSG deficit (LA/time)
   output$dsg_deficit_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(dsg_deficit))
     latest_dsg <- dsg_deficit %>%
       fsubset(time_period == comparison_year)
@@ -5871,6 +5807,7 @@ server <- function(input, output, session) {
   })
 
   output$dsg_deficit_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     dsg_la_tt <- dsg_deficit %>%
       fsubset(la_name == input$la_choice) %>%
       arrange(financial_year) %>%
@@ -5891,6 +5828,7 @@ server <- function(input, output, session) {
   # For this one, the usual if/else filter refused to work, so instead wrapping the whole thing in an if/else.
   observe(if (input$myregion_switch == TRUE) {
     output$dsg_deficit_la_bench <- renderPlotly({
+      validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
       comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(dsg_deficit))
       # Pull in England data to its own dataframe, for creating the England average dotted line.
       national_average <- eng_dsg_deficit %>%
@@ -5981,6 +5919,7 @@ server <- function(input, output, session) {
     })
   } else {
     output$dsg_deficit_la_bench <- renderPlotly({
+      validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
       comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(dsg_deficit))
       # Pull in England data to its own dataframe, for creating the England average dotted line.
       national_average <- eng_dsg_deficit %>%
@@ -6064,6 +6003,7 @@ server <- function(input, output, session) {
   })
 
   output$dsg_deficit_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(dsg_deficit))
 
     dsg_la_bt <- dsg_deficit %>%
@@ -6265,6 +6205,7 @@ server <- function(input, output, session) {
 
   ## Specialist Spend (LA/time)
   output$specialist_spend_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     latest_specialist_spend <- specialist_spend %>%
       fsubset(year == max(year))
 
@@ -6306,6 +6247,7 @@ server <- function(input, output, session) {
   })
 
   output$specialist_spend_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     spec_la_tt <- specialist_spend %>%
       fsubset(la_name == input$la_choice &
         category != "Total") %>%
@@ -6412,6 +6354,7 @@ server <- function(input, output, session) {
   ## Specialist Spend (LA/bench)
 
   output$specialist_spend_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
     comparison <- specialist_spend %>%
       collapse::fsubset(la_name == input$la_choice) %>%
@@ -6486,6 +6429,7 @@ server <- function(input, output, session) {
   })
 
   output$specialist_spend_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison <- specialist_spend %>%
       collapse::fsubset(la_name == input$la_choice)
     comparison_year <- max(comparison$year, na.rm = T)
@@ -6653,6 +6597,7 @@ server <- function(input, output, session) {
 
   ## % of pupils with EHCP (LA/time)
   output$percent_pupils_ehcp_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
 
     percent_pupils_ehcp_la_time <- percent_pupils_ehcp %>%
@@ -6682,6 +6627,7 @@ server <- function(input, output, session) {
   })
 
   output$percent_pupils_ehcp_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ehcp_ppc_la_tt <- percent_pupils_ehcp %>%
       fsubset(la_name == input$la_choice) %>%
       arrange(
@@ -6704,6 +6650,7 @@ server <- function(input, output, session) {
 
   ## % of pupils with EHCP (LA/bench)
   output$percent_pupils_ehcp_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(percent_pupils_ehcp))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_percent_pupils_ehcp %>%
@@ -6750,7 +6697,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         y = paste("% of pupils with", input$percent_pupils_ehcp_la_filter),
         x = percent_pupils_ehcp_la_bench_data$rank_statement[percent_pupils_ehcp_la_bench_data$la_name == input$la_choice],
@@ -6770,6 +6717,7 @@ server <- function(input, output, session) {
   })
 
   output$percent_pupils_ehcp_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(percent_pupils_ehcp))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -6988,6 +6936,7 @@ server <- function(input, output, session) {
 
   ## EHCP age profile (LA/time)
   output$ehcp_ageprofile_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
 
     ehcp_ageprofile_la_time <- ehcp_ageprofile %>%
@@ -7024,6 +6973,7 @@ server <- function(input, output, session) {
   })
 
   output$ehcp_ageprofile_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ehcp_age_la_tt <- ehcp_ageprofile %>%
       fsubset(la_name == input$la_choice & time_period > 2017) %>%
       arrange(
@@ -7145,6 +7095,7 @@ server <- function(input, output, session) {
   ### % of mainstream pupils with SEN ####
   ## % of mainstream pupils with SEN (LA/time)
   output$mainstream_with_sen_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     # req(input$la_choice)
 
     mainstream_with_sen_la_time <- mainstream_with_sen %>%
@@ -7174,6 +7125,7 @@ server <- function(input, output, session) {
   })
 
   output$mainstream_with_sen_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     msen_la_tt <- mainstream_with_sen %>%
       fsubset(la_name == input$la_choice) %>%
       arrange(
@@ -7196,6 +7148,7 @@ server <- function(input, output, session) {
 
   ## % of mainstream pupils with SEN (LA/bench)
   output$mainstream_with_sen_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(mainstream_with_sen))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_mainstream_with_sen %>%
@@ -7241,7 +7194,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         y = "% of pupils",
         x = mainstream_with_sen_la_bench_data$rank_statement[mainstream_with_sen_la_bench_data$la_name == input$la_choice],
@@ -7261,6 +7214,7 @@ server <- function(input, output, session) {
   })
 
   output$mainstream_with_sen_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(mainstream_with_sen))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -7483,6 +7437,7 @@ server <- function(input, output, session) {
   ## SEN of Children in Need (LA/time) ##
 
   output$cin_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     cin_la_time_data <- cin_la %>%
       fsubset(geographic_level == "Local authority" &
         la_name == input$la_choice &
@@ -7534,6 +7489,7 @@ server <- function(input, output, session) {
   })
 
   output$cin_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     cin_la_tt <- cin_la %>%
       fsubset(geographic_level == "Local authority" &
         la_name == input$la_choice &
@@ -7561,6 +7517,7 @@ server <- function(input, output, session) {
   ## SEN of Children in Need (LA/bench) ##
 
   output$cin_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(cin_la))
     # Pull in England data to its own dataframe, for creating the England average dotted line.
     national_average <- eng_cin %>%
@@ -7588,7 +7545,7 @@ server <- function(input, output, session) {
         region_name != "none"
       }) %>%
       # Add ranks
-      add_ranks(outcome = "Percentage of children")
+      add_ranks(outcome = "Percentage of children", reverse = TRUE)
 
     # Create rank statements to go on the X axis.
     cin_la_bench_data$rank_statement <- rank_statement_fun(cin_la_bench_data,
@@ -7610,7 +7567,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input) +
+      add_england_label_bench(national_average) +
       labs(
         y = "Percentage of Children",
         x = cin_la_bench_data$rank_statement[cin_la_bench_data$la_name == input$la_choice],
@@ -7630,6 +7587,7 @@ server <- function(input, output, session) {
   })
 
   output$cin_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(cin_la))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -7855,6 +7813,7 @@ server <- function(input, output, session) {
 
   ## Provider types (LA/time)
   output$provider_types_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ymax <- max(provider_types$`% of pupils (with SEN provision type)`)
 
     provider_types_la_time <- provider_types %>%
@@ -7902,6 +7861,7 @@ server <- function(input, output, session) {
   })
 
   output$provider_types_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     types_la_tt <- provider_types %>%
       filter(
         !(phase_type_grouping %in% c(
@@ -7932,6 +7892,7 @@ server <- function(input, output, session) {
 
   ## Provider types (LA/bench)
   output$provider_types_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison <- provider_types_grouped %>%
       collapse::fsubset(la_name == input$la_choice)
     comparison_year <- max(comparison$academic_year, na.rm = T)
@@ -7984,7 +7945,7 @@ server <- function(input, output, session) {
       geom_col() +
       # Add England average dotted line and label
       add_england_line_bench(national_average) +
-      add_england_label_bench(national_average, input = input, nudge = 3) +
+      add_england_label_bench(national_average, nudge = 3) +
       labs(
         x = provider_types_la_bench_data$rank_statement[provider_types_la_bench_data$la_name == input$la_choice],
         y = "% of pupils",
@@ -8004,6 +7965,7 @@ server <- function(input, output, session) {
   })
 
   output$provider_types_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison <- provider_types_grouped %>%
       collapse::fsubset(la_name == input$la_choice)
     comparison_year <- max(comparison$academic_year, na.rm = T)
@@ -8285,86 +8247,6 @@ server <- function(input, output, session) {
       formatRound(columns = "% in independent/AP/special", digits = 1))
   })
 
-  # ==========================================
-  ## Generic functions for regional bench view
-  # ==========================================
-
-  # Generic bar chart plot function
-  plot_reg_bench <- function(data, outcome_var, hover_label, label_y, region_choice_validated, national_average = NULL) {
-    data <- data %>%
-      mutate(
-        chosen_region = case_when(
-          region_name == region_choice_validated & input$level_choice == "Regions" ~ region_choice_validated,
-          input$level_choice == "England" ~ "English regions",
-          TRUE ~ "Other region"
-        )
-      ) %>%
-      ggplot(aes(
-        x = fct_reorder(region_name, outcome_var),
-        y = outcome_var,
-        text = paste0(
-          Region, "\n", # always state region then line break
-          hover_label, ":", outcome_var
-        ),
-        fill = chosen_region,
-        label = ""
-      )) +
-      geom_col() +
-      labs(
-        x = "Regions in England",
-        y = label_y,
-        fill = "Region"
-      ) +
-      theme(
-        axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 1),
-        legend.position = "none"
-      ) +
-      if (input$level_choice == "Regions") {
-        scale_fill_manual(values = c("Other region" = not_focused), na.value = focused)
-      } else {
-        scale_fill_manual(values = c("English regions" = focused), na.value = focused)
-      }
-
-    # Conditional English average line added if national_average created
-    ## It doesn't make sense to add this line for national counts,
-    if (!is.null(national_average) && is.data.frame(national_average)) {
-      print("Yes, national_average exists and is a data frame.")
-      # Include the code related to national_average
-      data <- data +
-        add_england_line_bench(national_average) +
-        add_england_label_bench_reg(national_average, nudge = 3)
-    } else {
-      print("No valid national_average provided or it is not a data frame. Skipping related code.")
-    }
-
-    data <- ggplotly(data, tooltip = c("text")) %>%
-      save_plot_button_only() %>%
-      layout(
-        legend = list(orientation = "h", y = -0.2),
-        dragmode = FALSE
-      )
-
-    return(data) # plot this
-  }
-
-  # Generic DT table plot function
-  table_bench_time <- function(data, var_filter, outcome_var, digits = 1) {
-    data <- data %>%
-      mutate(Region = region_name) %>%
-      arrange(
-        desc(`Academic year`),
-        !!var_filter
-      ) %>%
-      select(
-        `Academic year`,
-        Region,
-        !!var_filter,
-        !!outcome_var
-      )
-    return(DTise(data, list(order = c(list(0, "desc"), list(3, "desc")))) %>%
-      formatRound(4, digits)) # the outcome variable column will always be column 4 due to the select statement; avoiding having to mess around with non-standard evaluation
-  }
-
   # ==========================
   # Alternative Provision tab (note to coders - don't call it AP in section headings, AP isn't searchable)
   # ==========================
@@ -8388,7 +8270,7 @@ server <- function(input, output, session) {
         y = Total,
         group = `Type of AP`,
         fill = `Type of AP`,
-        label = paste0(Total)
+        text = paste0("Academic Year: ", `Academic year`, "\n Total Pupils: ", Total)
       )) +
       geom_col(position = "stack", show.legend = FALSE) +
       labs(
@@ -8401,10 +8283,10 @@ server <- function(input, output, session) {
       scale_x_discrete(limits = ap_counts_yrs$`Academic year`) +
       scale_y_continuous(labels = label_number())
 
-    data <- ggplotly(data, tooltip = c("text", "y", "x", "colour")) %>%
+    data <- ggplotly(data, tooltip = c("text")) %>%
       save_plot_button_only() %>%
       layout(
-        showlegend = FALSE,
+        legend = list(orientation = "h", y = -0.2),
         dragmode = FALSE,
         yaxis = list(autorange = FALSE)
       )
@@ -8428,6 +8310,7 @@ server <- function(input, output, session) {
 
   ## LA time
   output$ap_counts_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ap_counts))
     ap_counts_la_type <- ap_counts %>%
       fsubset(la_name == input$la_choice &
@@ -8442,6 +8325,7 @@ server <- function(input, output, session) {
   })
 
   output$ap_counts_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ap_counts_la_typet <- ap_counts %>%
       fsubset(la_name == input$la_choice &
         `Type of AP` == input$ap_counts_la_time_filter)
@@ -8493,6 +8377,7 @@ server <- function(input, output, session) {
 
   ## AP counts (LA/bench)
   output$ap_counts_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ap_counts))
     if (nrow(fsubset(ap_counts, la_name == input$la_choice & time_period == comparison_year)) > 0) {
       ap_counts_la_bench_data <- ap_counts %>%
@@ -8509,7 +8394,7 @@ server <- function(input, output, session) {
         } else {
           region_name != "none"
         }) %>%
-        add_ranks(outcome = "total")
+        add_ranks(outcome = "Total")
 
       ap_counts_la_bench_data$rank_statement <- rank_statement_fun(ap_counts_la_bench_data,
         rank_col = rank,
@@ -8523,7 +8408,7 @@ server <- function(input, output, session) {
         ap_counts_la_bench <- ggplot(ap_counts_la_bench_data, aes(
           x = fct_reorder(la_name, Total),
           y = Total,
-          text = la_name,
+          text = paste0(la_name, "\n", "Total pupils: ", Total),
           fill = chosen_la,
           label = ""
         )) +
@@ -8542,7 +8427,7 @@ server <- function(input, output, session) {
 
         ap_counts_la_bench %>%
           ggplotly(
-            tooltip = c("text", "y"),
+            tooltip = c("text"),
           ) %>%
           save_plot_button_only() %>%
           layout(
@@ -8556,6 +8441,7 @@ server <- function(input, output, session) {
   })
 
   output$ap_counts_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ap_counts))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -8609,7 +8495,7 @@ server <- function(input, output, session) {
       outcome_var = ap_counts_reg_bench_s1$Total,
       label_y = "Total pupils",
       region_choice_validated = paste0(region_choice_validated),
-      hover_label = "Total pupils"
+      hover_label = "Total pupils: "
     )
   })
 
@@ -8690,6 +8576,7 @@ server <- function(input, output, session) {
   }
 
   output$ap_characteristics_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ap_characteristics_la_time <- ap_characteristics %>%
       fsubset(
         la_name == input$la_choice &
@@ -8706,6 +8593,7 @@ server <- function(input, output, session) {
   })
 
   output$ap_characteristics_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ap_characteristics_la_typet <- ap_characteristics %>%
       fsubset(
         la_name == input$la_choice &
@@ -8770,6 +8658,7 @@ server <- function(input, output, session) {
 
   # AP characteristics (LA/bench)
   output$ap_characteristics_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ap_characteristics))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -8841,6 +8730,7 @@ server <- function(input, output, session) {
 
 
   output$ap_characteristics_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(ap_characteristics))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -9033,6 +8923,7 @@ server <- function(input, output, session) {
 
   ##   State-funded AP Absences (LA/time)
   output$ap_absences_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ap_absences_la_time <- sf_ap_absence %>%
       fsubset(la_name == input$la_choice)
 
@@ -9092,6 +8983,7 @@ server <- function(input, output, session) {
 
   # Benchmarking SF AP Absences
   output$ap_absences_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, sf_ap_absence)
     chosen_region <- ifelse(grepl("London$", la_region_lookup$region[la_region_lookup$la_name == input$la_choice]),
       yes = "London",
@@ -9131,7 +9023,7 @@ server <- function(input, output, session) {
         } else {
           Region != "none"
         }) %>%
-        add_ranks(outcome = "Percentage")
+        add_ranks(outcome = "Percentage", reverse = TRUE)
 
       # Create rank statements to go on the X axis.
       ap_absences_la_bench_data$rank_statement <- rank_statement_fun(ap_absences_la_bench_data,
@@ -9143,13 +9035,16 @@ server <- function(input, output, session) {
       ap_absences_la_bench <- ap_absences_la_bench_data %>%
         ggplot(aes(fct_reorder(la_name, `Percentage`),
           y = `Percentage`,
-          text = la_name,
+          text = paste0(
+            la_name, "\n",
+            "% sessions missed: ", round(Percentage, 1)
+          ),
           fill = chosen_la,
           label = `Percentage` # for hover label
         )) +
         geom_col() +
         add_england_line_bench(national_average) +
-        add_england_label_bench(national_average, input = input) +
+        add_england_label_bench(national_average) +
         labs(
           x = ap_absences_la_bench_data$rank_statement[ap_absences_la_bench_data$la_name == input$la_choice],
           y = paste0(measure_name),
@@ -9171,6 +9066,7 @@ server <- function(input, output, session) {
   })
 
   output$ap_absences_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, sf_ap_absence)
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -9646,6 +9542,7 @@ server <- function(input, output, session) {
 
   ## LA time
   output$ap_uap_la_time <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ap_uap_la_type <- uap_counts %>%
       filter(
         la_name == input$la_choice,
@@ -9661,6 +9558,7 @@ server <- function(input, output, session) {
   })
 
   output$ap_uap_la_time_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     ap_uap_la_typet <- uap_counts %>%
       fsubset(la_name == input$la_choice &
         `Type of AP` == input$ap_uap_la_time_filter)
@@ -9718,6 +9616,7 @@ server <- function(input, output, session) {
   ## AP counts (LA/bench)
 
   output$ap_uap_la_bench <- renderPlotly({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(uap_counts))
     ap_uap_la_bench_data <- uap_counts %>%
       collapse::fsubset(setting_type %in% "Grand total unregistered AP (all setting types)" &
@@ -9784,6 +9683,7 @@ server <- function(input, output, session) {
 
 
   output$ap_uap_la_bench_table <- renderDT({
+    validate(need(!(input$la_choice %in% c("Cumberland", "Westmorland and Furness")), message = "No data yet available for this LA (see Cumbria for relevant data)."))
     comparison_year <- fix_la_changes(input = input$la_choice, as.data.frame(uap_counts))
     chosen_region <- la_region_lookup$region[la_region_lookup$la_name == input$la_choice]
 
@@ -9847,14 +9747,15 @@ server <- function(input, output, session) {
 
   output$ap_uap_reg_bench_table <- renderDT({
     ap_uap_reg_type <- uap_counts %>%
-      collapse::fsubset(setting_type %in% "Grand total unregistered AP (all setting types)" &
-        geographic_level == "Regional" &
+      collapse::fsubset(geographic_level == "Regional" &
         `Type of AP` == input$ap_uap_reg_bench_filter &
         time_period == max(time_period)) %>%
-      mutate(`Grand total unregistered AP (all setting types)` = Total) %>%
+      group_by(`Type of AP`, `Academic year`, region_name, `Region`) %>%
+      summarise(`Total pupils` = sum(Total)) %>%
+      ungroup() %>%
       table_bench_time(
         var_filter = quote(`Type of AP`),
-        outcome_var = quote(`Grand total unregistered AP (all setting types)`),
+        outcome_var = quote(`Total pupils`),
         digits = 0
       )
   })
@@ -10011,7 +9912,7 @@ server <- function(input, output, session) {
       )
     return(DTise(
       summary_table,
-      list(list(1, "asc"), list(2, "asc"))
+      list(list(1, "asc"), list(3, "asc"))
     ))
   })
 
@@ -10931,14 +10832,16 @@ server <- function(input, output, session) {
   })
   # CONDITIONAL TEXT -----------------------------------------------------------------------------
 
-  # messages about Northamptonshire
+  # messages about Unitarisation
   la_text <- reactive({
     case_when(
-      input$la_choice %in% c("North Northamptonshire", "West Northamptonshire") ~ "North and West Northamptonshire were crearted out of the former Northamptonshire County Council on the 1st April 2021.
+      input$la_choice %in% c("North Northamptonshire", "West Northamptonshire") ~ "North and West Northamptonshire were created out of the former Northamptonshire County Council on the 1st April 2021.
                                                                                          For data prior to that date, select Northamptonshire",
-      input$la_choice == "Northamptonshire" ~ "Northamptonshire was divided into North and West Northamptonshire Unitary Authorities on 1st April 2021.
+      input$la_choice == "Northamptonshire" ~ "Northamptonshire was divided into North and West Northamptonshire Unitary Authorities on 1st April 2021. Northamptonshire's values below refer to the last year it repored data.
                                                      For data subsequent to that date, select North or West Northamptonshire",
-      TRUE ~ ""
+      input$la_choice %in% c("Cumberland", "Westmorland and Furness") ~ "Cumberland and Westmorland and Furness were created out of former Cumbria County Council on 1st April 2023. Since most metrics except academic outcomes use data collected in January there is relatively little data from these LAs in this version of the dashboard. For older data, see Cumbria.",
+      input$la_choice == "Cumbria" ~ "Cumbria was divided into Cumberland and Westmorland and Furness on 1st April 2023. Since the data for many metrics is collected in January most data for this year still refers to Cumbria, but some (including academic outcomes) refers to the new unitary authorities. Cumbria's value below refer to the last year for which it reported data.",
+      .default = ""
     )
   })
 
@@ -10951,9 +10854,9 @@ server <- function(input, output, session) {
   })
 
   northants_dest <- reactive({
-    ifelse(test = input$la_choice %in% c("North Northamptonshire", "West Northamptonshire"),
+    ifelse(test = input$la_choice %in% c("North Northamptonshire", "West Northamptonshire", "Cumberland", "Westmorland and Furness"),
       yes = "<br>Destinations data is not yet available for years after 2021/22; at which point
-        North and West Northamptonshire did not yet exist. For relevant data, see Northamptonshire.",
+        Cumberland, Westmorland and Furnss, and North and West Northamptonshire did not yet exist. For relevant data, see Northamptonshire and Cumbria.",
       no = ""
     )
   })
@@ -10968,14 +10871,11 @@ server <- function(input, output, session) {
 
   old_la_ofsted <- reactive({
     previous_la <- case_when(input$la_choice %in% c("North Northamptonshire", "West Northamptonshire") ~ "Northamptonshire",
-      input$la_choice %in% c("Northumberland", "Westmoreland and Furness") ~ "Cumbria",
+      input$la_choice %in% c("Cumberland", "Westmorland and Furness") ~ "Cumbria",
       .default = ""
     )
     old_la_ofsted <-
-      ifelse(test = input$la_choice %in% c("North Northamptonshire", "West Northamptonshire"),
-        yes = paste("Prior to the split this LA was part of", previous_la, "which had the following inspection outcome:"),
-        no = ""
-      )
+      paste("Prior to the split this LA was part of", previous_la, "which had the following inspection outcome:")
   })
 
   missing_data_1618dest_time <- reactive({
@@ -10996,6 +10896,32 @@ server <- function(input, output, session) {
     )
   })
 
+  # messages which show you which LA/Region you've got selected after you hide the topbox
+  laselected <- reactive({
+    paste0("Selected LA: ", input$la_choice, "\n", "Selected sub-ICB area: ", input$ccg_choice)
+  })
+
+  regselected <- reactive({
+    ifelse(test = input$level_choice == "England",
+      yes = paste0("Level: ", input$level_choice),
+      no = paste0("Level: ", input$level_choice, " Region: ", input$region_choice)
+    )
+  })
+
+  la_select_tog <- reactive({
+    ifelse(test = input$hide_la_selectors %% 2 == 0,
+      yes = "Hide LA selection panel",
+      no = "Show LA selection panel"
+    )
+  })
+
+  reg_select_tog <- reactive({
+    ifelse(test = input$hide_reg_selectors %% 2 == 0,
+      yes = "Hide Regions selection panel",
+      no = "Show Regions selection panel"
+    )
+  })
+
   output$nhants_excuse <- renderText(northants_KS4())
   output$nhants_excuse_bench <- renderText(northants_KS4()) # because you can't have two outputs with the same ID
   output$la_changed <- renderText(la_text())
@@ -11009,7 +10935,25 @@ server <- function(input, output, session) {
   output$la_split_ofsted <- renderText(old_la_ofsted())
   output$dest_1618_missing_time <- renderText(missing_data_1618dest_time())
   output$dest_1618_missing_bench <- renderText(missing_data_1618dest_bench())
+  output$myregion_text <- renderText("Comparing within region")
+  output$showhide_la <- renderText(la_select_tog())
+  output$showhide_reg <- renderText(reg_select_tog())
 
+  output$la_message <- renderUI({
+    if (input$hide_la_selectors %% 2 == 0) {
+      h2(renderText("Select local authority to display graphs"))
+    } else {
+      h3(renderText(laselected()))
+    }
+  })
+
+  output$reg_message <- renderUI({
+    if (input$hide_reg_selectors %% 2 == 0) {
+      h2(renderText("Select England or region-level view"))
+    } else {
+      h3(renderText(regselected()))
+    }
+  })
   # CHART/TABLE TOGGLES --------------------------------------------------------------------
 
   output$eyfsp_la_time_tog <- renderUI({

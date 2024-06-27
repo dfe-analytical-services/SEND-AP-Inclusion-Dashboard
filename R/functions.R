@@ -59,6 +59,73 @@ simpleCap <- function(x, except = c("nhs", "ft", "nhst", "ccg", "hcrg"), minor =
   return(out)
 }
 
+# ==========================================
+# Generic functions used for dataviz
+# ==========================================
+
+format_axis_label <- function(label, max_length = 40) {
+  formatted_label <- strwrap(label, width = max_length, simplify = TRUE)
+  return(paste(formatted_label, collapse = "\n"))
+}
+
+# Generic bar chart plot function
+plot_reg_bench <- function(data, outcome_var, hover_label, label_y, region_choice_validated, national_average = NULL) {
+  data <- data %>%
+    mutate(
+      chosen_region = case_when(
+        region_name == region_choice_validated & input$level_choice == "Regions" ~ region_choice_validated,
+        input$level_choice == "England" ~ "English regions",
+        TRUE ~ "Other region"
+      )
+    ) %>%
+    ggplot(aes(
+      x = fct_reorder(region_name, outcome_var),
+      y = outcome_var,
+      text = paste0(
+        Region, "\n", # always state region then line break
+        hover_label, ":", outcome_var
+      ),
+      fill = chosen_region,
+      label = ""
+    )) +
+    geom_col() +
+    labs(
+      x = "Regions in England",
+      y = label_y,
+      fill = "Region"
+    ) +
+    theme(
+      axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 1),
+      legend.position = "none"
+    ) +
+    if (input$level_choice == "Regions") {
+      scale_fill_manual(values = c("Other region" = af_purple), na.value = af_grey)
+    } else {
+      scale_fill_manual(values = c("English regions" = af_purple), na.value = af_grey)
+    }
+
+  # Conditional English average line added if national_average created
+  ## It doesn't make sense to add this line for national counts,
+  if (!is.null(national_average) && is.data.frame(national_average)) {
+    print("Yes, national_average exists and is a data frame.")
+    # Include the code related to national_average
+    data <- data +
+      add_england_line_bench(national_average) +
+      add_england_label_bench_reg(national_average, nudge = 3)
+  } else {
+    print("No valid national_average provided or it is not a data frame. Skipping related code.")
+  }
+
+  data <- ggplotly(data, tooltip = c("text")) %>%
+    save_plot_button_only() %>%
+    layout(
+      legend = list(orientation = "h", y = -0.2),
+      dragmode = FALSE
+    )
+
+  return(data) # plot this
+}
+
 # England Summary helper functions ----------------------------------------------------------------------------
 
 # Function for creating sparklines
@@ -325,6 +392,137 @@ DTise <- function(df, order, hidden = NULL) {
   return(output)
 }
 
+
+# Generic LA bench chart plot function
+plot_la_bench <- function(data, outcome_var, hover_label, label_y, la_choice_validated, national_average = NULL) {
+  data <- data %>%
+    ggplot(aes(
+      x = fct_reorder(la_name, !!sym(outcome_var)),
+      y = !!sym(outcome_var),
+      text = paste0(la_name, "\n", hover_label, ":", !!sym(outcome_var)),
+      fill = chosen_la,
+      label = ""
+    )) +
+    geom_col() +
+    labs(
+      x = data$rank_statement[data$la_name == la_choice_validated],
+      y = label_y,
+      fill = "Local Authority"
+    ) +
+    theme(axis.text.x = element_blank()) +
+    scale_fill_manual(values = c("Other LA" = not_focused), na.value = focused)
+
+  # Conditional English average line added if national_average created
+  if (!is.null(national_average) && is.data.frame(national_average)) {
+    print("Yes, national_average exists and is a data frame.")
+    # Include the code related to national_average
+    data <- data +
+      add_england_line_bench(national_average) +
+      add_england_label_bench(national_average, nudge = 3)
+  } else {
+    #print("No valid national_average provided or it is not a data frame. Skipping related code.")
+  }
+
+  data <- data %>%
+    ggplotly(
+      tooltip = c("text"),
+    ) %>%
+    save_plot_button_only() %>%
+    layout(
+      legend = list(orientation = "h", y = -0.2),
+      dragmode = FALSE
+    )
+
+  return(data) # plot this
+}
+
+# ==========================================
+## Generic functions for regional bench view
+# ==========================================
+
+# Generic bar chart plot function
+plot_reg_bench <- function(data, outcome_var, hover_label, label_y, region_choice_validated, national_average = NULL) {
+  data <- data %>%
+    mutate(
+      chosen_region = case_when(
+        region_name == region_choice_validated & input$level_choice == "Regions" ~ region_choice_validated,
+        input$level_choice == "England" ~ "English regions",
+        TRUE ~ "Other region"
+      )
+    ) %>%
+    ggplot(aes(
+      x = fct_reorder(region_name, outcome_var),
+      y = outcome_var,
+      text = paste0(
+        Region, "\n", # always state region then line break
+        hover_label, ":", outcome_var
+      ),
+      fill = chosen_region,
+      label = ""
+    )) +
+    geom_col() +
+    labs(
+      x = "Regions in England",
+      y = label_y,
+      fill = "Region"
+    ) +
+    theme(
+      axis.text.x = element_text(angle = 45, vjust = 0.5, hjust = 1),
+      legend.position = "none"
+    ) +
+    if (input$level_choice == "Regions") {
+      scale_fill_manual(values = c("Other region" = not_focused), na.value = focused)
+    } else {
+      scale_fill_manual(values = c("English regions" = focused), na.value = focused)
+    }
+  
+  # Conditional English average line added if national_average created
+  ## It doesn't make sense to add this line for national counts
+  if (!is.null(national_average) && is.data.frame(national_average)) {
+    print("Yes, national_average exists and is a data frame.")
+    # Include the code related to national_average
+    data <- data +
+      add_england_line_bench(national_average) +
+      add_england_label_bench_reg(national_average, nudge = 3)
+  } else {
+    print("No valid national_average provided or it is not a data frame. Skipping related code.")
+  }
+  
+  data <- ggplotly(data, tooltip = c("text")) %>%
+    save_plot_button_only() %>%
+    layout(
+      legend = list(orientation = "h", y = -0.2),
+      dragmode = FALSE
+    )
+  
+  return(data) # plot this
+}
+
+# Generic DT table plot function
+table_bench_time <- function(data, var_filter, outcome_var, var_filter_two = NULL, digits = 2) {
+  data <- data %>%
+    mutate(Region = region_name) %>%
+    arrange(
+      desc(`Academic year`),
+      !!var_filter,
+      !!var_filter_two
+    ) %>%
+    select(
+      `Academic year`,
+      Region,
+      !!var_filter,
+      !!var_filter_two,
+      !!outcome_var
+    )
+
+  # get the column number for the outcome variable as you can't index to order tables by name
+  # DT is zero-indexed because we're in javascript land so have to subtract 1
+  outcome_idx <- grep(as.character(outcome_var), names(data)) - 1
+
+  return(DTise(data, order = list(list(0, "desc"), list(outcome_idx, "desc"))) %>%
+    formatRound(as.character(outcome_var), digits))
+}
+
 # England average lines and labels for benchmarking graphs ----------------------------------------------------------------------------
 
 # Add an England line to the benchmarking graphs
@@ -338,8 +536,12 @@ add_england_line_bench <- function(df) {
   )
 }
 
+debug_annoying_return_value <- function(unknown_param){
+  print(as.character(unknown_param))
+}
+  
 # Label the England line on benchmarking graphs
-add_england_label_bench <- function(df, input, nudge = 0.25) {
+add_england_label_bench <- function(df, nudge = 0.25) {
   geom_text(
     data = df,
     colour = af_grey,
@@ -347,7 +549,7 @@ add_england_label_bench <- function(df, input, nudge = 0.25) {
     inherit.aes = FALSE,
     nudge_y = nudge,
     aes(
-      x = ifelse(test = input[["myregion_switch"]] == TRUE,
+      x = ifelse(test = input$panel_choice == "England and Regions",
         yes = 3,
         no = 20
       ),
